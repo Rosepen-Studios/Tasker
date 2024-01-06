@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbl7vtr42hpxv"]
+
+[ext_resource type="Texture2D" uid="uid://bsxpq01hbi3j7" path="res://Images/icon.svg" id="1_f6x47"]
+[ext_resource type="Script" path="res://Scripts/icon.gd" id="2_r8abo"]
+
+[node name="Icon" type="Button"]
+offset_right = 71.0
+offset_bottom = 71.0
+toggle_mode = true
+icon = ExtResource("1_f6x47")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_r8abo")

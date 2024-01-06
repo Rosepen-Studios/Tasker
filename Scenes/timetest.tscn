@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://obe4hiqd0tpd"]
+
+[ext_resource type="Script" path="res://Scripts/timetest.gd" id="1_v8tvi"]
+[ext_resource type="Script" path="res://Scripts/GlobalVarHolder.gd" id="1_yrdix"]
+[ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="2_8u0j8"]
+[ext_resource type="PackedScene" uid="uid://ceejtavn26ou0" path="res://Scenes/MainUI.tscn" id="2_cj2ok"]
+[ext_resource type="PackedScene" uid="uid://tolk5l6mauok" path="res://Scenes/newtask.tscn" id="6_oa1j6"]
+[ext_resource type="Texture2D" uid="uid://tx6xbxxynm4f" path="res://Images/Coolors Gradient.png" id="7_ldtgt"]
+
+[node name="Node2D" type="Node2D"]
+z_index = -11
+script = ExtResource("1_yrdix")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = -193.0
+offset_top = -233.0
+offset_right = 1407.0
+offset_bottom = 967.0
+grow_vertical = 2
+texture = ExtResource("7_ldtgt")
+metadata/_edit_use_anchors_ = true
+
+[node name="Time" type="Label" parent="."]
+offset_left = 971.0
+offset_top = 2.0
+offset_right = 1150.0
+offset_bottom = 56.0
+theme_type_variation = &"HeaderLarge"
+theme_override_fonts/font = ExtResource("2_8u0j8")
+theme_override_font_sizes/font_size = 42
+text = "20:57:69"
+script = ExtResource("1_v8tvi")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1149.0
+offset_bottom = 648.0
+metadata/_edit_use_anchors_ = true
+
+[node name="MainUI" parent="Control" instance=ExtResource("2_cj2ok")]
+layout_mode = 1
+anchor_left = 0.00348129
+anchor_top = 0.0
+anchor_right = 1.003
+anchor_bottom = 0.995
+offset_top = 172.0
+offset_right = 0.552979
+offset_bottom = -0.113098
+script = null
+
+[node name="Newtask" parent="Control" instance=ExtResource("6_oa1j6")]
+layout_mode = 1
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 1.0
+offset_bottom = 3.0

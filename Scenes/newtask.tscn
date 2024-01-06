@@ -1,0 +1,228 @@
+[gd_scene load_steps=19 format=3 uid="uid://tolk5l6mauok"]
+
+[ext_resource type="Script" path="res://Scenes/newtask.gd" id="1_cedea"]
+[ext_resource type="Texture2D" uid="uid://cgct7f34y5ry7" path="res://Images/Spline Untitled.png" id="1_fxnjx"]
+[ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="2_4le61"]
+[ext_resource type="FontFile" uid="uid://paosd82f7mrr" path="res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF" id="3_xyxbc"]
+[ext_resource type="Script" path="res://Scripts/Cancel.gd" id="4_rd550"]
+[ext_resource type="Script" path="res://Scripts/Save.gd" id="5_8b7vo"]
+[ext_resource type="Texture2D" uid="uid://bsxpq01hbi3j7" path="res://Images/icon.svg" id="6_ow8qn"]
+[ext_resource type="Script" path="res://Scripts/iconsel.gd" id="7_jc8wo"]
+[ext_resource type="PackedScene" uid="uid://cbl7vtr42hpxv" path="res://Scenes/icon.tscn" id="8_j210g"]
+
+[sub_resource type="Theme" id="Theme_u4im7"]
+default_font = ExtResource("3_xyxbc")
+default_font_size = 20
+/fonts/Font = ExtResource("3_xyxbc")
+
+[sub_resource type="ImageTexture" id="ImageTexture_p2x8l"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_fl3qf"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_stpem"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_q7yfq"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_k5awq"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_dq3ww"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_pw17t"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_gu7tb"]
+
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(-73.342, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cedea")
+
+[node name="BG" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(-0.377, 0)
+layout_mode = 0
+offset_left = -1226.0
+offset_top = -269.0
+offset_right = 2287.0
+offset_bottom = 809.0
+texture = ExtResource("1_fxnjx")
+expand_mode = 1
+
+[node name="newtask" type="Label" parent="BG"]
+layout_mode = 2
+offset_left = 1424.0
+offset_top = 351.0
+offset_right = 1797.0
+offset_bottom = 397.0
+theme_override_fonts/font = ExtResource("2_4le61")
+theme_override_font_sizes/font_size = 35
+text = "New Task"
+horizontal_alignment = 1
+
+[node name="name" type="Label" parent="BG"]
+layout_mode = 2
+offset_left = 1576.0
+offset_top = 392.0
+offset_right = 1949.0
+offset_bottom = 426.0
+theme_override_fonts/font = ExtResource("3_xyxbc")
+theme_override_font_sizes/font_size = 25
+text = "Name:"
+
+[node name="Nametext" type="TextEdit" parent="BG/name"]
+layout_mode = 1
+offset_left = -132.0
+offset_top = 40.0
+offset_right = 208.0
+offset_bottom = 77.0
+theme = SubResource("Theme_u4im7")
+theme_override_fonts/font = ExtResource("2_4le61")
+placeholder_text = "Example"
+middle_mouse_paste_enabled = false
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="duedate" type="Label" parent="BG"]
+custom_minimum_size = Vector2(119.519, 29.502)
+layout_mode = 2
+offset_left = 1897.0
+offset_top = 346.0
+offset_right = 2016.52
+offset_bottom = 380.0
+size_flags_horizontal = 4
+size_flags_vertical = 1
+size_flags_stretch_ratio = 5.09
+theme_override_fonts/font = ExtResource("3_xyxbc")
+theme_override_font_sizes/font_size = 25
+text = "Due Date:"
+horizontal_alignment = 1
+
+[node name="Save" type="Button" parent="BG"]
+custom_minimum_size = Vector2(0, 0.717)
+layout_direction = 2
+layout_mode = 2
+offset_left = 1991.0
+offset_top = 759.0
+offset_right = 2144.0
+offset_bottom = 797.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+auto_translate = false
+text = "Save"
+script = ExtResource("5_8b7vo")
+
+[node name="Cancel" type="Button" parent="BG"]
+custom_minimum_size = Vector2(-44.548, 1.359)
+layout_mode = 2
+offset_left = 1434.0
+offset_top = 759.0
+offset_right = 1614.0
+offset_bottom = 798.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+action_mode = 0
+text = "Cancel"
+script = ExtResource("4_rd550")
+
+[node name="Icon" type="Label" parent="BG"]
+layout_mode = 0
+offset_left = 1447.0
+offset_top = 532.0
+offset_right = 1503.0
+offset_bottom = 569.0
+theme_override_fonts/font = ExtResource("2_4le61")
+theme_override_font_sizes/font_size = 25
+text = "Icon:"
+
+[node name="TextureRect" type="TextureRect" parent="BG/Icon"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = -19.0
+offset_right = 139.0
+offset_bottom = 52.0
+
+[node name="CheckButton" type="CheckButton" parent="BG/Icon"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = -19.0
+offset_right = 139.0
+offset_bottom = 52.0
+theme_override_icons/checked = SubResource("ImageTexture_p2x8l")
+theme_override_icons/checked_disabled = SubResource("ImageTexture_fl3qf")
+theme_override_icons/unchecked = SubResource("ImageTexture_stpem")
+theme_override_icons/unchecked_disabled = SubResource("ImageTexture_q7yfq")
+theme_override_icons/checked_mirrored = SubResource("ImageTexture_k5awq")
+theme_override_icons/checked_disabled_mirrored = SubResource("ImageTexture_dq3ww")
+theme_override_icons/unchecked_mirrored = SubResource("ImageTexture_pw17t")
+theme_override_icons/unchecked_disabled_mirrored = SubResource("ImageTexture_gu7tb")
+icon = ExtResource("6_ow8qn")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("7_jc8wo")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BG/Icon/CheckButton"]
+visible = false
+layout_mode = 0
+offset_left = 73.0
+offset_top = -42.0
+offset_right = 148.0
+offset_bottom = 175.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BG/Icon/CheckButton/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
+custom_minimum_size = Vector2(71, 71)
+layout_mode = 2
+iconID = 1
+
+[node name="Button2" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
+custom_minimum_size = Vector2(71, 71)
+layout_mode = 2
+iconID = 2
+
+[node name="Button3" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
+custom_minimum_size = Vector2(71, 71)
+layout_mode = 2
+iconID = 3
+
+[node name="Button4" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
+custom_minimum_size = Vector2(71, 71)
+layout_mode = 2
+iconID = 4
+
+[node name="Button5" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
+custom_minimum_size = Vector2(71, 71)
+layout_mode = 2
+iconID = 5
+
+[node name="Button6" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
+custom_minimum_size = Vector2(71, 71)
+layout_mode = 2
+iconID = 6
+
+[node name="Button7" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
+custom_minimum_size = Vector2(71, 71)
+layout_mode = 2
+iconID = 7
+
+[node name="Button8" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
+custom_minimum_size = Vector2(71, 71)
+layout_mode = 2
+iconID = 8
+
+[node name="Button9" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
+custom_minimum_size = Vector2(71, 71)
+layout_mode = 2
+iconID = 9
+
+[node name="Button10" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
+custom_minimum_size = Vector2(71, 71)
+layout_mode = 2
+iconID = 10
