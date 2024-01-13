@@ -19,8 +19,10 @@ config/icon="res://Images/icon.svg"
 
 gvh="*res://Scripts/GlobalVarHolder.gd"
 icn="*res://Scripts/iconsel.gd"
-nt="*res://Scenes/newtask.gd"
 tskxmpl="*res://Scripts/taskexaple.gd"
+nt="*res://Scenes/newtask.gd"
+nmtxt="*res://Scripts/nametext.gd"
+Name="*res://Scenes/Name.gd"
 
 [input]
 

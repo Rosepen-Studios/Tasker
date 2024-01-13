@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://tolk5l6mauok"]
+[gd_scene load_steps=20 format=3 uid="uid://tolk5l6mauok"]
 
 [ext_resource type="Script" path="res://Scenes/newtask.gd" id="1_cedea"]
 [ext_resource type="Texture2D" uid="uid://cgct7f34y5ry7" path="res://Images/Spline Untitled.png" id="1_fxnjx"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://paosd82f7mrr" path="res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF" id="3_xyxbc"]
 [ext_resource type="Script" path="res://Scripts/Cancel.gd" id="4_rd550"]
 [ext_resource type="Script" path="res://Scripts/Save.gd" id="5_8b7vo"]
+[ext_resource type="Script" path="res://Scripts/nametext.gd" id="5_hjhjs"]
 [ext_resource type="Texture2D" uid="uid://bsxpq01hbi3j7" path="res://Images/icon.svg" id="6_ow8qn"]
 [ext_resource type="Script" path="res://Scripts/iconsel.gd" id="7_jc8wo"]
 [ext_resource type="PackedScene" uid="uid://cbl7vtr42hpxv" path="res://Scenes/icon.tscn" id="8_j210g"]
@@ -85,6 +86,7 @@ placeholder_text = "Example"
 middle_mouse_paste_enabled = false
 wrap_mode = 1
 scroll_smooth = true
+script = ExtResource("5_hjhjs")
 
 [node name="duedate" type="Label" parent="BG"]
 custom_minimum_size = Vector2(119.519, 29.502)
