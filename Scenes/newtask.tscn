@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://tolk5l6mauok"]
+[gd_scene load_steps=23 format=3 uid="uid://tolk5l6mauok"]
 
 [ext_resource type="Script" path="res://Scenes/newtask.gd" id="1_cedea"]
 [ext_resource type="Texture2D" uid="uid://cgct7f34y5ry7" path="res://Images/Spline Untitled.png" id="1_fxnjx"]
@@ -6,9 +6,13 @@
 [ext_resource type="FontFile" uid="uid://paosd82f7mrr" path="res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF" id="3_xyxbc"]
 [ext_resource type="Script" path="res://Scripts/Cancel.gd" id="4_rd550"]
 [ext_resource type="Script" path="res://Scripts/Save.gd" id="5_8b7vo"]
+[ext_resource type="Script" path="res://Scripts/nametext.gd" id="5_hjhjs"]
 [ext_resource type="Texture2D" uid="uid://bsxpq01hbi3j7" path="res://Images/icon.svg" id="6_ow8qn"]
 [ext_resource type="Script" path="res://Scripts/iconsel.gd" id="7_jc8wo"]
 [ext_resource type="PackedScene" uid="uid://cbl7vtr42hpxv" path="res://Scenes/icon.tscn" id="8_j210g"]
+[ext_resource type="Texture2D" uid="uid://d1iagm3q1paep" path="res://Images/Icons/Pencil.png" id="11_37n6j"]
+[ext_resource type="Texture2D" uid="uid://bbm0sp7m5v8s" path="res://Images/Icons/Notebook.png" id="12_c08ms"]
+[ext_resource type="Texture2D" uid="uid://ue18r0qyaps0" path="res://Images/Icons/Face.png" id="13_kpvwv"]
 
 [sub_resource type="Theme" id="Theme_u4im7"]
 default_font = ExtResource("3_xyxbc")
@@ -85,6 +89,7 @@ placeholder_text = "Example"
 middle_mouse_paste_enabled = false
 wrap_mode = 1
 scroll_smooth = true
+script = ExtResource("5_hjhjs")
 
 [node name="duedate" type="Label" parent="BG"]
 custom_minimum_size = Vector2(119.519, 29.502)
@@ -180,16 +185,19 @@ size_flags_vertical = 3
 [node name="Button" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+icon = ExtResource("11_37n6j")
 iconID = 1
 
 [node name="Button2" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+icon = ExtResource("12_c08ms")
 iconID = 2
 
 [node name="Button3" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+icon = ExtResource("13_kpvwv")
 iconID = 3
 
 [node name="Button4" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]

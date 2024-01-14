@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br5bcmff08yti"
-path="res://.godot/imported/Spline Untitled (1)..png-5582a62d7d5fde0d6c6f30b08abd10a9.ctex"
+uid="uid://d1iagm3q1paep"
+path="res://.godot/imported/Pencil.png-5b539ad0edb20636b732d1e9816aa784.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Spline Untitled (1)..png"
-dest_files=["res://.godot/imported/Spline Untitled (1)..png-5582a62d7d5fde0d6c6f30b08abd10a9.ctex"]
+source_file="res://Images/Icons/Pencil.png"
+dest_files=["res://.godot/imported/Pencil.png-5b539ad0edb20636b732d1e9816aa784.ctex"]
 
 [params]
 

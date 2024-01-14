@@ -1,0 +1,44 @@
+2a60927148abd1d33b818b535e306557
+::res://::1705254467
+::res://Images/::1705254467
+Coolors Gradient.png::CompressedTexture2D::1382992106633027479::1705253617::1705253617::1::::<><>::
+icon.svg::CompressedTexture2D::3698241238683433970::1705253617::1705253617::1::::<><>::
+Spline Untitled.png::CompressedTexture2D::5199314260212208804::1705253617::1705253617::1::::<><>::
+::res://Images/Icons/::1705255444
+Face.png::CompressedTexture2D::1413672889063796089::1705255444::1705255444::1::::<><>::
+Notebook.png::CompressedTexture2D::73027440216455096::1705254461::1705254467::1::::<><>::
+Pencil.png::CompressedTexture2D::9000698396761079343::1705253862::1705254446::1::::<><>::
+::res://Scenes/::1705254475
+icon.tscn::PackedScene::4867719837318751143::1705253617::0::1::::<><>::uid://bsxpq01hbi3j7<>res://Scripts/icon.gd
+MainUI.tscn::PackedScene::5062434669042531585::1705253617::0::1::::<><>::uid://brf6gngpp4kst<>res://Scripts/nth.gd<>uid://cgd42neh4wjwe
+Name.gd::GDScript::-1::1705253617::0::1::::<>RichTextLabel<>::
+newtask.gd::GDScript::-1::1705253617::0::1::::<>Control<>::
+newtask.tscn::PackedScene::1363176656656842902::1705254475::0::1::::<><>::res://Scenes/newtask.gd<>uid://cgct7f34y5ry7<>uid://brf6gngpp4kst<>uid://paosd82f7mrr<>res://Scripts/Cancel.gd<>res://Scripts/Save.gd<>res://Scripts/nametext.gd<>uid://bsxpq01hbi3j7<>res://Scripts/iconsel.gd<>uid://cbl7vtr42hpxv<>uid://d1iagm3q1paep<>uid://bbm0sp7m5v8s
+taskexaple.tscn::PackedScene::5201977261042682484::1705253617::0::1::::<><>::res://Scripts/taskexaple.gd<>uid://bsxpq01hbi3j7<>uid://brf6gngpp4kst<>uid://paosd82f7mrr<>uid://bha1yyg143lb8<>uid://bmlmo588mxlnv<>res://Scenes/Name.gd
+timetest.tscn::PackedScene::985003225434688197::1705254475::0::1::::<><>::res://Scripts/timetest.gd<>res://Scripts/GlobalVarHolder.gd<>uid://brf6gngpp4kst<>uid://ceejtavn26ou0<>uid://tolk5l6mauok<>uid://tx6xbxxynm4f
+Title.gd::GDScript::-1::1705253617::0::1::::<>Label<>::
+::res://Scripts/::1705253617
+Button.gd::GDScript::-1::1705253617::0::1::::<>Button<>::
+Cancel.gd::GDScript::-1::1705253617::0::1::::<>Button<>::
+CheckBox.gd::GDScript::-1::1705253617::0::1::::<>CheckBox<>::
+GlobalVarHolder.gd::GDScript::-1::1705253617::0::1::::<>Node<>::
+icon.gd::GDScript::-1::1705253617::0::1::::<>Button<>::
+iconsel.gd::GDScript::-1::1705253617::0::1::::<>CheckButton<>::
+iconselect.gd::GDScript::-1::1705253617::0::1::::<>Button<>::
+Label.gd::GDScript::-1::1705253617::0::1::::<>Label<>::
+nametext.gd::GDScript::-1::1705253617::0::1::::<>TextEdit<>::
+nametexttest.gd::GDScript::-1::1705253617::0::1::::<>TextEdit<>::
+nth.gd::GDScript::-1::1705253617::0::1::::<>Label<>::
+Save.gd::GDScript::-1::1705253617::0::1::::<>Button<>::
+taskexaple.gd::GDScript::-1::1705253617::0::1::::<>PanelContainer<>::
+timetest.gd::GDScript::-1::1705253617::0::1::::<>Label<>::
+::res://SF Pro Display Font Family/::1705253617
+SFPRODISPLAYBLACKITALIC.OTF::FontFile::2879365361075391327::1705253617::1705253617::1::::<><>::
+SFPRODISPLAYBOLD.OTF::FontFile::3591846548624246999::1705253617::1705253617::1::::<><>::
+SFPRODISPLAYHEAVYITALIC.OTF::FontFile::3252150195867385555::1705253617::1705253617::1::::<><>::
+SFPRODISPLAYLIGHTITALIC.OTF::FontFile::8762944976844673053::1705253617::1705253617::1::::<><>::
+SFPRODISPLAYMEDIUM.OTF::FontFile::1053715046542810867::1705253617::1705253617::1::::<><>::
+SFPRODISPLAYREGULAR.OTF::FontFile::845549989734687499::1705253617::1705253617::1::::<><>::
+SFPRODISPLAYSEMIBOLDITALIC.OTF::FontFile::1214907937878841159::1705253617::1705253617::1::::<><>::
+SFPRODISPLAYTHINITALIC.OTF::FontFile::5045191138010840426::1705253617::1705253617::1::::<><>::
+SFPRODISPLAYULTRALIGHTITALIC.OTF::FontFile::1294611157844578851::1705253617::1705253617::1::::<><>::
