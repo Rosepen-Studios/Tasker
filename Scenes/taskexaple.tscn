@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cgd42neh4wjwe"]
+[gd_scene load_steps=8 format=3 uid="uid://cgd42neh4wjwe"]
 
 [ext_resource type="Script" path="res://Scripts/taskexaple.gd" id="1_4j12x"]
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="2_k6uwd"]

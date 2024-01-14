@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=23 format=3 uid="uid://tolk5l6mauok"]
+=======
+[gd_scene load_steps=20 format=3 uid="uid://tolk5l6mauok"]
+>>>>>>> 2936fd2b16cece62f5215c16ac8297de5e70e1c0
 
 [ext_resource type="Script" path="res://Scenes/newtask.gd" id="1_cedea"]
 [ext_resource type="Texture2D" uid="uid://cgct7f34y5ry7" path="res://Images/Spline Untitled.png" id="1_fxnjx"]
