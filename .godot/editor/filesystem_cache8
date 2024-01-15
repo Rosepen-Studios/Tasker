@@ -1,13 +1,14 @@
 2a60927148abd1d33b818b535e306557
-::res://::1705256845
-::res://Images/::1705256845
+::res://::1705342733
+::res://Images/::1705342733
 Coolors Gradient.png::CompressedTexture2D::1382992106633027479::1705256727::1705256727::1::::<><>::
 icon.svg::CompressedTexture2D::3698241238683433970::1705256727::1705256727::1::::<><>::
 Spline Untitled.png::CompressedTexture2D::5199314260212208804::1705256727::1705256727::1::::<><>::
-::res://Images/Icons/::1705256845
-Face.png::CompressedTexture2D::5876990385562227792::1705256839::1705256845::1::::<><>::
-Notebook.png::CompressedTexture2D::3541279036893470692::1705256839::1705256845::1::::<><>::
-Pencil.png::CompressedTexture2D::4636132872910312866::1705256839::1705256845::1::::<><>::
+::res://Images/Icons/::1705342733
+Colors.png::CompressedTexture2D::1824540181980589688::1705342713::1705342733::1::::<><>::
+Face.png::CompressedTexture2D::617666365916982673::1705342716::1705342733::1::::<><>::
+Notebook.png::CompressedTexture2D::4356361729637042107::1705342716::1705342733::1::::<><>::
+Pencil.png::CompressedTexture2D::6516477107327846215::1705342716::1705342733::1::::<><>::
 ::res://Scenes/::1705256787
 icon.tscn::PackedScene::4867719837318751143::1705256725::0::1::::<><>::uid://bsxpq01hbi3j7<>res://Scripts/icon.gd
 MainUI.tscn::PackedScene::5062434669042531585::1705256725::0::1::::<><>::uid://brf6gngpp4kst<>res://Scripts/nth.gd<>uid://cgd42neh4wjwe
