@@ -1,1 +1,9 @@
+res://Scenes/newtask.tscn
 res://Scenes/timetest.tscn
+res://Scripts/GlobalVarHolder.gd
+res://Scenes/Icon.gd
+res://Scripts/icon.gd
+res://Scenes/iconrender.gd
+res://Scripts/Save.gd
+res://Scenes/ColorSel.gd
+res://Scenes/Color.gd

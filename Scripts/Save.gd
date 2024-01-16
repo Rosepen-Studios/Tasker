@@ -8,11 +8,11 @@ func _pressed():
 		
 		
 
-		gvh.icon = 1
+		gvh.icon = "1"
 		gvh.tsknum += 1
 		
 	else:
 		nmtxt._nosave()
-		gvh.icon = 1
+		gvh.icon = "1"
 		print("Error no more tasks available")
 	$"../..".visible = false

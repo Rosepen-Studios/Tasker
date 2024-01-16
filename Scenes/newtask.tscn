@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://tolk5l6mauok"]
+[gd_scene load_steps=48 format=3 uid="uid://tolk5l6mauok"]
 
 [ext_resource type="Script" path="res://Scenes/newtask.gd" id="1_cedea"]
 [ext_resource type="Texture2D" uid="uid://cgct7f34y5ry7" path="res://Images/Spline Untitled.png" id="1_fxnjx"]
@@ -7,14 +7,146 @@
 [ext_resource type="Script" path="res://Scripts/Cancel.gd" id="4_rd550"]
 [ext_resource type="Script" path="res://Scripts/Save.gd" id="5_8b7vo"]
 [ext_resource type="Script" path="res://Scripts/nametext.gd" id="5_hjhjs"]
-[ext_resource type="Texture2D" uid="uid://bsxpq01hbi3j7" path="res://Images/icon.svg" id="6_ow8qn"]
 [ext_resource type="Script" path="res://Scripts/iconsel.gd" id="7_jc8wo"]
+[ext_resource type="Texture2D" uid="uid://08257hvgyv6g" path="res://Images/Icons/Colors.png" id="8_imxt3"]
 [ext_resource type="PackedScene" uid="uid://cbl7vtr42hpxv" path="res://Scenes/icon.tscn" id="8_j210g"]
+[ext_resource type="Texture2D" uid="uid://cy3voqledf1u6" path="res://Images/Icons/Pencil.png" id="9_2sjn7"]
+[ext_resource type="Script" path="res://Scenes/Color.gd" id="9_ejdrv"]
+[ext_resource type="Texture2D" uid="uid://b3civ2ikkeoad" path="res://Images/Icons/Notebook.png" id="10_qouod"]
+[ext_resource type="Texture2D" uid="uid://i2g40jkx5ftx" path="res://Images/Icons/Face.png" id="11_ua7uo"]
+[ext_resource type="Script" path="res://Scenes/iconrender.gd" id="12_0jxlj"]
+[ext_resource type="Script" path="res://Scenes/ColorSel.gd" id="15_1voyc"]
 
 [sub_resource type="Theme" id="Theme_u4im7"]
 default_font = ExtResource("3_xyxbc")
 default_font_size = 20
 /fonts/Font = ExtResource("3_xyxbc")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0drtt"]
+atlas = ExtResource("8_imxt3")
+region = Rect2(142, 0, 65, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agrja"]
+atlas = ExtResource("8_imxt3")
+region = Rect2(0, 0, 142, 142)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfjs2"]
+atlas = ExtResource("8_imxt3")
+region = Rect2(207, 0, 142, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr0rs"]
+atlas = ExtResource("8_imxt3")
+region = Rect2(414, 0, 142, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ek64e"]
+atlas = ExtResource("8_imxt3")
+region = Rect2(621, 0, 142, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g56dy"]
+atlas = ExtResource("8_imxt3")
+region = Rect2(828, 0, 142, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5i6tg"]
+atlas = ExtResource("8_imxt3")
+region = Rect2(1035, 0, 142, 143)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fkhho"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0drtt")
+}],
+"loop": true,
+"name": &"-1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agrja")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfjs2")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nr0rs")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ek64e")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g56dy")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5i6tg")
+}],
+"loop": true,
+"name": &"5",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxod3"]
+atlas = ExtResource("9_2sjn7")
+region = Rect2(0, 0, 149, 149)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_082to"]
+atlas = ExtResource("10_qouod")
+region = Rect2(0, 0, 97, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pckx"]
+atlas = ExtResource("11_ua7uo")
+region = Rect2(0, 0, 119, 119)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_32t0i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxod3")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_082to")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pckx")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}]
 
 [sub_resource type="ImageTexture" id="ImageTexture_p2x8l"]
 
@@ -31,6 +163,26 @@ default_font_size = 20
 [sub_resource type="ImageTexture" id="ImageTexture_pw17t"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_gu7tb"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_erkt0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_avu2o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k5al1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_44y05"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mp0o1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jr3ye"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ekude"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xfpa0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3wax5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m6aej"]
 
 [node name="Control" type="Control"]
 custom_minimum_size = Vector2(-73.342, 0)
@@ -147,6 +299,20 @@ offset_top = -19.0
 offset_right = 139.0
 offset_bottom = 52.0
 
+[node name="Color" type="AnimatedSprite2D" parent="BG/Icon"]
+position = Vector2(104, 17)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_fkhho")
+animation = &"5"
+script = ExtResource("9_ejdrv")
+
+[node name="Icon" type="AnimatedSprite2D" parent="BG/Icon"]
+position = Vector2(104, 17)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_32t0i")
+animation = &"3"
+script = ExtResource("12_0jxlj")
+
 [node name="CheckButton" type="CheckButton" parent="BG/Icon"]
 layout_mode = 0
 offset_left = 68.0
@@ -161,7 +327,6 @@ theme_override_icons/checked_mirrored = SubResource("ImageTexture_k5awq")
 theme_override_icons/checked_disabled_mirrored = SubResource("ImageTexture_dq3ww")
 theme_override_icons/unchecked_mirrored = SubResource("ImageTexture_pw17t")
 theme_override_icons/unchecked_disabled_mirrored = SubResource("ImageTexture_gu7tb")
-icon = ExtResource("6_ow8qn")
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("7_jc8wo")
@@ -182,16 +347,19 @@ size_flags_vertical = 3
 [node name="Button" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+icon = ExtResource("9_2sjn7")
 iconID = 1
 
 [node name="Button2" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+icon = ExtResource("10_qouod")
 iconID = 2
 
 [node name="Button3" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+icon = ExtResource("11_ua7uo")
 iconID = 3
 
 [node name="Button4" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
@@ -228,3 +396,31 @@ iconID = 9
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
 iconID = 10
+
+[node name="Label" type="Label" parent="BG/Icon"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 54.0
+offset_right = 43.0
+offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("3_xyxbc")
+theme_override_font_sizes/font_size = 17
+text = "Color:"
+
+[node name="OptionButton" type="OptionButton" parent="BG/Icon/Label"]
+layout_mode = 0
+offset_left = 51.0
+offset_right = 69.0
+offset_bottom = 20.0
+theme_override_icons/arrow = SubResource("ViewportTexture_erkt0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_avu2o")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k5al1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_44y05")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mp0o1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jr3ye")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_ekude")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_xfpa0")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_3wax5")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_m6aej")
+expand_icon = true
+script = ExtResource("15_1voyc")
