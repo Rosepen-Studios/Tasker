@@ -5,8 +5,8 @@
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="2_k6uwd"]
 [ext_resource type="FontFile" uid="uid://paosd82f7mrr" path="res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF" id="3_if1ix"]
 [ext_resource type="FontFile" uid="uid://bha1yyg143lb8" path="res://SF Pro Display Font Family/SFPRODISPLAYBLACKITALIC.OTF" id="5_hxk1x"]
+[ext_resource type="Script" path="res://Scripts/Name.gd" id="7_58jt2"]
 [ext_resource type="FontFile" uid="uid://bmlmo588mxlnv" path="res://SF Pro Display Font Family/SFPRODISPLAYHEAVYITALIC.OTF" id="7_afxoi"]
-[ext_resource type="Script" path="res://Scenes/Name.gd" id="7_lyma1"]
 
 [node name="PanelContainer" type="PanelContainer"]
 anchors_preset = -1
@@ -61,4 +61,4 @@ theme_override_font_sizes/bold_font_size = 30
 theme_override_font_sizes/italics_font_size = 30
 theme_override_font_sizes/bold_italics_font_size = 30
 text = "Placeholder"
-script = ExtResource("7_lyma1")
+script = ExtResource("7_58jt2")

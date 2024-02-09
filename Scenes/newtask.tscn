@@ -1,26 +1,21 @@
-[gd_scene load_steps=48 format=3 uid="uid://tolk5l6mauok"]
+[gd_scene load_steps=47 format=3 uid="uid://tolk5l6mauok"]
 
-[ext_resource type="Script" path="res://Scenes/newtask.gd" id="1_cedea"]
+[ext_resource type="Script" path="res://Scripts/newtask.gd" id="1_8tmui"]
 [ext_resource type="Texture2D" uid="uid://cgct7f34y5ry7" path="res://Images/Spline Untitled.png" id="1_fxnjx"]
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="2_4le61"]
 [ext_resource type="FontFile" uid="uid://paosd82f7mrr" path="res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF" id="3_xyxbc"]
 [ext_resource type="Script" path="res://Scripts/Cancel.gd" id="4_rd550"]
 [ext_resource type="Script" path="res://Scripts/Save.gd" id="5_8b7vo"]
-[ext_resource type="Script" path="res://Scripts/nametext.gd" id="5_hjhjs"]
+[ext_resource type="Script" path="res://Scenes/NameIn.gd" id="5_ltrpg"]
 [ext_resource type="Script" path="res://Scripts/iconsel.gd" id="7_jc8wo"]
 [ext_resource type="Texture2D" uid="uid://08257hvgyv6g" path="res://Images/Icons/Colors.png" id="8_imxt3"]
 [ext_resource type="PackedScene" uid="uid://cbl7vtr42hpxv" path="res://Scenes/icon.tscn" id="8_j210g"]
 [ext_resource type="Texture2D" uid="uid://cy3voqledf1u6" path="res://Images/Icons/Pencil.png" id="9_2sjn7"]
-[ext_resource type="Script" path="res://Scenes/Color.gd" id="9_ejdrv"]
+[ext_resource type="Script" path="res://Scripts/Color.gd" id="9_h88we"]
 [ext_resource type="Texture2D" uid="uid://b3civ2ikkeoad" path="res://Images/Icons/Notebook.png" id="10_qouod"]
 [ext_resource type="Texture2D" uid="uid://i2g40jkx5ftx" path="res://Images/Icons/Face.png" id="11_ua7uo"]
-[ext_resource type="Script" path="res://Scenes/iconrender.gd" id="12_0jxlj"]
-[ext_resource type="Script" path="res://Scenes/ColorSel.gd" id="15_1voyc"]
-
-[sub_resource type="Theme" id="Theme_u4im7"]
-default_font = ExtResource("3_xyxbc")
-default_font_size = 20
-/fonts/Font = ExtResource("3_xyxbc")
+[ext_resource type="Script" path="res://Scripts/iconrender.gd" id="13_cftli"]
+[ext_resource type="Script" path="res://Scripts/ColorSel.gd" id="16_24yj5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0drtt"]
 atlas = ExtResource("8_imxt3")
@@ -193,7 +188,7 @@ anchor_bottom = 1.0
 offset_right = -2.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_cedea")
+script = ExtResource("1_8tmui")
 
 [node name="BG" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(-0.377, 0)
@@ -226,19 +221,13 @@ theme_override_fonts/font = ExtResource("3_xyxbc")
 theme_override_font_sizes/font_size = 25
 text = "Name:"
 
-[node name="Nametext" type="TextEdit" parent="BG/name"]
-layout_mode = 1
-offset_left = -132.0
-offset_top = 40.0
-offset_right = 208.0
-offset_bottom = 77.0
-theme = SubResource("Theme_u4im7")
-theme_override_fonts/font = ExtResource("2_4le61")
-placeholder_text = "Example"
-middle_mouse_paste_enabled = false
-wrap_mode = 1
-scroll_smooth = true
-script = ExtResource("5_hjhjs")
+[node name="LineEdit" type="LineEdit" parent="BG/name"]
+layout_mode = 0
+offset_left = -108.0
+offset_top = 62.0
+offset_right = 157.0
+offset_bottom = 93.0
+script = ExtResource("5_ltrpg")
 
 [node name="duedate" type="Label" parent="BG"]
 custom_minimum_size = Vector2(119.519, 29.502)
@@ -304,14 +293,14 @@ position = Vector2(104, 17)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_fkhho")
 animation = &"5"
-script = ExtResource("9_ejdrv")
+script = ExtResource("9_h88we")
 
 [node name="Icon" type="AnimatedSprite2D" parent="BG/Icon"]
 position = Vector2(104, 17)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_32t0i")
 animation = &"3"
-script = ExtResource("12_0jxlj")
+script = ExtResource("13_cftli")
 
 [node name="CheckButton" type="CheckButton" parent="BG/Icon"]
 layout_mode = 0
@@ -348,54 +337,44 @@ size_flags_vertical = 3
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
 icon = ExtResource("9_2sjn7")
-iconID = 1
 
 [node name="Button2" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
 icon = ExtResource("10_qouod")
-iconID = 2
 
 [node name="Button3" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
 icon = ExtResource("11_ua7uo")
-iconID = 3
 
 [node name="Button4" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
-iconID = 4
 
 [node name="Button5" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
-iconID = 5
 
 [node name="Button6" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
-iconID = 6
 
 [node name="Button7" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
-iconID = 7
 
 [node name="Button8" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
-iconID = 8
 
 [node name="Button9" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
-iconID = 9
 
 [node name="Button10" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
-iconID = 10
 
 [node name="Label" type="Label" parent="BG/Icon"]
 layout_mode = 0
@@ -423,4 +402,4 @@ theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_xfpa0")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_3wax5")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_m6aej")
 expand_icon = true
-script = ExtResource("15_1voyc")
+script = ExtResource("16_24yj5")
