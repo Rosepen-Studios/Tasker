@@ -12,17 +12,13 @@ config_version=5
 
 config/name="Tasker"
 run/main_scene="res://Scenes/timetest.tscn"
-config/features=PackedStringArray("4.0", "GL Compatibility")
+config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://Images/icon.svg"
 
 [autoload]
 
 gvh="*res://Scripts/GlobalVarHolder.gd"
-icn="*res://Scripts/iconsel.gd"
-tskxmpl="*res://Scripts/taskexaple.gd"
 nt="*res://Scripts/newtask.gd"
-Name="*res://Scripts/Name.gd"
-namein="*res://Scenes/NameIn.gd"
 
 [editor_plugins]
 

@@ -1,12 +1,139 @@
-[gd_scene load_steps=8 format=3 uid="uid://cgd42neh4wjwe"]
+[gd_scene load_steps=21 format=3 uid="uid://cgd42neh4wjwe"]
 
 [ext_resource type="Script" path="res://Scripts/taskexaple.gd" id="1_4j12x"]
-[ext_resource type="Texture2D" uid="uid://bsxpq01hbi3j7" path="res://Images/icon.svg" id="1_l5xhx"]
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="2_k6uwd"]
 [ext_resource type="FontFile" uid="uid://paosd82f7mrr" path="res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF" id="3_if1ix"]
-[ext_resource type="FontFile" uid="uid://bha1yyg143lb8" path="res://SF Pro Display Font Family/SFPRODISPLAYBLACKITALIC.OTF" id="5_hxk1x"]
-[ext_resource type="Script" path="res://Scripts/Name.gd" id="7_58jt2"]
-[ext_resource type="FontFile" uid="uid://bmlmo588mxlnv" path="res://SF Pro Display Font Family/SFPRODISPLAYHEAVYITALIC.OTF" id="7_afxoi"]
+[ext_resource type="Texture2D" uid="uid://08257hvgyv6g" path="res://Images/Icons/Colors.png" id="5_h38on"]
+[ext_resource type="PackedScene" uid="uid://crwtrotm873y8" path="res://test.tscn" id="6_lm5ye"]
+[ext_resource type="Texture2D" uid="uid://cy3voqledf1u6" path="res://Images/Icons/Pencil.png" id="6_s1m85"]
+[ext_resource type="Texture2D" uid="uid://b3civ2ikkeoad" path="res://Images/Icons/Notebook.png" id="7_2840w"]
+[ext_resource type="Texture2D" uid="uid://i2g40jkx5ftx" path="res://Images/Icons/Face.png" id="8_c0s4s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0drtt"]
+atlas = ExtResource("5_h38on")
+region = Rect2(142, 0, 65, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agrja"]
+atlas = ExtResource("5_h38on")
+region = Rect2(0, 0, 142, 142)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfjs2"]
+atlas = ExtResource("5_h38on")
+region = Rect2(207, 0, 142, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr0rs"]
+atlas = ExtResource("5_h38on")
+region = Rect2(414, 0, 142, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ek64e"]
+atlas = ExtResource("5_h38on")
+region = Rect2(621, 0, 142, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g56dy"]
+atlas = ExtResource("5_h38on")
+region = Rect2(828, 0, 142, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5i6tg"]
+atlas = ExtResource("5_h38on")
+region = Rect2(1035, 0, 142, 143)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4exy7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0drtt")
+}],
+"loop": true,
+"name": &"-1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agrja")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfjs2")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nr0rs")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ek64e")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g56dy")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5i6tg")
+}],
+"loop": true,
+"name": &"5",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxod3"]
+atlas = ExtResource("6_s1m85")
+region = Rect2(0, 0, 149, 149)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_082to"]
+atlas = ExtResource("7_2840w")
+region = Rect2(0, 0, 97, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pckx"]
+atlas = ExtResource("8_c0s4s")
+region = Rect2(0, 0, 119, 119)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fjl8d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxod3")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_082to")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pckx")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}]
 
 [node name="PanelContainer" type="PanelContainer"]
 anchors_preset = -1
@@ -18,18 +145,6 @@ script = ExtResource("1_4j12x")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 2
-
-[node name="Icon" type="TextureRect" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 6.0
-offset_top = 4.0
-offset_right = -1016.0
-offset_bottom = -5.0
-texture = ExtResource("1_l5xhx")
-stretch_mode = 2
 
 [node name="DueDate" type="Label" parent="Control"]
 layout_mode = 1
@@ -46,19 +161,23 @@ theme_override_fonts/font = ExtResource("3_if1ix")
 theme_override_font_sizes/font_size = 25
 text = "Due: X/X/X X:XX"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+[node name="Label2" parent="Control" instance=ExtResource("6_lm5ye")]
 layout_mode = 0
-offset_left = 135.0
-offset_top = 9.0
-offset_right = 340.0
-offset_bottom = 48.0
-theme_override_fonts/normal_font = ExtResource("2_k6uwd")
-theme_override_fonts/bold_font = ExtResource("2_k6uwd")
-theme_override_fonts/italics_font = ExtResource("5_hxk1x")
-theme_override_fonts/bold_italics_font = ExtResource("7_afxoi")
-theme_override_font_sizes/normal_font_size = 30
-theme_override_font_sizes/bold_font_size = 30
-theme_override_font_sizes/italics_font_size = 30
-theme_override_font_sizes/bold_italics_font_size = 30
-text = "Placeholder"
-script = ExtResource("7_58jt2")
+offset_left = 143.0
+offset_top = 17.0
+offset_right = 312.0
+offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("2_k6uwd")
+theme_override_font_sizes/font_size = 30
+
+[node name="Color" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(70.35, 67.775)
+scale = Vector2(0.85, 0.85)
+sprite_frames = SubResource("SpriteFrames_4exy7")
+animation = &"5"
+
+[node name="Icon2" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(70.35, 67.775)
+scale = Vector2(0.85, 0.85)
+sprite_frames = SubResource("SpriteFrames_fjl8d")
+animation = &"3"

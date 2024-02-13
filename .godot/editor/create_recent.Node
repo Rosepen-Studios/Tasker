@@ -1,5 +1,6 @@
-TextEdit
 Label
+Timer
+TextEdit
 LineEdit
 OptionButton
 AnimatedSprite2D

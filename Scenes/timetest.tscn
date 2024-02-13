@@ -3,12 +3,11 @@
 [ext_resource type="Script" path="res://Scripts/timetest.gd" id="1_v8tvi"]
 [ext_resource type="Script" path="res://Scripts/GlobalVarHolder.gd" id="1_yrdix"]
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="2_8u0j8"]
-[ext_resource type="PackedScene" uid="uid://ceejtavn26ou0" path="res://Scenes/MainUI.tscn" id="2_cj2ok"]
+[ext_resource type="PackedScene" uid="uid://c0m23xtdkrvme" path="res://Scenes/MainUI.tscn" id="2_cj2ok"]
 [ext_resource type="PackedScene" uid="uid://tolk5l6mauok" path="res://Scenes/newtask.tscn" id="6_oa1j6"]
 [ext_resource type="Texture2D" uid="uid://tx6xbxxynm4f" path="res://Images/Coolors Gradient.png" id="7_ldtgt"]
 
 [node name="Node2D" type="Node2D"]
-z_index = -11
 script = ExtResource("1_yrdix")
 
 [node name="TextureRect" type="TextureRect" parent="."]

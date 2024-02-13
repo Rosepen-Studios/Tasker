@@ -5,8 +5,8 @@
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="2_4le61"]
 [ext_resource type="FontFile" uid="uid://paosd82f7mrr" path="res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF" id="3_xyxbc"]
 [ext_resource type="Script" path="res://Scripts/Cancel.gd" id="4_rd550"]
+[ext_resource type="Script" path="res://Scripts/NameIn.gd" id="5_2r3ns"]
 [ext_resource type="Script" path="res://Scripts/Save.gd" id="5_8b7vo"]
-[ext_resource type="Script" path="res://Scenes/NameIn.gd" id="5_ltrpg"]
 [ext_resource type="Script" path="res://Scripts/iconsel.gd" id="7_jc8wo"]
 [ext_resource type="Texture2D" uid="uid://08257hvgyv6g" path="res://Images/Icons/Colors.png" id="8_imxt3"]
 [ext_resource type="PackedScene" uid="uid://cbl7vtr42hpxv" path="res://Scenes/icon.tscn" id="8_j210g"]
@@ -227,7 +227,7 @@ offset_left = -108.0
 offset_top = 62.0
 offset_right = 157.0
 offset_bottom = 93.0
-script = ExtResource("5_ltrpg")
+script = ExtResource("5_2r3ns")
 
 [node name="duedate" type="Label" parent="BG"]
 custom_minimum_size = Vector2(119.519, 29.502)
@@ -337,44 +337,54 @@ size_flags_vertical = 3
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
 icon = ExtResource("9_2sjn7")
+iconID = 1
 
 [node name="Button2" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
 icon = ExtResource("10_qouod")
+iconID = 2
 
 [node name="Button3" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
 icon = ExtResource("11_ua7uo")
+iconID = 3
 
 [node name="Button4" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+iconID = 4
 
 [node name="Button5" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+iconID = 5
 
 [node name="Button6" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+iconID = 5
 
 [node name="Button7" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+iconID = 7
 
 [node name="Button8" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+iconID = 8
 
 [node name="Button9" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+iconID = 9
 
 [node name="Button10" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+iconID = 10
 
 [node name="Label" type="Label" parent="BG/Icon"]
 layout_mode = 0
@@ -403,3 +413,5 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_3wax5")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_m6aej")
 expand_icon = true
 script = ExtResource("16_24yj5")
+
+[node name="Timer" type="Timer" parent="."]

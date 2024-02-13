@@ -2,5 +2,5 @@ extends Button
 @onready var control = $"../.."
 
 func _pressed():
-		namein._nosave()
+		$"../name/LineEdit".text = ""
 		$"../..".visible = false

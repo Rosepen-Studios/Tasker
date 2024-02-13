@@ -1,22 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ceejtavn26ou0"]
+[gd_scene load_steps=5 format=3 uid="uid://c0m23xtdkrvme"]
 
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="1_eb2eh"]
 [ext_resource type="Script" path="res://Scripts/nth.gd" id="2_v44os"]
 [ext_resource type="PackedScene" uid="uid://cgd42neh4wjwe" path="res://Scenes/taskexaple.tscn" id="3_vaimf"]
 
 [sub_resource type="GDScript" id="GDScript_b0xol"]
-script/source = "extends Control
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-"
 
 [node name="Control" type="Control"]
 layout_mode = 3

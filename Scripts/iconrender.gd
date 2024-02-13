@@ -1,5 +1,5 @@
 extends AnimatedSprite2D
 
-
 func _process(delta):
-	play(gvh.icon)
+	play(str(gvh.icon))
+	

@@ -1,3 +1,13 @@
 res://Scenes/timetest.tscn
 res://Scenes/taskexaple.tscn
 res://Scenes/newtask.tscn
+res://test.tscn
+res://Scripts/Name.gd
+res://Scripts/taskexaple.gd
+res://Scenes/MainUI.tscn
+res://Scripts/Label.gd
+res://Scripts/Save.gd
+res://Scripts/GlobalVarHolder.gd
+res://Scripts/iconrender.gd
+res://Scripts/iconsel.gd
+res://Scripts/icon.gd
