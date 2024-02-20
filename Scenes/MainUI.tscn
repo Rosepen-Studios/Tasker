@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0m23xtdkrvme"]
+[gd_scene load_steps=8 format=3 uid="uid://c0m23xtdkrvme"]
 
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="1_eb2eh"]
 [ext_resource type="Script" path="res://Scripts/nth.gd" id="2_v44os"]
+[ext_resource type="Script" path="res://Scenes/GD.gd" id="3_21g1e"]
 [ext_resource type="PackedScene" uid="uid://cgd42neh4wjwe" path="res://Scenes/taskexaple.tscn" id="3_vaimf"]
+[ext_resource type="PackedScene" uid="uid://b0vb52fub3v2g" path="res://Scenes/donetask.tscn" id="4_5fdsm"]
+[ext_resource type="Script" path="res://Scenes/ntd.gd" id="4_5xhnl"]
 
 [sub_resource type="GDScript" id="GDScript_b0xol"]
 
@@ -31,7 +34,19 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
 
-[node name="nth" type="Label" parent="ScrollContainer/VBoxContainer"]
+[node name="To Do" type="VBoxContainer" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1.39, 35.46)
+layout_mode = 2
+
+[node name="GD" type="Label" parent="ScrollContainer/VBoxContainer/To Do"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_eb2eh")
+theme_override_font_sizes/font_size = 40
+text = "Good Job all your tasks are complete!"
+horizontal_alignment = 1
+script = ExtResource("3_21g1e")
+
+[node name="nth" type="Label" parent="ScrollContainer/VBoxContainer/To Do"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_eb2eh")
 theme_override_font_sizes/font_size = 40
@@ -40,62 +55,139 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("2_v44os")
 
-[node name="PanelContainer" parent="ScrollContainer/VBoxContainer" instance=ExtResource("3_vaimf")]
+[node name="PanelContainer" parent="ScrollContainer/VBoxContainer/To Do" instance=ExtResource("3_vaimf")]
 visible = false
 custom_minimum_size = Vector2(-2.333, 135.212)
 layout_mode = 2
 ID = 1
 
-[node name="PanelContainer2" parent="ScrollContainer/VBoxContainer" instance=ExtResource("3_vaimf")]
+[node name="PanelContainer2" parent="ScrollContainer/VBoxContainer/To Do" instance=ExtResource("3_vaimf")]
 visible = false
 custom_minimum_size = Vector2(-2.333, 135.212)
 layout_mode = 2
 ID = 2
 
-[node name="PanelContainer3" parent="ScrollContainer/VBoxContainer" instance=ExtResource("3_vaimf")]
+[node name="PanelContainer3" parent="ScrollContainer/VBoxContainer/To Do" instance=ExtResource("3_vaimf")]
 visible = false
 custom_minimum_size = Vector2(-2.333, 135.212)
 layout_mode = 2
 ID = 3
 
-[node name="PanelContainer4" parent="ScrollContainer/VBoxContainer" instance=ExtResource("3_vaimf")]
+[node name="PanelContainer4" parent="ScrollContainer/VBoxContainer/To Do" instance=ExtResource("3_vaimf")]
 visible = false
 custom_minimum_size = Vector2(-2.333, 135.212)
 layout_mode = 2
 ID = 4
 
-[node name="PanelContainer5" parent="ScrollContainer/VBoxContainer" instance=ExtResource("3_vaimf")]
+[node name="PanelContainer5" parent="ScrollContainer/VBoxContainer/To Do" instance=ExtResource("3_vaimf")]
 visible = false
 custom_minimum_size = Vector2(-2.333, 135.212)
 layout_mode = 2
 ID = 5
 
-[node name="PanelContainer6" parent="ScrollContainer/VBoxContainer" instance=ExtResource("3_vaimf")]
+[node name="PanelContainer6" parent="ScrollContainer/VBoxContainer/To Do" instance=ExtResource("3_vaimf")]
 visible = false
 custom_minimum_size = Vector2(-2.333, 135.212)
 layout_mode = 2
 ID = 6
 
-[node name="PanelContainer7" parent="ScrollContainer/VBoxContainer" instance=ExtResource("3_vaimf")]
+[node name="PanelContainer7" parent="ScrollContainer/VBoxContainer/To Do" instance=ExtResource("3_vaimf")]
 visible = false
 custom_minimum_size = Vector2(-2.333, 135.212)
 layout_mode = 2
 ID = 7
 
-[node name="PanelContainer8" parent="ScrollContainer/VBoxContainer" instance=ExtResource("3_vaimf")]
+[node name="PanelContainer8" parent="ScrollContainer/VBoxContainer/To Do" instance=ExtResource("3_vaimf")]
 visible = false
 custom_minimum_size = Vector2(-2.333, 135.212)
 layout_mode = 2
 ID = 8
 
-[node name="PanelContainer9" parent="ScrollContainer/VBoxContainer" instance=ExtResource("3_vaimf")]
+[node name="PanelContainer9" parent="ScrollContainer/VBoxContainer/To Do" instance=ExtResource("3_vaimf")]
 visible = false
 custom_minimum_size = Vector2(-2.333, 135.212)
 layout_mode = 2
 ID = 9
 
-[node name="PanelContainer10" parent="ScrollContainer/VBoxContainer" instance=ExtResource("3_vaimf")]
+[node name="PanelContainer10" parent="ScrollContainer/VBoxContainer/To Do" instance=ExtResource("3_vaimf")]
 visible = false
 custom_minimum_size = Vector2(-2.333, 135.212)
+layout_mode = 2
+ID = 10
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_eb2eh")
+theme_override_font_sizes/font_size = 25
+text = "--------------------------------------------------------------------------------------------------------"
+
+[node name="Done" type="VBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ntd" type="Label" parent="ScrollContainer/VBoxContainer/Done"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_eb2eh")
+theme_override_font_sizes/font_size = 40
+text = "No Tasks Complete, Get To Work!"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_5xhnl")
+
+[node name="Control1" parent="ScrollContainer/VBoxContainer/Done" instance=ExtResource("4_5fdsm")]
+visible = false
+custom_minimum_size = Vector2(0, 131.225)
+layout_mode = 2
+
+[node name="Control2" parent="ScrollContainer/VBoxContainer/Done" instance=ExtResource("4_5fdsm")]
+visible = false
+custom_minimum_size = Vector2(0, 131.225)
+layout_mode = 2
+ID = 2
+
+[node name="Control3" parent="ScrollContainer/VBoxContainer/Done" instance=ExtResource("4_5fdsm")]
+visible = false
+custom_minimum_size = Vector2(0, 131.225)
+layout_mode = 2
+ID = 3
+
+[node name="Control4" parent="ScrollContainer/VBoxContainer/Done" instance=ExtResource("4_5fdsm")]
+visible = false
+custom_minimum_size = Vector2(0, 131.225)
+layout_mode = 2
+ID = 4
+
+[node name="Control5" parent="ScrollContainer/VBoxContainer/Done" instance=ExtResource("4_5fdsm")]
+visible = false
+custom_minimum_size = Vector2(0, 131.225)
+layout_mode = 2
+ID = 5
+
+[node name="Control6" parent="ScrollContainer/VBoxContainer/Done" instance=ExtResource("4_5fdsm")]
+visible = false
+custom_minimum_size = Vector2(0, 131.225)
+layout_mode = 2
+ID = 6
+
+[node name="Control7" parent="ScrollContainer/VBoxContainer/Done" instance=ExtResource("4_5fdsm")]
+visible = false
+custom_minimum_size = Vector2(0, 131.225)
+layout_mode = 2
+ID = 7
+
+[node name="Control8" parent="ScrollContainer/VBoxContainer/Done" instance=ExtResource("4_5fdsm")]
+visible = false
+custom_minimum_size = Vector2(0, 131.225)
+layout_mode = 2
+ID = 8
+
+[node name="Control9" parent="ScrollContainer/VBoxContainer/Done" instance=ExtResource("4_5fdsm")]
+visible = false
+custom_minimum_size = Vector2(0, 131.225)
+layout_mode = 2
+ID = 9
+
+[node name="Control10" parent="ScrollContainer/VBoxContainer/Done" instance=ExtResource("4_5fdsm")]
+visible = false
+custom_minimum_size = Vector2(0, 131.225)
 layout_mode = 2
 ID = 10

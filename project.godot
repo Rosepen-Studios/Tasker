@@ -13,12 +13,10 @@ config_version=5
 config/name="Tasker"
 run/main_scene="res://Scenes/timetest.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://Images/icon.svg"
 
 [autoload]
 
 gvh="*res://Scripts/GlobalVarHolder.gd"
-nt="*res://Scripts/newtask.gd"
 
 [editor_plugins]
 

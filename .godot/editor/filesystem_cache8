@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1707846558
-test.tscn::PackedScene::6012652766449814801::1707646346::0::1::::<><>::res://Scripts/Name.gd
+::res://::1708451813
+test.tscn::PackedScene::6012652766449814801::1707936019::0::1::::<><>::res://Scripts/Name.gd
 ::res://addons/::1706805608
 ::res://addons/godot_resource_groups_examples/::1706804973
 image_resource_group.tres::Resource/Resource::5030764908207017440::1706804973::0::1::::<><>::res://addons/godot_resource_groups/resource_group.gd
@@ -1023,13 +1023,13 @@ img0997.jpg::CompressedTexture2D::5398735952243966343::1706804996::1706805071::1
 img0998.jpg::CompressedTexture2D::3575029315000432394::1706804996::1706805071::1::::<><>::
 img0999.jpg::CompressedTexture2D::7018419795479513026::1706804996::1706805071::1::::<><>::
 img1000.jpg::CompressedTexture2D::5712248621940974833::1706804997::1706805071::1::::<><>::
-::res://Images/::1705342733
+::res://Images/::1707933870
 Coolors Gradient.png::CompressedTexture2D::1382992106633027479::1705256727::1705256727::1::::<><>::
-icon.svg::CompressedTexture2D::3698241238683433970::1705256727::1705256727::1::::<><>::
 Spline Untitled.png::CompressedTexture2D::5199314260212208804::1705256727::1705256727::1::::<><>::
-::res://Images/Icons/::1705427480
+::res://Images/Icons/::1707933916
 Blue.png::CompressedTexture2D::9135299487081005246::1705427480::1705427480::1::::<><>::
 Colors.png::CompressedTexture2D::1824540181980589688::1705342713::1705342733::1::::<><>::
+Done.png::CompressedTexture2D::3492814551527116486::1707933858::1707933916::1::::<><>::
 Face.png::CompressedTexture2D::617666365916982673::1705342716::1705342733::1::::<><>::
 Green.png::CompressedTexture2D::2265508503556349858::1705427480::1705427480::1::::<><>::
 Notebook.png::CompressedTexture2D::4356361729637042107::1705342716::1705342733::1::::<><>::
@@ -1038,32 +1038,34 @@ Pencil.png::CompressedTexture2D::6516477107327846215::1705342716::1705342733::1:
 Purpel.png::CompressedTexture2D::787018598126624314::1705427480::1705427480::1::::<><>::
 Red.png::CompressedTexture2D::53751599265383842::1705427480::1705427480::1::::<><>::
 White.png::CompressedTexture2D::2785427151728490468::1705427480::1705427480::1::::<><>::
-::res://Scenes/::1707646367
+::res://Scenes/::1707936019
+donetask.tscn::PackedScene::4184609425054725792::1707936019::0::1::::<><>::res://Scripts/donetask.gd<>uid://paosd82f7mrr::::res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF<>uid://crwtrotm873y8::::res://test.tscn<>uid://brf6gngpp4kst::::res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF<>uid://08257hvgyv6g::::res://Images/Icons/Colors.png<>uid://cy3voqledf1u6::::res://Images/Icons/Pencil.png<>uid://b3civ2ikkeoad::::res://Images/Icons/Notebook.png<>uid://i2g40jkx5ftx::::res://Images/Icons/Face.png
 icon.tscn::PackedScene::4867719837318751143::1705256725::0::1::::<><>::uid://bsxpq01hbi3j7<>res://Scripts/icon.gd
-MainUI.tscn::PackedScene::5062434669042531585::1705256725::0::1::::<><>::uid://brf6gngpp4kst<>res://Scripts/nth.gd<>uid://cgd42neh4wjwe
-newtask.tscn::PackedScene::1363176656656842902::1707646367::0::1::::<><>::res://Scripts/newtask.gd<>uid://cgct7f34y5ry7::::res://Images/Spline Untitled.png<>uid://brf6gngpp4kst::::res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF<>uid://paosd82f7mrr::::res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF<>res://Scripts/Cancel.gd<>res://Scripts/NameIn.gd<>res://Scripts/Save.gd<>res://Scripts/iconsel.gd<>uid://08257hvgyv6g::::res://Images/Icons/Colors.png<>uid://cbl7vtr42hpxv::::res://Scenes/icon.tscn<>uid://cy3voqledf1u6::::res://Images/Icons/Pencil.png<>res://Scripts/Color.gd<>uid://b3civ2ikkeoad::::res://Images/Icons/Notebook.png<>uid://i2g40jkx5ftx::::res://Images/Icons/Face.png<>res://Scripts/iconrender.gd<>res://Scripts/ColorSel.gd
-taskexaple.tscn::PackedScene::5201977261042682484::1707646345::0::1::::<><>::res://Scripts/taskexaple.gd<>uid://bsxpq01hbi3j7::::res://Images/icon.svg<>uid://brf6gngpp4kst::::res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF<>uid://paosd82f7mrr::::res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF<>uid://crwtrotm873y8::::res://test.tscn
-timetest.tscn::PackedScene::985003225434688197::1707646345::0::1::::<><>::res://Scripts/timetest.gd<>res://Scripts/GlobalVarHolder.gd<>uid://brf6gngpp4kst::::res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF<>uid://ceejtavn26ou0::::res://Scenes/MainUI.tscn<>uid://tolk5l6mauok::::res://Scenes/newtask.tscn<>uid://tx6xbxxynm4f::::res://Images/Coolors Gradient.png
-::res://Scripts/::1707646367
+MainUI.tscn::PackedScene::6554025589958460344::1707934634::0::1::::<><>::uid://brf6gngpp4kst::::res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF<>res://Scripts/nth.gd<>uid://cgd42neh4wjwe::::res://Scenes/taskexaple.tscn
+newtask.tscn::PackedScene::1363176656656842902::1707936019::0::1::::<><>::res://Scripts/newtask.gd<>uid://cgct7f34y5ry7::::res://Images/Spline Untitled.png<>uid://brf6gngpp4kst::::res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF<>uid://paosd82f7mrr::::res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF<>res://Scripts/Cancel.gd<>res://Scripts/NameIn.gd<>res://Scripts/Save.gd<>res://Scripts/iconsel.gd<>uid://08257hvgyv6g::::res://Images/Icons/Colors.png<>uid://cbl7vtr42hpxv::::res://Scenes/icon.tscn<>uid://cy3voqledf1u6::::res://Images/Icons/Pencil.png<>res://Scripts/Color.gd<>uid://b3civ2ikkeoad::::res://Images/Icons/Notebook.png<>uid://i2g40jkx5ftx::::res://Images/Icons/Face.png<>res://Scripts/iconrender.gd<>res://Scripts/ColorSel.gd
+taskexaple.tscn::PackedScene::5201977261042682484::1707936019::0::1::::<><>::res://Scripts/taskexaple.gd<>uid://brf6gngpp4kst::::res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF<>uid://paosd82f7mrr::::res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF<>uid://08257hvgyv6g::::res://Images/Icons/Colors.png<>uid://crwtrotm873y8::::res://test.tscn<>uid://cy3voqledf1u6::::res://Images/Icons/Pencil.png<>uid://b3civ2ikkeoad::::res://Images/Icons/Notebook.png<>uid://i2g40jkx5ftx::::res://Images/Icons/Face.png<>uid://bp07e7bd4u4fy::::res://Images/Icons/Done.png
+timetest.tscn::PackedScene::985003225434688197::1707936019::0::1::::<><>::res://Scripts/timetest.gd<>res://Scripts/GlobalVarHolder.gd<>uid://brf6gngpp4kst::::res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF<>uid://c0m23xtdkrvme::::res://Scenes/MainUI.tscn<>uid://tolk5l6mauok::::res://Scenes/newtask.tscn<>uid://tx6xbxxynm4f::::res://Images/Coolors Gradient.png
+::res://Scripts/::1707935886
 Button.gd::GDScript::-1::1705256725::0::1::::<>Button<>::
 Cancel.gd::GDScript::-1::1707642199::0::1::::<>Button<>::
 CheckBox.gd::GDScript::-1::1705256725::0::1::::<>CheckBox<>::
 Color.gd::GDScript::-1::1705428102::0::1::::<>AnimatedSprite2D<>::
 ColorSel.gd::GDScript::-1::1706724915::0::1::::<>OptionButton<>::
-GlobalVarHolder.gd::GDScript::-1::1707645167::0::1::::<>Node<>::
-icon.gd::GDScript::-1::1706724963::0::1::::<>Button<>::
-iconrender.gd::GDScript::-1::1705426235::0::1::::<>AnimatedSprite2D<>::
-iconsel.gd::GDScript::-1::1705256725::0::1::::<>CheckButton<>::
+donetask.gd::GDScript::-1::1707935886::0::1::::<>Control<>::
+GlobalVarHolder.gd::GDScript::-1::1707934305::0::1::::<>Node<>::
+icon.gd::GDScript::-1::1707848357::0::1::::<>Button<>::
+iconrender.gd::GDScript::-1::1707848100::0::1::::<>AnimatedSprite2D<>::
+iconsel.gd::GDScript::-1::1707848536::0::1::::<>CheckButton<>::
 iconselect.gd::GDScript::-1::1705256725::0::1::::<>Button<>::
-Label.gd::GDScript::-1::1707642707::0::1::::<>Label<>::
+Label.gd::GDScript::-1::1707848100::0::1::::<>Label<>::
 LineEdit.gd::GDScript::-1::1707158402::0::1::::<>LineEdit<>::
-Name.gd::GDScript::-1::1707646367::0::1::::<>Label<>::
+Name.gd::GDScript::-1::1707847025::0::1::::<>Label<>::
 NameIn.gd::GDScript::-1::1707642320::0::1::::<>LineEdit<>::
 newtask.gd::GDScript::-1::1705256725::0::1::::<>Control<>::
 nth.gd::GDScript::-1::1705256725::0::1::::<>Label<>::
-Save.gd::GDScript::-1::1707645489::0::1::::<>Button<>::
-taskexaple.gd::GDScript::-1::1707643619::0::1::::<>PanelContainer<>::
-timetest.gd::GDScript::-1::1705256725::0::1::::<>Label<>::
+Save.gd::GDScript::-1::1707848197::0::1::::<>Button<>::
+taskexaple.gd::GDScript::-1::1707934455::0::1::::<>PanelContainer<>::
+timetest.gd::GDScript::-1::1707934328::0::1::::<>Label<>::
 Title.gd::GDScript::-1::1705256725::0::1::::<>Label<>::
 ::res://SF Pro Display Font Family/::1705256726
 SFPRODISPLAYBLACKITALIC.OTF::FontFile::2879365361075391327::1705256725::1705256725::1::::<><>::
