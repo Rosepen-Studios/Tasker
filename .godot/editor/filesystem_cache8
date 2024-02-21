@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708451813
-test.tscn::PackedScene::6012652766449814801::1707936019::0::1::::<><>::res://Scripts/Name.gd
+::res://::1708538860
+test.tscn::PackedScene::6012652766449814801::1708538722::0::1::::<><>::res://Scripts/Name.gd
 ::res://addons/::1706805608
 ::res://addons/godot_resource_groups_examples/::1706804973
 image_resource_group.tres::Resource/Resource::5030764908207017440::1706804973::0::1::::<><>::res://addons/godot_resource_groups/resource_group.gd
@@ -1026,10 +1026,13 @@ img1000.jpg::CompressedTexture2D::5712248621940974833::1706804997::1706805071::1
 ::res://Images/::1707933870
 Coolors Gradient.png::CompressedTexture2D::1382992106633027479::1705256727::1705256727::1::::<><>::
 Spline Untitled.png::CompressedTexture2D::5199314260212208804::1705256727::1705256727::1::::<><>::
-::res://Images/Icons/::1707933916
+::res://Images/Icons/::1708538263
 Blue.png::CompressedTexture2D::9135299487081005246::1705427480::1705427480::1::::<><>::
 Colors.png::CompressedTexture2D::1824540181980589688::1705342713::1705342733::1::::<><>::
 Done.png::CompressedTexture2D::3492814551527116486::1707933858::1707933916::1::::<><>::
+DropDown.png::CompressedTexture2D::5592300006335312457::1708538262::1708538263::1::::<><>::
+edit2.png::CompressedTexture2D::6476826846354032924::1708536266::1708536267::1::::<><>::
+Edit.png::CompressedTexture2D::6144991599731300442::1708534861::1708534862::1::::<><>::
 Face.png::CompressedTexture2D::617666365916982673::1705342716::1705342733::1::::<><>::
 Green.png::CompressedTexture2D::2265508503556349858::1705427480::1705427480::1::::<><>::
 Notebook.png::CompressedTexture2D::4356361729637042107::1705342716::1705342733::1::::<><>::
@@ -1038,22 +1041,28 @@ Pencil.png::CompressedTexture2D::6516477107327846215::1705342716::1705342733::1:
 Purpel.png::CompressedTexture2D::787018598126624314::1705427480::1705427480::1::::<><>::
 Red.png::CompressedTexture2D::53751599265383842::1705427480::1705427480::1::::<><>::
 White.png::CompressedTexture2D::2785427151728490468::1705427480::1705427480::1::::<><>::
-::res://Scenes/::1707936019
-donetask.tscn::PackedScene::4184609425054725792::1707936019::0::1::::<><>::res://Scripts/donetask.gd<>uid://paosd82f7mrr::::res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF<>uid://crwtrotm873y8::::res://test.tscn<>uid://brf6gngpp4kst::::res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF<>uid://08257hvgyv6g::::res://Images/Icons/Colors.png<>uid://cy3voqledf1u6::::res://Images/Icons/Pencil.png<>uid://b3civ2ikkeoad::::res://Images/Icons/Notebook.png<>uid://i2g40jkx5ftx::::res://Images/Icons/Face.png
+X.png::CompressedTexture2D::4719637856512847486::1708536521::1708536522::1::::<><>::
+::res://Scenes/::1708538722
+donetask.tscn::PackedScene::4184609425054725792::1708538722::0::1::::<><>::res://Scripts/donetask.gd<>uid://paosd82f7mrr::::res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF<>uid://crwtrotm873y8::::res://test.tscn<>uid://brf6gngpp4kst::::res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF<>uid://08257hvgyv6g::::res://Images/Icons/Colors.png<>uid://cy3voqledf1u6::::res://Images/Icons/Pencil.png<>uid://b3civ2ikkeoad::::res://Images/Icons/Notebook.png<>uid://i2g40jkx5ftx::::res://Images/Icons/Face.png
+Edit.gd::GDScript::-1::1708537315::0::1::::<>Control<>::
+GD.gd::GDScript::-1::1708453552::0::1::::<>Label<>::
 icon.tscn::PackedScene::4867719837318751143::1705256725::0::1::::<><>::uid://bsxpq01hbi3j7<>res://Scripts/icon.gd
-MainUI.tscn::PackedScene::6554025589958460344::1707934634::0::1::::<><>::uid://brf6gngpp4kst::::res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF<>res://Scripts/nth.gd<>uid://cgd42neh4wjwe::::res://Scenes/taskexaple.tscn
-newtask.tscn::PackedScene::1363176656656842902::1707936019::0::1::::<><>::res://Scripts/newtask.gd<>uid://cgct7f34y5ry7::::res://Images/Spline Untitled.png<>uid://brf6gngpp4kst::::res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF<>uid://paosd82f7mrr::::res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF<>res://Scripts/Cancel.gd<>res://Scripts/NameIn.gd<>res://Scripts/Save.gd<>res://Scripts/iconsel.gd<>uid://08257hvgyv6g::::res://Images/Icons/Colors.png<>uid://cbl7vtr42hpxv::::res://Scenes/icon.tscn<>uid://cy3voqledf1u6::::res://Images/Icons/Pencil.png<>res://Scripts/Color.gd<>uid://b3civ2ikkeoad::::res://Images/Icons/Notebook.png<>uid://i2g40jkx5ftx::::res://Images/Icons/Face.png<>res://Scripts/iconrender.gd<>res://Scripts/ColorSel.gd
-taskexaple.tscn::PackedScene::5201977261042682484::1707936019::0::1::::<><>::res://Scripts/taskexaple.gd<>uid://brf6gngpp4kst::::res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF<>uid://paosd82f7mrr::::res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF<>uid://08257hvgyv6g::::res://Images/Icons/Colors.png<>uid://crwtrotm873y8::::res://test.tscn<>uid://cy3voqledf1u6::::res://Images/Icons/Pencil.png<>uid://b3civ2ikkeoad::::res://Images/Icons/Notebook.png<>uid://i2g40jkx5ftx::::res://Images/Icons/Face.png<>uid://bp07e7bd4u4fy::::res://Images/Icons/Done.png
-timetest.tscn::PackedScene::985003225434688197::1707936019::0::1::::<><>::res://Scripts/timetest.gd<>res://Scripts/GlobalVarHolder.gd<>uid://brf6gngpp4kst::::res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF<>uid://c0m23xtdkrvme::::res://Scenes/MainUI.tscn<>uid://tolk5l6mauok::::res://Scenes/newtask.tscn<>uid://tx6xbxxynm4f::::res://Images/Coolors Gradient.png
-::res://Scripts/::1707935886
+iconselect.gd::GDScript::-1::1708537917::0::1::::<>Button<>::
+MainUI.tscn::PackedScene::6554025589958460344::1708538722::0::1::::<><>::uid://brf6gngpp4kst::::res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF<>res://Scripts/nth.gd<>res://Scenes/GD.gd<>uid://cgd42neh4wjwe::::res://Scenes/taskexaple.tscn<>uid://b0vb52fub3v2g::::res://Scenes/donetask.tscn<>res://Scenes/ntd.gd
+newtask.tscn::PackedScene::1363176656656842902::1708538722::0::1::::<><>::res://Scripts/newtask.gd<>uid://cgct7f34y5ry7::::res://Images/Spline Untitled.png<>uid://brf6gngpp4kst::::res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF<>uid://paosd82f7mrr::::res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF<>res://Scripts/Cancel.gd<>res://Scripts/NameIn.gd<>res://Scripts/Save.gd<>res://Scripts/iconsel.gd<>uid://08257hvgyv6g::::res://Images/Icons/Colors.png<>uid://cbl7vtr42hpxv::::res://Scenes/icon.tscn<>uid://cy3voqledf1u6::::res://Images/Icons/Pencil.png<>res://Scripts/Color.gd<>uid://b3civ2ikkeoad::::res://Images/Icons/Notebook.png<>uid://i2g40jkx5ftx::::res://Images/Icons/Face.png<>res://Scripts/iconrender.gd<>res://Scripts/ColorSel.gd
+ntd.gd::GDScript::-1::1708452857::0::1::::<>Label<>::
+taskexaple.tscn::PackedScene::5201977261042682484::1708538722::0::1::::<><>::res://Scripts/taskexaple.gd<>uid://brf6gngpp4kst::::res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF<>uid://paosd82f7mrr::::res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF<>uid://08257hvgyv6g::::res://Images/Icons/Colors.png<>uid://crwtrotm873y8::::res://test.tscn<>uid://cy3voqledf1u6::::res://Images/Icons/Pencil.png<>uid://b3civ2ikkeoad::::res://Images/Icons/Notebook.png<>uid://i2g40jkx5ftx::::res://Images/Icons/Face.png<>uid://bp07e7bd4u4fy::::res://Images/Icons/Done.png<>res://Scenes/Edit.gd<>uid://cyjonlatvvhiy::::res://Images/Icons/edit2.png<>uid://b8ih0mk1tgqio::::res://Images/Icons/X.png<>res://Scripts/iconsel.gd<>uid://cbl7vtr42hpxv::::res://Scenes/icon.tscn<>res://Scenes/iconselect.gd<>res://Scripts/ColorSel.gd
+timetest.tscn::PackedScene::985003225434688197::1708538722::0::1::::<><>::res://Scripts/timetest.gd<>res://Scripts/GlobalVarHolder.gd<>uid://brf6gngpp4kst::::res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF<>uid://c0m23xtdkrvme::::res://Scenes/MainUI.tscn<>uid://tolk5l6mauok::::res://Scenes/newtask.tscn<>uid://tx6xbxxynm4f::::res://Images/Coolors Gradient.png
+::res://Scripts/::1708538722
 Button.gd::GDScript::-1::1705256725::0::1::::<>Button<>::
 Cancel.gd::GDScript::-1::1707642199::0::1::::<>Button<>::
 CheckBox.gd::GDScript::-1::1705256725::0::1::::<>CheckBox<>::
 Color.gd::GDScript::-1::1705428102::0::1::::<>AnimatedSprite2D<>::
-ColorSel.gd::GDScript::-1::1706724915::0::1::::<>OptionButton<>::
-donetask.gd::GDScript::-1::1707935886::0::1::::<>Control<>::
-GlobalVarHolder.gd::GDScript::-1::1707934305::0::1::::<>Node<>::
-icon.gd::GDScript::-1::1707848357::0::1::::<>Button<>::
+ColorSel.gd::GDScript::-1::1708538722::0::1::::<>OptionButton<>::
+donetask.gd::GDScript::-1::1708452564::0::1::::<>Control<>::
+DropDown.png::CompressedTexture2D::2456906665993738814::1708538223::1708538224::1::::<><>::
+GlobalVarHolder.gd::GDScript::-1::1708537242::0::1::::<>Node<>::
+icon.gd::GDScript::-1::1708537917::0::1::::<>Button<>::
 iconrender.gd::GDScript::-1::1707848100::0::1::::<>AnimatedSprite2D<>::
 iconsel.gd::GDScript::-1::1707848536::0::1::::<>CheckButton<>::
 iconselect.gd::GDScript::-1::1705256725::0::1::::<>Button<>::
@@ -1062,10 +1071,10 @@ LineEdit.gd::GDScript::-1::1707158402::0::1::::<>LineEdit<>::
 Name.gd::GDScript::-1::1707847025::0::1::::<>Label<>::
 NameIn.gd::GDScript::-1::1707642320::0::1::::<>LineEdit<>::
 newtask.gd::GDScript::-1::1705256725::0::1::::<>Control<>::
-nth.gd::GDScript::-1::1705256725::0::1::::<>Label<>::
-Save.gd::GDScript::-1::1707848197::0::1::::<>Button<>::
-taskexaple.gd::GDScript::-1::1707934455::0::1::::<>PanelContainer<>::
-timetest.gd::GDScript::-1::1707934328::0::1::::<>Label<>::
+nth.gd::GDScript::-1::1708453552::0::1::::<>Label<>::
+Save.gd::GDScript::-1::1708537561::0::1::::<>Button<>::
+taskexaple.gd::GDScript::-1::1708537566::0::1::::<>PanelContainer<>::
+timetest.gd::GDScript::-1::1708537503::0::1::::<>Label<>::
 Title.gd::GDScript::-1::1705256725::0::1::::<>Label<>::
 ::res://SF Pro Display Font Family/::1705256726
 SFPRODISPLAYBLACKITALIC.OTF::FontFile::2879365361075391327::1705256725::1705256725::1::::<><>::

@@ -11,3 +11,4 @@ var acttext:String
 var iconsel:bool =false
 var comptask:bool = false
 var comptaskid:int
+var saving:bool = false

@@ -1,10 +1,11 @@
 Label
+LineEdit
+Button
+TextureRect
 Control
 PanelContainer
 VBoxContainer
-Button
 Timer
 TextEdit
-LineEdit
 OptionButton
 AnimatedSprite2D

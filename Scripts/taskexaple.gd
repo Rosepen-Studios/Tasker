@@ -9,13 +9,16 @@ func _process(delta):
 		if on == false:
 			on = true
 			visible = true
-		$Control/Label2.text = gvh.savename
-		$Control/Color.play(str(gvh.saveiconcolor))
-		$Control/Icon2.play(str(gvh.saveicon))
-	await $Control/Done.pressed
+		if gvh.saving == true:
+			$Task/Label2.text = gvh.savename
+			$Task/Color.play(str(gvh.saveiconcolor))
+			$Task/Icon2.play(str(gvh.saveicon))
+			gvh.saving = false
+	await $Task/Done.pressed
 	if localgvhchange == false:
 		gvh.tskscomp = (gvh.tskscomp + 1)
 		localgvhchange = true
 		gvh.comptask = true
 		gvh.comptaskid = ID
 		visible = false
+		

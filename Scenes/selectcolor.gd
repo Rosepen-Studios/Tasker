@@ -8,7 +8,5 @@ func _ready():
 	add_icon_item(load("res://Images/Icons/Orange.png"),"Orange",5)
 	add_icon_item(load("res://Images/Icons/Purpel.png"),"Purple",6)
 	
-	
 func _process(delta):
-	gvh.color = str(selected)
-	
+	$"../Color".play(str(selected))

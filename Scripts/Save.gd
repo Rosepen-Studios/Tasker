@@ -2,6 +2,7 @@ extends Button
 
 func _pressed():
 	if gvh.tsknum <= 10 and $"../name/LineEdit".text != "":
+		gvh.saving = true
 		gvh.savename = gvh.acttext
 		$"../../Timer".start()
 		$"../name/LineEdit".text = ""

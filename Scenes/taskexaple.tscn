@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cgd42neh4wjwe"]
+[gd_scene load_steps=47 format=3 uid="uid://cgd42neh4wjwe"]
 
 [ext_resource type="Script" path="res://Scripts/taskexaple.gd" id="1_4j12x"]
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="2_k6uwd"]
@@ -9,6 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://b3civ2ikkeoad" path="res://Images/Icons/Notebook.png" id="7_2840w"]
 [ext_resource type="Texture2D" uid="uid://i2g40jkx5ftx" path="res://Images/Icons/Face.png" id="8_c0s4s"]
 [ext_resource type="Texture2D" uid="uid://bp07e7bd4u4fy" path="res://Images/Icons/Done.png" id="9_521aq"]
+[ext_resource type="Script" path="res://Scenes/Edit.gd" id="10_xomk8"]
+[ext_resource type="Texture2D" uid="uid://cyjonlatvvhiy" path="res://Images/Icons/edit2.png" id="11_ov53m"]
+[ext_resource type="Script" path="res://Scenes/selectcolor.gd" id="12_ag8yc"]
+[ext_resource type="Texture2D" uid="uid://b8ih0mk1tgqio" path="res://Images/Icons/X.png" id="12_g8ogr"]
+[ext_resource type="Script" path="res://Scripts/iconsel.gd" id="12_wp2mv"]
+[ext_resource type="PackedScene" uid="uid://cbl7vtr42hpxv" path="res://Scenes/icon.tscn" id="13_ikjly"]
+[ext_resource type="Script" path="res://Scenes/iconselect.gd" id="14_y5tdr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0drtt"]
 atlas = ExtResource("5_h38on")
@@ -136,6 +143,42 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_xnwfl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0dtx0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b30na"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lv5rc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dhfp3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ykmmi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k1vbp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ain2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4ste0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_67clp"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_co5n2"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_f2myc"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_gv4l6"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_s0ufl"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_erbmt"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_weild"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_y4rsr"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_oar8h"]
+
 [node name="PanelContainer" type="PanelContainer"]
 anchors_preset = -1
 anchor_right = 0.998
@@ -144,10 +187,10 @@ offset_right = 0.303955
 offset_bottom = -0.727997
 script = ExtResource("1_4j12x")
 
-[node name="Control" type="Control" parent="."]
+[node name="Task" type="Control" parent="."]
 layout_mode = 2
 
-[node name="DueDate" type="Label" parent="Control"]
+[node name="DueDate" type="Label" parent="Task"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -162,31 +205,207 @@ theme_override_fonts/font = ExtResource("3_if1ix")
 theme_override_font_sizes/font_size = 25
 text = "Due: X/X/X X:XX"
 
-[node name="Label2" parent="Control" instance=ExtResource("6_lm5ye")]
-layout_mode = 0
+[node name="Label2" parent="Task" instance=ExtResource("6_lm5ye")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 143.0
 offset_top = 17.0
-offset_right = 312.0
-offset_bottom = 56.0
+offset_right = -838.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_k6uwd")
 theme_override_font_sizes/font_size = 30
 
-[node name="Color" type="AnimatedSprite2D" parent="Control"]
+[node name="Color" type="AnimatedSprite2D" parent="Task"]
 position = Vector2(70.35, 67.775)
 scale = Vector2(0.85, 0.85)
 sprite_frames = SubResource("SpriteFrames_4exy7")
 animation = &"5"
 
-[node name="Icon2" type="AnimatedSprite2D" parent="Control"]
+[node name="Icon2" type="AnimatedSprite2D" parent="Task"]
 position = Vector2(70.35, 67.775)
 scale = Vector2(0.85, 0.85)
 sprite_frames = SubResource("SpriteFrames_fjl8d")
 animation = &"3"
 
-[node name="Done" type="Button" parent="Control"]
-layout_mode = 0
+[node name="Edit" type="Button" parent="Task"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.992
+anchor_bottom = 0.889
+offset_left = 1089.0
+offset_top = 7.0
+offset_right = 0.199951
+offset_bottom = -61.9042
+icon = ExtResource("6_s1m85")
+expand_icon = true
+
+[node name="Done" type="Button" parent="Task"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 1089.0
 offset_top = 77.0
-offset_right = 1141.0
-offset_bottom = 129.0
+offset_right = -9.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
 icon = ExtResource("9_521aq")
+
+[node name="Edit" type="Control" parent="."]
+visible = false
+layout_mode = 2
+script = ExtResource("10_xomk8")
+
+[node name="TextureRect" type="TextureRect" parent="Edit"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 1134.0
+offset_bottom = 120.0
+texture = ExtResource("11_ov53m")
+
+[node name="Name" type="LineEdit" parent="Edit/TextureRect"]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 17.0
+offset_right = 251.0
+offset_bottom = 48.0
+
+[node name="OptionButton" type="OptionButton" parent="Edit/TextureRect"]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 61.0
+offset_right = 125.0
+offset_bottom = 81.0
+theme_override_icons/arrow = SubResource("ViewportTexture_xnwfl")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0dtx0")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_b30na")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_lv5rc")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_dhfp3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ykmmi")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_k1vbp")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_0ain2")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_4ste0")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_67clp")
+expand_icon = true
+script = ExtResource("12_ag8yc")
+
+[node name="CheckButton" type="CheckButton" parent="Edit/TextureRect"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 95.0
+offset_bottom = 93.0
+theme_override_icons/checked = SubResource("ImageTexture_co5n2")
+theme_override_icons/checked_disabled = SubResource("ImageTexture_f2myc")
+theme_override_icons/unchecked = SubResource("ImageTexture_gv4l6")
+theme_override_icons/unchecked_disabled = SubResource("ImageTexture_s0ufl")
+theme_override_icons/checked_mirrored = SubResource("ImageTexture_erbmt")
+theme_override_icons/checked_disabled_mirrored = SubResource("ImageTexture_weild")
+theme_override_icons/unchecked_mirrored = SubResource("ImageTexture_y4rsr")
+theme_override_icons/unchecked_disabled_mirrored = SubResource("ImageTexture_oar8h")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("12_wp2mv")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Edit/TextureRect/CheckButton"]
+visible = false
+layout_mode = 0
+offset_left = 73.0
+offset_top = -42.0
+offset_right = 148.0
+offset_bottom = 175.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Edit/TextureRect/CheckButton/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" parent="Edit/TextureRect/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("13_ikjly")]
+custom_minimum_size = Vector2(71, 71)
+layout_mode = 2
+icon = ExtResource("6_s1m85")
+script = ExtResource("14_y5tdr")
+iconID = 1
+
+[node name="Button2" parent="Edit/TextureRect/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("13_ikjly")]
+custom_minimum_size = Vector2(71, 71)
+layout_mode = 2
+icon = ExtResource("7_2840w")
+script = ExtResource("14_y5tdr")
+iconID = 2
+
+[node name="Button3" parent="Edit/TextureRect/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("13_ikjly")]
+custom_minimum_size = Vector2(71, 71)
+layout_mode = 2
+icon = ExtResource("8_c0s4s")
+script = ExtResource("14_y5tdr")
+iconID = 3
+
+[node name="Button4" parent="Edit/TextureRect/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("13_ikjly")]
+custom_minimum_size = Vector2(71, 71)
+layout_mode = 2
+script = ExtResource("14_y5tdr")
+iconID = 4
+
+[node name="Button5" parent="Edit/TextureRect/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("13_ikjly")]
+custom_minimum_size = Vector2(71, 71)
+layout_mode = 2
+script = ExtResource("14_y5tdr")
+iconID = 5
+
+[node name="Button6" parent="Edit/TextureRect/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("13_ikjly")]
+custom_minimum_size = Vector2(71, 71)
+layout_mode = 2
+script = ExtResource("14_y5tdr")
+iconID = 6
+
+[node name="Button7" parent="Edit/TextureRect/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("13_ikjly")]
+custom_minimum_size = Vector2(71, 71)
+layout_mode = 2
+script = ExtResource("14_y5tdr")
+iconID = 7
+
+[node name="Button8" parent="Edit/TextureRect/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("13_ikjly")]
+custom_minimum_size = Vector2(71, 71)
+layout_mode = 2
+script = ExtResource("14_y5tdr")
+iconID = 8
+
+[node name="Button9" parent="Edit/TextureRect/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("13_ikjly")]
+custom_minimum_size = Vector2(71, 71)
+layout_mode = 2
+script = ExtResource("14_y5tdr")
+iconID = 9
+
+[node name="Button10" parent="Edit/TextureRect/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("13_ikjly")]
+custom_minimum_size = Vector2(71, 71)
+layout_mode = 2
+script = ExtResource("14_y5tdr")
+iconID = 10
+
+[node name="Close" type="Button" parent="Edit/TextureRect"]
+layout_mode = 0
+offset_left = 1079.0
+offset_top = 6.0
+offset_right = 1111.0
+offset_bottom = 38.0
+icon = ExtResource("12_g8ogr")
+expand_icon = true
+
+[node name="Color" type="AnimatedSprite2D" parent="Edit/TextureRect"]
+position = Vector2(52, 51)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_4exy7")
+animation = &"0"
+
+[node name="Icon2" type="AnimatedSprite2D" parent="Edit/TextureRect"]
+position = Vector2(52, 51)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_fjl8d")
+animation = &"1"
