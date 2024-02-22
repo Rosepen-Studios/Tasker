@@ -1,9 +1,11 @@
+res://Scenes/newtask.tscn
 res://Scenes/timetest.tscn
 res://Scenes/taskexaple.tscn
 res://Scenes/donetask.tscn
 res://Scenes/MainUI.tscn
-res://Scenes/newtask.tscn
 res://test.tscn
-res://Scripts/ColorSel.gd
-res://Scenes/selectcolor.gd
-res://Scenes/Edit.gd
+res://Scenes/Delete.gd
+res://Scripts/taskexaple.gd
+res://Scripts/GlobalVarHolder.gd
+res://Scripts/Save.gd
+res://Scripts/newtask.gd

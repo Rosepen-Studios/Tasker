@@ -1,21 +1,22 @@
-[gd_scene load_steps=47 format=3 uid="uid://cgd42neh4wjwe"]
+[gd_scene load_steps=45 format=3 uid="uid://cgd42neh4wjwe"]
 
 [ext_resource type="Script" path="res://Scripts/taskexaple.gd" id="1_4j12x"]
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="2_k6uwd"]
 [ext_resource type="FontFile" uid="uid://paosd82f7mrr" path="res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF" id="3_if1ix"]
 [ext_resource type="Texture2D" uid="uid://08257hvgyv6g" path="res://Images/Icons/Colors.png" id="5_h38on"]
+[ext_resource type="Texture2D" uid="uid://ds7xav3jqlb1n" path="res://Images/Icons/SF/icons8-pen-100.png" id="6_dv6dm"]
 [ext_resource type="PackedScene" uid="uid://crwtrotm873y8" path="res://test.tscn" id="6_lm5ye"]
-[ext_resource type="Texture2D" uid="uid://cy3voqledf1u6" path="res://Images/Icons/Pencil.png" id="6_s1m85"]
-[ext_resource type="Texture2D" uid="uid://b3civ2ikkeoad" path="res://Images/Icons/Notebook.png" id="7_2840w"]
-[ext_resource type="Texture2D" uid="uid://i2g40jkx5ftx" path="res://Images/Icons/Face.png" id="8_c0s4s"]
-[ext_resource type="Texture2D" uid="uid://bp07e7bd4u4fy" path="res://Images/Icons/Done.png" id="9_521aq"]
+[ext_resource type="Texture2D" uid="uid://ba5a0cguuhh4m" path="res://Images/Icons/SF/icons8-note-100.png" id="7_umakl"]
+[ext_resource type="Texture2D" uid="uid://btnl02lb7hlyw" path="res://Images/Icons/SF/icons8-happy-100.png" id="8_s28sd"]
+[ext_resource type="Texture2D" uid="uid://bt8qpxl1it5nb" path="res://Images/Icons/SF/icons8-ok-100.png" id="9_ow7sh"]
 [ext_resource type="Script" path="res://Scenes/Edit.gd" id="10_xomk8"]
 [ext_resource type="Texture2D" uid="uid://cyjonlatvvhiy" path="res://Images/Icons/edit2.png" id="11_ov53m"]
 [ext_resource type="Script" path="res://Scenes/selectcolor.gd" id="12_ag8yc"]
-[ext_resource type="Texture2D" uid="uid://b8ih0mk1tgqio" path="res://Images/Icons/X.png" id="12_g8ogr"]
 [ext_resource type="Script" path="res://Scripts/iconsel.gd" id="12_wp2mv"]
 [ext_resource type="PackedScene" uid="uid://cbl7vtr42hpxv" path="res://Scenes/icon.tscn" id="13_ikjly"]
 [ext_resource type="Script" path="res://Scenes/iconselect.gd" id="14_y5tdr"]
+[ext_resource type="Texture2D" uid="uid://casmykrvthm23" path="res://Images/Icons/SF/icons8-close-48.png" id="19_bgqwg"]
+[ext_resource type="Texture2D" uid="uid://nxielcemxo5t" path="res://Images/Icons/SF/icons8-trash-48.png" id="20_3u657"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0drtt"]
 atlas = ExtResource("5_h38on")
@@ -104,23 +105,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cxod3"]
-atlas = ExtResource("6_s1m85")
-region = Rect2(0, 0, 149, 149)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_082to"]
-atlas = ExtResource("7_2840w")
-region = Rect2(0, 0, 97, 122)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3pckx"]
-atlas = ExtResource("8_c0s4s")
-region = Rect2(0, 0, 119, 119)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_fjl8d"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cxod3")
+"texture": ExtResource("6_dv6dm")
 }],
 "loop": true,
 "name": &"1",
@@ -128,7 +117,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_082to")
+"texture": ExtResource("7_umakl")
 }],
 "loop": true,
 "name": &"2",
@@ -136,7 +125,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3pckx")
+"texture": ExtResource("8_s28sd")
 }],
 "loop": true,
 "name": &"3",
@@ -229,7 +218,7 @@ animation = &"5"
 position = Vector2(70.35, 67.775)
 scale = Vector2(0.85, 0.85)
 sprite_frames = SubResource("SpriteFrames_fjl8d")
-animation = &"3"
+animation = &"1"
 
 [node name="Edit" type="Button" parent="Task"]
 layout_mode = 1
@@ -240,7 +229,7 @@ offset_left = 1089.0
 offset_top = 7.0
 offset_right = 0.199951
 offset_bottom = -61.9042
-icon = ExtResource("6_s1m85")
+icon = ExtResource("6_dv6dm")
 expand_icon = true
 
 [node name="Done" type="Button" parent="Task"]
@@ -254,7 +243,15 @@ offset_right = -9.0
 offset_bottom = -7.0
 grow_horizontal = 2
 grow_vertical = 2
-icon = ExtResource("9_521aq")
+icon = ExtResource("9_ow7sh")
+expand_icon = true
+
+[node name="Label" type="Label" parent="Task"]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 57.0
+offset_right = 485.0
+offset_bottom = 80.0
 
 [node name="Edit" type="Control" parent="."]
 visible = false
@@ -329,21 +326,21 @@ size_flags_vertical = 3
 [node name="Button" parent="Edit/TextureRect/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("13_ikjly")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
-icon = ExtResource("6_s1m85")
+icon = ExtResource("6_dv6dm")
 script = ExtResource("14_y5tdr")
 iconID = 1
 
 [node name="Button2" parent="Edit/TextureRect/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("13_ikjly")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
-icon = ExtResource("7_2840w")
+icon = ExtResource("7_umakl")
 script = ExtResource("14_y5tdr")
 iconID = 2
 
 [node name="Button3" parent="Edit/TextureRect/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("13_ikjly")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
-icon = ExtResource("8_c0s4s")
+icon = ExtResource("8_s28sd")
 script = ExtResource("14_y5tdr")
 iconID = 3
 
@@ -395,7 +392,7 @@ offset_left = 1079.0
 offset_top = 6.0
 offset_right = 1111.0
 offset_bottom = 38.0
-icon = ExtResource("12_g8ogr")
+icon = ExtResource("19_bgqwg")
 expand_icon = true
 
 [node name="Color" type="AnimatedSprite2D" parent="Edit/TextureRect"]
@@ -409,3 +406,12 @@ position = Vector2(52, 51)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_fjl8d")
 animation = &"1"
+
+[node name="Delete" type="Button" parent="Edit/TextureRect"]
+layout_mode = 0
+offset_left = 1079.0
+offset_top = 62.0
+offset_right = 1111.0
+offset_bottom = 94.0
+icon = ExtResource("20_3u657")
+expand_icon = true

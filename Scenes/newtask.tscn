@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://tolk5l6mauok"]
+[gd_scene load_steps=44 format=3 uid="uid://tolk5l6mauok"]
 
 [ext_resource type="Script" path="res://Scripts/newtask.gd" id="1_8tmui"]
 [ext_resource type="Texture2D" uid="uid://cgct7f34y5ry7" path="res://Images/Spline Untitled.png" id="1_fxnjx"]
@@ -10,10 +10,10 @@
 [ext_resource type="Script" path="res://Scripts/iconsel.gd" id="7_jc8wo"]
 [ext_resource type="Texture2D" uid="uid://08257hvgyv6g" path="res://Images/Icons/Colors.png" id="8_imxt3"]
 [ext_resource type="PackedScene" uid="uid://cbl7vtr42hpxv" path="res://Scenes/icon.tscn" id="8_j210g"]
-[ext_resource type="Texture2D" uid="uid://cy3voqledf1u6" path="res://Images/Icons/Pencil.png" id="9_2sjn7"]
 [ext_resource type="Script" path="res://Scripts/Color.gd" id="9_h88we"]
-[ext_resource type="Texture2D" uid="uid://b3civ2ikkeoad" path="res://Images/Icons/Notebook.png" id="10_qouod"]
-[ext_resource type="Texture2D" uid="uid://i2g40jkx5ftx" path="res://Images/Icons/Face.png" id="11_ua7uo"]
+[ext_resource type="Texture2D" uid="uid://ds7xav3jqlb1n" path="res://Images/Icons/SF/icons8-pen-100.png" id="10_nnxxc"]
+[ext_resource type="Texture2D" uid="uid://ba5a0cguuhh4m" path="res://Images/Icons/SF/icons8-note-100.png" id="11_qf0oa"]
+[ext_resource type="Texture2D" uid="uid://btnl02lb7hlyw" path="res://Images/Icons/SF/icons8-happy-100.png" id="12_jbt7t"]
 [ext_resource type="Script" path="res://Scripts/iconrender.gd" id="13_cftli"]
 [ext_resource type="Script" path="res://Scripts/ColorSel.gd" id="16_24yj5"]
 
@@ -104,23 +104,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cxod3"]
-atlas = ExtResource("9_2sjn7")
-region = Rect2(0, 0, 149, 149)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_082to"]
-atlas = ExtResource("10_qouod")
-region = Rect2(0, 0, 97, 122)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3pckx"]
-atlas = ExtResource("11_ua7uo")
-region = Rect2(0, 0, 119, 119)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_32t0i"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cxod3")
+"texture": ExtResource("10_nnxxc")
 }],
 "loop": true,
 "name": &"1",
@@ -128,7 +116,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_082to")
+"texture": ExtResource("11_qf0oa")
 }],
 "loop": true,
 "name": &"2",
@@ -136,7 +124,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3pckx")
+"texture": ExtResource("12_jbt7t")
 }],
 "loop": true,
 "name": &"3",
@@ -299,7 +287,7 @@ script = ExtResource("9_h88we")
 position = Vector2(104, 17)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_32t0i")
-animation = &"3"
+animation = &"1"
 script = ExtResource("13_cftli")
 
 [node name="CheckButton" type="CheckButton" parent="BG/Icon"]
@@ -336,19 +324,19 @@ size_flags_vertical = 3
 [node name="Button" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
-icon = ExtResource("9_2sjn7")
+icon = ExtResource("10_nnxxc")
 iconID = 1
 
 [node name="Button2" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
-icon = ExtResource("10_qouod")
+icon = ExtResource("11_qf0oa")
 iconID = 2
 
 [node name="Button3" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
-icon = ExtResource("11_ua7uo")
+icon = ExtResource("12_jbt7t")
 iconID = 3
 
 [node name="Button4" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]

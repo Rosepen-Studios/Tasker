@@ -1,13 +1,13 @@
-[gd_scene load_steps=21 format=3 uid="uid://b0vb52fub3v2g"]
+[gd_scene load_steps=18 format=3 uid="uid://b0vb52fub3v2g"]
 
 [ext_resource type="Script" path="res://Scripts/donetask.gd" id="1_do110"]
 [ext_resource type="FontFile" uid="uid://paosd82f7mrr" path="res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF" id="2_16kio"]
 [ext_resource type="PackedScene" uid="uid://crwtrotm873y8" path="res://test.tscn" id="3_arnkv"]
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="4_8o8w0"]
 [ext_resource type="Texture2D" uid="uid://08257hvgyv6g" path="res://Images/Icons/Colors.png" id="5_mn4ou"]
-[ext_resource type="Texture2D" uid="uid://cy3voqledf1u6" path="res://Images/Icons/Pencil.png" id="6_1ai84"]
-[ext_resource type="Texture2D" uid="uid://b3civ2ikkeoad" path="res://Images/Icons/Notebook.png" id="7_brdvj"]
-[ext_resource type="Texture2D" uid="uid://i2g40jkx5ftx" path="res://Images/Icons/Face.png" id="8_75bu0"]
+[ext_resource type="Texture2D" uid="uid://ds7xav3jqlb1n" path="res://Images/Icons/SF/icons8-pen-100.png" id="6_kcwly"]
+[ext_resource type="Texture2D" uid="uid://ba5a0cguuhh4m" path="res://Images/Icons/SF/icons8-note-100.png" id="7_nv3tv"]
+[ext_resource type="Texture2D" uid="uid://btnl02lb7hlyw" path="res://Images/Icons/SF/icons8-happy-100.png" id="8_4ylth"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0drtt"]
 atlas = ExtResource("5_mn4ou")
@@ -96,23 +96,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cxod3"]
-atlas = ExtResource("6_1ai84")
-region = Rect2(0, 0, 149, 149)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_082to"]
-atlas = ExtResource("7_brdvj")
-region = Rect2(0, 0, 97, 122)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3pckx"]
-atlas = ExtResource("8_75bu0")
-region = Rect2(0, 0, 119, 119)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_54jfp"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cxod3")
+"texture": ExtResource("6_kcwly")
 }],
 "loop": true,
 "name": &"1",
@@ -120,7 +108,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_082to")
+"texture": ExtResource("7_nv3tv")
 }],
 "loop": true,
 "name": &"2",
@@ -128,7 +116,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3pckx")
+"texture": ExtResource("8_4ylth")
 }],
 "loop": true,
 "name": &"3",
@@ -186,4 +174,4 @@ animation = &"5"
 position = Vector2(70.35, 67.775)
 scale = Vector2(0.85, 0.85)
 sprite_frames = SubResource("SpriteFrames_54jfp")
-animation = &"3"
+animation = &"1"
