@@ -1,0 +1,153 @@
+[gd_scene load_steps=17 format=3 uid="uid://dkcpjcaqk7sno"]
+
+[ext_resource type="Script" path="res://Scripts/donetask.gd" id="1_vg6yd"]
+[ext_resource type="PackedScene" uid="uid://crwtrotm873y8" path="res://test.tscn" id="3_n2vk7"]
+[ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="4_isqow"]
+[ext_resource type="Texture2D" uid="uid://08257hvgyv6g" path="res://Images/Icons/Colors.png" id="5_yijek"]
+[ext_resource type="Texture2D" uid="uid://ds7xav3jqlb1n" path="res://Images/Icons/SF/icons8-pen-100.png" id="6_e3utg"]
+[ext_resource type="Texture2D" uid="uid://ba5a0cguuhh4m" path="res://Images/Icons/SF/icons8-note-100.png" id="7_tdony"]
+[ext_resource type="Texture2D" uid="uid://btnl02lb7hlyw" path="res://Images/Icons/SF/icons8-happy-100.png" id="8_2rpv3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0drtt"]
+atlas = ExtResource("5_yijek")
+region = Rect2(142, 0, 65, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agrja"]
+atlas = ExtResource("5_yijek")
+region = Rect2(0, 0, 142, 142)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfjs2"]
+atlas = ExtResource("5_yijek")
+region = Rect2(207, 0, 142, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr0rs"]
+atlas = ExtResource("5_yijek")
+region = Rect2(414, 0, 142, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ek64e"]
+atlas = ExtResource("5_yijek")
+region = Rect2(621, 0, 142, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g56dy"]
+atlas = ExtResource("5_yijek")
+region = Rect2(828, 0, 142, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5i6tg"]
+atlas = ExtResource("5_yijek")
+region = Rect2(1035, 0, 142, 143)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mdbh0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0drtt")
+}],
+"loop": true,
+"name": &"-1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agrja")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfjs2")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nr0rs")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ek64e")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g56dy")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5i6tg")
+}],
+"loop": true,
+"name": &"5",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a3eqn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_e3utg")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_tdony")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_2rpv3")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}]
+
+[node name="PanelContainer" type="PanelContainer"]
+offset_right = 1149.0
+offset_bottom = 135.0
+script = ExtResource("1_vg6yd")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+
+[node name="Label2" parent="Control" instance=ExtResource("3_n2vk7")]
+custom_minimum_size = Vector2(-30.06, 47.08)
+layout_mode = 0
+offset_left = 143.0
+offset_top = 17.0
+offset_right = 281.0
+offset_bottom = 64.08
+theme_override_fonts/font = ExtResource("4_isqow")
+theme_override_font_sizes/font_size = 30
+
+[node name="Color" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(70.35, 67.775)
+scale = Vector2(0.85, 0.85)
+sprite_frames = SubResource("SpriteFrames_mdbh0")
+animation = &"5"
+
+[node name="Icon2" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(70.35, 67.775)
+scale = Vector2(0.85, 0.85)
+sprite_frames = SubResource("SpriteFrames_a3eqn")
+animation = &"1"

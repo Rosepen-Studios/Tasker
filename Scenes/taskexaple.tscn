@@ -1,8 +1,7 @@
-[gd_scene load_steps=45 format=3 uid="uid://cgd42neh4wjwe"]
+[gd_scene load_steps=44 format=3 uid="uid://cgd42neh4wjwe"]
 
 [ext_resource type="Script" path="res://Scripts/taskexaple.gd" id="1_4j12x"]
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="2_k6uwd"]
-[ext_resource type="FontFile" uid="uid://paosd82f7mrr" path="res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF" id="3_if1ix"]
 [ext_resource type="Texture2D" uid="uid://08257hvgyv6g" path="res://Images/Icons/Colors.png" id="5_h38on"]
 [ext_resource type="Texture2D" uid="uid://ds7xav3jqlb1n" path="res://Images/Icons/SF/icons8-pen-100.png" id="6_dv6dm"]
 [ext_resource type="PackedScene" uid="uid://crwtrotm873y8" path="res://test.tscn" id="6_lm5ye"]
@@ -179,21 +178,6 @@ script = ExtResource("1_4j12x")
 [node name="Task" type="Control" parent="."]
 layout_mode = 2
 
-[node name="DueDate" type="Label" parent="Task"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 138.0
-offset_top = 94.0
-offset_right = -712.0
-offset_bottom = -2.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_if1ix")
-theme_override_font_sizes/font_size = 25
-text = "Due: X/X/X X:XX"
-
 [node name="Label2" parent="Task" instance=ExtResource("6_lm5ye")]
 layout_mode = 1
 anchors_preset = 15
@@ -245,13 +229,6 @@ grow_horizontal = 2
 grow_vertical = 2
 icon = ExtResource("9_ow7sh")
 expand_icon = true
-
-[node name="Label" type="Label" parent="Task"]
-layout_mode = 0
-offset_left = 445.0
-offset_top = 57.0
-offset_right = 485.0
-offset_bottom = 80.0
 
 [node name="Edit" type="Control" parent="."]
 visible = false
@@ -415,3 +392,6 @@ offset_right = 1111.0
 offset_bottom = 94.0
 icon = ExtResource("20_3u657")
 expand_icon = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1

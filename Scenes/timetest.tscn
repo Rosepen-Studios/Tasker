@@ -1,14 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://obe4hiqd0tpd"]
+[gd_scene load_steps=8 format=3 uid="uid://dc8g3nnk5mu5g"]
 
 [ext_resource type="Script" path="res://Scripts/timetest.gd" id="1_v8tvi"]
 [ext_resource type="Script" path="res://Scripts/GlobalVarHolder.gd" id="1_yrdix"]
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="2_8u0j8"]
 [ext_resource type="PackedScene" uid="uid://c0m23xtdkrvme" path="res://Scenes/MainUI.tscn" id="2_cj2ok"]
+[ext_resource type="Script" path="res://Scenes/Timer.gd" id="2_p23ri"]
 [ext_resource type="PackedScene" uid="uid://tolk5l6mauok" path="res://Scenes/newtask.tscn" id="6_oa1j6"]
 [ext_resource type="Texture2D" uid="uid://tx6xbxxynm4f" path="res://Images/Coolors Gradient.png" id="7_ldtgt"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_yrdix")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1000.0
+autostart = true
+script = ExtResource("2_p23ri")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 9
@@ -32,6 +38,9 @@ theme_override_font_sizes/font_size = 42
 text = "20:57:69"
 script = ExtResource("1_v8tvi")
 
+[node name="TimeControl" type="Node2D" parent="Time"]
+position = Vector2(-971, -2)
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -48,7 +57,6 @@ anchor_bottom = 0.995
 offset_top = 172.0
 offset_right = 0.552979
 offset_bottom = -0.113098
-script = null
 
 [node name="Newtask" parent="Control" instance=ExtResource("6_oa1j6")]
 z_index = 2
