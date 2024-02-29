@@ -12,15 +12,20 @@ var locname
 var locicon
 var loccolor 
 func _ready():
-	$Timer.start()
-	await $Timer.timeout
-	_load()
-	$Task/Label2.text = locname
-	$Task/Color.play(str(loccolor))
-	$Task/Icon2.play(str(locicon))
 	if gvh.taskDB[str(ID)] == 1:
-		visible = true
+		print("load")
+		_load()
+		$Task/Label2.text = locname
+		$Task/Color.play(str(loccolor))
+		$Task/Icon2.play(str(locicon))
+		$Task/Timer.start()
+		if gvh.taskDB[str(ID)] == 1:
+			visible = true
+			if done == true:
+				visible =false
+		await $Task/Timer.timeout
 	doneloading = true
+	_saveloop()
 func _process(delta):
 	
 	if gvh.targettask == ID and doneloading == true: #Creates the task
@@ -37,7 +42,7 @@ func _process(delta):
 			$Task/Color.play(str(gvh.saveiconcolor))
 			$Task/Icon2.play(str(gvh.saveicon))
 			gvh.saving = false
-			_save()
+		_save()
 	if done == true:
 		gvh.tskscomp += 1
 		gvh.comptask = true
@@ -50,10 +55,15 @@ func _process(delta):
 		print("delete")
 		savename = gvh.savename
 		localgvhchange = false
-		gvh.taskDB[ID] = 0
+		gvh.tsknum -= 1
+		gvh.tskscomp -= 1
 		on = false
 		done = false
 		visible = false
+		$Task/Label2.text = ""
+		$Task/Color.play("0")
+		$Task/Icon2.play("1")
+		gvh.taskDB[str(ID)] = 0
 		_save()
 
 	if $Task/Done.button_pressed == true and doneloading == true:   #Completes Task
@@ -62,6 +72,7 @@ func _process(delta):
 			done = true
 			localgvhchange = true
 			_save()
+			gvh.tskscomp +=1 
 	if doneloading == true:
 		locname = $Task/Label2.get_text()
 		locicon = $Task/Icon2.animation
@@ -87,5 +98,13 @@ func _load(): #Loads Last Login Data
 	locname = save["locname"]
 	locicon = save["locicon"]
 	loccolor = save["loccolor"]
-	
+	done = save["done"]
 	file.close()
+	if gvh.newday == true:
+		done = false
+
+func _saveloop():
+	$Task/Timer.start()
+	await $Task/Timer.timeout
+	_save()
+	_saveloop()

@@ -12,7 +12,7 @@ func _ready():
 	lastlogd = proccess[2]
 	print(lastlogt)
 	lastlogt = Time.get_time_string_from_system()
-	
+
 	
 
 func _save(): # Saves Last Login Data

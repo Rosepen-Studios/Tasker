@@ -1,11 +1,12 @@
+Sprite2D
+TextureRect
+Control
 Timer
+Label
 Node2D
 PanelContainer
-Control
-Label
 Button
 LineEdit
-TextureRect
 VBoxContainer
 TextEdit
 OptionButton

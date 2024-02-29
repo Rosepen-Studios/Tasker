@@ -1,7 +1,7 @@
-[gd_scene load_steps=44 format=3 uid="uid://tolk5l6mauok"]
+[gd_scene load_steps=59 format=3 uid="uid://tolk5l6mauok"]
 
 [ext_resource type="Script" path="res://Scripts/newtask.gd" id="1_8tmui"]
-[ext_resource type="Texture2D" uid="uid://cgct7f34y5ry7" path="res://Images/Spline Untitled.png" id="1_fxnjx"]
+[ext_resource type="Texture2D" uid="uid://bm2rh3fqmtnda" path="res://Images/Alert.png" id="2_3y252"]
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="2_4le61"]
 [ext_resource type="FontFile" uid="uid://paosd82f7mrr" path="res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF" id="3_xyxbc"]
 [ext_resource type="Script" path="res://Scripts/Cancel.gd" id="4_rd550"]
@@ -15,7 +15,33 @@
 [ext_resource type="Texture2D" uid="uid://ba5a0cguuhh4m" path="res://Images/Icons/SF/icons8-note-100.png" id="11_qf0oa"]
 [ext_resource type="Texture2D" uid="uid://btnl02lb7hlyw" path="res://Images/Icons/SF/icons8-happy-100.png" id="12_jbt7t"]
 [ext_resource type="Script" path="res://Scripts/iconrender.gd" id="13_cftli"]
+[ext_resource type="Texture2D" uid="uid://visw7kjbsxoc" path="res://Images/Icons/SF/icons8-home-100.png" id="16_0gfj5"]
 [ext_resource type="Script" path="res://Scripts/ColorSel.gd" id="16_24yj5"]
+[ext_resource type="Texture2D" uid="uid://dscyimp2xpwh1" path="res://Images/Icons/SF/icons8-presentation-100.png" id="17_2twhi"]
+[ext_resource type="Texture2D" uid="uid://cnf2cwikhw421" path="res://Images/Icons/SF/icons8-vegetarian-food-100.png" id="18_bk5en"]
+[ext_resource type="Texture2D" uid="uid://p2d4mof4f6fb" path="res://Images/Icons/SF/icons8-dumbbell-100.png" id="19_483s8"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_6ps0j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hw3xk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kagiw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6u7nu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c0sw1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l5ay2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_24cff"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3r5wq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ico0p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0wohj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nvu8n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0drtt"]
 atlas = ExtResource("8_imxt3")
@@ -129,6 +155,38 @@ animations = [{
 "loop": true,
 "name": &"3",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_0gfj5")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_2twhi")
+}],
+"loop": true,
+"name": &"5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_bk5en")
+}],
+"loop": true,
+"name": &"6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_483s8")
+}],
+"loop": true,
+"name": &"7",
+"speed": 5.0
 }]
 
 [sub_resource type="ImageTexture" id="ImageTexture_p2x8l"]
@@ -183,17 +241,37 @@ custom_minimum_size = Vector2(-0.377, 0)
 layout_mode = 0
 offset_left = -1226.0
 offset_top = -269.0
-offset_right = 2287.0
-offset_bottom = 809.0
-texture = ExtResource("1_fxnjx")
+offset_right = 214.0
+offset_bottom = 631.0
 expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="BG"]
+modulate = Color(1, 1, 1, 0.823529)
+layout_mode = 0
+offset_left = 1650.0
+offset_top = 365.0
+offset_right = 1974.0
+offset_bottom = 805.0
+texture = ExtResource("2_3y252")
+stretch_mode = 2
+
+[node name="Control" type="Control" parent="BG/TextureRect"]
+layout_mode = 1
+anchor_left = 0.002
+anchor_top = 0.044
+anchor_right = 0.002
+anchor_bottom = 0.044
+offset_left = 569.12
+offset_top = 222.4
+offset_right = 893.12
+offset_bottom = 662.4
 
 [node name="newtask" type="Label" parent="BG"]
 layout_mode = 2
-offset_left = 1424.0
-offset_top = 351.0
-offset_right = 1797.0
-offset_bottom = 397.0
+offset_left = 1740.0
+offset_top = 367.0
+offset_right = 1892.0
+offset_bottom = 413.0
 theme_override_fonts/font = ExtResource("2_4le61")
 theme_override_font_sizes/font_size = 35
 text = "New Task"
@@ -201,70 +279,68 @@ horizontal_alignment = 1
 
 [node name="name" type="Label" parent="BG"]
 layout_mode = 2
-offset_left = 1576.0
-offset_top = 392.0
-offset_right = 1949.0
-offset_bottom = 426.0
+offset_left = 1775.0
+offset_top = 402.0
+offset_right = 2148.0
+offset_bottom = 436.0
 theme_override_fonts/font = ExtResource("3_xyxbc")
 theme_override_font_sizes/font_size = 25
 text = "Name:"
 
 [node name="LineEdit" type="LineEdit" parent="BG/name"]
 layout_mode = 0
-offset_left = -108.0
-offset_top = 62.0
-offset_right = 157.0
-offset_bottom = 93.0
+offset_left = -102.0
+offset_top = 34.0
+offset_right = 176.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("2_4le61")
+theme_override_icons/clear = SubResource("ImageTexture_6ps0j")
+flat = true
 script = ExtResource("5_2r3ns")
-
-[node name="duedate" type="Label" parent="BG"]
-custom_minimum_size = Vector2(119.519, 29.502)
-layout_mode = 2
-offset_left = 1897.0
-offset_top = 346.0
-offset_right = 2016.52
-offset_bottom = 380.0
-size_flags_horizontal = 4
-size_flags_vertical = 1
-size_flags_stretch_ratio = 5.09
-theme_override_fonts/font = ExtResource("3_xyxbc")
-theme_override_font_sizes/font_size = 25
-text = "Due Date:"
-horizontal_alignment = 1
 
 [node name="Save" type="Button" parent="BG"]
 custom_minimum_size = Vector2(0, 0.717)
 layout_direction = 2
 layout_mode = 2
-offset_left = 1991.0
-offset_top = 759.0
-offset_right = 2144.0
-offset_bottom = 797.0
+offset_left = 1835.0
+offset_top = 744.0
+offset_right = 1964.0
+offset_bottom = 783.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
 auto_translate = false
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hw3xk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kagiw")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6u7nu")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_c0sw1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l5ay2")
 text = "Save"
 script = ExtResource("5_8b7vo")
 
 [node name="Cancel" type="Button" parent="BG"]
 custom_minimum_size = Vector2(-44.548, 1.359)
 layout_mode = 2
-offset_left = 1434.0
-offset_top = 759.0
-offset_right = 1614.0
-offset_bottom = 798.0
+offset_left = 1665.0
+offset_top = 745.0
+offset_right = 1794.0
+offset_bottom = 784.0
 size_flags_horizontal = 0
 size_flags_vertical = 8
+theme_override_styles/normal = SubResource("StyleBoxEmpty_24cff")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3r5wq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ico0p")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0wohj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nvu8n")
 action_mode = 0
 text = "Cancel"
 script = ExtResource("4_rd550")
 
 [node name="Icon" type="Label" parent="BG"]
 layout_mode = 0
-offset_left = 1447.0
-offset_top = 532.0
-offset_right = 1503.0
-offset_bottom = 569.0
+offset_left = 1741.0
+offset_top = 531.0
+offset_right = 1797.0
+offset_bottom = 568.0
 theme_override_fonts/font = ExtResource("2_4le61")
 theme_override_font_sizes/font_size = 25
 text = "Icon:"
@@ -287,7 +363,7 @@ script = ExtResource("9_h88we")
 position = Vector2(104, 17)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_32t0i")
-animation = &"1"
+animation = &"7"
 script = ExtResource("13_cftli")
 
 [node name="CheckButton" type="CheckButton" parent="BG/Icon"]
@@ -342,21 +418,25 @@ iconID = 3
 [node name="Button4" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+icon = ExtResource("16_0gfj5")
 iconID = 4
 
 [node name="Button5" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+icon = ExtResource("17_2twhi")
 iconID = 5
 
 [node name="Button6" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+icon = ExtResource("18_bk5en")
 iconID = 5
 
 [node name="Button7" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+icon = ExtResource("19_483s8")
 iconID = 7
 
 [node name="Button8" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]

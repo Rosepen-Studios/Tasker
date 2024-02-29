@@ -5,8 +5,8 @@
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="2_8u0j8"]
 [ext_resource type="PackedScene" uid="uid://c0m23xtdkrvme" path="res://Scenes/MainUI.tscn" id="2_cj2ok"]
 [ext_resource type="Script" path="res://Scenes/Timer.gd" id="2_p23ri"]
+[ext_resource type="Texture2D" uid="uid://dkebocom3ixe8" path="res://Images/Icons/apple-background-osx-wallpaper-preview(2).jpg" id="3_kxfmt"]
 [ext_resource type="PackedScene" uid="uid://tolk5l6mauok" path="res://Scenes/newtask.tscn" id="6_oa1j6"]
-[ext_resource type="Texture2D" uid="uid://tx6xbxxynm4f" path="res://Images/Coolors Gradient.png" id="7_ldtgt"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_yrdix")
@@ -19,12 +19,13 @@ script = ExtResource("2_p23ri")
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = -193.0
-offset_top = -233.0
-offset_right = 1407.0
-offset_bottom = 967.0
+offset_left = -0.87
+offset_top = -8.355
+offset_right = 2911.13
+offset_bottom = 1631.65
 grow_vertical = 2
-texture = ExtResource("7_ldtgt")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_kxfmt")
 metadata/_edit_use_anchors_ = true
 
 [node name="Time" type="Label" parent="."]
@@ -61,7 +62,7 @@ offset_bottom = -0.113098
 [node name="Newtask" parent="Control" instance=ExtResource("6_oa1j6")]
 z_index = 2
 layout_mode = 1
-offset_left = 3.0
+offset_left = -20.0
 offset_top = 3.0
-offset_right = 1.0
+offset_right = -22.0
 offset_bottom = 3.0

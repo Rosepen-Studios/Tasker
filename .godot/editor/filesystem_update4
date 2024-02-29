@@ -5,9 +5,5 @@ res://Scenes/MainUI.tscn
 res://Scenes/newtask.tscn
 res://test.tscn
 res://Scenes/fintask.tscn
-res://Scripts/GlobalVarHolder.gd
 res://Scripts/donetask.gd
-res://Scripts/Save.gd
 res://Scenes/Timer.gd
-res://Scripts/nth.gd
-res://Scenes/Edit.gd
