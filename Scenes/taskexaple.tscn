@@ -1,12 +1,14 @@
-[gd_scene load_steps=49 format=3 uid="uid://cgd42neh4wjwe"]
+[gd_scene load_steps=52 format=3 uid="uid://cgd42neh4wjwe"]
 
 [ext_resource type="Script" path="res://Scripts/taskexaple.gd" id="1_4j12x"]
+[ext_resource type="Texture2D" uid="uid://dj5ykpvbu2myf" path="res://Images/taskedit.png" id="2_6nr43"]
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="2_k6uwd"]
 [ext_resource type="Texture2D" uid="uid://cljatsutkwee7" path="res://Images/task.png" id="2_up8a2"]
 [ext_resource type="Texture2D" uid="uid://08257hvgyv6g" path="res://Images/Icons/Colors.png" id="5_h38on"]
 [ext_resource type="Texture2D" uid="uid://ds7xav3jqlb1n" path="res://Images/Icons/SF/icons8-pen-100.png" id="6_dv6dm"]
 [ext_resource type="PackedScene" uid="uid://crwtrotm873y8" path="res://test.tscn" id="6_lm5ye"]
 [ext_resource type="Texture2D" uid="uid://ba5a0cguuhh4m" path="res://Images/Icons/SF/icons8-note-100.png" id="7_umakl"]
+[ext_resource type="Texture2D" uid="uid://cof3kxq56j1iw" path="res://Images/Icons/SF/icons8-charge-100.png" id="7_uyl2i"]
 [ext_resource type="Texture2D" uid="uid://visw7kjbsxoc" path="res://Images/Icons/SF/icons8-home-100.png" id="8_hy8aj"]
 [ext_resource type="Texture2D" uid="uid://btnl02lb7hlyw" path="res://Images/Icons/SF/icons8-happy-100.png" id="8_s28sd"]
 [ext_resource type="Texture2D" uid="uid://bt8qpxl1it5nb" path="res://Images/Icons/SF/icons8-ok-100.png" id="9_ow7sh"]
@@ -14,11 +16,12 @@
 [ext_resource type="Texture2D" uid="uid://cnf2cwikhw421" path="res://Images/Icons/SF/icons8-vegetarian-food-100.png" id="10_jesgf"]
 [ext_resource type="Script" path="res://Scenes/Edit.gd" id="10_xomk8"]
 [ext_resource type="Texture2D" uid="uid://p2d4mof4f6fb" path="res://Images/Icons/SF/icons8-dumbbell-100.png" id="11_fdtsh"]
-[ext_resource type="Texture2D" uid="uid://cyjonlatvvhiy" path="res://Images/Icons/edit2.png" id="11_ov53m"]
 [ext_resource type="Script" path="res://Scenes/selectcolor.gd" id="12_ag8yc"]
 [ext_resource type="Script" path="res://Scripts/iconsel.gd" id="12_wp2mv"]
 [ext_resource type="PackedScene" uid="uid://cbl7vtr42hpxv" path="res://Scenes/icon.tscn" id="13_ikjly"]
+[ext_resource type="Texture2D" uid="uid://b4syfkxjol76t" path="res://Images/Icons/SF/icons8-book-100.png" id="14_3yr6k"]
 [ext_resource type="Script" path="res://Scenes/iconselect.gd" id="14_y5tdr"]
+[ext_resource type="Texture2D" uid="uid://bfui1pmlens1q" path="res://Images/Icons/SF/icons8-yin-yang-100.png" id="15_iq70q"]
 [ext_resource type="Texture2D" uid="uid://casmykrvthm23" path="res://Images/Icons/SF/icons8-close-48.png" id="19_bgqwg"]
 [ext_resource type="Texture2D" uid="uid://nxielcemxo5t" path="res://Images/Icons/SF/icons8-trash-48.png" id="20_3u657"]
 
@@ -121,6 +124,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("7_uyl2i")
+}],
+"loop": true,
+"name": &"10",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("7_umakl")
 }],
 "loop": true,
@@ -165,6 +176,22 @@ animations = [{
 }],
 "loop": true,
 "name": &"7",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_3yr6k")
+}],
+"loop": true,
+"name": &"8",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_iq70q")
+}],
+"loop": true,
+"name": &"9",
 "speed": 5.0
 }]
 
@@ -213,7 +240,7 @@ offset_bottom = -0.727997
 script = ExtResource("1_4j12x")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-modulate = Color(1, 1, 1, 0.823529)
+modulate = Color(1, 1, 1, 0.835294)
 self_modulate = Color(1, 1, 1, 0.352941)
 custom_minimum_size = Vector2(123.295, 0.415)
 layout_mode = 2
@@ -248,7 +275,7 @@ animation = &"5"
 position = Vector2(70.35, 67.775)
 scale = Vector2(0.85, 0.85)
 sprite_frames = SubResource("SpriteFrames_fjl8d")
-animation = &"2"
+animation = &"10"
 
 [node name="Edit" type="Button" parent="Task"]
 layout_mode = 1
@@ -285,12 +312,13 @@ layout_mode = 2
 script = ExtResource("10_xomk8")
 
 [node name="TextureRect" type="TextureRect" parent="Edit"]
+modulate = Color(1, 1, 1, 0.901961)
 layout_mode = 0
 offset_left = 16.0
 offset_top = 16.0
 offset_right = 1134.0
 offset_bottom = 120.0
-texture = ExtResource("11_ov53m")
+texture = ExtResource("2_6nr43")
 
 [node name="Name" type="LineEdit" parent="Edit/TextureRect"]
 layout_mode = 0
@@ -401,18 +429,21 @@ iconID = 7
 [node name="Button8" parent="Edit/TextureRect/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("13_ikjly")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+icon = ExtResource("14_3yr6k")
 script = ExtResource("14_y5tdr")
 iconID = 8
 
 [node name="Button9" parent="Edit/TextureRect/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("13_ikjly")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+icon = ExtResource("15_iq70q")
 script = ExtResource("14_y5tdr")
 iconID = 9
 
 [node name="Button10" parent="Edit/TextureRect/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("13_ikjly")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+icon = ExtResource("7_uyl2i")
 script = ExtResource("14_y5tdr")
 iconID = 10
 
@@ -435,7 +466,7 @@ animation = &"0"
 position = Vector2(52, 51)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_fjl8d")
-animation = &"7"
+animation = &"1"
 
 [node name="Delete" type="Button" parent="Edit/TextureRect"]
 layout_mode = 0

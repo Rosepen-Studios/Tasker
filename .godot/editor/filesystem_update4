@@ -1,9 +1,8 @@
 res://Scenes/timetest.tscn
-res://Scripts/taskexaple.gd
 res://Scenes/taskexaple.tscn
 res://Scenes/MainUI.tscn
 res://Scenes/newtask.tscn
 res://test.tscn
 res://Scenes/fintask.tscn
-res://Scripts/donetask.gd
+res://Scripts/timetest.gd
 res://Scenes/Timer.gd

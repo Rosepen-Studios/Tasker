@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://dkcpjcaqk7sno"]
+[gd_scene load_steps=24 format=3 uid="uid://dkcpjcaqk7sno"]
 
 [ext_resource type="Script" path="res://Scripts/donetask.gd" id="1_vg6yd"]
 [ext_resource type="PackedScene" uid="uid://crwtrotm873y8" path="res://test.tscn" id="3_n2vk7"]
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="4_isqow"]
 [ext_resource type="Texture2D" uid="uid://08257hvgyv6g" path="res://Images/Icons/Colors.png" id="5_yijek"]
+[ext_resource type="Texture2D" uid="uid://cof3kxq56j1iw" path="res://Images/Icons/SF/icons8-charge-100.png" id="6_8t31i"]
 [ext_resource type="Texture2D" uid="uid://ds7xav3jqlb1n" path="res://Images/Icons/SF/icons8-pen-100.png" id="6_e3utg"]
 [ext_resource type="Texture2D" uid="uid://ba5a0cguuhh4m" path="res://Images/Icons/SF/icons8-note-100.png" id="7_tdony"]
 [ext_resource type="Texture2D" uid="uid://btnl02lb7hlyw" path="res://Images/Icons/SF/icons8-happy-100.png" id="8_2rpv3"]
@@ -11,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://dscyimp2xpwh1" path="res://Images/Icons/SF/icons8-presentation-100.png" id="9_d6xt6"]
 [ext_resource type="Texture2D" uid="uid://cnf2cwikhw421" path="res://Images/Icons/SF/icons8-vegetarian-food-100.png" id="10_g68x2"]
 [ext_resource type="Texture2D" uid="uid://p2d4mof4f6fb" path="res://Images/Icons/SF/icons8-dumbbell-100.png" id="11_073k6"]
+[ext_resource type="Texture2D" uid="uid://b4syfkxjol76t" path="res://Images/Icons/SF/icons8-book-100.png" id="13_76tlg"]
+[ext_resource type="Texture2D" uid="uid://bfui1pmlens1q" path="res://Images/Icons/SF/icons8-yin-yang-100.png" id="14_0ra8m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0drtt"]
 atlas = ExtResource("5_yijek")
@@ -111,6 +114,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("6_8t31i")
+}],
+"loop": true,
+"name": &"10",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("7_tdony")
 }],
 "loop": true,
@@ -156,6 +167,22 @@ animations = [{
 "loop": true,
 "name": &"7",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_76tlg")
+}],
+"loop": true,
+"name": &"8",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_0ra8m")
+}],
+"loop": true,
+"name": &"9",
+"speed": 5.0
 }]
 
 [node name="PanelContainer" type="PanelContainer"]
@@ -186,4 +213,4 @@ animation = &"5"
 position = Vector2(70.35, 67.775)
 scale = Vector2(0.85, 0.85)
 sprite_frames = SubResource("SpriteFrames_a3eqn")
-animation = &"7"
+animation = &"10"

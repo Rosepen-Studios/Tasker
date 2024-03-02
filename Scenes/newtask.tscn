@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://tolk5l6mauok"]
+[gd_scene load_steps=62 format=3 uid="uid://tolk5l6mauok"]
 
 [ext_resource type="Script" path="res://Scripts/newtask.gd" id="1_8tmui"]
 [ext_resource type="Texture2D" uid="uid://bm2rh3fqmtnda" path="res://Images/Alert.png" id="2_3y252"]
@@ -20,6 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://dscyimp2xpwh1" path="res://Images/Icons/SF/icons8-presentation-100.png" id="17_2twhi"]
 [ext_resource type="Texture2D" uid="uid://cnf2cwikhw421" path="res://Images/Icons/SF/icons8-vegetarian-food-100.png" id="18_bk5en"]
 [ext_resource type="Texture2D" uid="uid://p2d4mof4f6fb" path="res://Images/Icons/SF/icons8-dumbbell-100.png" id="19_483s8"]
+[ext_resource type="Texture2D" uid="uid://b4syfkxjol76t" path="res://Images/Icons/SF/icons8-book-100.png" id="20_j1ya6"]
+[ext_resource type="Texture2D" uid="uid://bfui1pmlens1q" path="res://Images/Icons/SF/icons8-yin-yang-100.png" id="21_cttqg"]
+[ext_resource type="Texture2D" uid="uid://cof3kxq56j1iw" path="res://Images/Icons/SF/icons8-charge-100.png" id="22_vvr36"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_6ps0j"]
 
@@ -142,6 +145,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("22_vvr36")
+}],
+"loop": true,
+"name": &"10",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("11_qf0oa")
 }],
 "loop": true,
@@ -186,6 +197,22 @@ animations = [{
 }],
 "loop": true,
 "name": &"7",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_j1ya6")
+}],
+"loop": true,
+"name": &"8",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_cttqg")
+}],
+"loop": true,
+"name": &"9",
 "speed": 5.0
 }]
 
@@ -246,7 +273,7 @@ offset_bottom = 631.0
 expand_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="BG"]
-modulate = Color(1, 1, 1, 0.823529)
+modulate = Color(1, 1, 1, 0.960784)
 layout_mode = 0
 offset_left = 1650.0
 offset_top = 365.0
@@ -363,7 +390,7 @@ script = ExtResource("9_h88we")
 position = Vector2(104, 17)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_32t0i")
-animation = &"7"
+animation = &"10"
 script = ExtResource("13_cftli")
 
 [node name="CheckButton" type="CheckButton" parent="BG/Icon"]
@@ -442,16 +469,19 @@ iconID = 7
 [node name="Button8" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+icon = ExtResource("20_j1ya6")
 iconID = 8
 
 [node name="Button9" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+icon = ExtResource("21_cttqg")
 iconID = 9
 
 [node name="Button10" parent="BG/Icon/CheckButton/ScrollContainer/VBoxContainer" instance=ExtResource("8_j210g")]
 custom_minimum_size = Vector2(71, 71)
 layout_mode = 2
+icon = ExtResource("22_vvr36")
 iconID = 10
 
 [node name="Label" type="Label" parent="BG/Icon"]

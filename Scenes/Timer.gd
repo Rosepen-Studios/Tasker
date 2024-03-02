@@ -12,7 +12,7 @@ func _ready():
 	lastlogd = proccess[2]
 	print(lastlogt)
 	lastlogt = Time.get_time_string_from_system()
-
+	_saveloop()
 	
 
 func _save(): # Saves Last Login Data
@@ -33,6 +33,10 @@ func _load(): #Loads Last Login Data
 	lastlogt = save["lastlogt"]
 	gvh.taskDB = save["taskDB"]
 	file.close()
-	
-func _process(delta):
+
+
+func _saveloop():
+	start()
+	await timeout
 	_save()
+	_saveloop()
