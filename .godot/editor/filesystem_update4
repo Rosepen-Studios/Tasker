@@ -4,5 +4,3 @@ res://Scenes/MainUI.tscn
 res://Scenes/newtask.tscn
 res://test.tscn
 res://Scenes/fintask.tscn
-res://Scripts/timetest.gd
-res://Scenes/Timer.gd

@@ -1,11 +1,11 @@
+Button
+Timer
 Sprite2D
 TextureRect
 Control
-Timer
 Label
 Node2D
 PanelContainer
-Button
 LineEdit
 VBoxContainer
 TextEdit

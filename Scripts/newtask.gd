@@ -3,7 +3,10 @@ func _ready():
 	visible = false
 
 func _process(delta):
-	if Input.is_action_pressed("NewTask"):
+	if Input.is_action_just_released("NewTask"):
 		visible = true
+		print("yes")
+	
+	
 	
 	

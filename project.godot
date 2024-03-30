@@ -13,6 +13,11 @@ config_version=5
 config/name="Tasker"
 run/main_scene="res://Scenes/timetest.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/image="res://Images/bootscreen.png"
+config/icon="res://Images/Icons/Icon.png"
+config/macos_native_icon="res://Images/Icons/icon3.icns"
+config/windows_native_icon="res://Images/Icons/icon3.ico"
+boot_splash/minimum_display_time=100
 
 [autoload]
 
@@ -29,7 +34,13 @@ NewTask={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"command_or_control_autoremap":true,"alt_pressed":false,"shift_pressed":false,"pressed":false,"keycode":0,"physical_keycode":78,"key_label":0,"unicode":110,"echo":false,"script":null)
 ]
 }
+CloseTask={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
 
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
+viewport/transparent_background=true
