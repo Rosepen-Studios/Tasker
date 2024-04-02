@@ -1,3 +1,3 @@
-Documentation: (As of version 0.1)
+**Documentation:** (As of version 0.1)
 
-How To Instal:
+**How To Instal:**
