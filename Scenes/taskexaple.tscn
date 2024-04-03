@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://cgd42neh4wjwe"]
+[gd_scene load_steps=53 format=3 uid="uid://cgd42neh4wjwe"]
 
 [ext_resource type="Script" path="res://Scripts/taskexaple.gd" id="1_4j12x"]
 [ext_resource type="Texture2D" uid="uid://dj5ykpvbu2myf" path="res://Images/taskedit.png" id="2_6nr43"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cljatsutkwee7" path="res://Images/task.png" id="2_up8a2"]
 [ext_resource type="Texture2D" uid="uid://08257hvgyv6g" path="res://Images/Icons/Colors.png" id="5_h38on"]
 [ext_resource type="Texture2D" uid="uid://ds7xav3jqlb1n" path="res://Images/Icons/SF/icons8-pen-100.png" id="6_dv6dm"]
-[ext_resource type="PackedScene" uid="uid://crwtrotm873y8" path="res://test.tscn" id="6_lm5ye"]
+[ext_resource type="PackedScene" path="res://test.tscn" id="6_lm5ye"]
 [ext_resource type="Texture2D" uid="uid://ba5a0cguuhh4m" path="res://Images/Icons/SF/icons8-note-100.png" id="7_umakl"]
 [ext_resource type="Texture2D" uid="uid://cof3kxq56j1iw" path="res://Images/Icons/SF/icons8-charge-100.png" id="7_uyl2i"]
 [ext_resource type="Texture2D" uid="uid://visw7kjbsxoc" path="res://Images/Icons/SF/icons8-home-100.png" id="8_hy8aj"]
@@ -14,14 +14,15 @@
 [ext_resource type="Texture2D" uid="uid://bt8qpxl1it5nb" path="res://Images/Icons/SF/icons8-ok-100.png" id="9_ow7sh"]
 [ext_resource type="Texture2D" uid="uid://dscyimp2xpwh1" path="res://Images/Icons/SF/icons8-presentation-100.png" id="9_sbu8q"]
 [ext_resource type="Texture2D" uid="uid://cnf2cwikhw421" path="res://Images/Icons/SF/icons8-vegetarian-food-100.png" id="10_jesgf"]
-[ext_resource type="Script" path="res://Scenes/Edit.gd" id="10_xomk8"]
+[ext_resource type="Script" path="res://Scripts/Edit.gd" id="10_xomk8"]
 [ext_resource type="Texture2D" uid="uid://p2d4mof4f6fb" path="res://Images/Icons/SF/icons8-dumbbell-100.png" id="11_fdtsh"]
-[ext_resource type="Script" path="res://Scenes/selectcolor.gd" id="12_ag8yc"]
+[ext_resource type="Script" path="res://Scripts/selectcolor.gd" id="12_ag8yc"]
 [ext_resource type="Script" path="res://Scripts/iconsel.gd" id="12_wp2mv"]
 [ext_resource type="PackedScene" uid="uid://cbl7vtr42hpxv" path="res://Scenes/icon.tscn" id="13_ikjly"]
 [ext_resource type="Texture2D" uid="uid://b4syfkxjol76t" path="res://Images/Icons/SF/icons8-book-100.png" id="14_3yr6k"]
 [ext_resource type="Script" path="res://Scenes/iconselect.gd" id="14_y5tdr"]
 [ext_resource type="Texture2D" uid="uid://bfui1pmlens1q" path="res://Images/Icons/SF/icons8-yin-yang-100.png" id="15_iq70q"]
+[ext_resource type="Texture2D" uid="uid://eapkfrh1rjxg" path="res://Images/Icons/SF/icons8-important-100.png" id="16_rx5r3"]
 [ext_resource type="Texture2D" uid="uid://casmykrvthm23" path="res://Images/Icons/SF/icons8-close-48.png" id="19_bgqwg"]
 [ext_resource type="Texture2D" uid="uid://nxielcemxo5t" path="res://Images/Icons/SF/icons8-trash-48.png" id="20_3u657"]
 
@@ -193,6 +194,14 @@ animations = [{
 "loop": true,
 "name": &"9",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_rx5r3")
+}],
+"loop": true,
+"name": &"Error",
+"speed": 5.0
 }]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_xnwfl"]
@@ -257,25 +266,26 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 143.0
 offset_top = 17.0
-offset_right = -662.0
-offset_bottom = -80.0
+offset_right = -421.78
+offset_bottom = -75.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_k6uwd")
 theme_override_font_sizes/font_size = 30
+text = "Error Loading Data, Please Reload the App"
 clip_text = true
 
 [node name="Color" type="AnimatedSprite2D" parent="Task"]
 position = Vector2(70.35, 67.775)
 scale = Vector2(0.85, 0.85)
 sprite_frames = SubResource("SpriteFrames_4exy7")
-animation = &"5"
+animation = &"2"
 
 [node name="Icon2" type="AnimatedSprite2D" parent="Task"]
 position = Vector2(70.35, 67.775)
 scale = Vector2(0.85, 0.85)
 sprite_frames = SubResource("SpriteFrames_fjl8d")
-animation = &"10"
+animation = &"Error"
 
 [node name="Edit" type="Button" parent="Task"]
 layout_mode = 1
@@ -460,7 +470,7 @@ expand_icon = true
 position = Vector2(52, 51)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_4exy7")
-animation = &"0"
+animation = &"-1"
 
 [node name="Icon2" type="AnimatedSprite2D" parent="Edit/TextureRect"]
 position = Vector2(52, 51)

@@ -1,7 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://dkcpjcaqk7sno"]
+[gd_scene load_steps=25 format=3 uid="uid://dkcpjcaqk7sno"]
 
 [ext_resource type="Script" path="res://Scripts/donetask.gd" id="1_vg6yd"]
-[ext_resource type="PackedScene" uid="uid://crwtrotm873y8" path="res://test.tscn" id="3_n2vk7"]
+[ext_resource type="PackedScene" uid="uid://k5m1bprl5il4" path="res://test.tscn" id="3_n2vk7"]
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="4_isqow"]
 [ext_resource type="Texture2D" uid="uid://08257hvgyv6g" path="res://Images/Icons/Colors.png" id="5_yijek"]
 [ext_resource type="Texture2D" uid="uid://cof3kxq56j1iw" path="res://Images/Icons/SF/icons8-charge-100.png" id="6_8t31i"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://p2d4mof4f6fb" path="res://Images/Icons/SF/icons8-dumbbell-100.png" id="11_073k6"]
 [ext_resource type="Texture2D" uid="uid://b4syfkxjol76t" path="res://Images/Icons/SF/icons8-book-100.png" id="13_76tlg"]
 [ext_resource type="Texture2D" uid="uid://bfui1pmlens1q" path="res://Images/Icons/SF/icons8-yin-yang-100.png" id="14_0ra8m"]
+[ext_resource type="Texture2D" uid="uid://eapkfrh1rjxg" path="res://Images/Icons/SF/icons8-important-100.png" id="15_1ss7w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0drtt"]
 atlas = ExtResource("5_yijek")
@@ -183,6 +184,14 @@ animations = [{
 "loop": true,
 "name": &"9",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_1ss7w")
+}],
+"loop": true,
+"name": &"error",
+"speed": 5.0
 }]
 
 [node name="PanelContainer" type="PanelContainer"]
@@ -202,15 +211,16 @@ offset_right = 281.0
 offset_bottom = 64.08
 theme_override_fonts/font = ExtResource("4_isqow")
 theme_override_font_sizes/font_size = 30
+text = "Error Loading Data, Please Reload the App"
 
 [node name="Color" type="AnimatedSprite2D" parent="Control"]
 position = Vector2(70.35, 67.775)
 scale = Vector2(0.85, 0.85)
 sprite_frames = SubResource("SpriteFrames_mdbh0")
-animation = &"5"
+animation = &"2"
 
 [node name="Icon2" type="AnimatedSprite2D" parent="Control"]
 position = Vector2(70.35, 67.775)
 scale = Vector2(0.85, 0.85)
 sprite_frames = SubResource("SpriteFrames_a3eqn")
-animation = &"10"
+animation = &"1"

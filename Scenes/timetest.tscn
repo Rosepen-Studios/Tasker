@@ -1,11 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://dc8g3nnk5mu5g"]
+[gd_scene load_steps=11 format=3 uid="uid://dc8g3nnk5mu5g"]
 
 [ext_resource type="Script" path="res://Scripts/timetest.gd" id="1_v8tvi"]
 [ext_resource type="Script" path="res://Scripts/GlobalVarHolder.gd" id="1_yrdix"]
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="2_8u0j8"]
 [ext_resource type="PackedScene" uid="uid://c0m23xtdkrvme" path="res://Scenes/MainUI.tscn" id="2_cj2ok"]
-[ext_resource type="Script" path="res://Scenes/Timer.gd" id="2_p23ri"]
-[ext_resource type="Texture2D" uid="uid://dkebocom3ixe8" path="res://Images/Icons/apple-background-osx-wallpaper-preview(2).jpg" id="3_kxfmt"]
+[ext_resource type="Script" path="res://Scripts/Timer.gd" id="2_p23ri"]
+[ext_resource type="Texture2D" uid="uid://bal1hotkvq5tp" path="res://Images/Icons/photo-1620121692029-d088224ddc74.png" id="3_yjqqo"]
+[ext_resource type="Script" path="res://Scripts/Background.gd" id="4_40a35"]
 [ext_resource type="PackedScene" uid="uid://tolk5l6mauok" path="res://Scenes/newtask.tscn" id="6_oa1j6"]
 [ext_resource type="Texture2D" uid="uid://cw3t1nirhewk8" path="res://Images/Icons/new.png" id="8_818ww"]
 [ext_resource type="Script" path="res://Scenes/newtask.gd" id="9_ccfb4"]
@@ -27,13 +28,15 @@ offset_right = 2911.13
 offset_bottom = 1631.65
 grow_vertical = 2
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("3_kxfmt")
+texture = ExtResource("3_yjqqo")
+expand_mode = 1
+script = ExtResource("4_40a35")
 metadata/_edit_use_anchors_ = true
 
 [node name="Time" type="Label" parent="."]
-offset_left = 1042.08
+offset_left = 1037.08
 offset_top = 2.0
-offset_right = 1221.08
+offset_right = 1216.08
 offset_bottom = 56.0
 theme_type_variation = &"HeaderLarge"
 theme_override_fonts/font = ExtResource("2_8u0j8")
@@ -56,7 +59,7 @@ metadata/_edit_use_anchors_ = true
 [node name="MainUI" parent="Control" instance=ExtResource("2_cj2ok")]
 layout_mode = 1
 anchor_left = 0.00348129
-anchor_top = 0.0
+anchor_top = -0.177469
 anchor_right = 1.003
 anchor_bottom = 0.923014
 offset_top = 172.0

@@ -13,10 +13,9 @@ config_version=5
 config/name="Tasker"
 run/main_scene="res://Scenes/timetest.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
+run/max_fps=60
 boot_splash/image="res://Images/bootscreen.png"
-config/icon="res://Images/Icons/Icon.png"
-config/macos_native_icon="res://Images/Icons/icon3.icns"
-config/windows_native_icon="res://Images/Icons/icon3.ico"
+config/icon="res://Images/Icons/Icon_256px.png"
 boot_splash/minimum_display_time=100
 
 [autoload]

@@ -2,9 +2,9 @@
 
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="1_eb2eh"]
 [ext_resource type="Script" path="res://Scripts/nth.gd" id="2_v44os"]
-[ext_resource type="Script" path="res://Scenes/GD.gd" id="3_21g1e"]
+[ext_resource type="Script" path="res://Scripts/GD.gd" id="3_21g1e"]
 [ext_resource type="PackedScene" uid="uid://cgd42neh4wjwe" path="res://Scenes/taskexaple.tscn" id="3_vaimf"]
-[ext_resource type="Script" path="res://Scenes/ntd.gd" id="4_5xhnl"]
+[ext_resource type="Script" path="res://Scripts/ntd.gd" id="4_5xhnl"]
 [ext_resource type="PackedScene" uid="uid://dkcpjcaqk7sno" path="res://Scenes/fintask.tscn" id="6_j64h5"]
 
 [node name="Control" type="Control"]
