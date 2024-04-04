@@ -11,7 +11,7 @@
 <h1>Documentation:</h1>(As of version 0.1)
 
 <h2>Data directory (user path)</h2>
-Tasker saves all its data in its user path, which for Windows is located at <code>C:\Users\"username"\AppData\Roaming\Godot\app_userdata\Tasker</code> remember to change "username" to your username, for Mac path is yet to be defined.
+Tasker saves all its data in its user path, which for Windows is located at <code>C:\Users\"username"\AppData\Roaming\Godot\app_userdata\Tasker</code> remember to change "username" to your username, for Mac path is <code>~/Library/Application Support/Tasker</code>
 
 <h2>Understanding the data storage structure</h2>
 When you open the user you will see 2 folder, you can ingnore those and you will also see 11 <code>.json</code> files. 
