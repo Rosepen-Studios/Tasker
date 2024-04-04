@@ -1,5 +1,7 @@
 extends Button
-
+func _process(delta):
+	if Input.is_action_just_pressed("Enter"):
+		_pressed()
 func _pressed():
 	if gvh.tsknum <= 10 and $"../name/LineEdit".text != "":
 		if gvh.taskDB["1"] == 0:

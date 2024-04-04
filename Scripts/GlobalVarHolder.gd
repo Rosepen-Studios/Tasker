@@ -16,6 +16,7 @@ var targettask:int
 var save:bool = false
 var newday:bool = false
 var devmode:bool = false
+var conopen= false
 
 var edit:bool = false
 var edittarget:int 

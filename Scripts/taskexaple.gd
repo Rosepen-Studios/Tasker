@@ -93,6 +93,8 @@ func _saveloop():
 	await $Task/Timer.timeout
 	_save()
 	_saveloop()
+	if gvh.taskDB[str(ID)] == 0:
+		visible = false
 
 func _delete():
 	savename = gvh.savename

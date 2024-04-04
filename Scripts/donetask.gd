@@ -11,10 +11,12 @@ func _ready():
 	if done == true:
 		visible = true
 func _process(delta):
+	if gvh.taskDB[str(ID)]== 0:
+		visible = false
 	if gvh.taskDB[str(ID)] == 1 and on == false and wasloaded == false:
 		_load()
 		on = true
-	if gvh.taskCP[ID] == 1 :
+	if gvh.taskCP[ID] == 1:
 		visible = true
 	if gvh.edit == true and gvh.edittarget == ID:
 		$Control/Label2.text = gvh.editname
