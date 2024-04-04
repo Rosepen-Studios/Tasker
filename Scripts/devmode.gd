@@ -13,19 +13,29 @@ func _process(delta):
 		_send()
 func _send():
 	output.newline()
-	output.add_text(str(output.get_line_count()) + " "  + ">"+ text)
+	output.add_text(str(output.get_line_count()-1) + " "  + ">"+ text)
 	_find_command()
 	
 func _find_command():
 	if text == "del:all":
 		text = ""
 		_exe_command("del:all")
-
+	elif  text == "info":
+		text = ""
+		_exe_command("info")
+	elif  text == "easter_egg":
+		text = ""
+		_exe_command("easter_egg")
 func _exe_command(command):
 	if command == "del:all":
 		output.newline()
-		output.add_text(str(output.get_line_count()) + " " + "<Deleting all tasks")
+		output.add_text(str(output.get_line_count()-1) + " " + "<Deleting all tasks")
 		Input.action_press("delall")
 		Input.action_release("delall")
 		gvh.taskDB = {"1":0,"10":0,"2":0,"3":0,"4":0,"5":0,"6":0,"7":0,"8":0,"9":0}
-	
+	elif command == "info":
+		output.newline()
+		output.add_text(str(output.get_line_count()-1) + " " + "<Tasker version: 0.2 stable")
+	elif command == "easter_egg":
+		output.newline()
+		output.add_text(str(output.get_line_count()-1) + " " + "<Great job, you found an easter egg!🐣")
