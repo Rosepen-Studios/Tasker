@@ -10,7 +10,6 @@ func _ready():
 	if lastlogd != proccess[2]:
 		gvh.newday = true
 	lastlogd = proccess[2]
-	print(lastlogt)
 	lastlogt = Time.get_time_string_from_system()
 	_saveloop()
 	

@@ -23,8 +23,12 @@ func _process(delta):
 		
 	if gvh.taskDB[str(ID)] == 0:
 		on = false
+	if Input.is_action_pressed("delall"):
+		print("del")
+		$Control/Label2.text = ""
+		gvh.taskDB[str(ID)] = 0
 
-func _load(): #Loads Last Login Data
+func _load(): #Loads task data
 	var wasloaded = true
 	var file = FileAccess.open("user://savetask"+str(ID)+".json", FileAccess.READ)
 	var json = file.get_as_text()

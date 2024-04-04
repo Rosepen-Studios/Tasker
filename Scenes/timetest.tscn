@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dc8g3nnk5mu5g"]
+[gd_scene load_steps=12 format=3 uid="uid://dc8g3nnk5mu5g"]
 
 [ext_resource type="Script" path="res://Scripts/timetest.gd" id="1_v8tvi"]
 [ext_resource type="Script" path="res://Scripts/GlobalVarHolder.gd" id="1_yrdix"]
@@ -8,16 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://bal1hotkvq5tp" path="res://Images/Icons/photo-1620121692029-d088224ddc74.png" id="3_yjqqo"]
 [ext_resource type="Script" path="res://Scripts/Background.gd" id="4_40a35"]
 [ext_resource type="PackedScene" uid="uid://tolk5l6mauok" path="res://Scenes/newtask.tscn" id="6_oa1j6"]
+[ext_resource type="PackedScene" uid="uid://5hbsx41us32b" path="res://Scenes/devmode.tscn" id="7_7oeyw"]
 [ext_resource type="Texture2D" uid="uid://cw3t1nirhewk8" path="res://Images/Icons/new.png" id="8_818ww"]
-[ext_resource type="Script" path="res://Scenes/newtask.gd" id="9_ccfb4"]
+[ext_resource type="Script" path="res://Scripts/newtask (2).gd" id="9_ccfb4"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_yrdix")
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.25
-autostart = true
-script = ExtResource("2_p23ri")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 9
@@ -32,6 +28,11 @@ texture = ExtResource("3_yjqqo")
 expand_mode = 1
 script = ExtResource("4_40a35")
 metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.25
+autostart = true
+script = ExtResource("2_p23ri")
 
 [node name="Time" type="Label" parent="."]
 offset_left = 1037.08
@@ -71,7 +72,7 @@ z_index = 2
 layout_mode = 1
 offset_left = -20.0
 offset_top = 3.0
-offset_right = -22.0
+offset_right = -20.0
 offset_bottom = 3.0
 
 [node name="Button" type="Button" parent="Control"]
@@ -84,3 +85,14 @@ action_mode = 0
 icon = ExtResource("8_818ww")
 flat = true
 script = ExtResource("9_ccfb4")
+
+[node name="LineEdit" parent="." instance=ExtResource("7_7oeyw")]
+visible = false
+z_index = 20
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 50.0
+offset_top = 615.0
+offset_right = 1148.0
+offset_bottom = 646.0

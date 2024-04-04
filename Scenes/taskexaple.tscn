@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://cgd42neh4wjwe"]
+[gd_scene load_steps=55 format=3 uid="uid://cgd42neh4wjwe"]
 
 [ext_resource type="Script" path="res://Scripts/taskexaple.gd" id="1_4j12x"]
 [ext_resource type="Texture2D" uid="uid://dj5ykpvbu2myf" path="res://Images/taskedit.png" id="2_6nr43"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cljatsutkwee7" path="res://Images/task.png" id="2_up8a2"]
 [ext_resource type="Texture2D" uid="uid://08257hvgyv6g" path="res://Images/Icons/Colors.png" id="5_h38on"]
 [ext_resource type="Texture2D" uid="uid://ds7xav3jqlb1n" path="res://Images/Icons/SF/icons8-pen-100.png" id="6_dv6dm"]
-[ext_resource type="PackedScene" path="res://test.tscn" id="6_lm5ye"]
+[ext_resource type="PackedScene" uid="uid://bw6n2vbol56fp" path="res://Scenes/test.tscn" id="6_lm5ye"]
 [ext_resource type="Texture2D" uid="uid://ba5a0cguuhh4m" path="res://Images/Icons/SF/icons8-note-100.png" id="7_umakl"]
 [ext_resource type="Texture2D" uid="uid://cof3kxq56j1iw" path="res://Images/Icons/SF/icons8-charge-100.png" id="7_uyl2i"]
 [ext_resource type="Texture2D" uid="uid://visw7kjbsxoc" path="res://Images/Icons/SF/icons8-home-100.png" id="8_hy8aj"]
@@ -20,11 +20,14 @@
 [ext_resource type="Script" path="res://Scripts/iconsel.gd" id="12_wp2mv"]
 [ext_resource type="PackedScene" uid="uid://cbl7vtr42hpxv" path="res://Scenes/icon.tscn" id="13_ikjly"]
 [ext_resource type="Texture2D" uid="uid://b4syfkxjol76t" path="res://Images/Icons/SF/icons8-book-100.png" id="14_3yr6k"]
-[ext_resource type="Script" path="res://Scenes/iconselect.gd" id="14_y5tdr"]
+[ext_resource type="Script" path="res://Scripts/iconselect (2).gd" id="14_y5tdr"]
 [ext_resource type="Texture2D" uid="uid://bfui1pmlens1q" path="res://Images/Icons/SF/icons8-yin-yang-100.png" id="15_iq70q"]
 [ext_resource type="Texture2D" uid="uid://eapkfrh1rjxg" path="res://Images/Icons/SF/icons8-important-100.png" id="16_rx5r3"]
+[ext_resource type="Texture2D" uid="uid://cqr3sdsggqwdp" path="res://Images/Button.png" id="17_ugn4h"]
 [ext_resource type="Texture2D" uid="uid://casmykrvthm23" path="res://Images/Icons/SF/icons8-close-48.png" id="19_bgqwg"]
 [ext_resource type="Texture2D" uid="uid://nxielcemxo5t" path="res://Images/Icons/SF/icons8-trash-48.png" id="20_3u657"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tndk3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0drtt"]
 atlas = ExtResource("5_h38on")
@@ -246,11 +249,12 @@ anchor_right = 0.998
 anchor_bottom = 0.211
 offset_right = -4.91602
 offset_bottom = -0.727997
+theme_override_styles/panel = SubResource("StyleBoxEmpty_tndk3")
 script = ExtResource("1_4j12x")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0.835294)
-self_modulate = Color(1, 1, 1, 0.352941)
+self_modulate = Color(1, 1, 1, 0.666667)
 custom_minimum_size = Vector2(123.295, 0.415)
 layout_mode = 2
 texture = ExtResource("2_up8a2")
@@ -287,6 +291,28 @@ scale = Vector2(0.85, 0.85)
 sprite_frames = SubResource("SpriteFrames_fjl8d")
 animation = &"Error"
 
+[node name="TextureRect2" type="TextureRect" parent="Task"]
+modulate = Color(1, 1, 1, 0.666667)
+self_modulate = Color(1, 1, 1, 0.666667)
+layout_mode = 0
+offset_left = 1084.95
+offset_top = 8.0
+offset_right = 1604.95
+offset_bottom = 528.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("17_ugn4h")
+
+[node name="TextureRect" type="TextureRect" parent="Task"]
+modulate = Color(1, 1, 1, 0.666667)
+self_modulate = Color(1, 1, 1, 0.666667)
+layout_mode = 0
+offset_left = 1084.95
+offset_top = 77.0
+offset_right = 1604.95
+offset_bottom = 597.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("17_ugn4h")
+
 [node name="Edit" type="Button" parent="Task"]
 layout_mode = 1
 anchors_preset = -1
@@ -294,9 +320,10 @@ anchor_right = 0.992
 anchor_bottom = 0.889
 offset_left = 1085.0
 offset_top = 8.0
-offset_right = -3.62183
+offset_right = 1.37817
 offset_bottom = -60.904
 icon = ExtResource("6_dv6dm")
+flat = true
 expand_icon = true
 
 [node name="Done" type="Button" parent="Task"]
@@ -306,11 +333,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 1085.0
 offset_top = 77.0
-offset_right = -12.78
+offset_right = -7.78003
 offset_bottom = -7.0
 grow_horizontal = 2
 grow_vertical = 2
 icon = ExtResource("9_ow7sh")
+flat = true
 expand_icon = true
 
 [node name="Timer" type="Timer" parent="Task"]
@@ -322,7 +350,6 @@ layout_mode = 2
 script = ExtResource("10_xomk8")
 
 [node name="TextureRect" type="TextureRect" parent="Edit"]
-modulate = Color(1, 1, 1, 0.901961)
 layout_mode = 0
 offset_left = 16.0
 offset_top = 16.0
@@ -456,6 +483,15 @@ layout_mode = 2
 icon = ExtResource("7_uyl2i")
 script = ExtResource("14_y5tdr")
 iconID = 10
+
+[node name="TextureRect" type="TextureRect" parent="Edit/TextureRect/CheckButton"]
+layout_mode = 0
+offset_left = 1070.0
+offset_top = -2.0
+offset_right = 1102.0
+offset_bottom = 30.0
+texture = ExtResource("17_ugn4h")
+expand_mode = 1
 
 [node name="Close" type="Button" parent="Edit/TextureRect"]
 layout_mode = 0

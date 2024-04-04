@@ -1,7 +1,7 @@
 [gd_scene load_steps=62 format=3 uid="uid://tolk5l6mauok"]
 
 [ext_resource type="Script" path="res://Scripts/newtask.gd" id="1_8tmui"]
-[ext_resource type="Texture2D" uid="uid://bm2rh3fqmtnda" path="res://Images/Alert.png" id="2_3y252"]
+[ext_resource type="Texture2D" uid="uid://bm2rh3fqmtnda" path="res://Images/Newtask.png" id="2_3y252"]
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="2_4le61"]
 [ext_resource type="FontFile" uid="uid://paosd82f7mrr" path="res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF" id="3_xyxbc"]
 [ext_resource type="Script" path="res://Scripts/Cancel.gd" id="4_rd550"]

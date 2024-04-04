@@ -12,8 +12,9 @@ var locname
 var locicon
 var loccolor 
 func _ready():
-	if gvh.taskDB[str(ID)] == 1:
-		print("load")
+	if Input.is_action_just_pressed("delall"):
+		_delete()
+	if gvh.taskDB[str(ID)] == 1: #Loads task from saved data
 		_load()
 		$Task/Label2.text = locname
 		$Task/Color.play(str(loccolor))
@@ -27,9 +28,7 @@ func _ready():
 	doneloading = true
 	_saveloop()
 func _process(delta):
-	
 	if gvh.targettask == ID and doneloading == true: #Creates the task
-		print("goog")
 		if on == false:
 			gvh.targettask = 0
 			on = true
@@ -51,23 +50,10 @@ func _process(delta):
 		gvh.taskCP[ID] = 1
 	if gvh.edit == true:
 		_save()
-	if $Edit/TextureRect/Delete.button_pressed == true and doneloading == true: #Deletes task
-		print("delete")
-		savename = gvh.savename
-		localgvhchange = false
-		gvh.tsknum -= 1
-		gvh.tskscomp -= 1
-		on = false
-		done = false
-		visible = false
-		$Task/Label2.text = ""
-		$Task/Color.play("0")
-		$Task/Icon2.play("1")
-		gvh.taskDB[str(ID)] = 0
-		_save()
+	if ($Edit/TextureRect/Delete.button_pressed == true and doneloading == true): #Deletes task
+		_delete()
 
 	if $Task/Done.button_pressed == true and doneloading == true:   #Completes Task
-		print("done")
 		if localgvhchange == false:
 			done = true
 			localgvhchange = true
@@ -80,7 +66,6 @@ func _process(delta):
 		
 	
 func _save(): # Saves task data
-	
 	var file = FileAccess.open("user://savetask"+str(ID)+".json", FileAccess.WRITE)
 	var save = {}
 	save["locname"] = locname
@@ -91,7 +76,7 @@ func _save(): # Saves task data
 	file.store_string(json)
 	file.close()
 
-func _load(): #Loads Last Login Data
+func _load(): #Loads task data
 	var file = FileAccess.open("user://savetask"+str(ID)+".json", FileAccess.READ)
 	var json = file.get_as_text()
 	var save = JSON.parse_string(json)
@@ -108,3 +93,18 @@ func _saveloop():
 	await $Task/Timer.timeout
 	_save()
 	_saveloop()
+
+func _delete():
+	savename = gvh.savename
+	localgvhchange = false
+	gvh.tsknum -= 1
+	gvh.tskscomp -= 1
+	on = false
+	done = false
+	visible = false
+	$Task/Label2.text = ""
+	$Task/Color.play("0")
+	$Task/Icon2.play("1")
+	gvh.taskDB[str(ID)] = 0
+	print("del")
+	_save()

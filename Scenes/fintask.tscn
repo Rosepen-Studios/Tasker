@@ -1,7 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://dkcpjcaqk7sno"]
+[gd_scene load_steps=27 format=3 uid="uid://dkcpjcaqk7sno"]
 
 [ext_resource type="Script" path="res://Scripts/donetask.gd" id="1_vg6yd"]
-[ext_resource type="PackedScene" uid="uid://k5m1bprl5il4" path="res://test.tscn" id="3_n2vk7"]
+[ext_resource type="PackedScene" uid="uid://bw6n2vbol56fp" path="res://Scenes/test.tscn" id="3_n2vk7"]
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="4_isqow"]
 [ext_resource type="Texture2D" uid="uid://08257hvgyv6g" path="res://Images/Icons/Colors.png" id="5_yijek"]
 [ext_resource type="Texture2D" uid="uid://cof3kxq56j1iw" path="res://Images/Icons/SF/icons8-charge-100.png" id="6_8t31i"]
@@ -15,6 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://b4syfkxjol76t" path="res://Images/Icons/SF/icons8-book-100.png" id="13_76tlg"]
 [ext_resource type="Texture2D" uid="uid://bfui1pmlens1q" path="res://Images/Icons/SF/icons8-yin-yang-100.png" id="14_0ra8m"]
 [ext_resource type="Texture2D" uid="uid://eapkfrh1rjxg" path="res://Images/Icons/SF/icons8-important-100.png" id="15_1ss7w"]
+[ext_resource type="Texture2D" uid="uid://cljatsutkwee7" path="res://Images/task.png" id="16_rjs4q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ls4y5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0drtt"]
 atlas = ExtResource("5_yijek")
@@ -195,9 +198,18 @@ animations = [{
 }]
 
 [node name="PanelContainer" type="PanelContainer"]
-offset_right = 1149.0
-offset_bottom = 135.0
+offset_right = 1144.0
+offset_bottom = 136.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ls4y5")
 script = ExtResource("1_vg6yd")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.835294)
+self_modulate = Color(1, 1, 1, 0.666667)
+custom_minimum_size = Vector2(123.295, 0.415)
+layout_mode = 2
+texture = ExtResource("16_rjs4q")
+stretch_mode = 2
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 2
