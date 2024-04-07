@@ -5,8 +5,4 @@ res://Scenes/fintask.tscn
 res://Scenes/newtask.tscn
 res://Scenes/test.tscn
 res://Scripts/devmode.gd
-res://Scripts/GlobalVarHolder.gd
-res://Scripts/newtask.gd
 res://Scripts/Save.gd
-res://Scripts/taskexaple.gd
-res://Scripts/donetask.gd

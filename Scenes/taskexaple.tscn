@@ -283,7 +283,7 @@ clip_text = true
 position = Vector2(70.35, 67.775)
 scale = Vector2(0.85, 0.85)
 sprite_frames = SubResource("SpriteFrames_4exy7")
-animation = &"2"
+animation = &"0"
 
 [node name="Icon2" type="AnimatedSprite2D" parent="Task"]
 position = Vector2(70.35, 67.775)

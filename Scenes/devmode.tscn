@@ -48,3 +48,4 @@ offset_top = -619.0
 offset_right = 1139.0
 offset_bottom = -14.0
 theme_override_fonts/normal_font = ExtResource("1_cevg0")
+bbcode_enabled = true
