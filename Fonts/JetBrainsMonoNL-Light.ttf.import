@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dw33onsyb1mpp"
-path="res://.godot/imported/SFPRODISPLAYLIGHTITALIC.OTF-dcce5aa992897fc901fede6629590cf9.fontdata"
+uid="uid://k1v3vdw5hfvv"
+path="res://.godot/imported/JetBrainsMonoNL-Light.ttf-1eae0aee3f23c1422454aca4b11857fe.fontdata"
 
 [deps]
 
-source_file="res://SF Pro Display Font Family/SFPRODISPLAYLIGHTITALIC.OTF"
-dest_files=["res://.godot/imported/SFPRODISPLAYLIGHTITALIC.OTF-dcce5aa992897fc901fede6629590cf9.fontdata"]
+source_file="res://Fonts/JetBrainsMonoNL-Light.ttf"
+dest_files=["res://.godot/imported/JetBrainsMonoNL-Light.ttf-1eae0aee3f23c1422454aca4b11857fe.fontdata"]
 
 [params]
 

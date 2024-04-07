@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://rkrmd2r1wt3t"
-path="res://.godot/imported/SFPRODISPLAYSEMIBOLDITALIC.OTF-06c0cac5a4bb34dcf875e31790b96f65.fontdata"
+path="res://.godot/imported/SFPRODISPLAYSEMIBOLDITALIC.OTF-d3c0a14fffd3d74b43a94fd13030760b.fontdata"
 
 [deps]
 
-source_file="res://SF Pro Display Font Family/SFPRODISPLAYSEMIBOLDITALIC.OTF"
-dest_files=["res://.godot/imported/SFPRODISPLAYSEMIBOLDITALIC.OTF-06c0cac5a4bb34dcf875e31790b96f65.fontdata"]
+source_file="res://Fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF"
+dest_files=["res://.godot/imported/SFPRODISPLAYSEMIBOLDITALIC.OTF-d3c0a14fffd3d74b43a94fd13030760b.fontdata"]
 
 [params]
 

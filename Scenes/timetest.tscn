@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/timetest.gd" id="1_v8tvi"]
 [ext_resource type="Script" path="res://Scripts/GlobalVarHolder.gd" id="1_yrdix"]
-[ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="2_8u0j8"]
+[ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://Fonts/SFPRODISPLAYBOLD.OTF" id="2_8u0j8"]
 [ext_resource type="PackedScene" uid="uid://c0m23xtdkrvme" path="res://Scenes/MainUI.tscn" id="2_cj2ok"]
 [ext_resource type="Script" path="res://Scripts/Timer.gd" id="2_p23ri"]
 [ext_resource type="Texture2D" uid="uid://bal1hotkvq5tp" path="res://Images/Icons/photo-1620121692029-d088224ddc74.png" id="3_yjqqo"]

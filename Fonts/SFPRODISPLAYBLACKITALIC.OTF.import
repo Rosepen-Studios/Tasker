@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://mbuc5a08pstv"
-path="res://.godot/imported/SFPRODISPLAYREGULAR.OTF-d909a1bbd1f457b4d65591f75ca5dec9.fontdata"
+uid="uid://bha1yyg143lb8"
+path="res://.godot/imported/SFPRODISPLAYBLACKITALIC.OTF-77741cc962dc2cd2cde65fb162583470.fontdata"
 
 [deps]
 
-source_file="res://SF Pro Display Font Family/SFPRODISPLAYREGULAR.OTF"
-dest_files=["res://.godot/imported/SFPRODISPLAYREGULAR.OTF-d909a1bbd1f457b4d65591f75ca5dec9.fontdata"]
+source_file="res://Fonts/SFPRODISPLAYBLACKITALIC.OTF"
+dest_files=["res://.godot/imported/SFPRODISPLAYBLACKITALIC.OTF-77741cc962dc2cd2cde65fb162583470.fontdata"]
 
 [params]
 

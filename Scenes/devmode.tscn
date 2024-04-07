@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://5hbsx41us32b"]
 
-[ext_resource type="FontFile" uid="uid://k1v3vdw5hfvv" path="res://JetBrainsMonoNL-Light.ttf" id="1_cevg0"]
+[ext_resource type="FontFile" uid="uid://k1v3vdw5hfvv" path="res://Fonts/JetBrainsMonoNL-Light.ttf" id="1_lnup7"]
 [ext_resource type="Script" path="res://Scripts/devmode.gd" id="1_rfslu"]
 [ext_resource type="Texture2D" uid="uid://ctsxd4u47k78i" path="res://Images/Icons/Edit.png" id="2_cioqu"]
 [ext_resource type="Texture2D" uid="uid://casmykrvthm23" path="res://Images/Icons/SF/icons8-close-48.png" id="3_a3icy"]
@@ -13,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 617.0
 offset_right = -1.0
-theme_override_fonts/font = ExtResource("1_cevg0")
+theme_override_fonts/font = ExtResource("1_lnup7")
 script = ExtResource("1_rfslu")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -47,5 +47,5 @@ offset_left = 6.0
 offset_top = -619.0
 offset_right = 1139.0
 offset_bottom = -14.0
-theme_override_fonts/normal_font = ExtResource("1_cevg0")
+theme_override_fonts/normal_font = ExtResource("1_lnup7")
 bbcode_enabled = true

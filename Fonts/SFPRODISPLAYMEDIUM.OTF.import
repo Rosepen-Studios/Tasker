@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cybsv7xb52ipv"
-path="res://.godot/imported/JetBrainsMonoNL-Italic.ttf-76463ccb564dd9cb253b7a39794a6f40.fontdata"
+uid="uid://paosd82f7mrr"
+path="res://.godot/imported/SFPRODISPLAYMEDIUM.OTF-3558b92226650c4d5cf732ffce8148d7.fontdata"
 
 [deps]
 
-source_file="res://SF Pro Display Font Family/JetBrainsMonoNL-Italic.ttf"
-dest_files=["res://.godot/imported/JetBrainsMonoNL-Italic.ttf-76463ccb564dd9cb253b7a39794a6f40.fontdata"]
+source_file="res://Fonts/SFPRODISPLAYMEDIUM.OTF"
+dest_files=["res://.godot/imported/SFPRODISPLAYMEDIUM.OTF-3558b92226650c4d5cf732ffce8148d7.fontdata"]
 
 [params]
 

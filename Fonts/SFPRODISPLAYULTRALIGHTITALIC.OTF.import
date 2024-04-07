@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://k1v3vdw5hfvv"
-path="res://.godot/imported/JetBrainsMonoNL-Light.ttf-8c3beea786d59a4e1fb2f0da9b1418b0.fontdata"
+uid="uid://speb6ptswn5d"
+path="res://.godot/imported/SFPRODISPLAYULTRALIGHTITALIC.OTF-cb986f771872f7cd66e2327ad1dd601d.fontdata"
 
 [deps]
 
-source_file="res://JetBrainsMonoNL-Light.ttf"
-dest_files=["res://.godot/imported/JetBrainsMonoNL-Light.ttf-8c3beea786d59a4e1fb2f0da9b1418b0.fontdata"]
+source_file="res://Fonts/SFPRODISPLAYULTRALIGHTITALIC.OTF"
+dest_files=["res://.godot/imported/SFPRODISPLAYULTRALIGHTITALIC.OTF-cb986f771872f7cd66e2327ad1dd601d.fontdata"]
 
 [params]
 

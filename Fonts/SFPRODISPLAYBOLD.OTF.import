@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://brf6gngpp4kst"
-path="res://.godot/imported/SFPRODISPLAYBOLD.OTF-844f917f7b98b80ca756fb12c51b8917.fontdata"
+path="res://.godot/imported/SFPRODISPLAYBOLD.OTF-6375f745dc0f3e4fc1bcfcddeb843438.fontdata"
 
 [deps]
 
-source_file="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF"
-dest_files=["res://.godot/imported/SFPRODISPLAYBOLD.OTF-844f917f7b98b80ca756fb12c51b8917.fontdata"]
+source_file="res://Fonts/SFPRODISPLAYBOLD.OTF"
+dest_files=["res://.godot/imported/SFPRODISPLAYBOLD.OTF-6375f745dc0f3e4fc1bcfcddeb843438.fontdata"]
 
 [params]
 

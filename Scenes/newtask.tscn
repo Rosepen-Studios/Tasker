@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/newtask.gd" id="1_8tmui"]
 [ext_resource type="Texture2D" uid="uid://bm2rh3fqmtnda" path="res://Images/Newtask.png" id="2_3y252"]
-[ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="2_4le61"]
-[ext_resource type="FontFile" uid="uid://paosd82f7mrr" path="res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF" id="3_xyxbc"]
+[ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://Fonts/SFPRODISPLAYBOLD.OTF" id="2_4le61"]
+[ext_resource type="FontFile" uid="uid://paosd82f7mrr" path="res://Fonts/SFPRODISPLAYMEDIUM.OTF" id="3_xyxbc"]
 [ext_resource type="Script" path="res://Scripts/Cancel.gd" id="4_rd550"]
 [ext_resource type="Script" path="res://Scripts/NameIn.gd" id="5_2r3ns"]
 [ext_resource type="Script" path="res://Scripts/Save.gd" id="5_8b7vo"]

@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://c3ensiyeq4jtl"]
 
-[ext_resource type="FontFile" uid="uid://paosd82f7mrr" path="res://SF Pro Display Font Family/SFPRODISPLAYMEDIUM.OTF" id="2_16kio"]
-[ext_resource type="PackedScene" uid="uid://crwtrotm873y8" path="res://test.tscn" id="3_arnkv"]
-[ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://SF Pro Display Font Family/SFPRODISPLAYBOLD.OTF" id="4_8o8w0"]
+[ext_resource type="FontFile" uid="uid://paosd82f7mrr" path="res://Fonts/SFPRODISPLAYMEDIUM.OTF" id="2_16kio"]
+[ext_resource type="PackedScene" path="res://test.tscn" id="3_arnkv"]
+[ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://Fonts/SFPRODISPLAYBOLD.OTF" id="4_8o8w0"]
 [ext_resource type="Texture2D" uid="uid://08257hvgyv6g" path="res://Images/Icons/Colors.png" id="5_mn4ou"]
 [ext_resource type="Texture2D" uid="uid://ds7xav3jqlb1n" path="res://Images/Icons/SF/icons8-pen-100.png" id="6_kcwly"]
 [ext_resource type="Texture2D" uid="uid://ba5a0cguuhh4m" path="res://Images/Icons/SF/icons8-note-100.png" id="7_nv3tv"]

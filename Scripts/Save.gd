@@ -108,9 +108,7 @@ func _pressed():
 			$"../..".visible = false
 	elif $"../name/LineEdit".text == "":
 		gvh.icon = "1"
-		print("ERROR: Task needs to have a name. (Exit Code 2)")
 	else:
 		$"../name/LineEdit".text = ""
 		gvh.icon = "1"
-		print("ERROR: No more tasks available. (Exit Code 1)")
 	$"../..".visible = false
