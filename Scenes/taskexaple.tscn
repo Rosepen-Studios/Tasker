@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/taskexaple.gd" id="1_4j12x"]
 [ext_resource type="Texture2D" uid="uid://dj5ykpvbu2myf" path="res://Images/taskedit.png" id="2_6nr43"]
-[ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://Fonts/SFPRODISPLAYBOLD.OTF" id="2_k6uwd"]
 [ext_resource type="Texture2D" uid="uid://cljatsutkwee7" path="res://Images/task.png" id="2_up8a2"]
+[ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://Fonts/SFPRODISPLAYBOLD.OTF" id="4_7mmna"]
 [ext_resource type="Texture2D" uid="uid://08257hvgyv6g" path="res://Images/Icons/Colors.png" id="5_h38on"]
 [ext_resource type="Texture2D" uid="uid://ds7xav3jqlb1n" path="res://Images/Icons/SF/icons8-pen-100.png" id="6_dv6dm"]
 [ext_resource type="PackedScene" uid="uid://bw6n2vbol56fp" path="res://Scenes/test.tscn" id="6_lm5ye"]
@@ -274,7 +274,7 @@ offset_right = -421.78
 offset_bottom = -75.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_k6uwd")
+theme_override_fonts/font = ExtResource("4_7mmna")
 theme_override_font_sizes/font_size = 30
 text = "Error Loading Data, Please Reload the App"
 clip_text = true

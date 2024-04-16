@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/newtask.gd" id="1_8tmui"]
 [ext_resource type="Texture2D" uid="uid://bm2rh3fqmtnda" path="res://Images/Newtask.png" id="2_3y252"]
-[ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://Fonts/SFPRODISPLAYBOLD.OTF" id="2_4le61"]
-[ext_resource type="FontFile" uid="uid://paosd82f7mrr" path="res://Fonts/SFPRODISPLAYMEDIUM.OTF" id="3_xyxbc"]
+[ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://Fonts/SFPRODISPLAYBOLD.OTF" id="3_xg5pl"]
+[ext_resource type="FontFile" uid="uid://paosd82f7mrr" path="res://Fonts/SFPRODISPLAYMEDIUM.OTF" id="4_gec5c"]
 [ext_resource type="Script" path="res://Scripts/Cancel.gd" id="4_rd550"]
 [ext_resource type="Script" path="res://Scripts/NameIn.gd" id="5_2r3ns"]
 [ext_resource type="Script" path="res://Scripts/Save.gd" id="5_8b7vo"]
@@ -299,7 +299,7 @@ offset_left = 1740.0
 offset_top = 367.0
 offset_right = 1892.0
 offset_bottom = 413.0
-theme_override_fonts/font = ExtResource("2_4le61")
+theme_override_fonts/font = ExtResource("3_xg5pl")
 theme_override_font_sizes/font_size = 35
 text = "New Task"
 horizontal_alignment = 1
@@ -310,7 +310,7 @@ offset_left = 1775.0
 offset_top = 402.0
 offset_right = 2148.0
 offset_bottom = 436.0
-theme_override_fonts/font = ExtResource("3_xyxbc")
+theme_override_fonts/font = ExtResource("4_gec5c")
 theme_override_font_sizes/font_size = 25
 text = "Name:"
 
@@ -320,7 +320,7 @@ offset_left = -102.0
 offset_top = 34.0
 offset_right = 176.0
 offset_bottom = 74.0
-theme_override_fonts/font = ExtResource("2_4le61")
+theme_override_fonts/font = ExtResource("3_xg5pl")
 theme_override_icons/clear = SubResource("ImageTexture_6ps0j")
 flat = true
 script = ExtResource("5_2r3ns")
@@ -368,7 +368,7 @@ offset_left = 1741.0
 offset_top = 531.0
 offset_right = 1797.0
 offset_bottom = 568.0
-theme_override_fonts/font = ExtResource("2_4le61")
+theme_override_fonts/font = ExtResource("3_xg5pl")
 theme_override_font_sizes/font_size = 25
 text = "Icon:"
 
@@ -490,7 +490,7 @@ offset_left = -2.0
 offset_top = 54.0
 offset_right = 43.0
 offset_bottom = 79.0
-theme_override_fonts/font = ExtResource("3_xyxbc")
+theme_override_fonts/font = ExtResource("4_gec5c")
 theme_override_font_sizes/font_size = 17
 text = "Color:"
 
