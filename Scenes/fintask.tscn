@@ -198,8 +198,11 @@ animations = [{
 }]
 
 [node name="PanelContainer" type="PanelContainer"]
-offset_right = 1144.0
-offset_bottom = 136.0
+anchors_preset = -1
+anchor_right = 0.993
+anchor_bottom = 0.21
+offset_right = 0.0639648
+offset_bottom = -0.0800018
 theme_override_styles/panel = SubResource("StyleBoxEmpty_ls4y5")
 script = ExtResource("1_vg6yd")
 

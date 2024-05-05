@@ -211,3 +211,8 @@ func _exe_command(command, sufix, sufix2, sufix3):
 			count += 1
 		output.newline()
 		output.add_text(str(output.get_line_count()-1) + " " + "Task count: "+ str(count))
+	elif command == "set_win":
+		ProjectSettings.set_setting("display/window/size/viewport_height",int(sufix))
+		ProjectSettings.set_setting("display/window/size/viewport_width",int(sufix2))
+		output.newline()
+		output.add_text(str(output.get_line_count()-1) + " " + "<Window height set to:"+sufix+" and window width set to:"+sufix2)

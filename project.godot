@@ -24,6 +24,12 @@ boot_splash/minimum_display_time=100
 
 gvh="*res://Scripts/GlobalVarHolder.gd"
 
+[display]
+
+window/energy_saving/keep_screen_on=false
+window/stretch/mode="canvas_items"
+window/dpi/allow_hidpi=false
+
 [editor_plugins]
 
 enabled=PackedStringArray()

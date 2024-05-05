@@ -4,3 +4,5 @@ res://Scenes/devmode.tscn
 res://Scenes/fintask.tscn
 res://Scenes/newtask.tscn
 res://Scenes/test.tscn
+res://Scripts/devmode.gd
+res://Scripts/Timer.gd
