@@ -4,5 +4,8 @@ res://Scenes/devmode.tscn
 res://Scenes/fintask.tscn
 res://Scenes/newtask.tscn
 res://Scenes/test.tscn
-res://Scripts/devmode.gd
-res://Scripts/Timer.gd
+res://Scripts/keepratio.gd
+res://Scripts/donetask.gd
+res://Scripts/taskexaple.gd
+res://Scenes/MainUI.tscn
+res://Scripts/newtask.gd

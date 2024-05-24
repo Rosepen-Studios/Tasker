@@ -46,6 +46,7 @@ func _process(delta):
 		gvh.tskscomp += 1
 		gvh.comptask = true
 		gvh.comptaskid = ID
+		
 		visible = false
 		gvh.taskCP[ID] = 1
 	if gvh.edit == true:

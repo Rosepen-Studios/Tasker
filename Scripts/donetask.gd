@@ -5,6 +5,7 @@ var savename:String = gvh.savename
 var on:bool = false
 var done:bool = false
 var wasloaded = false
+var isin:bool = false #stops the Done animation from repeating
 func _ready():
 	_load()
 	
@@ -18,6 +19,9 @@ func _process(delta):
 		on = true
 	if gvh.taskCP[ID] == 1:
 		visible = true
+		if isin == false:
+			
+			isin = true
 	if gvh.edit == true and gvh.edittarget == ID:
 		$Control/Label2.text = gvh.editname
 		$Control/Color.play(str(gvh.editcolor))

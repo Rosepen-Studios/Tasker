@@ -23,11 +23,13 @@ boot_splash/minimum_display_time=100
 [autoload]
 
 gvh="*res://Scripts/GlobalVarHolder.gd"
+Keepratio="*res://Scripts/keepratio.gd"
 
 [display]
 
 window/energy_saving/keep_screen_on=false
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 window/dpi/allow_hidpi=false
 
 [editor_plugins]
