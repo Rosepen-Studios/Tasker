@@ -53,7 +53,7 @@ func _exe_command(command, sufix, sufix2, sufix3):
 		gvh.taskCP = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0}
 	elif command == "info":
 		output.newline()
-		output.add_text(str(output.get_line_count()-1) + " " + "<Tasker version: 0.2 stable")
+		output.add_text(str(output.get_line_count()-1) + " " + "<Tasker version: 0.2.3 stable")
 	elif command == "easter_egg":
 		output.newline()
 		output.add_text(str(output.get_line_count()-1) + " " + "<Great job, you found an easter egg!🐣")
@@ -210,7 +210,7 @@ func _exe_command(command, sufix, sufix2, sufix3):
 		if gvh.taskDB["10"] == 1:
 			count += 1
 		output.newline()
-		output.add_text(str(output.get_line_count()-1) + " " + "Task count: "+ str(count))
+		output.add_text(str(output.get_line_count()-1) + " " + "<Task count: "+ str(count))
 	elif command == "set_win":
 		ProjectSettings.set_setting("display/window/size/viewport_height",int(sufix))
 		ProjectSettings.set_setting("display/window/size/viewport_width",int(sufix2))

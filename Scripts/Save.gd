@@ -111,4 +111,4 @@ func _pressed():
 	else:
 		$"../name/LineEdit".text = ""
 		gvh.icon = "1"
-	$"../..".visible = false
+

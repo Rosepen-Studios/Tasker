@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://cgd42neh4wjwe"]
+[gd_scene load_steps=60 format=3 uid="uid://cgd42neh4wjwe"]
 
 [ext_resource type="Script" path="res://Scripts/taskexaple.gd" id="1_4j12x"]
 [ext_resource type="Texture2D" uid="uid://dj5ykpvbu2myf" path="res://Images/taskedit.png" id="2_6nr43"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://eapkfrh1rjxg" path="res://Images/Icons/SF/icons8-important-100.png" id="16_rx5r3"]
 [ext_resource type="Texture2D" uid="uid://cqr3sdsggqwdp" path="res://Images/Button.png" id="17_ugn4h"]
 [ext_resource type="Texture2D" uid="uid://casmykrvthm23" path="res://Images/Icons/SF/icons8-close-48.png" id="19_bgqwg"]
+[ext_resource type="Script" path="res://Scenes/Edit.gd" id="19_elhil"]
 [ext_resource type="Texture2D" uid="uid://nxielcemxo5t" path="res://Images/Icons/SF/icons8-trash-48.png" id="20_3u657"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tndk3"]
@@ -272,10 +273,38 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(-1152, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Task/TextureRect2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.1, 0.1)]
+}
+
+[sub_resource type="Animation" id="Animation_8y7nc"]
+resource_name = "Press Edit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Task/TextureRect2:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.1, 0.1), Vector2(0.08, 0.08), Vector2(0.1, 0.1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hadro"]
 _data = {
 "Done": SubResource("Animation_25jce"),
+"Press Edit": SubResource("Animation_8y7nc"),
 "RESET": SubResource("Animation_hl354")
 }
 
@@ -284,8 +313,8 @@ anchors_preset = -1
 anchor_right = 0.998
 anchor_bottom = 0.211
 offset_left = -1152.0
-offset_right = 1142.48
-offset_bottom = 272.728
+offset_right = 3441.87
+offset_bottom = 546.184
 theme_override_styles/panel = SubResource("StyleBoxEmpty_tndk3")
 script = ExtResource("1_4j12x")
 
@@ -307,8 +336,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 143.0
 offset_top = 17.0
-offset_right = -421.78
-offset_bottom = -75.0
+offset_right = -3516.87
+offset_bottom = -485.184
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("4_7mmna")
@@ -328,58 +357,47 @@ scale = Vector2(0.85, 0.85)
 sprite_frames = SubResource("SpriteFrames_fjl8d")
 animation = &"Error"
 
-[node name="TextureRect2" type="TextureRect" parent="Task"]
+[node name="TextureRect2" type="Sprite2D" parent="Task"]
 modulate = Color(1, 1, 1, 0.666667)
-self_modulate = Color(1, 1, 1, 0.666667)
-layout_mode = 0
-offset_left = 1084.95
-offset_top = 8.0
-offset_right = 1604.95
-offset_bottom = 528.0
+show_behind_parent = true
+position = Vector2(1110.9, 34.9)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("17_ugn4h")
 
-[node name="TextureRect" type="TextureRect" parent="Task"]
+[node name="TextureRect" type="Sprite2D" parent="Task"]
 modulate = Color(1, 1, 1, 0.666667)
 self_modulate = Color(1, 1, 1, 0.666667)
-layout_mode = 0
-offset_left = 1084.95
-offset_top = 77.0
-offset_right = 1604.95
-offset_bottom = 597.0
+position = Vector2(1112, 104)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("17_ugn4h")
 
-[node name="Edit" type="Button" parent="Task"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.992
-anchor_bottom = 0.889
-offset_left = 1085.0
-offset_top = 8.0
-offset_right = 1.37817
-offset_bottom = -60.904
-icon = ExtResource("6_dv6dm")
-flat = true
-expand_icon = true
+[node name="Timer" type="Timer" parent="Task"]
+wait_time = 0.5
 
 [node name="Done" type="Button" parent="Task"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 1085.0
-offset_top = 77.0
-offset_right = -7.78003
-offset_bottom = -7.0
+layout_mode = 2
+offset_left = 1086.0
+offset_top = 78.0
+offset_right = 1138.0
+offset_bottom = 130.0
 grow_horizontal = 2
 grow_vertical = 2
 icon = ExtResource("9_ow7sh")
 flat = true
 expand_icon = true
 
-[node name="Timer" type="Timer" parent="Task"]
-wait_time = 0.5
+[node name="Edit" type="Button" parent="Task"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 1085.0
+offset_top = 9.0
+offset_right = 1605.0
+offset_bottom = 529.0
+scale = Vector2(0.1, 0.1)
+icon = ExtResource("6_dv6dm")
+flat = true
+expand_icon = true
+script = ExtResource("19_elhil")
 
 [node name="Edit" type="Control" parent="."]
 visible = false
@@ -387,6 +405,7 @@ layout_mode = 2
 script = ExtResource("10_xomk8")
 
 [node name="TextureRect" type="TextureRect" parent="Edit"]
+visible = false
 layout_mode = 0
 offset_left = 16.0
 offset_top = 16.0
