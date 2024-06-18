@@ -25,3 +25,10 @@ When you open the user you will see 2 folder, you can ingnore those and you will
 where x = the task's number/ID and 1 = active or 0 = inactive 
   </li>
   <h2>Overriding</h2>
+  As of the currunt version of <strong>Tasker</strong> you can only override the background to any picture of your choosing.
+  <h3>How to Override the background:</h3>
+  <ul>1. Open <strong>The Data Directory Path</strong>. (look at the <strong>Data directory</strong> on how to do that)</ul>
+  <ul>2. Select the image you want to use as your new background. (16:9 aspect ratio ensures no streching, Supported formats are: .png .jpg and .jpeg)</ul>
+  <ul>3. Rename the image to <strong>bg</strong>.</ul>
+  <ul>4. Place the Image in the <strong>The Data Directory Path</strong>.</ul>
+  <ul>5. Restart Tasker and you are done!</ul>
