@@ -24,6 +24,7 @@ When you open the user you will see 2 folder, you can ingnore those and you will
     The <code>savetime.json</code> file has the following structure: <code>{"lastlogd":"03","lastlogt":"19:36:41","taskDB":{"1":1,"10":0,"2":0,"3":0,"4":0,"5":0,"6":0,"7":0,"8":0,"9":0}}</code>,   <code>lastlogd</code> contains the day you last opened the program (type: <code>int</code>),   <code>lastlogt</code> contains the time you last opened the program (type: <code>int</code>), <code>taskDB</code> is a database all scripts may access to determin which tasks are active (active = shown to the user) (type <code>dictionary</code>, stucture: <code>"x":1</code>
 where x = the task's number/ID and 1 = active or 0 = inactive 
   </li>
+  <ul>   </ul>
   <li>
    The <code>config.json</code> file is used to enable certain features not ment for normal use. (Such features will be mentioned further below.) This is the structure the file follows: <code>{"devmode":true}</code>, where "feature" is the feature you are trying to toggle (In this case <code>devmode</code>) and it is a bool where <code>true</code> means the feature is anabled and <code>false</code> means the opposite.
   </li>
