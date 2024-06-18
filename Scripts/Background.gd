@@ -20,6 +20,7 @@ func _write_config():
 	var file = FileAccess.open("user://config.json", FileAccess.WRITE)
 	var save = {}
 	save["devmode"] = false
+	save["beta"] = false
 	var json = JSON.stringify(save)
 	file.store_string(json)
 	file.close()
@@ -29,5 +30,6 @@ func _load():
 	var json = file.get_as_text()
 	var save = JSON.parse_string(json)
 	gvh.devmode = save["devmode"]
+	gvh.beta = save["beta"]
 	file.close()
 	

@@ -26,6 +26,9 @@ func _find_command():
 	elif  text == "info":
 		text = ""
 		_exe_command("info",null,null,null)
+	elif  text == "beta":
+		text = ""
+		_exe_command("beta",null,null,null)
 	elif  text == "easter_egg":
 		text = ""
 		_exe_command("easter_egg",null,null,null)
@@ -53,7 +56,13 @@ func _exe_command(command, sufix, sufix2, sufix3):
 		gvh.taskCP = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0}
 	elif command == "info":
 		output.newline()
-		output.add_text(str(output.get_line_count()-1) + " " + "<Tasker version: 0.2.3 stable")
+		output.append_text(str(output.get_line_count()-1) + " " + "<Tasker version: 0.2.3 "+"[color=red]undeployed[/color]")
+	elif command == "beta":
+		output.newline()
+		if gvh.beta == false:
+			output.append_text(str(output.get_line_count()-1) + " " + "<[color=red]The beta program is not enabled.[/color]")
+		else:
+				output.append_text(str(output.get_line_count()-1) + " " + "<[color=green]The beta program is enabled.[/color]")
 	elif command == "easter_egg":
 		output.newline()
 		output.add_text(str(output.get_line_count()-1) + " " + "<Great job, you found an easter egg!🐣")
@@ -61,7 +70,7 @@ func _exe_command(command, sufix, sufix2, sufix3):
 	elif command == "del":
 		if int(sufix) <= 10 and gvh.taskDB[str(sufix)] == 0:
 			output.newline()
-			output.add_text(str(output.get_line_count()-1) + " " + "Error 404: Task not found")
+			output.append_text(str(output.get_line_count()-1) + " " + "Error 404: Task not found")
 		elif  int(sufix) <= 10:
 			gvh.taskDB[sufix] = 0
 			gvh.taskCP[int(sufix)] = 0
@@ -69,7 +78,7 @@ func _exe_command(command, sufix, sufix2, sufix3):
 			output.add_text(str(output.get_line_count()-1) + " " + "<Deleting task "+str(sufix))
 		else:
 			output.newline()
-			output.add_text(str(output.get_line_count()-1) + " " + "Error 400: Bad request")
+			output.append_text(str(output.get_line_count()-1) + " " + "Error 400: Bad request")
 	elif command == "add":
 		if gvh.tsknum <= 10 and sufix != "" and sufix2 != "" and sufix3 != "" and int(sufix2) > 0 and int(sufix2) < 11 and int(sufix3) >-1 and int(sufix3) < 6 and (gvh.taskDB["1"] == 0 or gvh.taskDB["2"] == 0 or gvh.taskDB["3"] == 0 or gvh.taskDB["4"] == 0 or gvh.taskDB["5"] == 0 or  gvh.taskDB["6"] == 0 or gvh.taskDB["7"] == 0 or gvh.taskDB["8"] == 0 or gvh.taskDB["9"] == 0 or gvh.taskDB["10"] == 0):
 			if gvh.taskDB["1"] == 0:

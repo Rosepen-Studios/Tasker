@@ -279,6 +279,21 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_qkj8o"]
+resource_name = "Out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 564.435)]
+}
+
 [sub_resource type="Animation" id="Animation_lycwn"]
 length = 0.001
 tracks/0/type = "value"
@@ -306,21 +321,6 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_qkj8o"]
-resource_name = "Out"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 564.435)]
-}
-
 [sub_resource type="Animation" id="Animation_tw0cw"]
 resource_name = "Save"
 
@@ -339,8 +339,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1150.0
-offset_bottom = 540.926
+offset_right = 4606.0
+offset_bottom = 2484.93
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8tmui")

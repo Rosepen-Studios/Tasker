@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://cgd42neh4wjwe"]
+[gd_scene load_steps=59 format=3 uid="uid://cgd42neh4wjwe"]
 
 [ext_resource type="Script" path="res://Scripts/taskexaple.gd" id="1_4j12x"]
 [ext_resource type="Texture2D" uid="uid://dj5ykpvbu2myf" path="res://Images/taskedit.png" id="2_6nr43"]
@@ -6,7 +6,6 @@
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://Fonts/SFPRODISPLAYBOLD.OTF" id="4_7mmna"]
 [ext_resource type="Texture2D" uid="uid://08257hvgyv6g" path="res://Images/Icons/Colors.png" id="5_h38on"]
 [ext_resource type="Texture2D" uid="uid://ds7xav3jqlb1n" path="res://Images/Icons/SF/icons8-pen-100.png" id="6_dv6dm"]
-[ext_resource type="PackedScene" uid="uid://bw6n2vbol56fp" path="res://Scenes/test.tscn" id="6_lm5ye"]
 [ext_resource type="Texture2D" uid="uid://ba5a0cguuhh4m" path="res://Images/Icons/SF/icons8-note-100.png" id="7_umakl"]
 [ext_resource type="Texture2D" uid="uid://cof3kxq56j1iw" path="res://Images/Icons/SF/icons8-charge-100.png" id="7_uyl2i"]
 [ext_resource type="Texture2D" uid="uid://visw7kjbsxoc" path="res://Images/Icons/SF/icons8-home-100.png" id="8_hy8aj"]
@@ -259,6 +258,21 @@ tracks/0/keys = {
 "values": [Vector2(0, 0), Vector2(-1152, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_8y7nc"]
+resource_name = "Press Edit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Task/TextureRect2:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.1, 0.1), Vector2(0.08, 0.08), Vector2(0.1, 0.1)]
+}
+
 [sub_resource type="Animation" id="Animation_hl354"]
 length = 0.001
 tracks/0/type = "value"
@@ -286,21 +300,6 @@ tracks/1/keys = {
 "values": [Vector2(0.1, 0.1)]
 }
 
-[sub_resource type="Animation" id="Animation_8y7nc"]
-resource_name = "Press Edit"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Task/TextureRect2:scale")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0.1, 0.1), Vector2(0.08, 0.08), Vector2(0.1, 0.1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hadro"]
 _data = {
 "Done": SubResource("Animation_25jce"),
@@ -313,8 +312,8 @@ anchors_preset = -1
 anchor_right = 0.998
 anchor_bottom = 0.211
 offset_left = -1152.0
-offset_right = 3441.87
-offset_bottom = 546.184
+offset_right = 4591.57
+offset_bottom = 682.912
 theme_override_styles/panel = SubResource("StyleBoxEmpty_tndk3")
 script = ExtResource("1_4j12x")
 
@@ -328,22 +327,6 @@ stretch_mode = 2
 
 [node name="Task" type="Control" parent="."]
 layout_mode = 2
-
-[node name="Label2" parent="Task" instance=ExtResource("6_lm5ye")]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 143.0
-offset_top = 17.0
-offset_right = -3516.87
-offset_bottom = -485.184
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("4_7mmna")
-theme_override_font_sizes/font_size = 30
-text = "Error Loading Data, Please Reload the App"
-clip_text = true
 
 [node name="Color" type="AnimatedSprite2D" parent="Task"]
 position = Vector2(70.35, 67.775)
@@ -399,13 +382,22 @@ flat = true
 expand_icon = true
 script = ExtResource("19_elhil")
 
+[node name="Label2" type="Label" parent="Task"]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 13.0
+offset_right = 1073.0
+offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("4_7mmna")
+theme_override_font_sizes/font_size = 35
+text = "Error Loading Data, Please Reload The App"
+
 [node name="Edit" type="Control" parent="."]
 visible = false
 layout_mode = 2
 script = ExtResource("10_xomk8")
 
 [node name="TextureRect" type="TextureRect" parent="Edit"]
-visible = false
 layout_mode = 0
 offset_left = 16.0
 offset_top = 16.0
