@@ -8,7 +8,7 @@
 </ul>
 <ul>5. The app should now open with no problem</ul>
 
-<h1>Documentation:</h1>(As of version 0.1)
+<h1>Documentation:</h1>(As of version 0.2.3)
 
 <h2>Data directory (user path)</h2>
 Tasker saves all its data in its user path, which for Windows is located at <code>C:\Users\"username"\AppData\Roaming\Godot\app_userdata\Tasker</code> remember to change "username" to your username, for Mac path is <code>~/Library/Application Support/Godot/app_userdata/Tasker</code>
@@ -24,3 +24,4 @@ When you open the user you will see 2 folder, you can ingnore those and you will
     The <code>savetime.json</code> has the following structure: <code>{"lastlogd":"03","lastlogt":"19:36:41","taskDB":{"1":1,"10":0,"2":0,"3":0,"4":0,"5":0,"6":0,"7":0,"8":0,"9":0}}</code>,   <code>lastlogd</code> contains the day you last opened the program (type: <code>int</code>),   <code>lastlogt</code> contains the time you last opened the program (type: <code>int</code>), <code>taskDB</code> is a database all scripts may access to determin which tasks are active (active = shown to the user) (type <code>dictionary</code>, stucture: <code>"x":1</code>
 where x = the task's number/ID and 1 = active or 0 = inactive 
   </li>
+  <h2>Overriding</h2>
