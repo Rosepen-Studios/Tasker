@@ -1,10 +1,12 @@
-res://Scenes/timetest.tscn
 res://Scenes/taskexaple.tscn
+res://Scenes/timetest.tscn
 res://Scenes/devmode.tscn
 res://Scenes/fintask.tscn
 res://Scenes/newtask.tscn
 res://Scenes/test.tscn
 res://Scenes/MainUI.tscn
-res://Scripts/devmode.gd
-res://Scripts/Background.gd
+res://Scripts/ColorSel.gd
+res://Scripts/donetask.gd
 res://Scripts/GlobalVarHolder.gd
+res://Scripts/Save.gd
+res://Scripts/taskexaple.gd

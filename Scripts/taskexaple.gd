@@ -36,11 +36,12 @@ func _process(delta):
 			gvh.taskDB[str(ID)] = 1
 			$Edit.visible = false
 			_save()
-		if gvh.saving == true:
+		if gvh.nowsaving == true:
 			$Task/Label2.text = gvh.savename
 			$Task/Color.play(str(gvh.saveiconcolor))
 			$Task/Icon2.play(str(gvh.saveicon))
-			gvh.saving = false
+			gvh.nowsaving = false
+			gvh.savepass = true
 		_save()
 	if done == true:
 		gvh.tskscomp += 1

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgct7f34y5ry7"
-path="res://.godot/imported/Spline Untitled.png-0210a6d194a882190fa31d61c15d1312.ctex"
+uid="uid://lhic1apio21k"
+path="res://.godot/imported/Purple.png-5284954b9e47b6b763ad0248a0015401.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Spline Untitled.png"
-dest_files=["res://.godot/imported/Spline Untitled.png-0210a6d194a882190fa31d61c15d1312.ctex"]
+source_file="res://Images/Icons/Colors/Purple.png"
+dest_files=["res://.godot/imported/Purple.png-5284954b9e47b6b763ad0248a0015401.ctex"]
 
 [params]
 

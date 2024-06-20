@@ -312,8 +312,8 @@ anchors_preset = -1
 anchor_right = 0.998
 anchor_bottom = 0.211
 offset_left = -1152.0
-offset_right = 4591.57
-offset_bottom = 682.912
+offset_right = 8040.66
+offset_bottom = 1093.1
 theme_override_styles/panel = SubResource("StyleBoxEmpty_tndk3")
 script = ExtResource("1_4j12x")
 

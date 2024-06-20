@@ -4,7 +4,7 @@ extends Control
 var savename:String = gvh.savename
 var on:bool = false
 var done:bool = false
-var wasloaded = false
+var wasloaded:bool
 var isin:bool = false #stops the Done animation from repeating
 func _ready():
 	_load()
@@ -12,6 +12,11 @@ func _ready():
 	if done == true:
 		visible = true
 func _process(delta):
+	if gvh.savepass == true:
+		$Control/Label2.text = gvh.savename
+		$Control/Color.play(str(gvh.saveiconcolor))
+		$Control/Icon2.play(str(gvh.saveicon))
+		gvh.savepass = false
 	if gvh.taskDB[str(ID)]== 0:
 		visible = false
 	if gvh.taskDB[str(ID)] == 1 and on == false and wasloaded == false:
@@ -19,9 +24,7 @@ func _process(delta):
 		on = true
 	if gvh.taskCP[ID] == 1:
 		visible = true
-		if isin == false:
-			
-			isin = true
+		
 	if gvh.edit == true and gvh.edittarget == ID:
 		$Control/Label2.text = gvh.editname
 		$Control/Color.play(str(gvh.editcolor))
@@ -35,7 +38,7 @@ func _process(delta):
 		gvh.taskDB[str(ID)] = 0
 
 func _load(): #Loads task data
-	var wasloaded = true
+	wasloaded = true
 	var file = FileAccess.open("user://savetask"+str(ID)+".json", FileAccess.READ)
 	var json = file.get_as_text()
 	var save = JSON.parse_string(json)

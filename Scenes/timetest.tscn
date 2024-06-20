@@ -64,8 +64,8 @@ offset_bottom = -0.113098
 [node name="Newtask" parent="Control" instance=ExtResource("6_oa1j6")]
 z_index = 2
 layout_mode = 1
-offset_right = 4596.0
-offset_bottom = 2592.0
+offset_right = 9192.0
+offset_bottom = 5184.0
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 0
