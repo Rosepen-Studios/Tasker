@@ -37,5 +37,79 @@ where x = the task's number/ID and 1 = active or 0 = inactive
   <ul>4. Place the Image in the <strong>The Data Directory Path</strong>.</ul>
   <ul>5. Restart Tasker and you are done!</ul>
   <h2>Developer Mode</h2>
-  Developer Mode is a feature that can be turned on externaly and was programed to help with testing and debuging Tasker. It is essentially a console that accepts custom commands that have can control the app on provide information.
+  
+  Developer Mode is a feature that can be turned on externaly and was programed to help with testing and debuging Tasker. It is essentially a console that accepts custom commands that can control the app or provide information.
   <h3>How to enable Developer Mode:</h3>
+  <ul>1. Open <strong>The Data Directory Path</strong>.</ul>
+  <ul>2. Open the <code>config.json</code> file.</ul>
+  <ul>3. Change the value of <code>devmode</code> to <code>true</code>.</ul>
+  <ul>4. Restart Tasker for your change to take effect, continue reading to see ow to use Developer Mode.</ul>
+  <h3>How to use Developer Mode:</h3>
+  After enabling D.M. and restarting Tasker, nothing is immediately different. To actually acces the aforementioned console you need to use the new hotkey <code>/</code>. After doing that you should be met with the D.M. console, if nothing happens please go over the activation steps again. Focusing on the console it is a simple screen with most of it being covered by the text space, the input bar right below and a button to exit D.M. on the top left of the screen. In order to do something with the console you need to learn Tasker's custom commands, but first you need to understand how to form commands. First of all commands are split into two different kinds: <strong>Actions</strong> where the command affects the app and <strong>Informants</strong> where the command provides info about the app. Moving on, commands are comprised of four parts the <code>command</code>, <code>sufix</code>, <code>sufix2</code> and <code>sufix3</code>. The <code>command</code> is what tells Tasker what action to execute and the <code>sufixes</code> are parameters, or extra info passed along with the command, different commands require more or less <code>sufixes</code>. Finaly Here is the list of comnds currently implemented:
+<table>
+  <tr>
+    <th>Command</th>
+   <th>Explanation</th>
+    <th>Type</th>
+    <th>Sufix</th>
+   <th>Sufix2</th>
+   <th>Sufix3</th>
+    <th>Example</th>
+   <th>Result</th>
+  
+  </tr>
+  <tr>
+    <td>count</td>
+       <td>Counts how many tasks are loaded</td>
+    <td>Informant</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+      <td>count</td>
+    <td>Task count:*number of tasks*</td>
+
+  </tr>
+  <tr>
+    <td>info</td>
+       <td>Prints the app's current version (not the most up-to-date version)</td>
+    <td>Informant</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+      <td>info</td>
+    <td>Tasker version 0.2.2 stable</td>
+
+  </tr>
+   <tr>
+    <td>add</td>
+    <td>Creates a task</td>
+    <td>Action</td>
+    <td>Task Name (<code>string</code>)</td>
+    <td>Task Icon(<code>int</code> 1-10)</td>
+    <td>Task Color(<code>int</code> 1-6</td>
+    <td>add:example,1,3</td>
+    <td>Added task(Name:example Icon:1 Color:3)</td>
+  </tr>
+     <tr>
+    <td>del</td>
+    <td>Deletes tasks</td>
+    <td>Action</td>
+    <td>Task ID (<code>int</code> 1-10 or <code>all</code>)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>del:all</td>
+    <td>Deleting all tasks</td>
+  </tr>
+       <tr>
+    <td>???</td>
+    <td>???</td>
+    <td>Easter Egg</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>???</td>
+    <td>???</td>
+  </tr>
+</table>
+  
+ 
