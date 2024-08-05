@@ -7,6 +7,8 @@ func _ready():
 	add_icon_item(load("res://Images/Icons/Colors/Green.png"),"Green",4)
 	add_icon_item(load("res://Images/Icons/Colors/Orange.png"),"Orange",5)
 	add_icon_item(load("res://Images/Icons/Colors/Purple.png"),"Purple",6)
+	add_icon_item(load("res://Images/Icons/Colors/Teal.png"),"Teal",7)
+	add_icon_item(load("res://Images/Icons/Colors/Gold.png"),"Gold",8)
 	
 	
 func _process(delta):

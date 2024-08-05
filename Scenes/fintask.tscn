@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dkcpjcaqk7sno"]
+[gd_scene load_steps=31 format=3 uid="uid://dkcpjcaqk7sno"]
 
 [ext_resource type="Script" path="res://Scripts/donetask.gd" id="1_vg6yd"]
 [ext_resource type="PackedScene" uid="uid://bw6n2vbol56fp" path="res://Scenes/test.tscn" id="3_n2vk7"]
@@ -46,6 +46,14 @@ region = Rect2(828, 0, 142, 143)
 [sub_resource type="AtlasTexture" id="AtlasTexture_5i6tg"]
 atlas = ExtResource("5_yijek")
 region = Rect2(1035, 0, 142, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbc06"]
+atlas = ExtResource("5_yijek")
+region = Rect2(1242, 0, 142, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3io0"]
+atlas = ExtResource("5_yijek")
+region = Rect2(1449, 0, 142, 143)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mdbh0"]
 animations = [{
@@ -103,6 +111,22 @@ animations = [{
 }],
 "loop": true,
 "name": &"5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbc06")
+}],
+"loop": true,
+"name": &"6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3io0")
+}],
+"loop": true,
+"name": &"7",
 "speed": 5.0
 }]
 
@@ -254,7 +278,7 @@ text = "Error Loading Data, Please Reload the App"
 position = Vector2(70.35, 67.775)
 scale = Vector2(0.85, 0.85)
 sprite_frames = SubResource("SpriteFrames_mdbh0")
-animation = &"2"
+animation = &"7"
 
 [node name="Icon2" type="AnimatedSprite2D" parent="Control"]
 position = Vector2(70.35, 67.775)

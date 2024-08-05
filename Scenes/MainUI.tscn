@@ -1,10 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0m23xtdkrvme"]
+[gd_scene load_steps=4 format=3 uid="uid://c0m23xtdkrvme"]
 
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://Fonts/SFPRODISPLAYBOLD.OTF" id="1_eb2eh"]
-[ext_resource type="Script" path="res://Scripts/nth.gd" id="2_v44os"]
-[ext_resource type="Script" path="res://Scripts/GD.gd" id="3_21g1e"]
 [ext_resource type="PackedScene" uid="uid://cgd42neh4wjwe" path="res://Scenes/taskexaple.tscn" id="3_vaimf"]
-[ext_resource type="Script" path="res://Scripts/ntd.gd" id="4_5xhnl"]
 [ext_resource type="PackedScene" uid="uid://dkcpjcaqk7sno" path="res://Scenes/fintask.tscn" id="6_j64h5"]
 
 [node name="Control" type="Control"]
@@ -35,23 +32,6 @@ size_flags_stretch_ratio = 0.0
 z_index = 1
 custom_minimum_size = Vector2(1.39, 35.46)
 layout_mode = 2
-
-[node name="GD" type="Label" parent="ScrollContainer/VBoxContainer/To Do"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_eb2eh")
-theme_override_font_sizes/font_size = 40
-text = "Good Job all your tasks are complete!"
-horizontal_alignment = 1
-script = ExtResource("3_21g1e")
-
-[node name="nth" type="Label" parent="ScrollContainer/VBoxContainer/To Do"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_eb2eh")
-theme_override_font_sizes/font_size = 40
-text = "No Tasks Here ; )"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("2_v44os")
 
 [node name="PanelContainer" parent="ScrollContainer/VBoxContainer/To Do" instance=ExtResource("3_vaimf")]
 visible = false
@@ -122,15 +102,6 @@ text = "------------------------------------------------------------------------
 [node name="Done" type="VBoxContainer" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
-
-[node name="ntd" type="Label" parent="ScrollContainer/VBoxContainer/Done"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_eb2eh")
-theme_override_font_sizes/font_size = 40
-text = "No Tasks Complete, Get To Work!"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("4_5xhnl")
 
 [node name="PanelContainer" parent="ScrollContainer/VBoxContainer/Done" instance=ExtResource("6_j64h5")]
 visible = false

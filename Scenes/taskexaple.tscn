@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://cgd42neh4wjwe"]
+[gd_scene load_steps=61 format=3 uid="uid://cgd42neh4wjwe"]
 
 [ext_resource type="Script" path="res://Scripts/taskexaple.gd" id="1_4j12x"]
 [ext_resource type="Texture2D" uid="uid://dj5ykpvbu2myf" path="res://Images/taskedit.png" id="2_6nr43"]
@@ -57,6 +57,14 @@ region = Rect2(828, 0, 142, 143)
 atlas = ExtResource("5_h38on")
 region = Rect2(1035, 0, 142, 143)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_miy1p"]
+atlas = ExtResource("5_h38on")
+region = Rect2(1242, 0, 142, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pbbw"]
+atlas = ExtResource("5_h38on")
+region = Rect2(1449, 0, 142, 143)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_4exy7"]
 animations = [{
 "frames": [{
@@ -113,6 +121,22 @@ animations = [{
 }],
 "loop": true,
 "name": &"5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_miy1p")
+}],
+"loop": true,
+"name": &"6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5pbbw")
+}],
+"loop": true,
+"name": &"7",
 "speed": 5.0
 }]
 
@@ -312,8 +336,8 @@ anchors_preset = -1
 anchor_right = 0.998
 anchor_bottom = 0.211
 offset_left = -1152.0
-offset_right = 8040.66
-offset_bottom = 1093.1
+offset_right = 16088.5
+offset_bottom = 2050.2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_tndk3")
 script = ExtResource("1_4j12x")
 
@@ -554,7 +578,7 @@ expand_icon = true
 position = Vector2(52, 51)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_4exy7")
-animation = &"-1"
+animation = &"6"
 
 [node name="Icon2" type="AnimatedSprite2D" parent="Edit/TextureRect"]
 position = Vector2(52, 51)

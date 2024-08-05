@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://tolk5l6mauok"]
+[gd_scene load_steps=69 format=3 uid="uid://tolk5l6mauok"]
 
 [ext_resource type="Script" path="res://Scripts/newtask.gd" id="1_8tmui"]
 [ext_resource type="Texture2D" uid="uid://bm2rh3fqmtnda" path="res://Images/Newtask.png" id="2_3y252"]
@@ -74,6 +74,14 @@ region = Rect2(828, 0, 142, 143)
 atlas = ExtResource("8_imxt3")
 region = Rect2(1035, 0, 142, 143)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfafb"]
+atlas = ExtResource("8_imxt3")
+region = Rect2(1242, 0, 142, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30bbg"]
+atlas = ExtResource("8_imxt3")
+region = Rect2(1449, 0, 142, 143)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_fkhho"]
 animations = [{
 "frames": [{
@@ -130,6 +138,22 @@ animations = [{
 }],
 "loop": true,
 "name": &"5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mfafb")
+}],
+"loop": true,
+"name": &"6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30bbg")
+}],
+"loop": true,
+"name": &"7",
 "speed": 5.0
 }]
 
@@ -339,8 +363,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 8062.0
-offset_bottom = 4428.93
+offset_right = 14974.0
+offset_bottom = 8316.93
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8tmui")
@@ -465,7 +489,7 @@ offset_bottom = 52.0
 position = Vector2(104, 17)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_fkhho")
-animation = &"5"
+animation = &"7"
 script = ExtResource("9_h88we")
 
 [node name="Icon" type="AnimatedSprite2D" parent="BG/Icon"]

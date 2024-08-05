@@ -41,6 +41,7 @@ func _process(delta):
 			$Task/Color.play(str(gvh.saveiconcolor))
 			$Task/Icon2.play(str(gvh.saveicon))
 			gvh.nowsaving = false
+			gvh.savepassid = ID
 			gvh.savepass = true
 		_save()
 	if done == true:
@@ -54,6 +55,7 @@ func _process(delta):
 		_save()
 	if ($Edit/TextureRect/Delete.button_pressed == true and doneloading == true): #Deletes task
 		_delete()
+		gvh.tsknum -= 1
 
 	if $Task/Done.button_pressed == true and doneloading == true:   #Completes Task
 		if localgvhchange == false:

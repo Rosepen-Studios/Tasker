@@ -12,7 +12,7 @@ func _ready():
 	if done == true:
 		visible = true
 func _process(delta):
-	if gvh.savepass == true:
+	if gvh.savepass == true and gvh.savepassid == ID:
 		$Control/Label2.text = gvh.savename
 		$Control/Color.play(str(gvh.saveiconcolor))
 		$Control/Icon2.play(str(gvh.saveicon))

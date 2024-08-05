@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://Fonts/SFPRODISPLAYBOLD.OTF" id="2_8u0j8"]
 [ext_resource type="PackedScene" uid="uid://c0m23xtdkrvme" path="res://Scenes/MainUI.tscn" id="2_cj2ok"]
 [ext_resource type="Script" path="res://Scripts/Timer.gd" id="2_p23ri"]
-[ext_resource type="Texture2D" uid="uid://bal1hotkvq5tp" path="res://Images/Icons/photo-1620121692029-d088224ddc74.png" id="3_yjqqo"]
+[ext_resource type="Texture2D" uid="uid://c888wh1y23qcv" path="res://Images/background.png" id="2_uqj5o"]
 [ext_resource type="Script" path="res://Scripts/Background.gd" id="4_40a35"]
 [ext_resource type="PackedScene" uid="uid://tolk5l6mauok" path="res://Scenes/newtask.tscn" id="6_oa1j6"]
 [ext_resource type="PackedScene" uid="uid://5hbsx41us32b" path="res://Scenes/devmode.tscn" id="7_7oeyw"]
@@ -16,9 +16,10 @@
 script = ExtResource("1_yrdix")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.901961, 0.901961, 0.901961, 1)
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("3_yjqqo")
+texture = ExtResource("2_uqj5o")
 expand_mode = 1
 script = ExtResource("4_40a35")
 metadata/_edit_use_anchors_ = true
@@ -29,14 +30,14 @@ autostart = true
 script = ExtResource("2_p23ri")
 
 [node name="Time" type="Label" parent="."]
-offset_left = 1037.08
+offset_left = 1030.22
 offset_top = 2.0
-offset_right = 1216.08
+offset_right = 1209.22
 offset_bottom = 56.0
 theme_type_variation = &"HeaderLarge"
 theme_override_fonts/font = ExtResource("2_8u0j8")
 theme_override_font_sizes/font_size = 42
-text = "20:57:69"
+text = "20:57"
 script = ExtResource("1_v8tvi")
 
 [node name="TimeControl" type="Node2D" parent="Time"]
@@ -64,8 +65,8 @@ offset_bottom = -0.113098
 [node name="Newtask" parent="Control" instance=ExtResource("6_oa1j6")]
 z_index = 2
 layout_mode = 1
-offset_right = 9192.0
-offset_bottom = 5184.0
+offset_right = 17235.0
+offset_bottom = 9720.0
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo88047yt6ls"
-path="res://.godot/imported/bootscreen.png-9f090533e9ba00cc4c44a534437c0923.ctex"
+uid="uid://cyc5og4sl5ccr"
+path="res://.godot/imported/Teal.png-11efe26e8dc206e2f2431f90deeaab38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/bootscreen.png"
-dest_files=["res://.godot/imported/bootscreen.png-9f090533e9ba00cc4c44a534437c0923.ctex"]
+source_file="res://Images/Icons/Colors/Teal.png"
+dest_files=["res://.godot/imported/Teal.png-11efe26e8dc206e2f2431f90deeaab38.ctex"]
 
 [params]
 

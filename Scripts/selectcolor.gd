@@ -1,12 +1,13 @@
 extends OptionButton
 
 func _ready():
-	add_icon_item(load("res://Images/Icons/White.png"),"White",1)
-	add_icon_item(load("res://Images/Icons/Blue.png"),"Blue",2)
-	add_icon_item(load("res://Images/Icons/Red.png"),"Red",3)
-	add_icon_item(load("res://Images/Icons/Green.png"),"Green",4)
-	add_icon_item(load("res://Images/Icons/Orange.png"),"Orange",5)
-	add_icon_item(load("res://Images/Icons/Purpel.png"),"Purple",6)
-	
+	add_icon_item(load("res://Images/Icons/Colors/White.png"),"White",1)
+	add_icon_item(load("res://Images/Icons/Colors/Blue.png"),"Blue",2)
+	add_icon_item(load("res://Images/Icons/Colors/Red.png"),"Red",3)
+	add_icon_item(load("res://Images/Icons/Colors/Green.png"),"Green",4)
+	add_icon_item(load("res://Images/Icons/Colors/Orange.png"),"Orange",5)
+	add_icon_item(load("res://Images/Icons/Colors/Purple.png"),"Purple",6)
+	add_icon_item(load("res://Images/Icons/Colors/Teal.png"),"Teal",7)
+	add_icon_item(load("res://Images/Icons/Colors/Gold.png"),"Gold",8)
 func _process(delta):
 	$"../Color".play(str(selected))

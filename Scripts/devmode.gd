@@ -56,7 +56,7 @@ func _exe_command(command, sufix, sufix2, sufix3):
 		gvh.taskCP = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0}
 	elif command == "info":
 		output.newline()
-		output.append_text(str(output.get_line_count()-1) + " " + "<Tasker version: 0.2.3 "+"[color=red]undeployed[/color]")
+		output.append_text(str(output.get_line_count()-1) + " " + "<Tasker version: 0.3 "+"[color=white]Stable[/color]")
 	elif command == "beta":
 		output.newline()
 		if gvh.beta == false:
@@ -83,7 +83,7 @@ func _exe_command(command, sufix, sufix2, sufix3):
 		if gvh.tsknum <= 10 and sufix != "" and sufix2 != "" and sufix3 != "" and int(sufix2) > 0 and int(sufix2) < 11 and int(sufix3) >-1 and int(sufix3) < 6 and (gvh.taskDB["1"] == 0 or gvh.taskDB["2"] == 0 or gvh.taskDB["3"] == 0 or gvh.taskDB["4"] == 0 or gvh.taskDB["5"] == 0 or  gvh.taskDB["6"] == 0 or gvh.taskDB["7"] == 0 or gvh.taskDB["8"] == 0 or gvh.taskDB["9"] == 0 or gvh.taskDB["10"] == 0):
 			if gvh.taskDB["1"] == 0:
 				gvh.targettask = 1
-				gvh.saving = true
+				gvh.nowsaving = true
 				gvh.savename = sufix
 				gvh.saveicon = sufix2
 				gvh.saveiconcolor = sufix3
@@ -93,7 +93,7 @@ func _exe_command(command, sufix, sufix2, sufix3):
 				output.add_text(str(output.get_line_count()-1) + " " + "Added task(Name: "+sufix+" Icon: "+ sufix2+ " Color: "+ sufix3+ ")")
 			elif gvh.taskDB["2"] == 0:
 				gvh.targettask = 2
-				gvh.saving = true
+				gvh.nowsaving = true
 				gvh.savename = sufix
 				gvh.saveicon = sufix2
 				gvh.saveiconcolor = sufix3
@@ -103,7 +103,7 @@ func _exe_command(command, sufix, sufix2, sufix3):
 				output.add_text(str(output.get_line_count()-1) + " " + "Added task(Name: "+sufix+" Icon: "+ sufix2+ " Color: "+ sufix3+ ")")
 			elif gvh.taskDB["3"] == 0:
 				gvh.targettask = 3
-				gvh.saving = true
+				gvh.nowsaving = true
 				gvh.savename = sufix
 				gvh.saveicon = sufix2
 				gvh.icon = "1"
@@ -112,7 +112,7 @@ func _exe_command(command, sufix, sufix2, sufix3):
 				output.add_text(str(output.get_line_count()-1) + " " + "Added task(Name: "+sufix+" Icon: "+ sufix2+ " Color: "+ sufix3+ ")")
 			elif gvh.taskDB["4"] == 0:
 				gvh.targettask = 4
-				gvh.saving = true
+				gvh.nowsaving = true
 				gvh.savename = sufix
 				gvh.saveicon = sufix2
 				gvh.saveiconcolor = sufix3
@@ -122,7 +122,7 @@ func _exe_command(command, sufix, sufix2, sufix3):
 				output.add_text(str(output.get_line_count()-1) + " " + "Added task(Name: "+sufix+" Icon: "+ sufix2+ " Color: "+ sufix3+ ")")
 			elif gvh.taskDB["5"] == 0:
 				gvh.targettask = 5
-				gvh.saving = true
+				gvh.nowsaving = true
 				gvh.savename = sufix
 				gvh.saveicon = sufix2
 				gvh.saveiconcolor = sufix3
@@ -132,7 +132,7 @@ func _exe_command(command, sufix, sufix2, sufix3):
 				output.add_text(str(output.get_line_count()-1) + " " + "Added task(Name: "+sufix+" Icon: "+ sufix2+ " Color: "+ sufix3+ ")")
 			elif gvh.taskDB["6"] == 0:
 				gvh.targettask = 6
-				gvh.saving = true
+				gvh.nowsaving = true
 				gvh.savename = sufix
 				gvh.saveicon = sufix2
 				gvh.saveiconcolor = sufix3
@@ -142,7 +142,7 @@ func _exe_command(command, sufix, sufix2, sufix3):
 				output.add_text(str(output.get_line_count()-1) + " " + "Added task(Name: "+sufix+" Icon: "+ sufix2+ " Color: "+ sufix3+ ")")
 			elif gvh.taskDB["7"] == 0:
 				gvh.targettask = 7
-				gvh.saving = true
+				gvh.nowsaving = true
 				gvh.savename = sufix
 				gvh.saveicon = sufix2
 				gvh.saveiconcolor = sufix3
@@ -152,7 +152,7 @@ func _exe_command(command, sufix, sufix2, sufix3):
 				output.add_text(str(output.get_line_count()-1) + " " + "Added task(Name: "+sufix+" Icon: "+ sufix2+ " Color: "+ sufix3+ ")")
 			elif gvh.taskDB["8"] == 0:
 				gvh.targettask = 8
-				gvh.saving = true
+				gvh.nowsaving = true
 				gvh.savename = sufix
 				gvh.saveicon = sufix2
 				gvh.saveiconcolor = sufix3
@@ -162,7 +162,7 @@ func _exe_command(command, sufix, sufix2, sufix3):
 				output.add_text(str(output.get_line_count()-1) + " " + "Added task(Name: "+sufix+" Icon: "+ sufix2+ " Color: "+ sufix3+ ")")
 			elif gvh.taskDB["9"] == 0:
 				gvh.targettask = 9
-				gvh.saving = true
+				gvh.nowsaving = true
 				gvh.savename = sufix
 				gvh.saveicon = sufix2
 				gvh.saveiconcolor = sufix3
@@ -172,7 +172,7 @@ func _exe_command(command, sufix, sufix2, sufix3):
 				output.add_text(str(output.get_line_count()-1) + " " + "Added task(Name: "+sufix+" Icon: "+ sufix2+ " Color: "+ sufix3+ ")")
 			elif gvh.taskDB["10"] == 0:
 				gvh.targettask = 10
-				gvh.saving = true
+				gvh.nowsaving = true
 				gvh.savename = sufix
 				gvh.saveicon = sufix2
 				gvh.saveiconcolor = sufix3

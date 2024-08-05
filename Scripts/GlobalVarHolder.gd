@@ -19,7 +19,8 @@ var devmode:bool = false #Devmode Enabled?
 var beta:bool = false #Beta Enabled?
 var conopen= false
 var nowsaving:bool #Is Saving?
-var savepass:bool #Main Task Saved, Passing To Done Task
+var savepass:bool = false #Main Task Saved, Passing To Done Task
+var savepassid:int #What Task Is Saving?
 
 var edit:bool = false
 var edittarget:int 
@@ -30,4 +31,7 @@ var editcolor:String
 var taskDB = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0} #Active Tasks
 var taskCP = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0} #Completed Tasks
 
+
+	
+	
 
