@@ -30,6 +30,7 @@ window/energy_saving/keep_screen_on=false
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/dpi/allow_hidpi=false
+window/per_pixel_transparency/allowed=true
 
 [editor_plugins]
 

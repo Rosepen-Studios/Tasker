@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://bt8qpxl1it5nb" path="res://Images/Icons/SF/icons8-ok-100.png" id="9_ow7sh"]
 [ext_resource type="Texture2D" uid="uid://dscyimp2xpwh1" path="res://Images/Icons/SF/icons8-presentation-100.png" id="9_sbu8q"]
 [ext_resource type="Texture2D" uid="uid://cnf2cwikhw421" path="res://Images/Icons/SF/icons8-vegetarian-food-100.png" id="10_jesgf"]
-[ext_resource type="Script" path="res://Scripts/Edit.gd" id="10_xomk8"]
 [ext_resource type="Texture2D" uid="uid://p2d4mof4f6fb" path="res://Images/Icons/SF/icons8-dumbbell-100.png" id="11_fdtsh"]
 [ext_resource type="Script" path="res://Scripts/selectcolor.gd" id="12_ag8yc"]
 [ext_resource type="Script" path="res://Scripts/iconsel.gd" id="12_wp2mv"]
@@ -22,9 +21,10 @@
 [ext_resource type="Script" path="res://Scripts/iconselect (2).gd" id="14_y5tdr"]
 [ext_resource type="Texture2D" uid="uid://bfui1pmlens1q" path="res://Images/Icons/SF/icons8-yin-yang-100.png" id="15_iq70q"]
 [ext_resource type="Texture2D" uid="uid://eapkfrh1rjxg" path="res://Images/Icons/SF/icons8-important-100.png" id="16_rx5r3"]
+[ext_resource type="Script" path="res://Scripts/Edit.gd" id="17_5ku8k"]
 [ext_resource type="Texture2D" uid="uid://cqr3sdsggqwdp" path="res://Images/Button.png" id="17_ugn4h"]
 [ext_resource type="Texture2D" uid="uid://casmykrvthm23" path="res://Images/Icons/SF/icons8-close-48.png" id="19_bgqwg"]
-[ext_resource type="Script" path="res://Scenes/Edit.gd" id="19_elhil"]
+[ext_resource type="Script" path="res://Scenes/Edit.gd" id="19_ycbvc"]
 [ext_resource type="Texture2D" uid="uid://nxielcemxo5t" path="res://Images/Icons/SF/icons8-trash-48.png" id="20_3u657"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tndk3"]
@@ -336,8 +336,8 @@ anchors_preset = -1
 anchor_right = 0.998
 anchor_bottom = 0.211
 offset_left = -1152.0
-offset_right = 16088.5
-offset_bottom = 2050.2
+offset_right = 22986.7
+offset_bottom = 2870.57
 theme_override_styles/panel = SubResource("StyleBoxEmpty_tndk3")
 script = ExtResource("1_4j12x")
 
@@ -404,7 +404,7 @@ scale = Vector2(0.1, 0.1)
 icon = ExtResource("6_dv6dm")
 flat = true
 expand_icon = true
-script = ExtResource("19_elhil")
+script = ExtResource("17_5ku8k")
 
 [node name="Label2" type="Label" parent="Task"]
 layout_mode = 0
@@ -419,7 +419,7 @@ text = "Error Loading Data, Please Reload The App"
 [node name="Edit" type="Control" parent="."]
 visible = false
 layout_mode = 2
-script = ExtResource("10_xomk8")
+script = ExtResource("19_ycbvc")
 
 [node name="TextureRect" type="TextureRect" parent="Edit"]
 layout_mode = 0

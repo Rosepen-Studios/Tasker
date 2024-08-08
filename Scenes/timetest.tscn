@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://dc8g3nnk5mu5g"]
+[gd_scene load_steps=13 format=3 uid="uid://dc8g3nnk5mu5g"]
 
 [ext_resource type="Script" path="res://Scripts/timetest.gd" id="1_v8tvi"]
 [ext_resource type="Script" path="res://Scripts/GlobalVarHolder.gd" id="1_yrdix"]
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://Fonts/SFPRODISPLAYBOLD.OTF" id="2_8u0j8"]
 [ext_resource type="PackedScene" uid="uid://c0m23xtdkrvme" path="res://Scenes/MainUI.tscn" id="2_cj2ok"]
 [ext_resource type="Script" path="res://Scripts/Timer.gd" id="2_p23ri"]
+[ext_resource type="PackedScene" uid="uid://bwpop16mptdur" path="res://Scenes/Error.tscn" id="2_semji"]
 [ext_resource type="Texture2D" uid="uid://c888wh1y23qcv" path="res://Images/background.png" id="2_uqj5o"]
 [ext_resource type="Script" path="res://Scripts/Background.gd" id="4_40a35"]
 [ext_resource type="PackedScene" uid="uid://tolk5l6mauok" path="res://Scenes/newtask.tscn" id="6_oa1j6"]
@@ -65,8 +66,8 @@ offset_bottom = -0.113098
 [node name="Newtask" parent="Control" instance=ExtResource("6_oa1j6")]
 z_index = 2
 layout_mode = 1
-offset_right = 17235.0
-offset_bottom = 9720.0
+offset_right = 33321.0
+offset_bottom = 18792.0
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 0
@@ -79,7 +80,7 @@ icon = ExtResource("8_818ww")
 flat = true
 script = ExtResource("9_ccfb4")
 
-[node name="LineEdit" parent="." instance=ExtResource("7_7oeyw")]
+[node name="Dev Mode" parent="." instance=ExtResource("7_7oeyw")]
 visible = false
 z_index = 20
 anchors_preset = 0
@@ -89,3 +90,6 @@ offset_left = 50.0
 offset_top = 615.0
 offset_right = 1148.0
 offset_bottom = 646.0
+
+[node name="Error System" parent="." instance=ExtResource("2_semji")]
+z_index = 21

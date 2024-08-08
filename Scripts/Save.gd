@@ -3,7 +3,8 @@ func _process(delta):
 	if Input.is_action_just_pressed("Enter"):
 		_pressed()
 func _pressed():
-	if gvh.tsknum <= 10 and $"../name/LineEdit".text != "":
+	if gvh.tsknum < 10 and $"../name/LineEdit".text != "":
+		
 		if gvh.taskDB["1"] == 0:
 			print("Attempting 1")
 			gvh.targettask = 1
@@ -92,6 +93,7 @@ func _pressed():
 			gvh.saveiconcolor = $"../Icon/Label/OptionButton".selected
 			gvh.icon = "1"
 			gvh.tsknum += 1
+			$"../..".visible = false
 			
 		elif gvh.taskDB["9"] == 0:
 			gvh.targettask = 9
@@ -102,8 +104,8 @@ func _pressed():
 			gvh.saveiconcolor = $"../Icon/Label/OptionButton".selected
 			gvh.icon = "1"
 			gvh.tsknum += 1
+			$"../..".visible = false
 			
-			gvh.nowsaving = false
 		elif gvh.taskDB["10"] == 0:
 			gvh.targettask = 10
 			gvh.nowsaving = true
@@ -117,7 +119,14 @@ func _pressed():
 			
 	elif $"../name/LineEdit".text == "":
 		gvh.icon = "1"
-	else:
+	elif gvh.tsknum <= 10:
+		gvh.printerror = true
+		gvh.errortitle = null
+		gvh.errormessage = "Can't create more than 10 tasks, Creation Cancelled"
 		$"../name/LineEdit".text = ""
 		gvh.icon = "1"
+		$"../../AnimationPlayer".play("Out")
+		$"../../Timer".start
+		await $"../../Timer".timeout
+		$"../..".visible = false
 

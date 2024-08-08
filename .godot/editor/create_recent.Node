@@ -1,13 +1,13 @@
+Timer
+AnimationPlayer
+Button
 Label
 Sprite2D
-AnimationPlayer
 TextureRect
 RichTextLabel
-Button
 LineEdit
 CodeEdit
 ColorRect
-Timer
 Control
 Node2D
 PanelContainer

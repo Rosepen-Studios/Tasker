@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1722842090
-export_presets.cfg::TextFile::-1::1716630620::0::1::::<><>::
-README.md::TextFile::-1::1718714387::0::1::::<><>::
+::res://::1723113421
+export_presets.cfg::TextFile::-1::1722841077::0::1::::<><>::
+README.md::TextFile::-1::1722848036::0::1::::<><>::
 ::res://Fonts/::1712502344
 JetBrainsMonoNL-Italic.ttf::FontFile::6460570116359140939::1712230909::1712502344::1::::<><>::
 JetBrainsMonoNL-Light.ttf::FontFile::756888425728028171::1712230965::1712502344::1::::<><>::
@@ -28,9 +28,8 @@ DropDown.png::CompressedTexture2D::5592300006335312457::1708541862::1708541863::
 Edit.png::CompressedTexture2D::6144991599731300442::1708538461::1708538462::1::::<><>::
 Icon 512.png::CompressedTexture2D::7036974116688487245::1712485746::1712485758::1::::<><>::
 new.png::CompressedTexture2D::6375999253984605181::1709376325::1709376362::1::::<><>::
-::res://Images/Icons/Colors/::1722843199
+::res://Images/Icons/Colors/::1722843580
 Blue.png::CompressedTexture2D::9135299487081005246::1705431080::1718893090::1::::<><>::
-bootscreen.png::CompressedTexture2D::4557251464945275773::1722783434::1722783435::1::::<><>::
 Gold.png::CompressedTexture2D::1545575703235095487::1722843192::1722843193::1::::<><>::
 Green.png::CompressedTexture2D::2265508503556349858::1705431080::1718893090::1::::<><>::
 Orange.png::CompressedTexture2D::5947137895799546878::1705431080::1718893090::1::::<><>::
@@ -56,31 +55,33 @@ icons8-trash-48.png::CompressedTexture2D::960429115800706495::1708625012::170862
 icons8-vegetarian-food-100.png::CompressedTexture2D::5697262322180172548::1709144388::1709144389::1::::<><>::
 icons8-yin-yang-100.png::CompressedTexture2D::2779185430441690324::1709368533::1709368613::1::::<><>::
 ::res://Saves/::1708882411
-::res://Scenes/::1722842091
-Close.gd::GDScript::-1::1712228984::0::1::::<>Button<>::
-devmode.tscn::PackedScene::2120210068747614423::1722842091::0::1::::<><>::uid://k1v3vdw5hfvv::::res://Fonts/JetBrainsMonoNL-Light.ttf<>res://Scripts/devmode.gd<>uid://ctsxd4u47k78i::::res://Images/Icons/Edit.png<>uid://casmykrvthm23::::res://Images/Icons/SF/icons8-close-48.png<>res://Scenes/Close.gd
+::res://Scenes/::1723113400
+devmode.tscn::PackedScene::2120210068747614423::1723113330::0::1::::<><>::uid://k1v3vdw5hfvv::::res://Fonts/JetBrainsMonoNL-Light.ttf<>res://Scripts/devmode.gd<>uid://ctsxd4u47k78i::::res://Images/Icons/Edit.png<>uid://casmykrvthm23::::res://Images/Icons/SF/icons8-close-48.png<>res://Scripts/Close.gd
 donetask.tscn::PackedScene::6747208422929981213::1712502344::0::1::::<><>::uid://paosd82f7mrr::::res://Fonts/SFPRODISPLAYMEDIUM.OTF<>res://test.tscn<>uid://brf6gngpp4kst::::res://Fonts/SFPRODISPLAYBOLD.OTF<>uid://08257hvgyv6g::::res://Images/Icons/Colors.png<>uid://ds7xav3jqlb1n::::res://Images/Icons/SF/icons8-pen-100.png<>uid://ba5a0cguuhh4m::::res://Images/Icons/SF/icons8-note-100.png<>uid://btnl02lb7hlyw::::res://Images/Icons/SF/icons8-happy-100.png
-Edit.gd::GDScript::-1::1716629440::0::1::::<>Button<>::
-fintask.tscn::PackedScene::7866206175792697008::1722842091::0::1::::<><>::res://Scripts/donetask.gd<>uid://bw6n2vbol56fp::::res://Scenes/test.tscn<>uid://brf6gngpp4kst::::res://Fonts/SFPRODISPLAYBOLD.OTF<>uid://08257hvgyv6g::::res://Images/Icons/Colors.png<>uid://cof3kxq56j1iw::::res://Images/Icons/SF/icons8-charge-100.png<>uid://ds7xav3jqlb1n::::res://Images/Icons/SF/icons8-pen-100.png<>uid://ba5a0cguuhh4m::::res://Images/Icons/SF/icons8-note-100.png<>uid://btnl02lb7hlyw::::res://Images/Icons/SF/icons8-happy-100.png<>uid://visw7kjbsxoc::::res://Images/Icons/SF/icons8-home-100.png<>uid://dscyimp2xpwh1::::res://Images/Icons/SF/icons8-presentation-100.png<>uid://cnf2cwikhw421::::res://Images/Icons/SF/icons8-vegetarian-food-100.png<>uid://p2d4mof4f6fb::::res://Images/Icons/SF/icons8-dumbbell-100.png<>uid://b4syfkxjol76t::::res://Images/Icons/SF/icons8-book-100.png<>uid://bfui1pmlens1q::::res://Images/Icons/SF/icons8-yin-yang-100.png<>uid://eapkfrh1rjxg::::res://Images/Icons/SF/icons8-important-100.png<>uid://cljatsutkwee7::::res://Images/task.png
+Edit.gd::GDScript::-1::1723107596::0::1::::<>Control<>::
+Error.tscn::PackedScene::3962419148910075789::1723113331::0::1::::<><>::res://Scripts/Error.gd<>uid://cbp7ofm4b2s77::::res://UI Library/Pop-Ups/Simple/Red/Small.png<>uid://paosd82f7mrr::::res://Fonts/SFPRODISPLAYMEDIUM.OTF<>uid://brf6gngpp4kst::::res://Fonts/SFPRODISPLAYBOLD.OTF<>uid://b42eb8buugmrs::::res://UI Library/Icons/Close Icon.png
+fintask.tscn::PackedScene::7866206175792697008::1723113330::0::1::::<><>::res://Scripts/donetask.gd<>uid://bw6n2vbol56fp::::res://Scenes/test.tscn<>uid://brf6gngpp4kst::::res://Fonts/SFPRODISPLAYBOLD.OTF<>uid://08257hvgyv6g::::res://Images/Icons/Colors.png<>uid://cof3kxq56j1iw::::res://Images/Icons/SF/icons8-charge-100.png<>uid://ds7xav3jqlb1n::::res://Images/Icons/SF/icons8-pen-100.png<>uid://ba5a0cguuhh4m::::res://Images/Icons/SF/icons8-note-100.png<>uid://btnl02lb7hlyw::::res://Images/Icons/SF/icons8-happy-100.png<>uid://visw7kjbsxoc::::res://Images/Icons/SF/icons8-home-100.png<>uid://dscyimp2xpwh1::::res://Images/Icons/SF/icons8-presentation-100.png<>uid://cnf2cwikhw421::::res://Images/Icons/SF/icons8-vegetarian-food-100.png<>uid://p2d4mof4f6fb::::res://Images/Icons/SF/icons8-dumbbell-100.png<>uid://b4syfkxjol76t::::res://Images/Icons/SF/icons8-book-100.png<>uid://bfui1pmlens1q::::res://Images/Icons/SF/icons8-yin-yang-100.png<>uid://eapkfrh1rjxg::::res://Images/Icons/SF/icons8-important-100.png<>uid://cljatsutkwee7::::res://Images/task.png
 icon.tscn::PackedScene::4867719837318751143::1705260325::0::1::::<><>::uid://bsxpq01hbi3j7::::res://Images/icon.svg<>res://Scripts/icon.gd
-MainUI.tscn::PackedScene::6554025589958460344::1722842091::0::1::::<><>::uid://brf6gngpp4kst::::res://Fonts/SFPRODISPLAYBOLD.OTF<>uid://cgd42neh4wjwe::::res://Scenes/taskexaple.tscn<>uid://dkcpjcaqk7sno::::res://Scenes/fintask.tscn
-newtask.tscn::PackedScene::1363176656656842902::1722842091::0::1::::<><>::res://Scripts/newtask.gd<>uid://bm2rh3fqmtnda::::res://Images/Newtask.png<>uid://brf6gngpp4kst::::res://Fonts/SFPRODISPLAYBOLD.OTF<>uid://paosd82f7mrr::::res://Fonts/SFPRODISPLAYMEDIUM.OTF<>res://Scripts/Cancel.gd<>res://Scripts/NameIn.gd<>res://Scripts/Save.gd<>res://Scripts/iconsel.gd<>uid://08257hvgyv6g::::res://Images/Icons/Colors.png<>uid://cbl7vtr42hpxv::::res://Scenes/icon.tscn<>res://Scripts/Color.gd<>uid://ds7xav3jqlb1n::::res://Images/Icons/SF/icons8-pen-100.png<>uid://ba5a0cguuhh4m::::res://Images/Icons/SF/icons8-note-100.png<>uid://btnl02lb7hlyw::::res://Images/Icons/SF/icons8-happy-100.png<>res://Scripts/iconrender.gd<>uid://visw7kjbsxoc::::res://Images/Icons/SF/icons8-home-100.png<>res://Scripts/ColorSel.gd<>uid://dscyimp2xpwh1::::res://Images/Icons/SF/icons8-presentation-100.png<>uid://cnf2cwikhw421::::res://Images/Icons/SF/icons8-vegetarian-food-100.png<>uid://p2d4mof4f6fb::::res://Images/Icons/SF/icons8-dumbbell-100.png<>uid://b4syfkxjol76t::::res://Images/Icons/SF/icons8-book-100.png<>uid://bfui1pmlens1q::::res://Images/Icons/SF/icons8-yin-yang-100.png<>uid://cof3kxq56j1iw::::res://Images/Icons/SF/icons8-charge-100.png
-taskexaple.tscn::PackedScene::5201977261042682484::1722842091::0::1::::<><>::res://Scripts/taskexaple.gd<>uid://dj5ykpvbu2myf::::res://Images/taskedit.png<>uid://cljatsutkwee7::::res://Images/task.png<>uid://brf6gngpp4kst::::res://Fonts/SFPRODISPLAYBOLD.OTF<>uid://08257hvgyv6g::::res://Images/Icons/Colors.png<>uid://ds7xav3jqlb1n::::res://Images/Icons/SF/icons8-pen-100.png<>uid://ba5a0cguuhh4m::::res://Images/Icons/SF/icons8-note-100.png<>uid://cof3kxq56j1iw::::res://Images/Icons/SF/icons8-charge-100.png<>uid://visw7kjbsxoc::::res://Images/Icons/SF/icons8-home-100.png<>uid://btnl02lb7hlyw::::res://Images/Icons/SF/icons8-happy-100.png<>uid://bt8qpxl1it5nb::::res://Images/Icons/SF/icons8-ok-100.png<>uid://dscyimp2xpwh1::::res://Images/Icons/SF/icons8-presentation-100.png<>uid://cnf2cwikhw421::::res://Images/Icons/SF/icons8-vegetarian-food-100.png<>res://Scripts/Edit.gd<>uid://p2d4mof4f6fb::::res://Images/Icons/SF/icons8-dumbbell-100.png<>res://Scripts/selectcolor.gd<>res://Scripts/iconsel.gd<>uid://cbl7vtr42hpxv::::res://Scenes/icon.tscn<>uid://b4syfkxjol76t::::res://Images/Icons/SF/icons8-book-100.png<>res://Scripts/iconselect (2).gd<>uid://bfui1pmlens1q::::res://Images/Icons/SF/icons8-yin-yang-100.png<>uid://eapkfrh1rjxg::::res://Images/Icons/SF/icons8-important-100.png<>uid://cqr3sdsggqwdp::::res://Images/Button.png<>uid://casmykrvthm23::::res://Images/Icons/SF/icons8-close-48.png<>res://Scenes/Edit.gd<>uid://nxielcemxo5t::::res://Images/Icons/SF/icons8-trash-48.png
-test.tscn::PackedScene::3995409596634230997::1722842091::0::1::::<><>::res://Scripts/Name.gd
-timetest.tscn::PackedScene::7368179211806225810::1722842091::0::1::::<><>::res://Scripts/timetest.gd<>res://Scripts/GlobalVarHolder.gd<>uid://brf6gngpp4kst::::res://Fonts/SFPRODISPLAYBOLD.OTF<>uid://c0m23xtdkrvme::::res://Scenes/MainUI.tscn<>res://Scripts/Timer.gd<>uid://c888wh1y23qcv::::res://Images/background.png<>res://Scripts/Background.gd<>uid://tolk5l6mauok::::res://Scenes/newtask.tscn<>uid://5hbsx41us32b::::res://Scenes/devmode.tscn<>uid://cw3t1nirhewk8::::res://Images/Icons/new.png<>res://Scripts/newtask (2).gd
-::res://Scripts/::1722841902
+MainUI.tscn::PackedScene::6554025589958460344::1723113330::0::1::::<><>::uid://brf6gngpp4kst::::res://Fonts/SFPRODISPLAYBOLD.OTF<>uid://cgd42neh4wjwe::::res://Scenes/taskexaple.tscn<>uid://dkcpjcaqk7sno::::res://Scenes/fintask.tscn
+newtask.tscn::PackedScene::1363176656656842902::1723113330::0::1::::<><>::res://Scripts/newtask.gd<>uid://bm2rh3fqmtnda::::res://Images/Newtask.png<>uid://brf6gngpp4kst::::res://Fonts/SFPRODISPLAYBOLD.OTF<>uid://paosd82f7mrr::::res://Fonts/SFPRODISPLAYMEDIUM.OTF<>res://Scripts/Cancel.gd<>res://Scripts/NameIn.gd<>res://Scripts/Save.gd<>res://Scripts/iconsel.gd<>uid://08257hvgyv6g::::res://Images/Icons/Colors.png<>uid://cbl7vtr42hpxv::::res://Scenes/icon.tscn<>res://Scripts/Color.gd<>uid://ds7xav3jqlb1n::::res://Images/Icons/SF/icons8-pen-100.png<>uid://ba5a0cguuhh4m::::res://Images/Icons/SF/icons8-note-100.png<>uid://btnl02lb7hlyw::::res://Images/Icons/SF/icons8-happy-100.png<>res://Scripts/iconrender.gd<>uid://visw7kjbsxoc::::res://Images/Icons/SF/icons8-home-100.png<>res://Scripts/ColorSel.gd<>uid://dscyimp2xpwh1::::res://Images/Icons/SF/icons8-presentation-100.png<>uid://cnf2cwikhw421::::res://Images/Icons/SF/icons8-vegetarian-food-100.png<>uid://p2d4mof4f6fb::::res://Images/Icons/SF/icons8-dumbbell-100.png<>uid://b4syfkxjol76t::::res://Images/Icons/SF/icons8-book-100.png<>uid://bfui1pmlens1q::::res://Images/Icons/SF/icons8-yin-yang-100.png<>uid://cof3kxq56j1iw::::res://Images/Icons/SF/icons8-charge-100.png
+taskexaple.tscn::PackedScene::5201977261042682484::1723113330::0::1::::<><>::res://Scripts/taskexaple.gd<>uid://dj5ykpvbu2myf::::res://Images/taskedit.png<>uid://cljatsutkwee7::::res://Images/task.png<>uid://brf6gngpp4kst::::res://Fonts/SFPRODISPLAYBOLD.OTF<>uid://08257hvgyv6g::::res://Images/Icons/Colors.png<>uid://ds7xav3jqlb1n::::res://Images/Icons/SF/icons8-pen-100.png<>uid://ba5a0cguuhh4m::::res://Images/Icons/SF/icons8-note-100.png<>uid://cof3kxq56j1iw::::res://Images/Icons/SF/icons8-charge-100.png<>uid://visw7kjbsxoc::::res://Images/Icons/SF/icons8-home-100.png<>uid://btnl02lb7hlyw::::res://Images/Icons/SF/icons8-happy-100.png<>uid://bt8qpxl1it5nb::::res://Images/Icons/SF/icons8-ok-100.png<>uid://dscyimp2xpwh1::::res://Images/Icons/SF/icons8-presentation-100.png<>uid://cnf2cwikhw421::::res://Images/Icons/SF/icons8-vegetarian-food-100.png<>uid://p2d4mof4f6fb::::res://Images/Icons/SF/icons8-dumbbell-100.png<>res://Scripts/selectcolor.gd<>res://Scripts/iconsel.gd<>uid://cbl7vtr42hpxv::::res://Scenes/icon.tscn<>uid://b4syfkxjol76t::::res://Images/Icons/SF/icons8-book-100.png<>res://Scripts/iconselect (2).gd<>uid://bfui1pmlens1q::::res://Images/Icons/SF/icons8-yin-yang-100.png<>uid://eapkfrh1rjxg::::res://Images/Icons/SF/icons8-important-100.png<>res://Scripts/Edit.gd<>uid://cqr3sdsggqwdp::::res://Images/Button.png<>uid://casmykrvthm23::::res://Images/Icons/SF/icons8-close-48.png<>res://Scenes/Edit.gd<>uid://nxielcemxo5t::::res://Images/Icons/SF/icons8-trash-48.png
+test.tscn::PackedScene::3995409596634230997::1723113330::0::1::::<><>::res://Scripts/Name.gd
+timetest.tscn::PackedScene::7368179211806225810::1723113330::0::1::::<><>::res://Scripts/timetest.gd<>res://Scripts/GlobalVarHolder.gd<>uid://brf6gngpp4kst::::res://Fonts/SFPRODISPLAYBOLD.OTF<>uid://c0m23xtdkrvme::::res://Scenes/MainUI.tscn<>res://Scripts/Timer.gd<>uid://bwpop16mptdur::::res://Scenes/Error.tscn<>uid://c888wh1y23qcv::::res://Images/background.png<>res://Scripts/Background.gd<>uid://tolk5l6mauok::::res://Scenes/newtask.tscn<>uid://5hbsx41us32b::::res://Scenes/devmode.tscn<>uid://cw3t1nirhewk8::::res://Images/Icons/new.png<>res://Scripts/newtask (2).gd
+::res://Scripts/::1723113402
 Background.gd::GDScript::-1::1718713971::0::1::::<>TextureRect<>::
 Button.gd::GDScript::-1::1705260325::0::1::::<>Button<>::
 Cancel.gd::GDScript::-1::1716630267::0::1::::<>Button<>::
 CheckBox.gd::GDScript::-1::1705260325::0::1::::<>CheckBox<>::
+Close.gd::GDScript::-1::1712228984::0::1::::<>Button<>::
 Color.gd::GDScript::-1::1705431702::0::1::::<>AnimatedSprite2D<>::
-ColorSel.gd::GDScript::-1::1718893163::0::1::::<>OptionButton<>::
+ColorSel.gd::GDScript::-1::1722843470::0::1::::<>OptionButton<>::
 Delete.gd::GDScript::-1::1708626257::0::1::::<>Button<>::
-devmode.gd::GDScript::-1::1722841005::0::1::::<>LineEdit<>::
+devmode.gd::GDScript::-1::1723106786::0::1::::<>LineEdit<>::
 donetask.gd::GDScript::-1::1722841902::0::1::::<>Control<>::
-Edit.gd::GDScript::-1::1716629004::0::1::::<>Control<>::
+Edit.gd::GDScript::-1::1716629440::0::1::::<>Button<>::
+Error.gd::GDScript::-1::1723113402::0::1::::<>Node<>::
 GD.gd::GDScript::-1::1709143891::0::1::::<>Label<>::
-GlobalVarHolder.gd::GDScript::-1::1722841902::0::1::::<>Node2D<>::
+GlobalVarHolder.gd::GDScript::-1::1723112909::0::1::::<>Node2D<>::
 icon.gd::GDScript::-1::1708541517::0::1::::<>Button<>::
 iconrender.gd::GDScript::-1::1707851700::0::1::::<>AnimatedSprite2D<>::
 iconsel.gd::GDScript::-1::1707852136::0::1::::<>CheckButton<>::
@@ -94,10 +95,17 @@ newtask (2).gd::GDScript::-1::1709376935::0::1::::<>Button<>::
 newtask.gd::GDScript::-1::1716575223::0::1::::<>Control<>::
 ntd.gd::GDScript::-1::1709143875::0::1::::<>Label<>::
 nth.gd::GDScript::-1::1708971814::0::1::::<>Label<>::
-Save.gd::GDScript::-1::1718894738::0::1::::<>Button<>::
-selectcolor.gd::GDScript::-1::1708542911::0::1::::<>OptionButton<>::
-taskexaple.gd::GDScript::-1::1722841902::0::1::::<>PanelContainer<>::
+Save.gd::GDScript::-1::1723113088::0::1::::<>Button<>::
+selectcolor.gd::GDScript::-1::1722843548::0::1::::<>OptionButton<>::
+taskexaple.gd::GDScript::-1::1723106654::0::1::::<>PanelContainer<>::
 TimeControl.gd::GDScript::-1::1708854339::0::1::::<>Node2D<>::
 Timer.gd::GDScript::-1::1714925486::0::1::::<>Timer<>::
 timetest.gd::GDScript::-1::1712161535::0::1::::<>Label<>::
 Title.gd::GDScript::-1::1705260325::0::1::::<>Label<>::
+::res://UI Library/::1723103915
+::res://UI Library/Icons/::1723103923
+Close Icon.png::CompressedTexture2D::4477881738071669556::1723103921::1723103923::1::::<><>::
+::res://UI Library/Pop-Ups/::1723103315
+::res://UI Library/Pop-Ups/Simple/::1723103327
+::res://UI Library/Pop-Ups/Simple/Red/::1723103653
+Small.png::CompressedTexture2D::4875964104692777008::1723103653::1723103653::1::::<><>::

@@ -35,6 +35,9 @@ func _find_command():
 	elif  sep[0] == "del":
 		text = ""
 		_exe_command("del",sep[1],null,null)
+	elif  sep[0] == "print_error":
+		text = ""
+		_exe_command("print_error",sep[1],null,null)
 	elif sep[0] == "add":
 		var sufixsep = sep[1].split(",")
 		_exe_command("add",sufixsep[0],sufixsep[1],sufixsep[2])
@@ -180,6 +183,10 @@ func _exe_command(command, sufix, sufix2, sufix3):
 				gvh.tsknum += 1
 				output.newline()
 				output.add_text(str(output.get_line_count()-1) + " " + "Added task(Name: "+sufix+" Icon: "+ sufix2+ " Color: "+ sufix3+ ")")
+		elif gvh.tsknum >= 10:
+			gvh.icon = "1"
+			output.newline()
+			output.add_text(str(output.get_line_count()-1) + " " + "ERROR 500: No tasks available")
 		elif sufix == "":
 			output.newline()
 			output.add_text(str(output.get_line_count()-1) + " " + "Error 400: Bad request")
@@ -192,34 +199,16 @@ func _exe_command(command, sufix, sufix2, sufix3):
 			output.newline()
 			output.add_text(str(output.get_line_count()-1) + " " + "Error 400: Bad request")
 			gvh.icon = "1"
-		else:
-			gvh.icon = "1"
-			output.newline()
-			output.add_text(str(output.get_line_count()-1) + " " + "ERROR 500: No tasks available")
-	elif command == "count":
-		var count:int
-		if gvh.taskDB["1"] == 1:
-			count += 1
-		if gvh.taskDB["2"] == 1:
-			count += 1
-		if gvh.taskDB["3"] == 1:
-			count += 1
-		if gvh.taskDB["4"] == 1:
-			count += 1
-		if gvh.taskDB["5"] == 1:
-			count += 1
-		if gvh.taskDB["6"] == 1:
-			count += 1
-		if gvh.taskDB["7"] == 1:
-			count += 1
-		if gvh.taskDB["8"] == 1:
-			count += 1
-		if gvh.taskDB["9"] == 1:
-			count += 1
-		if gvh.taskDB["10"] == 1:
-			count += 1
+	elif command == "print_error":
+		var sep = sufix.split(",")
+		gvh.printerror = true
+		gvh.errortitle = sep[0]
+		gvh.errormessage = sep[1]
 		output.newline()
-		output.add_text(str(output.get_line_count()-1) + " " + "<Task count: "+ str(count))
+		output.append_text(str(output.get_line_count()-1) + " " + "Printing error with title: "+ sep[0]+" and reason: "+ sep[1])
+	elif command == "count":
+		output.newline()
+		output.add_text(str(output.get_line_count()-1) + " " + "<Task count: "+ str(gvh.tsknum))
 	elif command == "set_win":
 		ProjectSettings.set_setting("display/window/size/viewport_height",int(sufix))
 		ProjectSettings.set_setting("display/window/size/viewport_width",int(sufix2))

@@ -1,0 +1,125 @@
+[gd_scene load_steps=11 format=3 uid="uid://bwpop16mptdur"]
+
+[ext_resource type="Script" path="res://Scripts/Error.gd" id="1_xspq2"]
+[ext_resource type="Texture2D" uid="uid://cbp7ofm4b2s77" path="res://UI Library/Pop-Ups/Simple/Red/Small.png" id="1_y8r43"]
+[ext_resource type="FontFile" uid="uid://paosd82f7mrr" path="res://Fonts/SFPRODISPLAYMEDIUM.OTF" id="2_a8pwm"]
+[ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://Fonts/SFPRODISPLAYBOLD.OTF" id="2_sifms"]
+[ext_resource type="Texture2D" uid="uid://b42eb8buugmrs" path="res://UI Library/Icons/Close Icon.png" id="4_c3rpr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6qwst"]
+
+[sub_resource type="Animation" id="Animation_1wo4e"]
+resource_name = "Enter"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Small:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(576, -48.5), Vector2(576, 55.4)]
+}
+
+[sub_resource type="Animation" id="Animation_bnx4k"]
+resource_name = "Exit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Small:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ce23j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Small:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, -48.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Small:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e0dpb"]
+_data = {
+"Enter": SubResource("Animation_1wo4e"),
+"Exit": SubResource("Animation_bnx4k"),
+"RESET": SubResource("Animation_ce23j")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_xspq2")
+
+[node name="Small" type="Sprite2D" parent="."]
+position = Vector2(576, -48.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_y8r43")
+
+[node name="Reason" type="Label" parent="Small"]
+offset_left = -186.0
+offset_top = -29.0
+offset_right = 190.0
+offset_bottom = 67.0
+theme_override_fonts/font = ExtResource("2_a8pwm")
+theme_override_font_sizes/font_size = 32
+text = "Insert Error Reason Here"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Error" type="Label" parent="Small"]
+offset_left = -70.0
+offset_top = -88.8
+offset_right = 53.0
+offset_bottom = -20.8
+theme_override_fonts/font = ExtResource("2_sifms")
+theme_override_font_sizes/font_size = 56
+text = "Error"
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Small"]
+custom_minimum_size = Vector2(19, 19)
+offset_left = -186.0
+offset_top = -92.8
+offset_right = -124.0
+offset_bottom = -29.8
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6qwst")
+icon = ExtResource("4_c3rpr")
+flat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_e0dpb")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="enter" from="." to="AnimationPlayer" method="_on_node_2d_enter"]
+[connection signal="exit" from="." to="AnimationPlayer" method="_on_node_2d_exit"]
+[connection signal="pressed" from="Small/Button" to="." method="close"]

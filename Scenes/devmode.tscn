@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://5hbsx41us32b"]
+[gd_scene load_steps=8 format=3 uid="uid://5hbsx41us32b"]
 
 [ext_resource type="FontFile" uid="uid://k1v3vdw5hfvv" path="res://Fonts/JetBrainsMonoNL-Light.ttf" id="1_ly11r"]
 [ext_resource type="Script" path="res://Scripts/devmode.gd" id="1_rfslu"]
 [ext_resource type="Texture2D" uid="uid://ctsxd4u47k78i" path="res://Images/Icons/Edit.png" id="2_cioqu"]
 [ext_resource type="Texture2D" uid="uid://casmykrvthm23" path="res://Images/Icons/SF/icons8-close-48.png" id="3_a3icy"]
-[ext_resource type="Script" path="res://Scenes/Close.gd" id="4_putfn"]
+[ext_resource type="Script" path="res://Scripts/Close.gd" id="5_3qr4c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jv7ju"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rwiuq"]
 
 [node name="LineEdit" type="LineEdit"]
 z_index = 10
@@ -39,9 +43,11 @@ offset_top = -616.0
 offset_right = -21.171
 offset_bottom = -560.0
 scale = Vector2(0.7, 0.7)
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jv7ju")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rwiuq")
 icon = ExtResource("3_a3icy")
 flat = true
-script = ExtResource("4_putfn")
+script = ExtResource("5_3qr4c")
 
 [node name="Output" type="RichTextLabel" parent="."]
 layout_mode = 0
