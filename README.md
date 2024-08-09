@@ -8,7 +8,7 @@
 </ul>
 <ul>5. The app should now open with no problem</ul>
 
-<h1>Documentation:</h1>(As of version 0.2.2)
+<h1>Documentation:</h1>(As of version 0.3.1)
 
 <h2>Data directory (user path)</h2>
 Tasker saves all its data in its user path, which for Windows is located at <code>C:\Users\"username"\AppData\Roaming\Godot\app_userdata\Tasker</code> remember to change "username" to your username, for Mac path is <code>~/Library/Application Support/Godot/app_userdata/Tasker</code>
@@ -99,6 +99,17 @@ where x = the task's number/ID and 1 = active or 0 = inactive
     <td>-</td>
     <td>del:all</td>
     <td>Deleting all tasks</td>
+  </tr>
+  </tr>
+     <tr>
+    <td>print_error</td>
+    <td>Prints Errors Banners (No effect on app)</td>
+    <td>Action</td>
+    <td>Error Title <code>string</code></td>
+    <td>Error Reason <code>stirng</code>code></td>
+    <td>-</td>
+    <td>print_error:Test,this is a test error!</td>
+    <td>Printing error with title: Test and reason: this is a test error!</td>
   </tr>
        <tr>
     <td>???</td>
