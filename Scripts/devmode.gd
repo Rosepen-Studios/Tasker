@@ -59,7 +59,7 @@ func _exe_command(command, sufix, sufix2, sufix3):
 		gvh.taskCP = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0}
 	elif command == "info":
 		output.newline()
-		output.append_text(str(output.get_line_count()-1) + " " + "<Tasker version: 0.3 "+"[color=white]Stable[/color]")
+		output.append_text(str(output.get_line_count()-1) + " " + "<Tasker version: 0.3.1 "+"[color=white]Stable[/color]")
 	elif command == "beta":
 		output.newline()
 		if gvh.beta == false:

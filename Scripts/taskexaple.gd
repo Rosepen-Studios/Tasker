@@ -7,11 +7,14 @@ var on = false
 var done:bool = false
 var doneloading = false
 
+@onready var animatior = $AnimationPlayer
+
 
 var locname 
 var locicon
 var loccolor 
 func _ready():
+	animatior.play("Press Edit")
 	if Input.is_action_just_pressed("delall"):
 		_delete()
 	if gvh.taskDB[str(ID)] == 1: #Loads task from saved data

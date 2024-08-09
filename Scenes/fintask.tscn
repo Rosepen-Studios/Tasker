@@ -1,6 +1,7 @@
 [gd_scene load_steps=31 format=3 uid="uid://dkcpjcaqk7sno"]
 
 [ext_resource type="Script" path="res://Scripts/donetask.gd" id="1_vg6yd"]
+[ext_resource type="Texture2D" uid="uid://dg7mdn24gfjno" path="res://UI Library/Containers/Dark Grey No Outlines.png" id="2_wb25k"]
 [ext_resource type="PackedScene" uid="uid://bw6n2vbol56fp" path="res://Scenes/test.tscn" id="3_n2vk7"]
 [ext_resource type="FontFile" uid="uid://brf6gngpp4kst" path="res://Fonts/SFPRODISPLAYBOLD.OTF" id="4_0veox"]
 [ext_resource type="Texture2D" uid="uid://08257hvgyv6g" path="res://Images/Icons/Colors.png" id="5_yijek"]
@@ -15,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://b4syfkxjol76t" path="res://Images/Icons/SF/icons8-book-100.png" id="13_76tlg"]
 [ext_resource type="Texture2D" uid="uid://bfui1pmlens1q" path="res://Images/Icons/SF/icons8-yin-yang-100.png" id="14_0ra8m"]
 [ext_resource type="Texture2D" uid="uid://eapkfrh1rjxg" path="res://Images/Icons/SF/icons8-important-100.png" id="15_1ss7w"]
-[ext_resource type="Texture2D" uid="uid://cljatsutkwee7" path="res://Images/task.png" id="16_rjs4q"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ls4y5"]
 
@@ -254,13 +254,11 @@ script = ExtResource("1_vg6yd")
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
-modulate = Color(1, 1, 1, 0.835294)
-self_modulate = Color(1, 1, 1, 0.666667)
 custom_minimum_size = Vector2(123.295, 0.415)
 layout_mode = 2
 offset_right = 1144.0
 offset_bottom = 136.0
-texture = ExtResource("16_rjs4q")
+texture = ExtResource("2_wb25k")
 stretch_mode = 2
 
 [node name="Label2" parent="Control" instance=ExtResource("3_n2vk7")]
@@ -275,13 +273,13 @@ theme_override_font_sizes/font_size = 30
 text = "Error Loading Data, Please Reload the App"
 
 [node name="Color" type="AnimatedSprite2D" parent="Control"]
-position = Vector2(70.35, 67.775)
-scale = Vector2(0.85, 0.85)
+position = Vector2(67.865, 67.775)
+scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_mdbh0")
 animation = &"7"
 
 [node name="Icon2" type="AnimatedSprite2D" parent="Control"]
-position = Vector2(70.35, 67.775)
+position = Vector2(68.13, 67.775)
 scale = Vector2(0.85, 0.85)
 sprite_frames = SubResource("SpriteFrames_a3eqn")
 animation = &"1"
