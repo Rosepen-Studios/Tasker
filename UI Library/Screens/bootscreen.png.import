@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo88047yt6ls"
-path="res://.godot/imported/bootscreen.png-9f090533e9ba00cc4c44a534437c0923.ctex"
+uid="uid://bch0vjwvwlf4r"
+path="res://.godot/imported/bootscreen.png-9624aece9ae84dc5fafb428581c1908d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/bootscreen.png"
-dest_files=["res://.godot/imported/bootscreen.png-9f090533e9ba00cc4c44a534437c0923.ctex"]
+source_file="res://UI Library/Screens/bootscreen.png"
+dest_files=["res://.godot/imported/bootscreen.png-9624aece9ae84dc5fafb428581c1908d.ctex"]
 
 [params]
 
