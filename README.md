@@ -1,5 +1,5 @@
 <h1>How To install:</h1>
-<ul>1. Go to the releases page: https://github.com/Firepixel85/Tasker/releases</ul>
+<ul>1. Go to the releases page: https://github.com/Rosepen-Studios/Tasker/releases</ul>
 <ul>2. Select the correct version according to your OS </ul>
 <ul>3. Download the .exe or .zip file (with prefix Tasker)</ul>
 <ul>4. Run the file you downloaded
