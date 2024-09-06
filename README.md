@@ -103,7 +103,7 @@ where x = the task's number/ID and 1 = active or 0 = inactive
   </tr>
      <tr>
     <td>print_error</td>
-    <td>Prints Errors Banners (No effect on app)</td>
+    <td>Prints Error Banners (No effect on app)</td>
     <td>Action</td>
     <td>Error Title <code>string</code></td>
     <td>Error Reason <code>stirng</code>code></td>
