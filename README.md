@@ -17,11 +17,11 @@ Tasker saves all its data in its user path, which for Windows is located at <cod
 When you open the user you will see 2 folder, you can ingnore those and you will also see 12 <code>.json</code> files. 
 
   <li>
-    Files with the <code>savetask</code> prefix and then a numbers (1-10) are where your task data is stored, their structure goes as such:<code>{"done":false,"loccolor":"1","locicon":"1","locname":"example"}</code>, <code>locname</code> is the task's name        (type: <code>string</code>),  <code>locicon</code> is the task's icon (type <code>int</code>, range 1-10),  <code>loccolor</code> is the task's color (type <code>int</code>, range 1-8),    <code>done</code> defines if the task is done.
+    Files with the <code>savetask</code> prefix and then a numbers (1-10) are where your task data is stored, their structure goes as such:<code>{"done":false,"loccolor":"1","locicon":"1","locname":"example"}</code>, <code>locname</code> is the task's name        (type: <code>string</code>),  <code>locicon</code> is the task's icon (type: <code>int</code>, range 1-10),  <code>loccolor</code> is the task's color (type: <code>int</code>, range 1-8),    <code>done</code> defines if the task is done (type: <code>bool</code>).
   </li>
   <ul>   </ul>
   <li>
-    The <code>savetime.json</code> file has the following structure: <code>{"lastlogd":"03","lastlogt":"19:36:41","taskDB":{"1":1,"10":0,"2":0,"3":0,"4":0,"5":0,"6":0,"7":0,"8":0,"9":0}}</code>,   <code>lastlogd</code> contains the day you last opened the program (type: <code>int</code>),   <code>lastlogt</code> contains the time you last opened the program (type: <code>int</code>), <code>taskDB</code> is a database all scripts may access to determin which tasks are active (active = shown to the user) (type <code>dictionary</code>, stucture: <code>"x":1</code>
+    The <code>savetime.json</code> file has the following structure: <code>{"lastlogd":"03","lastlogt":"19:36:41","taskDB":{"1":1,"10":0,"2":0,"3":0,"4":0,"5":0,"6":0,"7":0,"8":0,"9":0}}</code>,   <code>lastlogd</code> contains the day you last opened the program (type: <code>int</code>),   <code>lastlogt</code> contains the time you last opened the program (type: <code>int</code>), <code>taskDB</code> is a database all scripts may access to determine which tasks are active (active = shown to the user) (type: <code>dictionary</code>, stucture: <code>"x":1</code>
 where x = the task's number/ID and 1 = active or 0 = inactive 
   </li>
   <ul>   </ul>
@@ -43,7 +43,7 @@ where x = the task's number/ID and 1 = active or 0 = inactive
   <ul>1. Open <strong>The Data Directory Path</strong>.</ul>
   <ul>2. Open the <code>config.json</code> file.</ul>
   <ul>3. Change the value of <code>devmode</code> to <code>true</code>.</ul>
-  <ul>4. Restart Tasker for your change to take effect, continue reading to see ow to use Developer Mode.</ul>
+  <ul>4. Restart Tasker for your change to take effect, continue reading to see how to use Developer Mode.</ul>
   <h3>How to use Developer Mode:</h3>
   After enabling D.M. and restarting Tasker, nothing is immediately different. To actually acces the aforementioned console you need to use the new hotkey <code>/</code>. After doing that you should be met with the D.M. console, if nothing happens please go over the activation steps again. Focusing on the console it is a simple screen with most of it being covered by the text space, the input bar right below and a button to exit D.M. on the top left of the screen. In order to do something with the console you need to learn Tasker's custom commands, but first you need to understand how to form commands. First of all commands are split into two different kinds: <strong>Actions</strong> where the command affects the app and <strong>Informants</strong> where the command provides info about the app. Moving on, commands are comprised of four parts the <code>command</code>, <code>sufix</code>, <code>sufix2</code> and <code>sufix3</code>. The <code>command</code> is what tells Tasker what action to execute and the <code>sufixes</code> are parameters, or extra info passed along with the command, different commands require more or less <code>sufixes</code>. Finaly Here is the list of comnds currently implemented:
 <table>
@@ -77,7 +77,7 @@ where x = the task's number/ID and 1 = active or 0 = inactive
     <td>-</td>
     <td>-</td>
       <td>info</td>
-    <td>Tasker version 0.2.2 stable</td>
+    <td>Tasker version 0.3.1 stable</td>
 
   </tr>
    <tr>
@@ -106,7 +106,7 @@ where x = the task's number/ID and 1 = active or 0 = inactive
     <td>Prints Error Banners (No effect on app)</td>
     <td>Action</td>
     <td>Error Title <code>string</code></td>
-    <td>Error Reason <code>stirng</code>code></td>
+    <td>Error Reason <code>string</code></td>
     <td>-</td>
     <td>print_error:Test,this is a test error!</td>
     <td>Printing error with title: Test and reason: this is a test error!</td>
