@@ -17,7 +17,7 @@ Tasker saves all its data in its user path, which for Windows is located at <cod
 When you open the user you will see 2 folder, you can ingnore those and you will also see 12 <code>.json</code> files. 
 
   <li>
-    Files with the <code>savetask</code> prefix and then a numbers (1-10) are where your task data is stored, their structure goes as such:<code>{"done":false,"loccolor":"1","locicon":"1","locname":"example"}</code>, <code>locname</code> is the task's name        (type: <code>string</code>),  <code>locicon</code> is the task's icon (type <code>int</code>, range 1-10),  <code>loccolor</code> is the task's color (type <code>int</code>, range 1-6),    <code>done</code> defines if the task is done.
+    Files with the <code>savetask</code> prefix and then a numbers (1-10) are where your task data is stored, their structure goes as such:<code>{"done":false,"loccolor":"1","locicon":"1","locname":"example"}</code>, <code>locname</code> is the task's name        (type: <code>string</code>),  <code>locicon</code> is the task's icon (type <code>int</code>, range 1-10),  <code>loccolor</code> is the task's color (type <code>int</code>, range 1-8),    <code>done</code> defines if the task is done.
   </li>
   <ul>   </ul>
   <li>
