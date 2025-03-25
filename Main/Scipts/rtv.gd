@@ -43,7 +43,7 @@ var popup_clicked:bool
 
 #System
 var os = "MAC"
-var version = "1.0"
+var version = "1.0.1"
 var latest_version
 var updater_version
 var updater_latest_version
