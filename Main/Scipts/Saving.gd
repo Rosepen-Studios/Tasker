@@ -7,6 +7,9 @@ extends TextureRect
 var console_callouts:bool = false
 var latest:bool
 func _ready() -> void:
+	print("(System) INFO: Log date is " + Time.get_date_string_from_system())
+	if rtv.production:
+		print("(System) INFO: RTV production is enabled and could be causing errors with task creation, if this is a production log ignore this message")
 	if FileAccess.file_exists("user://taskdata.json"):
 		loadtaskdata()
 		rtv.isloading = true
@@ -125,9 +128,12 @@ func on_settings_changed() -> void:
 	saveorientation()
 
 func is_latest():
-	rtv.updater_version = FileAccess.open(OS.get_user_data_dir().split("Tasker")[0]+"Tasker Updater/latest.json",FileAccess.READ).get_as_text().split("\"")[1]
+	if FileAccess.file_exists(OS.get_user_data_dir().split("Tasker")[0]+"Tasker Updater/latest.json"):
+		rtv.updater_version = FileAccess.open(OS.get_user_data_dir().split("Tasker")[0]+"Tasker Updater/latest.json",FileAccess.READ).get_as_text().split("\"")[1]
+	else:
+		print("(System) WARN: File latest.json not found, aborting updater version check (404)")
+		print("(System) INFO: The error above should be fixed automaticaly when you update Tasker")
 	web.set_download_file("user://latest_version.txt")
-	print(rtv.updater_version)
 	web.request("https://github.com/Firepixel85/Tasker-Labs/releases/download/latest_pointer/latest_version.txt")
 	await web.request_completed
 	rtv.latest_version = FileAccess.open("user://latest_version.txt",FileAccess.READ).get_as_text().split(",")[0]

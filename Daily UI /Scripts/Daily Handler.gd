@@ -21,6 +21,7 @@ func add_task(taskname,taskcolor,taskicon):
 	rtv.justcreatedid = rtv.lastgivenid
 	if rtv.production == true:
 		if rtv.namedic[str(targetid)].split(",")[1].split(":")[0] == "{strk}":
+			print("(Daily Handler) INFO: Recieved instructions to edit task data, overriding streak data")
 			rtv.streakdic[str(targetid)] = int(rtv.namedic[str(targetid)].split(",")[1].split(":")[1])
 			rtv.namedic[str(targetid)] = rtv.namedic[str(targetid)].split(",")[0]
 	if rtv.namedic[str(targetid)] == "{dropdata}":

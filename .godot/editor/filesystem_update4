@@ -1,3 +1,9 @@
 res://Main/main.tscn
 res://Theme/Main Theme.tres
+res://Daily UI /Scripts/Daily Handler.gd
+res://Main/Scipts/Saving.gd
+res://Settings/Settings.tscn
+res://Daily UI /Daily UI.tscn
+res://New Task/New Task.tscn
 res://Main/Scipts/rtv.gd
+res://New Task/Scripts/New Task.gd

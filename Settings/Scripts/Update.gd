@@ -30,16 +30,13 @@ func _on_button_pressed() -> void:
 	for i in str(output).split("\\n").size():
 		if str(output).split("\\n")[i] == "[\"Updater.app":
 			found_updater = true
-			print("found")
 			
 	
 	if not found_updater or rtv.updater_latest_version != rtv.updater_version:
 		web.set_download_file("user://Updater.zip")
-
 		delete_updater()
+  
 		if rtv.os == "MAC":
-			
-			
 			web.request("https://github.com/Firepixel85/Tasker-Labs/releases/download/latest_pointer/Updater.Mac.zip")
 			await web.request_completed
 			term = OS.execute("/bin/bash",["-c"]+["cd .. && cd .. && cd .. && cd .. && cd .. && unzip '/Users/"+user+"/Library/Application Support/Godot/app_userdata/Tasker/Updater.zip' -d  '/Users/"+user+"/Library/Application Support/Godot/app_userdata/Tasker'"],output)
