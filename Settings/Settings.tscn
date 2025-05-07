@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dceb2vqd421g4"]
+[gd_scene load_steps=29 format=3 uid="uid://dceb2vqd421g4"]
 
 [ext_resource type="Script" path="res://Settings/Scripts/Settings.gd" id="1_6a7mm"]
 [ext_resource type="Texture2D" uid="uid://dg1sxtba4r5wl" path="res://Settings/Textures/Container.png" id="1_31h5v"]
@@ -16,6 +16,7 @@
 [ext_resource type="FontFile" uid="uid://cb1fkhwou4qo4" path="res://Theme/Inter font/static/Inter_24pt-Medium.ttf" id="11_itkk4"]
 [ext_resource type="Script" path="res://Settings/Scripts/Toggle_Setting.gd" id="11_ns6ly"]
 [ext_resource type="Script" path="res://Settings/warning.gd" id="12_8v2n7"]
+[ext_resource type="Script" path="res://Settings/Scripts/Info.gd" id="16_dljw3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fmji8"]
 shader = ExtResource("1_qhpvl")
@@ -1064,6 +1065,46 @@ alignment = 2
 layout_mode = 2
 text = "Restart"
 
+[node name="Open Console" type="HBoxContainer" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Open Console"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Open Console"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("9_bgp7a")
+text = "Open Console"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Open Console/Label2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="Button" type="Button" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Open Console/Label2/HBoxContainer"]
+layout_mode = 2
+text = "Open"
+
+[node name="Info" type="HBoxContainer" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Info"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Info"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("9_bgp7a")
+text = "Info:"
+script = ExtResource("16_dljw3")
+
 [node name="Control" type="Control" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 33.05)
 layout_mode = 2
@@ -1128,5 +1169,6 @@ libraries = {
 [connection signal="pressed" from="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/TextureRect/Button" to="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/TextureRect" method="_on_button_pressed"]
 [connection signal="pressed" from="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Open app_userdata/Label2/HBoxContainer/Button" to="." method="_on_open_aud_pressed"]
 [connection signal="pressed" from="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Restart Orientation/Label2/HBoxContainer/Button" to="." method="_on_restart_orientation_pressed"]
+[connection signal="pressed" from="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Open Console/Label2/HBoxContainer/Button" to="." method="open_console"]
 [connection signal="pressed" from="MarginContainer/TextureRect/MarginContainer/VBoxContainer/Control/HBoxContainer/Button2" to="." method="on_apply_pressed"]
 [connection signal="pressed" from="MarginContainer/TextureRect/MarginContainer/VBoxContainer/Control/HBoxContainer/Button3" to="." method="on_done_pressed"]

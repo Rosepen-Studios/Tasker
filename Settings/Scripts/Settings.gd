@@ -73,8 +73,6 @@ func on_done_pressed() -> void:
 	else:
 		warning.set_warn("Click again to exit without saving.")
 		apply_pass = true
-		
-
 
 func _on_open_aud_pressed() -> void:
 	OS.shell_show_in_file_manager(OS.get_user_data_dir())
@@ -88,3 +86,12 @@ func _on_restart_orientation_pressed() -> void:
 	on_done_pressed()
 	reorientate.emit()
 	settings_changed.emit()
+
+
+func open_console() -> void:
+	
+	apply_pass = true
+	on_done_pressed()
+	await animator.animation_finished
+	print("lol")
+	get_tree().change_scene_to_file("res://Console/Console.tscn")

@@ -50,7 +50,7 @@ func _process(_delta: float) -> void:
 		taskname.text = rtv.namedic[rtv.edittarget]
 		taskcolor.select(int(rtv.colordic[rtv.edittarget]))
 		taskicon.select(int(rtv.icondic[rtv.edittarget])-1)
-		print("(Edit) INFO: Edit request accepted")
+		rtv.dolog("(Edit) INFO: Edit request accepted")
 
 func _on_cancel_pressed() -> void:
 	rtv.edittarget = "0"
@@ -62,7 +62,7 @@ func _on_cancel_pressed() -> void:
 
 
 func _on_create_pressed() -> void:
-	print("(Edit) INFO: Edit completion requested")
+	rtv.dolog("(Edit) INFO: Edit completion requested")
 	if taskname.text != "" and taskname.text.split("").size() <= 36:
 		rtv.namedic[rtv.edittarget] = taskname.text
 		rtv.colordic[rtv.edittarget] = taskcolor.selected 
@@ -77,7 +77,7 @@ func _on_create_pressed() -> void:
 
 	elif taskname.text == "":
 		var tween = get_tree().create_tween()
-		print("(Edit) INFO: Edit completion aborted")
+		rtv.dolog("(Edit) INFO: Edit completion aborted")
 		edit.modulate = Color(1, 0.27, 0.27)
 		tween.tween_property(edit,"position",Vector2(175,0),0.08)
 		tween.tween_property(edit,"position",Vector2(160,0),0.1)
@@ -87,7 +87,7 @@ func _on_create_pressed() -> void:
 		pop_up.make_popup("Error!","Task name can't be empty.")
 		
 	elif taskname.text.split("").size() > 36:
-		print("(Edit) INFO: Edit completion aborted")
+		rtv.dolog("(Edit) INFO: Edit completion aborted")
 		var tween = get_tree().create_tween()
 		edit.modulate = Color(1, 0.27, 0.27)
 		tween.tween_property(edit,"position",Vector2(175,0),0.08)
@@ -98,7 +98,7 @@ func _on_create_pressed() -> void:
 		pop_up.make_popup("Error!","Task name can't be longet than 36 characters.")
 
 func _on_delete_pressed() -> void:
-	print("(Edit) INFO: Deleting task: "+str(rtv.edittarget))
+	rtv.dolog("(Edit) INFO: Deleting task: "+str(rtv.edittarget))
 	rtv.deletetarget = rtv.edittarget
 	rtv.namedic.erase(rtv.edittarget)
 	rtv.colordic.erase(rtv.edittarget)

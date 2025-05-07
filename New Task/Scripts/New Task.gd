@@ -63,13 +63,13 @@ func _on_cancel_pressed():
 		Input.action_release("Cancel")
 
 func _on_create_pressed():
-	print("(New task) INFO: Requested completion")
+	rtv.dolog("(New task) INFO: Requested completion")
 	if rtv.iscreating == true and taskname.text != "" and taskname.text.split("").size() <= 36:
-		print("(New task) INFO: Completion request accepted")
+		rtv.dolog("(New task) INFO: Completion request accepted")
 		var tween = get_tree().create_tween()
 		tween.tween_property(create,"scale",Vector2(1.1,1.1),0.2)
 		tween.tween_property(create,"scale",Vector2(1,1),0.2)
-		print("(New task) INFO: Sending task data to Daily Handler")
+		rtv.dolog("(New task) INFO: Sending task data to Daily Handler")
 		daily_handler.add_task(taskname.text,taskcolor.selected,taskicon.selected)
 		animator.play("Out_Complete")
 		await animator.animation_changed
@@ -78,7 +78,7 @@ func _on_create_pressed():
 
 	elif taskname.text == "":
 		var tween = get_tree().create_tween()
-		print("(New task) WARN: Completion aborted (400)")
+		rtv.dolog("(New task) WARN: Completion aborted (400)")
 		create.modulate = Color(1, 0.27, 0.27)
 		tween.tween_property(create,"position",Vector2(15,0),0.08)
 		tween.tween_property(create,"position",Vector2(0,0),0.1)
@@ -88,7 +88,7 @@ func _on_create_pressed():
 		pop_up.make_popup("Error!","Task name can't be empty.")
 
 	elif taskname.text.split("").size() > 36:
-		print("(New task) WARN: Completion aborted (400)")
+		rtv.dolog("(New task) WARN: Completion aborted (400)")
 		var tween = get_tree().create_tween()
 		create.modulate = Color(1, 0.27, 0.27)
 		tween.tween_property(create,"position",Vector2(15,0),0.08)

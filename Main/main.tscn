@@ -286,12 +286,16 @@ theme_override_constants/margin_top = 16
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Greeting/MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = -6
 
 [node name="Label" type="Label" parent="Greeting/MarginContainer/HBoxContainer"]
 texture_repeat = 1
 layout_mode = 2
 theme = ExtResource("2_qf686")
 text = "[Dynamic]"
+
+[node name="TextureRect" type="TextureRect" parent="Greeting/MarginContainer/HBoxContainer"]
+layout_mode = 2
 
 [node name="Time" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -398,6 +402,8 @@ libraries = {
 }
 
 [connection signal="timeout" from="Background/Timer" to="Background" method="load_timeout"]
+[connection signal="new_task" from="Daily Ui" to="Daily Ui/Incomplete/MarginContainer/VBoxContainer/Control/ScrollContainer2/VBoxContainer" method="new_task"]
+[connection signal="new_task" from="Daily Ui" to="Daily Ui/Complete/MarginContainer/VBoxContainer/Control/ScrollContainer2/VBoxContainer" method="new_task"]
 [connection signal="new_task" from="Daily Ui" to="Overview" method="_on_new_task"]
 [connection signal="new_task" from="Daily Ui" to="New task" method="new_task"]
 [connection signal="child_entered_tree" from="Pop Up/MarginContainer/VBoxContainer" to="Pop Up" method="pop_up_made"]

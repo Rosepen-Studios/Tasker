@@ -16,8 +16,8 @@ func _ready() -> void:
 		visible = true
 		hint._ready()
 	timesetting.add_item("No thanks!", 0)
-	timesetting.add_item("Yes please, in MM:HH!", 1)
-	timesetting.add_item("Yes please, in MM:HH:SS!", 2)
+	timesetting.add_item("Yes please, in HH:MM!", 1)
+	timesetting.add_item("Yes please, in HH:MM:SS!", 2)
 	timesetting.select(1)
 	animator.play("RESET")
 	page = 1

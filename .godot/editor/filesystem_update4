@@ -1,9 +1,20 @@
 res://Main/main.tscn
 res://Theme/Main Theme.tres
-res://Daily UI /Scripts/Daily Handler.gd
-res://Main/Scipts/Saving.gd
 res://Settings/Settings.tscn
 res://Daily UI /Daily UI.tscn
 res://New Task/New Task.tscn
+res://Orientation/Orientation.tscn
 res://Main/Scipts/rtv.gd
+res://Main/Scipts/Saving.gd
+res://Settings/Scripts/Info.gd
+res://Daily UI /Scripts/Daily Handler.gd
 res://New Task/Scripts/New Task.gd
+res://Console/Console.tscn
+res://Overview/Scripts/Overview Task Instatiator.gd
+res://Daily UI /Scripts/Task Instantiator.gd
+res://Settings/Scripts/Update.gd
+res://Console/Scripts/Console.gd
+res://New Task/Edit/Scripts/Edit.gd
+res://Overview/Task/Scripts/Overview Task.gd
+res://Settings/Scripts/Settings.gd
+res://Update/Scripts/Update.gd

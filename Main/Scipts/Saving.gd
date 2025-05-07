@@ -3,13 +3,14 @@ extends TextureRect
 @onready var web: HTTPRequest = $Timer/HTTPRequest
 @onready var pop_up: Control = $"../Pop Up"
 @onready var update: Control = $"../Update"
+@onready var tag: TextureRect = $"../Greeting/MarginContainer/HBoxContainer/TextureRect"
 
 var console_callouts:bool = false
 var latest:bool
 func _ready() -> void:
-	print("(System) INFO: Log date is " + Time.get_date_string_from_system())
+	rtv.dolog("(System) INFO: Log date is " + Time.get_date_string_from_system())
 	if rtv.production:
-		print("(System) INFO: RTV production is enabled and could be causing errors with task creation, if this is a production log ignore this message")
+		rtv.dolog("(System) INFO: RTV production is enabled and could be causing errors with task creation, if this is a production log ignore this message")
 	if FileAccess.file_exists("user://taskdata.json"):
 		loadtaskdata()
 		rtv.isloading = true
@@ -29,18 +30,23 @@ func _ready() -> void:
 	if FileAccess.file_exists("user://bg.jpg"):
 		texture = ImageTexture.create_from_image(Image.load_from_file("user://bg.jpg"))
 	savetimer.start()
-	
-
+	if rtv.version.split("_obd").size() == 2:
+		rtv.dolog("(System) INFO: Beta distro detected")
+		rtv.beta = true
+		tag.texture = load("res://Main/Textures/Beta_Tag.svg")
+	if OS.has_feature("editor"):
+		rtv.dolog("(System) INFO: Debugger detected")
+		tag.texture = load("res://Main/Textures/Debug_Tag.svg")
 	await  is_latest()
 	if latest == false:
 		if rtv.settings["notify_for_updates"]:
-			print("(System) INFO: Running on older version!")
+			rtv.dolog("(System) INFO: Running on older version!")
 			pop_up.make_popup("Notice","You are running an outdated version of Tasker. Click here to update.")
 			await pop_up.clicked
 			rtv.popup_clicked = false
 			update.visible = true
 	else:
-		print("(System) INFO: Applications is up-to-date")
+		rtv.dolog("(System) INFO: Applications is up-to-date")
 
 	
 func savetaskdata(): # Saves task data
@@ -59,7 +65,7 @@ func savetaskdata(): # Saves task data
 	file.store_string(json)
 	file.close()
 	if console_callouts:
-		print("(Saving) INFO: Saved taskdata")
+		rtv.dolog("(Saving) INFO: Saved taskdata")
 
 func loadtaskdata(): #Loads task data
 	var file = FileAccess.open("user://taskdata.json", FileAccess.READ)
@@ -85,7 +91,7 @@ func savelastlog(): # Saves lastlog data
 	file.store_string(json)
 	file.close()
 	if console_callouts:
-		print("(Saving) INFO: Saved lastlog")
+		rtv.dolog("(Saving) INFO: Saved lastlog")
 
 func saveorientation(): # Saves lastlog data
 	var file = FileAccess.open("user://orientation.json", FileAccess.WRITE)
@@ -97,7 +103,7 @@ func saveorientation(): # Saves lastlog data
 	file.store_string(json)
 	file.close()
 	if console_callouts:
-		print("(Saving) INFO: Saved orientation")
+		rtv.dolog("(Saving) INFO: Saved orientation")
 
 func loadlastlog(): #Loads lastlog data
 	var file = FileAccess.open("user://lastlog.json", FileAccess.READ)
@@ -131,14 +137,14 @@ func is_latest():
 	if FileAccess.file_exists(OS.get_user_data_dir().split("Tasker")[0]+"Tasker Updater/latest.json"):
 		rtv.updater_version = FileAccess.open(OS.get_user_data_dir().split("Tasker")[0]+"Tasker Updater/latest.json",FileAccess.READ).get_as_text().split("\"")[1]
 	else:
-		print("(System) WARN: File latest.json not found, aborting updater version check (404)")
-		print("(System) INFO: The error above should be fixed automaticaly when you update Tasker")
+		rtv.dolog("(System) WARN: File latest.json not found, aborting updater version check (404)")
+		rtv.dolog("(System) INFO: The error above should be fixed automaticaly when you update Tasker")
 	web.set_download_file("user://latest_version.txt")
 	web.request("https://github.com/Firepixel85/Tasker-Labs/releases/download/latest_pointer/latest_version.txt")
 	await web.request_completed
 	rtv.latest_version = FileAccess.open("user://latest_version.txt",FileAccess.READ).get_as_text().split(",")[0]
 	rtv.updater_latest_version = FileAccess.open("user://latest_version.txt",FileAccess.READ).get_as_text().split(",")[1]
-	print("(System) INFO: Current vesrion: "+ rtv.version+ " Latest version: "+ rtv.latest_version)
+	rtv.dolog("(System) INFO: Current vesrion: "+ rtv.version+ " Latest version: "+ rtv.latest_version)
 	if rtv.latest_version == rtv.version:
 		latest = true
 	else:

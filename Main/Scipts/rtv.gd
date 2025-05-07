@@ -43,8 +43,14 @@ var popup_clicked:bool
 
 #System
 var os = "MAC"
-var version = "1.0.1"
+var version = "1.0.3_obd1"
+var beta:bool = false
 var latest_version
 var updater_version
 var updater_latest_version
 var production:bool = false #Should only be true when building new versions
+var logs = []
+
+func dolog(log):
+	print(log)
+	logs.append(log)

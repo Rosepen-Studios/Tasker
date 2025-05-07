@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 
 
 func _on_visibility_changed() -> void:
-	if rtv. latest_version != null:
+	if rtv. latest_version != null and text != null:
 		text.text = "You are currently running version "+rtv.version+" of Tasker when "+rtv.latest_version+" is available!  Click here if you wish to update. You can disable this pop-up with the: \"Get notified of new versions\" setting." 
 
 
@@ -56,7 +56,7 @@ func _on_button_pressed() -> void:
 
 func delete_updater():
 	if rtv.os == "MAC":
-		print("(System) INFO: Attempting to delete Updater")
+		rtv.dolog("(System) INFO: Attempting to delete Updater")
 
 		var output = []
 		var term = OS.execute("/bin/bash",["-c"]+["cd .. && cd .. && cd .. && cd .. && cd .. && rm -rf '/Users/"+user+"/Library/Application Support/Godot/app_userdata/Tasker/Updater.app'"],output)
@@ -66,6 +66,6 @@ func delete_updater():
 		for i in str(output).split("\\n").size():
 			if str(output).split("\\n")[i] == "[\"Updater.app":
 				delete_updater()
-				print("(System) INFO: Deletion Failed retrying")
+				rtv.dolog("(System) INFO: Deletion failed, retrying")
 	elif rtv.os == "WIN":
-		print("(System) ERROR: Failed to delete Updater REASON: This feature is not available on windows")
+		rtv.dolog("(System) ERROR: Failed to delete Updater REASON: This feature is not available on windows")

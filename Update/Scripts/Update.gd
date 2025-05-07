@@ -51,4 +51,5 @@ func _on_update_pressed() -> void:
 
 func _on_visibility_changed() -> void:
 	if rtv.latest_version != null:
-		text.text = "Tasker version "+rtv.latest_version+" is available and you are running version "+rtv.version+". Do you want to update?"
+		if text != null:
+			text.text = "Tasker version "+rtv.latest_version+" is available and you are running version "+rtv.version+". Do you want to update?"
