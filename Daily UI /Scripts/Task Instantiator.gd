@@ -4,11 +4,8 @@ func _ready():
 	if rtv.isloading == true:
 		loadfull()
 
-func new_task(id):
-	rtv.dolog("(Task Instantiator) INFO: Recieved signal from Daily Handler")
-	add_child(preload("res://Daily Task/Daily Task.tscn").instantiate())
-	rtv.justcreatedid = id
-	rtv.dolog("(Task Instantiator) INFO: Task instantiated")
+
+	
 
 func loadfull():
 	rtv.dolog("(Task Instantiator) INFO: Loading in full")
@@ -20,3 +17,10 @@ func loadfull():
 		await rtv.loadcreationstatus == 1
 	rtv.dolog("(Task Instantiator) INFO: Loaded full")
 		
+
+
+func new_task(id: int) -> void:
+	rtv.dolog("(Task Instantiator) INFO: Recieved signal from Daily Handler")
+	add_child(preload("res://Daily Task/Daily Task.tscn").instantiate())
+	rtv.justcreatedid = id
+	rtv.dolog("(Task Instantiator) INFO: Task instantiated")

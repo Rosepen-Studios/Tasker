@@ -1,5 +1,5 @@
 extends Control
-@onready var con: CodeEdit = $VBoxContainer/CodeEdit
+@onready var con: CodeEdit = $MarginContainer/VBoxContainer/CodeEdit
 
 func _ready() -> void:
 	for i in rtv.logs:

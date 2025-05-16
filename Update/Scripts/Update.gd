@@ -25,11 +25,11 @@ func _on_update_pressed() -> void:
 	for i in str(output).split("\\n").size():
 		if str(output).split("\\n")[i] == "[\"Updater.app":
 			found_updater = true
-			print("found")
+			rtv.dolog("(Updater) INFO: Located updater")
 			
 	
 	if not found_updater or rtv.updater_latest_version != rtv.updater_version:
-		print("not found, downloading")
+		rtv.dolog("(Updater) INFO: Updater not found wonloading latest version")
 		web.set_download_file("user://Updater.zip")
 		web.request("https://github.com/Firepixel85/Tasker-Labs/releases/download/latest_pointer/Updater.Mac.zip")
 		

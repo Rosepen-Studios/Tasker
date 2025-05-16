@@ -70,31 +70,19 @@ func _on_create_pressed() -> void:
 		rtv.edittarget = "0"
 		rtv.isediting = false
 		animator.play("Out")
-		print("(Edit) INFO: Edit completion accepted")
+		rtv.dolog("(Edit) INFO: Edit completion accepted")
 		await animator.animation_finished
 		visible = false
 
 
 	elif taskname.text == "":
-		var tween = get_tree().create_tween()
 		rtv.dolog("(Edit) INFO: Edit completion aborted")
-		edit.modulate = Color(1, 0.27, 0.27)
-		tween.tween_property(edit,"position",Vector2(175,0),0.08)
-		tween.tween_property(edit,"position",Vector2(160,0),0.1)
-		tween.tween_property(edit,"position",Vector2(145,0),0.08)
-		tween.tween_property(edit,"position",Vector2(160,0),0.1)
-		tween.tween_property(edit,"modulate",Color(1, 1, 1),0.1)
+		shake(edit)
 		pop_up.make_popup("Error!","Task name can't be empty.")
 		
 	elif taskname.text.split("").size() > 36:
 		rtv.dolog("(Edit) INFO: Edit completion aborted")
-		var tween = get_tree().create_tween()
-		edit.modulate = Color(1, 0.27, 0.27)
-		tween.tween_property(edit,"position",Vector2(175,0),0.08)
-		tween.tween_property(edit,"position",Vector2(160,0),0.1)
-		tween.tween_property(edit,"position",Vector2(145,0),0.08)
-		tween.tween_property(edit,"position",Vector2(160,0),0.1)
-		tween.tween_property(edit,"modulate",Color(1, 1, 1),0.1)
+		
 		pop_up.make_popup("Error!","Task name can't be longet than 36 characters.")
 
 func _on_delete_pressed() -> void:
@@ -112,3 +100,12 @@ func _on_delete_pressed() -> void:
 	animator.play("Out")
 	await animator.animation_finished
 	visible = false
+
+func shake(object):
+	var tween = get_tree().create_tween()
+	object.modulate = Color(1, 0.27, 0.27)
+	tween.tween_property(object,"position",Vector2(175,0),0.08)
+	tween.tween_property(object,"position",Vector2(160,0),0.1)
+	tween.tween_property(object,"position",Vector2(145,0),0.08)
+	tween.tween_property(object,"position",Vector2(160,0),0.1)
+	tween.tween_property(object,"modulate",Color(1, 1, 1),0.1)

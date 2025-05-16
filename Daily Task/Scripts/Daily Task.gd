@@ -52,9 +52,9 @@ func _ready():
 			else:
 				visible = false
 			
-		print("(Daily Task "+str(id)+") INFO: Data loaded")
+		rtv.dolog("(Daily Task "+str(id)+") INFO: Data loaded")
 	else:
-		print("(Daily Task "+str(id)+") ERROR: Task ID is invalid")
+		rtv.dolog("(Daily Task "+str(id)+") ERROR: Task ID is invalid")
 	
 func _process(_delta: float) -> void:
 	
@@ -64,7 +64,7 @@ func _process(_delta: float) -> void:
 		animator.play("Deleted")
 		await animator.animation_finished
 		visible = false
-		print("(Daily Task "+str(id)+") INFO: Deleting")
+		rtv.dolog("(Daily Task "+str(id)+") INFO: Deleting")
 
 	if deleted == false:
 		update_streak_color()
@@ -91,7 +91,8 @@ func _on_done_pressed() -> void: #Completes the task
 	rtv.streakdic[id] += 1
 	rtv.donedic[id] = true
 	rtv.comlastlogdic[id] = true
-	print("(Daily Task "+str(id)+") INFO: Complete")
+	rtv.dolog("(Daily Task "+str(id)+") INFO: Complete")
+
 	
 
 
@@ -100,7 +101,7 @@ func _on_edit_pressed() -> void: #Requests to edit
 	Input.action_release("Edit")
 	rtv.edittarget = id
 	rtv.isediting = true
-	print("(Daily Task "+str(id)+") INFO: Requested edit")
+	rtv.dolog("(Daily Task "+str(id)+") INFO: Requested edit")
 
 
 

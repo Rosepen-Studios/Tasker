@@ -21,27 +21,35 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 100.0
-offset_bottom = 22.0
+offset_left = 1.0
+offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_oxqdv")
 
-[node name="Incomplete" type="TextureRect" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 96
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Incomplete" type="TextureRect" parent="MarginContainer/HBoxContainer"]
 material = ExtResource("2_qtfcs")
 layout_direction = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_bottom = 1.0
-offset_left = -4.0
-offset_top = 60.0
-offset_right = 499.0
-offset_bottom = -39.0
-grow_vertical = 2
+layout_mode = 2
 texture = ExtResource("1_3r60q")
 script = ExtResource("4_4xv47")
 
-[node name="MarginContainer" type="MarginContainer" parent="Incomplete"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/Incomplete"]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
@@ -52,21 +60,21 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Incomplete/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Incomplete/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Label" type="Label" parent="Incomplete/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Incomplete/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_hpifb")
 theme_override_font_sizes/font_size = 30
 text = "To-Do:"
 
-[node name="Control" type="Control" parent="Incomplete/MarginContainer/VBoxContainer"]
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer/Incomplete/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ScrollContainer2" type="ScrollContainer" parent="Incomplete/MarginContainer/VBoxContainer/Control"]
+[node name="ScrollContainer2" type="ScrollContainer" parent="MarginContainer/HBoxContainer/Incomplete/MarginContainer/VBoxContainer/Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -78,25 +86,19 @@ script = ExtResource("4_g6ke7")
 wheel_scroll_damper = ExtResource("5_2sb03")
 dragging_scroll_damper = ExtResource("5_2sb03")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Incomplete/MarginContainer/VBoxContainer/Control/ScrollContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Incomplete/MarginContainer/VBoxContainer/Control/ScrollContainer2"]
 layout_mode = 2
+theme_override_constants/separation = 8
 script = ExtResource("3_jy2y0")
 
-[node name="Complete" type="TextureRect" parent="."]
+[node name="Complete" type="TextureRect" parent="MarginContainer/HBoxContainer"]
 material = ExtResource("2_qtfcs")
 layout_direction = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_bottom = 1.0
-offset_left = 521.0
-offset_top = 60.0
-offset_right = 1024.0
-offset_bottom = -39.0
-grow_vertical = 2
+layout_mode = 2
 texture = ExtResource("1_3r60q")
 script = ExtResource("4_4xv47")
 
-[node name="MarginContainer" type="MarginContainer" parent="Complete"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/Complete"]
 layout_mode = 0
 offset_right = 503.0
 offset_bottom = 549.0
@@ -105,21 +107,21 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Complete/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Complete/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Label" type="Label" parent="Complete/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Complete/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_hpifb")
 theme_override_font_sizes/font_size = 30
 text = "Done:"
 
-[node name="Control" type="Control" parent="Complete/MarginContainer/VBoxContainer"]
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer/Complete/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ScrollContainer2" type="ScrollContainer" parent="Complete/MarginContainer/VBoxContainer/Control"]
+[node name="ScrollContainer2" type="ScrollContainer" parent="MarginContainer/HBoxContainer/Complete/MarginContainer/VBoxContainer/Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -131,9 +133,9 @@ script = ExtResource("4_g6ke7")
 wheel_scroll_damper = ExtResource("5_2sb03")
 dragging_scroll_damper = SubResource("Resource_7tvve")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Complete/MarginContainer/VBoxContainer/Control/ScrollContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Complete/MarginContainer/VBoxContainer/Control/ScrollContainer2"]
 layout_mode = 2
 script = ExtResource("5_obgsm")
 
-[connection signal="new_task" from="." to="Incomplete/MarginContainer/VBoxContainer/Control/ScrollContainer2/VBoxContainer" method="new_task"]
-[connection signal="new_task" from="." to="Complete/MarginContainer/VBoxContainer/Control/ScrollContainer2/VBoxContainer" method="new_task"]
+[connection signal="new_task" from="." to="MarginContainer/HBoxContainer/Incomplete/MarginContainer/VBoxContainer/Control/ScrollContainer2/VBoxContainer" method="new_task"]
+[connection signal="new_task" from="." to="MarginContainer/HBoxContainer/Complete/MarginContainer/VBoxContainer/Control/ScrollContainer2/VBoxContainer" method="new_task_done"]

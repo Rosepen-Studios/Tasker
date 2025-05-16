@@ -1,17 +1,17 @@
 extends Control
 
 
-@onready var animator: AnimationPlayer = $"../AnimationPlayer"
+@onready var tab_handler: ScrollContainer = $"../TabHandler"
 @onready var selection: TextureRect = $TextureRect/Control/Upper/Selection/TextureRect
 @onready var overview: TextureRect = $TextureRect/Control/Upper/VBoxContainer/Overview/TextureRect
 @onready var daily: TextureRect = $TextureRect/Control/Upper/VBoxContainer/Daily/TextureRect
 @onready var settings: Control = $"../Settings"
 
-var page:String = "daily"
-var selectionpositions:Dictionary = {1:10,2:62,3:115,4:168}
-signal changed_page(page:String)
+var tab:String = "daily"
+var selectionpositions:Dictionary = {"daily":10,"overview":62,"placeholder1":115,"placeholder2":168}
+signal changed_page(tab:String)
 func _ready() -> void:
-	selection.positionselection(selectionpositions[2])
+	selection.positionselection(selectionpositions["daily"])
 	daily.modulate = Color(1, 1, 1)
 	overview.modulate = Color(0.576, 0.576, 0.576)
 
@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 		daily.modulate = Color(1, 1, 1)
 		overview.modulate = Color(1, 1, 1)
 	else:
-		if page == "overview":
+		if tab == "overview":
 			overview.modulate = Color(1, 1, 1)
 			daily.modulate = Color(0.576, 0.576, 0.576)
 		else:
@@ -29,34 +29,28 @@ func _process(delta: float) -> void:
 
 		
 func _on_overview_pressed() -> void:
-	if page != "overview" and (rtv.settings["sidebar_selection"] == 0 or 2):
+	if tab != "overview" and (rtv.settings["sidebar_selection"] == 0 or 2):
 		overview.modulate = Color(1, 1, 1)
 		daily.modulate = Color(0.576, 0.576, 0.576)
-		selection.positionselection(selectionpositions[1])
-		animator.play("Overview")
-		page = "overview"
-		changed_page.emit(page)
-	elif page != "overview":
-		selection.positionselection(selectionpositions[1])
-		animator.play("Overview")
-		page = "overview"
-		changed_page.emit(page)
+		switch_tab("overview")
+	elif tab != "overview":
+		switch_tab("overview")
 
 func _on_daily_pressed() -> void:
-	if page != "daily" and (rtv.settings["sidebar_selection"] == 0 or 2):
+	if tab != "daily" and (rtv.settings["sidebar_selection"] == 0 or 2):
 		daily.modulate = Color(1, 1, 1)
 		overview.modulate = Color(0.576, 0.576, 0.576)
-		selection.positionselection(selectionpositions[2])
-		animator.play("Daily")
-		page = "daily"
-		changed_page.emit(page)
-	elif page != "daily":
-		selection.positionselection(selectionpositions[2])
-		animator.play("Daily")
-		page = "daily"
-		changed_page.emit(page)
+		switch_tab("daily")
+	elif tab != "daily":
+		switch_tab("daily")
 
 
 func _on_settings_pressed() -> void:
 	if rtv.iscreating == false and rtv.isediting == false and rtv.issetting == false:
 		settings.enter()
+
+func switch_tab(tabid:String):
+	tab = tabid
+	selection.positionselection(selectionpositions[tabid])
+	tab_handler.switch_to(tabid)
+	changed_page.emit(tabid)

@@ -3,8 +3,8 @@ extends Control
 signal new_task(id:int)
 
 #Smooth Scrolling:
-@onready var scroll_container: SmoothScrollContainer = $Incomplete/MarginContainer/VBoxContainer/Control/ScrollContainer2
-@onready var scroll_container_done: SmoothScrollContainer = $Complete/MarginContainer/VBoxContainer/Control/ScrollContainer2
+@onready var scroll_container: SmoothScrollContainer = $MarginContainer/HBoxContainer/Incomplete/MarginContainer/VBoxContainer/Control/ScrollContainer2
+@onready var scroll_container_done: SmoothScrollContainer = $MarginContainer/HBoxContainer/Complete/MarginContainer/VBoxContainer/Control/ScrollContainer2
 var profile = {"smooth":load("res://Scroll Profiles/Smooth.tres"),"standard":load("res://Scroll Profiles/Standard.tres")}
 
 func add_task(taskname,taskcolor,taskicon):

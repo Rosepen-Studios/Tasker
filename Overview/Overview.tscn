@@ -117,7 +117,7 @@ texture_progress = ExtResource("4_ouu1u")
 script = ExtResource("6_8r374")
 
 [node name="Timer" type="Timer" parent="MarginContainer/Control/TextureRect/MarginContainer/HBoxContainer/Control/VBoxContainer/Control/Score/Control/TextureProgressBar"]
-wait_time = 0.1
+wait_time = 0.3
 
 [node name="Label" type="Label" parent="MarginContainer/Control/TextureRect/MarginContainer/HBoxContainer/Control/VBoxContainer/Control/Score/Control"]
 layout_mode = 1

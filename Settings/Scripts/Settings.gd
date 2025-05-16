@@ -89,9 +89,7 @@ func _on_restart_orientation_pressed() -> void:
 
 
 func open_console() -> void:
-	
 	apply_pass = true
 	on_done_pressed()
 	await animator.animation_finished
-	print("lol")
 	get_tree().change_scene_to_file("res://Console/Console.tscn")

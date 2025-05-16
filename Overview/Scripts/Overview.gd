@@ -8,8 +8,7 @@ extends Control
 @onready var scroll_container: SmoothScrollContainer = $MarginContainer/Control/TextureRect/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/Control/TextureRect/MarginContainer/VBoxContainer/ScrollContainer
 @onready var scroll_container_done: SmoothScrollContainer = $MarginContainer/Control/TextureRect/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer/TextureRect2/MarginContainer/VBoxContainer/ScrollContainer
 var profile = {"smooth":load("res://Scroll Profiles/Smooth.tres"),"standard":load("res://Scroll Profiles/Standard.tres")}
-func _ready() -> void:
-	visible = false
+
 
 func _on_new_task(id: int) -> void:
 	instance1.add_task(id)

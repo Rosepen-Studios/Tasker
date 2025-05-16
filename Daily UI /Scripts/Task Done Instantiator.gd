@@ -14,6 +14,10 @@ func loadfull():
 		add_child(preload("res://Daily Task/Daily Task Done/Daily Task Done.tscn").instantiate())
 		await rtv.loadcreationstatus == 1
 
-func new_task(id: int) -> void:
+
+	
+
+
+func new_task_done(id: int) -> void:
 	add_child(preload("res://Daily Task/Daily Task Done/Daily Task Done.tscn").instantiate())
 	rtv.justcreatedid = id

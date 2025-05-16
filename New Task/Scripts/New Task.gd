@@ -11,7 +11,7 @@ var iconpointer:Dictionary = {2:"res://Daily Task/Textures/Icons/Big/Book.svg",1
 @onready var animator = $AnimationPlayer
 @onready var cancel = $TextureRect/HBoxContainer/MarginContainer/HBoxContainer/Cancel
 @onready var create = $TextureRect/HBoxContainer/MarginContainer/HBoxContainer/Control/Create
-@onready var daily_handler = $"../Daily Ui"
+@onready var daily_handler = $"../TabHandler/VBoxContainer/Daily Ui"
 
 @onready var taskname = $TextureRect/HBoxContainer/MarginContainer/VBoxContainer/LineEdit
 @onready var taskcolor = $"TextureRect/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Color Drop Down"
@@ -46,11 +46,11 @@ func _process(_delta):
 		visible = true
 		animator.play("RESET")
 		animator.play("In")
-		print("(New task) INFO: Creating")
+		rtv.dolog("(New task) INFO: Creating")
 	if Input.is_action_just_pressed("Cancel") and rtv.iscreating == true:
 		rtv.iscreating = false
 		animator.play("Out_Canceled")
-		print("(New task) INFO: Creation canceled")
+		rtv.dolog("(New task) INFO: Creation canceled")
 		await animator.animation_changed
 		visible = false
 	if Input.is_action_just_pressed("Enter") and rtv.iscreating == true:
@@ -77,25 +77,13 @@ func _on_create_pressed():
 		rtv.iscreating = false
 
 	elif taskname.text == "":
-		var tween = get_tree().create_tween()
 		rtv.dolog("(New task) WARN: Completion aborted (400)")
-		create.modulate = Color(1, 0.27, 0.27)
-		tween.tween_property(create,"position",Vector2(15,0),0.08)
-		tween.tween_property(create,"position",Vector2(0,0),0.1)
-		tween.tween_property(create,"position",Vector2(-15,0),0.08)
-		tween.tween_property(create,"position",Vector2(0,0),0.1)
-		tween.tween_property(create,"modulate",Color(1, 1, 1),0.1)
+		shake(create)
 		pop_up.make_popup("Error!","Task name can't be empty.")
 
 	elif taskname.text.split("").size() > 36:
 		rtv.dolog("(New task) WARN: Completion aborted (400)")
-		var tween = get_tree().create_tween()
-		create.modulate = Color(1, 0.27, 0.27)
-		tween.tween_property(create,"position",Vector2(15,0),0.08)
-		tween.tween_property(create,"position",Vector2(0,0),0.1)
-		tween.tween_property(create,"position",Vector2(-15,0),0.08)
-		tween.tween_property(create,"position",Vector2(0,0),0.1)
-		tween.tween_property(create,"modulate",Color(1, 1, 1),0.1)
+		shake(create)
 		pop_up.make_popup("Error!","Task name can't be longet than 36 characters.")
 
 		
@@ -107,3 +95,12 @@ func clearsel():
 	taskicon.selected = 0
 
 var clo = Color(1, 0.5, 0.575, 1)
+
+func shake(object):
+	var tween = get_tree().create_tween()
+	object.modulate = Color(1, 0.27, 0.27)
+	tween.tween_property(object,"position",Vector2(15,0),0.08)
+	tween.tween_property(object,"position",Vector2(0,0),0.1)
+	tween.tween_property(object,"position",Vector2(-15,0),0.08)
+	tween.tween_property(object,"position",Vector2(0,0),0.1)
+	tween.tween_property(object,"modulate",Color(1, 1, 1),0.1)
