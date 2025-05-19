@@ -1,4 +1,5 @@
 extends Control
+@onready var saving: Control = $"."
 
 var iscreating:bool #Is the New Task Scene Active?
 var justcreatedid:int #The ID of the task that was just created
@@ -34,16 +35,31 @@ var username:String
 
 #Settings
 var issetting:bool
-var settings:Dictionary = {"time_setting":0,"username":"","sidebar_selection":0,"accent_color":"8667E9","smooth_scroll":true,"notify_for_updates":true}
+var settings:Dictionary = {
+	"time_setting":0,
+	"username":"",
+	"sidebar_selection":0,
+	"accent_color":"8667E9",
+	"smooth_scroll":true,
+	"notify_for_updates":true,
+	"focus_goal_day":60,
+	"focus_goal_week":300
+}
 
 #Pop Up
 var pop_up_name:String
 var pop_up_desc:String
 var popup_clicked:bool
 
+#Focus
+var sessionid:Dictionary
+var sessiontime:Dictionary
+var sessionlen:Dictionary
+var last_given_session_id:int = 0
+
 #System
 var os = "MAC"
-var version = "1.0.3_obd1"
+var version = "1.1"
 var beta:bool = false
 var latest_version
 var updater_version
@@ -54,3 +70,6 @@ var logs = []
 func dolog(log):
 	print(log)
 	logs.append(log)
+
+func savefocus():
+	saving.savefocus()

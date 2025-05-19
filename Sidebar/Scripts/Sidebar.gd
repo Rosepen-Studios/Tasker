@@ -6,10 +6,9 @@ extends Control
 @onready var overview: TextureRect = $TextureRect/Control/Upper/VBoxContainer/Overview/TextureRect
 @onready var daily: TextureRect = $TextureRect/Control/Upper/VBoxContainer/Daily/TextureRect
 @onready var settings: Control = $"../Settings"
-
 var tab:String = "daily"
-var selectionpositions:Dictionary = {"daily":10,"overview":62,"placeholder1":115,"placeholder2":168}
-signal changed_page(tab:String)
+var selectionpositions:Dictionary = {"daily":10,"overview":62,"focus":115,"placeholder2":168}
+signal changed_tab(tab:String)
 func _ready() -> void:
 	selection.positionselection(selectionpositions["daily"])
 	daily.modulate = Color(1, 1, 1)
@@ -19,13 +18,6 @@ func _process(delta: float) -> void:
 	if rtv.settings["sidebar_selection"] == 1:
 		daily.modulate = Color(1, 1, 1)
 		overview.modulate = Color(1, 1, 1)
-	else:
-		if tab == "overview":
-			overview.modulate = Color(1, 1, 1)
-			daily.modulate = Color(0.576, 0.576, 0.576)
-		else:
-			daily.modulate = Color(1, 1, 1)
-			overview.modulate = Color(0.576, 0.576, 0.576)
 
 		
 func _on_overview_pressed() -> void:
@@ -53,4 +45,14 @@ func switch_tab(tabid:String):
 	tab = tabid
 	selection.positionselection(selectionpositions[tabid])
 	tab_handler.switch_to(tabid)
-	changed_page.emit(tabid)
+	changed_tab.emit(tabid)
+
+
+func _on_focus_pressed() -> void:
+	if tab != "focus" and (rtv.settings["sidebar_selection"] == 0 or 2):
+		daily.modulate = Color(1, 1, 1)
+		overview.modulate = Color(0.576, 0.576, 0.576)
+		switch_tab("focus")
+	elif tab != "focus":
+		switch_tab("focus")
+	

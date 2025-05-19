@@ -1,0 +1,165 @@
+[gd_scene load_steps=15 format=3 uid="uid://d4c65c74fxgwm"]
+
+[ext_resource type="Script" path="res://FocusUI/Session/Scripts/FocusSession.gd" id="1_qvcxw"]
+[ext_resource type="Texture2D" uid="uid://c6ho0a26outi6" path="res://FocusUI/Session/Textures/Container.png" id="1_wwhyt"]
+[ext_resource type="Texture2D" uid="uid://cqdylq0arfyi" path="res://Sidebar/Textures/Focus Icon.svg" id="2_0vtdq"]
+[ext_resource type="Theme" uid="uid://c3rp1lb338sef" path="res://Theme/Main Theme.tres" id="3_xcq4i"]
+[ext_resource type="FontFile" uid="uid://c8wand4s2de77" path="res://Theme/SF Pro Font/SF-Pro-Display-Medium.otf" id="4_uft3h"]
+[ext_resource type="Texture2D" uid="uid://bchlkgr4uh2mu" path="res://FocusUI/Session/Textures/ContributionContainer.png" id="5_jw0t2"]
+[ext_resource type="Texture2D" uid="uid://bsvhmhodfnc2k" path="res://FocusUI/Session/Textures/DeleteBack.png" id="5_qf10j"]
+[ext_resource type="Texture2D" uid="uid://laq1hkcxbe7f" path="res://FocusUI/Session/Textures/DeleteProgress.png" id="6_rkt73"]
+[ext_resource type="Texture2D" uid="uid://xn71bfg6wngi" path="res://FocusUI/Session/Textures/Ring/Base.png" id="6_v7rh2"]
+[ext_resource type="Texture2D" uid="uid://8j3nnodl2ja3" path="res://FocusUI/Session/Textures/Ring/Progress.png" id="7_anbkk"]
+[ext_resource type="Script" path="res://FocusUI/Session/Scripts/Contribution.gd" id="7_h6khp"]
+[ext_resource type="Texture2D" uid="uid://bjgybaujyjghc" path="res://FocusUI/Session/Textures/DeleteIcon.svg" id="7_x1r5o"]
+[ext_resource type="Script" path="res://FocusUI/Session/Scripts/DeleteButton.gd" id="8_sj0oj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mxupg"]
+
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(0, 101)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 563.0
+offset_bottom = 101.0
+size_flags_horizontal = 0
+script = ExtResource("1_qvcxw")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_wwhyt")
+stretch_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Control" type="Control" parent="TextureRect/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(87, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/HBoxContainer/Control"]
+layout_mode = 2
+offset_right = 480.0
+offset_bottom = 480.0
+grow_vertical = 2
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("2_0vtdq")
+stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_xcq4i")
+theme_override_font_sizes/font_size = 28
+text = "Session at 12:34"
+
+[node name="Label2" type="Label" parent="TextureRect/MarginContainer/HBoxContainer/VBoxContainer"]
+modulate = Color(0.701961, 0.701961, 0.701961, 1)
+layout_mode = 2
+theme = ExtResource("3_xcq4i")
+theme_override_fonts/font = ExtResource("4_uft3h")
+theme_override_font_sizes/font_size = 20
+text = "Focused for 1:30:00"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TextureRect/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("5_jw0t2")
+stretch_mode = 2
+script = ExtResource("7_h6khp")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/HBoxContainer2/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="TextureRect/MarginContainer/HBoxContainer2/TextureRect/MarginContainer"]
+layout_mode = 2
+max_value = 125.0
+fill_mode = 4
+radial_initial_angle = 216.0
+texture_under = ExtResource("6_v7rh2")
+texture_progress = ExtResource("7_anbkk")
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/HBoxContainer2/TextureRect/MarginContainer/TextureProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_uft3h")
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="TextureRect/MarginContainer/HBoxContainer2/TextureRect/MarginContainer/TextureProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_uft3h")
+theme_override_font_sizes/font_size = 16
+text = "Goal"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="TextureRect/MarginContainer/HBoxContainer2"]
+layout_mode = 2
+fill_mode = 3
+texture_under = ExtResource("5_qf10j")
+texture_progress = ExtResource("6_rkt73")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/HBoxContainer2/TextureProgressBar"]
+layout_mode = 0
+offset_right = 420.0
+offset_bottom = 850.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_x1r5o")
+stretch_mode = 3
+
+[node name="Button" type="Button" parent="TextureRect/MarginContainer/HBoxContainer2/TextureProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mxupg")
+flat = true
+script = ExtResource("8_sj0oj")
+
+[connection signal="mouse_entered" from="TextureRect/MarginContainer/HBoxContainer2/TextureProgressBar/Button" to="TextureRect/MarginContainer/HBoxContainer2/TextureProgressBar/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/MarginContainer/HBoxContainer2/TextureProgressBar/Button" to="TextureRect/MarginContainer/HBoxContainer2/TextureProgressBar/Button" method="_on_mouse_exited"]

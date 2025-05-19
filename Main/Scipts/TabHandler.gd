@@ -1,7 +1,7 @@
 extends ScrollContainer
 
 
-var positions = {"daily":0,"overview":652}
+var positions = {"daily":0,"overview":652,"focus":1304}
 
 	
 func switch_to(tabid:String):

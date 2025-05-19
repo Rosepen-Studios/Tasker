@@ -39,10 +39,11 @@ theme_override_constants/margin_top = 83
 [node name="Control" type="Control" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/Control"]
+[node name="TextureRect" type="NinePatchRect" parent="MarginContainer/Control"]
 layout_mode = 2
 anchor_right = 0.974
 anchor_bottom = 0.972
+offset_top = -3.05176e-05
 offset_right = 0.455933
 offset_bottom = -0.180115
 grow_horizontal = 2
@@ -50,7 +51,6 @@ grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 texture = ExtResource("1_jux3x")
-expand_mode = 5
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Control/TextureRect"]
 layout_mode = 1

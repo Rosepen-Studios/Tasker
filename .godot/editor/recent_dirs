@@ -1,5 +1,11 @@
-res://Debug/Scripts
+res://FocusUI/Session/Scripts
+res://FocusUI/Scripts
 res://Main/Scipts
+res://FocusUI/Session
+res://FocusUI/Selector
+res://FocusUI
+res://Sidebar/Scripts
+res://Debug/Scripts
 res://Console
 res://Console/Scripts
 res://Settings/Scripts

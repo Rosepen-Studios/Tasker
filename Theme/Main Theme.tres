@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://b4aucabwmunli" path="res://Theme/Inter font/static/Inter_18pt-SemiBold.ttf" id="1_uynt7"]
 [ext_resource type="Texture2D" uid="uid://b5dqbbvpo66y5" path="res://Theme/Textures/Switch/Switch On.svg" id="2_utnk0"]
 [ext_resource type="Texture2D" uid="uid://dyvyyc81g62lh" path="res://Theme/Textures/Switch/Switch Off.svg" id="3_g72pt"]
-[ext_resource type="FontFile" uid="uid://x4yjjqdaibsw" path="res://Theme/Inter font/static/Inter_28pt-SemiBold.ttf" id="4_klxxu"]
+[ext_resource type="FontFile" uid="uid://c3ccumvrdcimj" path="res://Theme/SF Pro Font/SF-Pro-Display-Semibold.otf" id="4_pvjs1"]
 [ext_resource type="Texture2D" uid="uid://conpyevb1h6rb" path="res://Theme/Textures/Line Input.svg" id="5_dgpqo"]
 [ext_resource type="FontFile" uid="uid://d4midvuswbpbb" path="res://Theme/Inter font/static/Inter_24pt-SemiBold.ttf" id="6_iqdyv"]
 [ext_resource type="Texture2D" uid="uid://bfy2wak52ixc5" path="res://Theme/Textures/Drop Down Arrow.svg" id="7_eeiba"]
@@ -95,7 +95,7 @@ CheckButton/icons/checked = ExtResource("2_utnk0")
 CheckButton/icons/unchecked = ExtResource("3_g72pt")
 CheckButton/styles/focus = SubResource("StyleBoxEmpty_0d3dn")
 Label/font_sizes/font_size = 28
-Label/fonts/font = ExtResource("4_klxxu")
+Label/fonts/font = ExtResource("4_pvjs1")
 LineEdit/styles/focus = SubResource("StyleBoxTexture_nd41a")
 LineEdit/styles/normal = SubResource("StyleBoxTexture_pkgvo")
 OptionButton/constants/arrow_margin = 7

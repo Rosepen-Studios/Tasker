@@ -80,6 +80,8 @@ func loadtaskdata(): #Loads task data
 	rtv.lastgivenid = save["lastgivenid"] 
 	rtv.comlastlogdic = save["complastlogdic"]
 	file.close()
+	if console_callouts:
+		rtv.dolog("(Saving) INFO: Loaded taskdata")
 
 	
 	
@@ -93,7 +95,7 @@ func savelastlog(): # Saves lastlog data
 	if console_callouts:
 		rtv.dolog("(Saving) INFO: Saved lastlog")
 
-func saveorientation(): # Saves lastlog data
+func saveorientation(): # Saves orientation data
 	var file = FileAccess.open("user://orientation.json", FileAccess.WRITE)
 	var save:Dictionary
 	save["orientationcomp"] = rtv.orientationcomp
@@ -105,21 +107,48 @@ func saveorientation(): # Saves lastlog data
 	if console_callouts:
 		rtv.dolog("(Saving) INFO: Saved orientation")
 
+func savefocus(): # Saves lastlog data
+	var file = FileAccess.open("user://focus.json", FileAccess.WRITE)
+	var save:Dictionary
+	save["sessionid"] = rtv.sessionid 
+	save["sessiontime"] = rtv.sessiontime 
+	save["sessionlen"] = rtv.sessionlen 
+	save["last_given_session_id"] = rtv.last_given_session_id 
+	var json = JSON.stringify(save)
+	file.store_string(json)
+	file.close()
+	if console_callouts:
+		rtv.dolog("(Saving) INFO: Saved focus")
+
 func loadlastlog(): #Loads lastlog data
 	var file = FileAccess.open("user://lastlog.json", FileAccess.READ)
 	var json = file.get_as_text()
 	var save = JSON.parse_string(json)
 	rtv.lastlogd = save["lastlogd"]
 	file.close()
+	if console_callouts:
+		rtv.dolog("(Saving) INFO: Loaded lastlog")
 	
-func loadorientation(): #Loads lastlog data
+func loadorientation(): #Loads orientation data
 	var file = FileAccess.open("user://orientation.json", FileAccess.READ)
 	var json = file.get_as_text()
 	var save = JSON.parse_string(json)
 	rtv.orientationcomp = save["orientationcomp"]
-
 	rtv.settings = save["settings"]
+	if console_callouts:
+		rtv.dolog("(Saving) INFO: Loaded orientation")
+
+func loadfocus(): #Loads focus data
+	var file = FileAccess.open("user://focus.json", FileAccess.READ)
+	var json = file.get_as_text()
+	var save = JSON.parse_string(json)
+	rtv.sessionid = save["sessionid"]
+	rtv.sessiontime = save["sessiontime"]
+	rtv.sessionlen = save["sessionlen"]
+	rtv.last_given_session_id = save["last_given_session_id"]
 	file.close()
+	if console_callouts:
+		rtv.dolog("(Saving) INFO: Saved focus")
 	
 func load_timeout() -> void:
 	savetaskdata()

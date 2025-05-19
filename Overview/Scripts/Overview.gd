@@ -15,14 +15,7 @@ func _on_new_task(id: int) -> void:
 	instance2.add_task(id)
 	score.animate_value(true)
 
-
-func _on_page_changed(page: Variant) -> void:
-	if page == "overview":
-		var tween = get_tree().create_tween()
-		score.animate_value()
-
-
-func _on_changed_page(page: String) -> void:
-	if page == "overview":
+func on_tab_switched(tab: String) -> void:
+	if tab == "overview":
 		var tween = get_tree().create_tween()
 		score.animate_value(false)

@@ -1,27 +1,16 @@
 res://Main/main.tscn
-res://Theme/Main Theme.tres
-res://Settings/Settings.tscn
-res://Daily UI /Daily UI.tscn
-res://New Task/New Task.tscn
-res://Orientation/Orientation.tscn
-res://Console/Console.tscn
 res://Theme/Deafult Round Shader.tres
-res://Daily UI /Scripts/Daily Handler.gd
-res://Main/Scipts/TabHandler.gd
-res://Sidebar/Scripts/Sidebar.gd
-res://New Task/Scripts/New Task.gd
-res://Overview/Scripts/Overview.gd
-res://Sidebar/sidebar.tscn
-res://Daily UI /Scripts/Task Instantiator.gd
-res://Daily UI /Scripts/Task Done Instantiator.gd
-res://New Task/Edit/Scripts/Edit.gd
-res://New Task/Edit/Edit.tscn
-res://Daily Task/Scripts/Daily Task.gd
-res://Daily Task/Daily Task.tscn
-res://Debug/Scripts/button debug.gd
+res://Theme/Main Theme.tres
 res://Main/Scipts/Greeting.gd
-res://Settings/Scripts/Settings.gd
-res://Update/Scripts/Update.gd
+res://Daily UI /Daily UI.tscn
 res://Overview/Overview.tscn
-res://Overview/Scripts/Score.gd
-res://Console/Scripts/Console.gd
+res://New Task/New Task.tscn
+res://Sidebar/sidebar.tscn
+res://Daily Task/Daily Task.tscn
+res://FocusUI/FocusUI.tscn
+res://FocusUI/Session/FocusSession.tscn
+res://FocusUI/Scripts/SessionInstantiator.gd
+res://FocusUI/Scripts/FocusHandler.gd
+res://FocusUI/Session/Scripts/FocusSession.gd
+res://FocusUI/Scripts/FocusProgress.gd
+res://FocusUI/Session/Scripts/Contribution.gd
