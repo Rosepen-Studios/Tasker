@@ -52,14 +52,15 @@ var pop_up_desc:String
 var popup_clicked:bool
 
 #Focus
-var sessionid:Dictionary
+var sessionid:Array
 var sessiontime:Dictionary
 var sessionlen:Dictionary
+var sessiondate:Dictionary
 var last_given_session_id:int = 0
 
 #System
 var os = "MAC"
-var version = "1.1"
+var version = "1.1_obd1"
 var beta:bool = false
 var latest_version
 var updater_version

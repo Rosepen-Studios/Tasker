@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://New Task/Edit/Scripts/Edit.gd" id="1_g4o2a"]
 [ext_resource type="Texture2D" uid="uid://cacx088843vye" path="res://New Task/Textures/Containers/Blue.png" id="2_i3xcm"]
-[ext_resource type="FontFile" uid="uid://b6etgqa0fr38o" path="res://Theme/Inter font/static/Inter_28pt-Bold.ttf" id="2_t3rew"]
+[ext_resource type="FontFile" uid="uid://b6etgqa0fr38o" path="res://Theme/Fonts/Inter font/static/Inter_28pt-Bold.ttf" id="2_t3rew"]
 [ext_resource type="Theme" uid="uid://c3rp1lb338sef" path="res://Theme/Main Theme.tres" id="3_08462"]
 [ext_resource type="Texture2D" uid="uid://cgkx0vtba7slf" path="res://Debug/Textures/Task Color Debug.png" id="4_inf8k"]
 [ext_resource type="Texture2D" uid="uid://bptfqvcviqbuu" path="res://Daily Task/Textures/Icons/Big/Paw.svg" id="5_rh3wb"]
-[ext_resource type="FontFile" uid="uid://d4midvuswbpbb" path="res://Theme/Inter font/static/Inter_24pt-SemiBold.ttf" id="6_vsd24"]
+[ext_resource type="FontFile" uid="uid://d4midvuswbpbb" path="res://Theme/Fonts/Inter font/static/Inter_24pt-SemiBold.ttf" id="6_vsd24"]
 [ext_resource type="Texture2D" uid="uid://cbr4ue5kbmkc7" path="res://Theme/Textures/Button Highlighted.png" id="8_d0ybi"]
 [ext_resource type="Texture2D" uid="uid://demx36e56pml4" path="res://Theme/Textures/Button.png" id="9_ss6a5"]
 [ext_resource type="Texture2D" uid="uid://btbkmmfgp78pu" path="res://Theme/Textures/Button Long Highlighted.svg" id="10_8mdlf"]

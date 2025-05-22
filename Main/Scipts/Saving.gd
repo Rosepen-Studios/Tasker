@@ -7,8 +7,13 @@ extends TextureRect
 
 var console_callouts:bool = false
 var latest:bool
+signal focusloaded
 func _ready() -> void:
 	rtv.dolog("(System) INFO: Log date is " + Time.get_date_string_from_system())
+	if rtv.version.split("_obd").size() == 2:
+		rtv.dolog("(System) INFO: Beta version detected")
+		rtv.beta = true
+		tag.texture = load("res://Main/Textures/Beta_Tag.svg")
 	if rtv.production:
 		rtv.dolog("(System) INFO: RTV production is enabled and could be causing errors with task creation, if this is a production log ignore this message")
 	if FileAccess.file_exists("user://taskdata.json"):
@@ -19,6 +24,8 @@ func _ready() -> void:
 		loadlastlog()
 	if FileAccess.file_exists("user://orientation.json"):
 		loadorientation()
+	if FileAccess.file_exists("user://focus.json"):
+		loadfocus()
 	else:
 		rtv.lastlogwasloaded = false
 		var file = FileAccess.open("user://lastlog.json", FileAccess.WRITE)
@@ -30,10 +37,6 @@ func _ready() -> void:
 	if FileAccess.file_exists("user://bg.jpg"):
 		texture = ImageTexture.create_from_image(Image.load_from_file("user://bg.jpg"))
 	savetimer.start()
-	if rtv.version.split("_obd").size() == 2:
-		rtv.dolog("(System) INFO: Beta distro detected")
-		rtv.beta = true
-		tag.texture = load("res://Main/Textures/Beta_Tag.svg")
 	if OS.has_feature("editor"):
 		rtv.dolog("(System) INFO: Debugger detected")
 		tag.texture = load("res://Main/Textures/Debug_Tag.svg")
@@ -110,10 +113,11 @@ func saveorientation(): # Saves orientation data
 func savefocus(): # Saves lastlog data
 	var file = FileAccess.open("user://focus.json", FileAccess.WRITE)
 	var save:Dictionary
-	save["sessionid"] = rtv.sessionid 
 	save["sessiontime"] = rtv.sessiontime 
 	save["sessionlen"] = rtv.sessionlen 
+	save["sessiondate"] = rtv.sessiondate
 	save["last_given_session_id"] = rtv.last_given_session_id 
+	save["sessionid"] = rtv.sessionid 
 	var json = JSON.stringify(save)
 	file.store_string(json)
 	file.close()
@@ -145,10 +149,12 @@ func loadfocus(): #Loads focus data
 	rtv.sessionid = save["sessionid"]
 	rtv.sessiontime = save["sessiontime"]
 	rtv.sessionlen = save["sessionlen"]
+	rtv.sessiondate = save["sessiondate"]
 	rtv.last_given_session_id = save["last_given_session_id"]
 	file.close()
 	if console_callouts:
 		rtv.dolog("(Saving) INFO: Saved focus")
+	focusloaded.emit()
 	
 func load_timeout() -> void:
 	savetaskdata()
@@ -169,11 +175,18 @@ func is_latest():
 		rtv.dolog("(System) WARN: File latest.json not found, aborting updater version check (404)")
 		rtv.dolog("(System) INFO: The error above should be fixed automaticaly when you update Tasker")
 	web.set_download_file("user://latest_version.txt")
-	web.request("https://github.com/Firepixel85/Tasker-Labs/releases/download/latest_pointer/latest_version.txt")
+	print(rtv.beta)
+	if rtv.beta:
+		web.request("https://github.com/Firepixel85/Tasker-Labs/releases/download/latest_pointer/latest_beta_version.txt")
+	else:
+		web.request("https://github.com/Firepixel85/Tasker-Labs/releases/download/latest_pointer/latest_version.txt")
 	await web.request_completed
 	rtv.latest_version = FileAccess.open("user://latest_version.txt",FileAccess.READ).get_as_text().split(",")[0]
 	rtv.updater_latest_version = FileAccess.open("user://latest_version.txt",FileAccess.READ).get_as_text().split(",")[1]
-	rtv.dolog("(System) INFO: Current vesrion: "+ rtv.version+ " Latest version: "+ rtv.latest_version)
+	if rtv.beta:
+		rtv.dolog("(System) INFO: Current vesrion: "+ rtv.version+ " Latest beta version: "+ rtv.latest_version)
+	else:
+		rtv.dolog("(System) INFO: Current vesrion: "+ rtv.version+ " Latest version: "+ rtv.latest_version)
 	if rtv.latest_version == rtv.version:
 		latest = true
 	else:

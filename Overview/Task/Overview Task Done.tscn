@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cl1st1ntlurdy" path="res://Overview/Task/Textures/Task Container.png" id="1_q80v7"]
 [ext_resource type="Script" path="res://Overview/Task/Scripts/Overview Task Done.gd" id="1_s773d"]
-[ext_resource type="FontFile" uid="uid://cql10rvrxrm18" path="res://Theme/Inter font/static/Inter_18pt-Medium.ttf" id="2_xarv8"]
+[ext_resource type="FontFile" uid="uid://cql10rvrxrm18" path="res://Theme/Fonts/Inter font/static/Inter_18pt-Medium.ttf" id="2_xarv8"]
 
 [node name="Control" type="Control"]
 custom_minimum_size = Vector2(0, 44)

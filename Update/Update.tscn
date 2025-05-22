@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://8kc7p7wbv43j" path="res://Update/Container.png" id="1_00g5d"]
 [ext_resource type="Script" path="res://Update/Scripts/Update.gd" id="1_mx3xm"]
-[ext_resource type="FontFile" uid="uid://ds4ohnaje2v44" path="res://Theme/Inter font/static/Inter_18pt-Bold.ttf" id="2_b8l1r"]
-[ext_resource type="FontFile" uid="uid://cql10rvrxrm18" path="res://Theme/Inter font/static/Inter_18pt-Medium.ttf" id="3_0qpwv"]
+[ext_resource type="FontFile" uid="uid://ds4ohnaje2v44" path="res://Theme/Fonts/Inter font/static/Inter_18pt-Bold.ttf" id="2_b8l1r"]
+[ext_resource type="FontFile" uid="uid://cql10rvrxrm18" path="res://Theme/Fonts/Inter font/static/Inter_18pt-Medium.ttf" id="3_0qpwv"]
 [ext_resource type="Texture2D" uid="uid://dmgq4ipbv5hgi" path="res://Update/Button.png" id="4_frb8g"]
 [ext_resource type="Texture2D" uid="uid://cfnnq0egn203w" path="res://Update/Button Pressed.png" id="4_fudkr"]
 

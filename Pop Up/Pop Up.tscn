@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dfr75nnm8bwn4" path="res://Pop Up/Container.png" id="1_2toyl"]
 [ext_resource type="Script" path="res://Pop Up/Scripts/Pop Up.gd" id="1_drh30"]
-[ext_resource type="FontFile" uid="uid://ds4ohnaje2v44" path="res://Theme/Inter font/static/Inter_18pt-Bold.ttf" id="2_v8r6d"]
-[ext_resource type="FontFile" uid="uid://cql10rvrxrm18" path="res://Theme/Inter font/static/Inter_18pt-Medium.ttf" id="3_d1gbm"]
+[ext_resource type="FontFile" uid="uid://ds4ohnaje2v44" path="res://Theme/Fonts/Inter font/static/Inter_18pt-Bold.ttf" id="2_v8r6d"]
+[ext_resource type="FontFile" uid="uid://cql10rvrxrm18" path="res://Theme/Fonts/Inter font/static/Inter_18pt-Medium.ttf" id="3_d1gbm"]
 [ext_resource type="Texture2D" uid="uid://dsbu3n8xh0ndl" path="res://Pop Up/Progress.png" id="4_kprfw"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uiohr"]

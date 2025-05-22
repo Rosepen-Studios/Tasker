@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://cgkx0vtba7slf" path="res://Debug/Textures/Task Color Debug.png" id="2_vn0x7"]
 [ext_resource type="Texture2D" uid="uid://bh88i30soxtgf" path="res://Daily Task/Textures/Container.png" id="2_yepfj"]
 [ext_resource type="Texture2D" uid="uid://dmic7twal8bfy" path="res://Daily Task/Textures/Icons/Big/Book.svg" id="3_uvsoo"]
-[ext_resource type="FontFile" uid="uid://cb1fkhwou4qo4" path="res://Theme/Inter font/static/Inter_24pt-Medium.ttf" id="4_w1mve"]
+[ext_resource type="FontFile" uid="uid://cb1fkhwou4qo4" path="res://Theme/Fonts/Inter font/static/Inter_24pt-Medium.ttf" id="4_w1mve"]
 [ext_resource type="Texture2D" uid="uid://bo0nj0wolhled" path="res://Daily Task/Textures/Streak Container.png" id="6_f34pk"]
 [ext_resource type="Texture2D" uid="uid://clrxri3hw52lv" path="res://Daily Task/Textures/Streak Flame.svg" id="6_sipa1"]
-[ext_resource type="FontFile" uid="uid://b0taxodwoxljs" path="res://Theme/Inter font/static/Inter_24pt-Bold.ttf" id="7_ufmxk"]
+[ext_resource type="FontFile" uid="uid://b0taxodwoxljs" path="res://Theme/Fonts/Inter font/static/Inter_24pt-Bold.ttf" id="7_ufmxk"]
 [ext_resource type="Texture2D" uid="uid://beajogrnqo5fo" path="res://Daily Task/Textures/Edit Button.svg" id="8_aqm5c"]
 [ext_resource type="Texture2D" uid="uid://dfm3sk7oyuqpk" path="res://Daily Task/Textures/X Button.svg" id="10_jfsmj"]
 

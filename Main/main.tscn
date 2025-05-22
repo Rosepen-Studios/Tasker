@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cyq17akq5k48v" path="res://Overview/Overview.tscn" id="7_0mwpl"]
 [ext_resource type="PackedScene" uid="uid://b6nm4kqyij8qh" path="res://New Task/Edit/Edit.tscn" id="8_as1ma"]
 [ext_resource type="PackedScene" uid="uid://drw2bikltirct" path="res://FocusUI/FocusUI.tscn" id="9_84fla"]
-[ext_resource type="FontFile" uid="uid://b7srdqmpudkab" path="res://Theme/Inter font/static/Inter_24pt-ExtraBold.ttf" id="9_lq6es"]
+[ext_resource type="FontFile" uid="uid://b7srdqmpudkab" path="res://Theme/Fonts/Inter font/static/Inter_24pt-ExtraBold.ttf" id="9_lq6es"]
 [ext_resource type="Script" path="res://Main/Scipts/Warnings.gd" id="10_ytvsy"]
 [ext_resource type="PackedScene" uid="uid://um6cwu8sn12e" path="res://Orientation/Orientation.tscn" id="11_733n8"]
 [ext_resource type="PackedScene" uid="uid://dceb2vqd421g4" path="res://Settings/Settings.tscn" id="13_w7yt8"]
@@ -195,6 +195,7 @@ layout_mode = 1
 visible = false
 layout_mode = 1
 
+[connection signal="focusloaded" from="Background" to="TabHandler/VBoxContainer/FocusUI" method="on_focusloaded"]
 [connection signal="timeout" from="Background/Timer" to="Background" method="load_timeout"]
 [connection signal="new_task" from="TabHandler/VBoxContainer/Daily Ui" to="TabHandler/VBoxContainer/Overview" method="_on_new_task"]
 [connection signal="new_task" from="TabHandler/VBoxContainer/Daily Ui" to="New task" method="new_task"]
@@ -205,5 +206,6 @@ layout_mode = 1
 [connection signal="settings_changed" from="Settings" to="Background" method="on_settings_changed"]
 [connection signal="settings_changed" from="Settings" to="Greeting" method="on_settings_changed"]
 [connection signal="settings_changed" from="Settings" to="Time" method="_on_settings_settings_changed"]
+[connection signal="settings_changed" from="Settings" to="TabHandler/VBoxContainer/FocusUI" method="settings_changed"]
 [connection signal="orientationcomp" from="Orientation" to="Background" method="_on_orientationcomp"]
 [connection signal="orientationcomp" from="Orientation" to="Greeting" method="orientation_complete"]

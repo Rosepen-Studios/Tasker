@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cyu6hgypsaay1" path="res://Daily UI /Textures/UI Container.png" id="1_3r60q"]
 [ext_resource type="Script" path="res://Daily UI /Scripts/Daily Handler.gd" id="1_oxqdv"]
-[ext_resource type="FontFile" uid="uid://ds4ohnaje2v44" path="res://Theme/Inter font/static/Inter_18pt-Bold.ttf" id="2_hpifb"]
+[ext_resource type="FontFile" uid="uid://ds4ohnaje2v44" path="res://Theme/Fonts/Inter font/static/Inter_18pt-Bold.ttf" id="2_hpifb"]
 [ext_resource type="Material" uid="uid://cwurw8t3txml2" path="res://Theme/Deafult Round Shader.tres" id="2_qtfcs"]
 [ext_resource type="Script" path="res://Daily UI /Scripts/Task Instantiator.gd" id="3_jy2y0"]
 [ext_resource type="Script" path="res://Daily UI /Scripts/Update Shader.gd" id="4_4xv47"]

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c6ho0a26outi6" path="res://FocusUI/Session/Textures/Container.png" id="1_wwhyt"]
 [ext_resource type="Texture2D" uid="uid://cqdylq0arfyi" path="res://Sidebar/Textures/Focus Icon.svg" id="2_0vtdq"]
 [ext_resource type="Theme" uid="uid://c3rp1lb338sef" path="res://Theme/Main Theme.tres" id="3_xcq4i"]
-[ext_resource type="FontFile" uid="uid://c8wand4s2de77" path="res://Theme/SF Pro Font/SF-Pro-Display-Medium.otf" id="4_uft3h"]
+[ext_resource type="FontFile" uid="uid://c8wand4s2de77" path="res://Theme/Fonts/SF Pro Font/SF-Pro-Display-Medium.otf" id="4_uft3h"]
 [ext_resource type="Texture2D" uid="uid://bchlkgr4uh2mu" path="res://FocusUI/Session/Textures/ContributionContainer.png" id="5_jw0t2"]
 [ext_resource type="Texture2D" uid="uid://bsvhmhodfnc2k" path="res://FocusUI/Session/Textures/DeleteBack.png" id="5_qf10j"]
 [ext_resource type="Texture2D" uid="uid://laq1hkcxbe7f" path="res://FocusUI/Session/Textures/DeleteProgress.png" id="6_rkt73"]
@@ -102,6 +102,24 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/HBoxContainer2/TextureRect/MarginContainer"]
+custom_minimum_size = Vector2(68, 69)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_uft3h")
+theme_override_font_sizes/font_size = 16
+text = "0%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="TextureRect/MarginContainer/HBoxContainer2/TextureRect/MarginContainer"]
+custom_minimum_size = Vector2(68, 69)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_uft3h")
+theme_override_font_sizes/font_size = 16
+text = "Goal"
+horizontal_alignment = 1
+vertical_alignment = 2
+
 [node name="TextureProgressBar" type="TextureProgressBar" parent="TextureRect/MarginContainer/HBoxContainer2/TextureRect/MarginContainer"]
 layout_mode = 2
 max_value = 125.0
@@ -109,32 +127,6 @@ fill_mode = 4
 radial_initial_angle = 216.0
 texture_under = ExtResource("6_v7rh2")
 texture_progress = ExtResource("7_anbkk")
-
-[node name="Label" type="Label" parent="TextureRect/MarginContainer/HBoxContainer2/TextureRect/MarginContainer/TextureProgressBar"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("4_uft3h")
-theme_override_font_sizes/font_size = 16
-text = "0%"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label2" type="Label" parent="TextureRect/MarginContainer/HBoxContainer2/TextureRect/MarginContainer/TextureProgressBar"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("4_uft3h")
-theme_override_font_sizes/font_size = 16
-text = "Goal"
-horizontal_alignment = 1
-vertical_alignment = 2
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="TextureRect/MarginContainer/HBoxContainer2"]
 layout_mode = 2
@@ -163,3 +155,4 @@ script = ExtResource("8_sj0oj")
 
 [connection signal="mouse_entered" from="TextureRect/MarginContainer/HBoxContainer2/TextureProgressBar/Button" to="TextureRect/MarginContainer/HBoxContainer2/TextureProgressBar/Button" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="TextureRect/MarginContainer/HBoxContainer2/TextureProgressBar/Button" to="TextureRect/MarginContainer/HBoxContainer2/TextureProgressBar/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="TextureRect/MarginContainer/HBoxContainer2/TextureProgressBar/Button" to="." method="on_delete_pressed"]

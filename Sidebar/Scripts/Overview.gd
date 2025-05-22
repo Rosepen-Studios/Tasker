@@ -10,7 +10,6 @@ func _ready() -> void:
 	if sidebar.tab == tabid:
 		modulate = Color(1,1,1)
 	mouse_entered.connect(hover)
-	mouse_exited.connect(dehover)
 
 func hover():
 	if sidebar.tab == tabid:
@@ -18,11 +17,7 @@ func hover():
 	else:
 		modulate = Color(0.7,0.7,0.7)
 
-func dehover():
-	if sidebar.tab == tabid:
-		modulate = Color(1,1,1)
-	else:
-		modulate = Color(0.576,0.576,0.576)
+
 
 func _pressed() -> void:
 	if sidebar.tab == tabid:

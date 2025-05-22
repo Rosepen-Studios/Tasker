@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://drw2bikltirct"]
+[gd_scene load_steps=28 format=3 uid="uid://drw2bikltirct"]
 
 [ext_resource type="Texture2D" uid="uid://dnt52yi58ujq1" path="res://FocusUI/Textures/Container1.png" id="1_nc1jc"]
 [ext_resource type="Script" path="res://FocusUI/Scripts/FocusHandler.gd" id="1_o46vs"]
@@ -6,19 +6,20 @@
 [ext_resource type="Texture2D" uid="uid://c1u02j22qv1jh" path="res://FocusUI/Textures/SelectorBase.png" id="2_vkdtv"]
 [ext_resource type="Texture2D" uid="uid://540cgiba4bvj" path="res://FocusUI/Textures/SelectorSelect.png" id="3_v6qtn"]
 [ext_resource type="Theme" uid="uid://c3rp1lb338sef" path="res://Theme/Main Theme.tres" id="4_ffh51"]
-[ext_resource type="FontFile" uid="uid://c8wand4s2de77" path="res://Theme/SF Pro Font/SF-Pro-Display-Medium.otf" id="5_cdnfd"]
+[ext_resource type="FontFile" uid="uid://c8wand4s2de77" path="res://Theme/Fonts/SF Pro Font/SF-Pro-Display-Medium.otf" id="5_cdnfd"]
 [ext_resource type="Texture2D" uid="uid://k7pq14vexn8i" path="res://FocusUI/Textures/Ring/Base.png" id="7_yf5mt"]
 [ext_resource type="Texture2D" uid="uid://c7t4s3nb8llm2" path="res://FocusUI/Textures/Ring/Progress.png" id="8_bd5ms"]
 [ext_resource type="Texture2D" uid="uid://c2hu7aqm1heq7" path="res://FocusUI/Textures/Button Hover.png" id="9_m7ivv"]
 [ext_resource type="Texture2D" uid="uid://dmaur8tr2t0lb" path="res://FocusUI/Textures/Button Pressed.png" id="9_p17ji"]
 [ext_resource type="Script" path="res://FocusUI/Scripts/FocusProgress.gd" id="10_31v8h"]
 [ext_resource type="Texture2D" uid="uid://vubak1dutm5f" path="res://FocusUI/Textures/Button.png" id="10_w8lni"]
-[ext_resource type="FontFile" uid="uid://c3ccumvrdcimj" path="res://Theme/SF Pro Font/SF-Pro-Display-Semibold.otf" id="11_1rkri"]
+[ext_resource type="FontFile" uid="uid://c3ccumvrdcimj" path="res://Theme/Fonts/SF Pro Font/SF-Pro-Display-Semibold.otf" id="11_1rkri"]
 [ext_resource type="Texture2D" uid="uid://cdnlkgld7t8ef" path="res://FocusUI/Textures/OptionsButton.svg" id="12_ltv32"]
 [ext_resource type="Texture2D" uid="uid://dwb3a4kydd3jx" path="res://FocusUI/Textures/Container2.png" id="13_c1gw7"]
-[ext_resource type="FontFile" uid="uid://3a523niai7fn" path="res://Theme/DM Mono Font/DMMono-Medium.ttf" id="14_n1t8f"]
-[ext_resource type="FontFile" uid="uid://cx5sd2jen747u" path="res://Theme/DM Mono Font/DMMono-Light.ttf" id="15_6s1vi"]
+[ext_resource type="FontFile" uid="uid://3a523niai7fn" path="res://Theme/Fonts/DM Mono Font/DMMono-Medium.ttf" id="14_n1t8f"]
 [ext_resource type="Texture2D" uid="uid://batyl7l2xjitw" path="res://FocusUI/Textures/Container3.png" id="16_w6jsw"]
+[ext_resource type="Script" path="res://FocusUI/Scripts/Counter.gd" id="17_bvnq1"]
+[ext_resource type="FontFile" uid="uid://ben6ahwb5fop1" path="res://Theme/Fonts/SF Mono Font/SFMono-Regular.otf" id="18_15u7c"]
 [ext_resource type="Script" path="res://FocusUI/Scripts/SessionInstantiator.gd" id="20_ej8si"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i5x65"]
@@ -80,10 +81,11 @@ theme_override_constants/margin_bottom = 16
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Container1/MarginContainer"]
 layout_mode = 2
-size_flags_vertical = 0
 theme_override_constants/separation = 32
+alignment = 1
 
 [node name="Selector" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 alignment = 1
 script = ExtResource("2_fjj8d")
@@ -188,6 +190,7 @@ script = ExtResource("10_31v8h")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/Ring/Container"]
 layout_mode = 2
+max_value = 2400.0
 fill_mode = 4
 texture_under = ExtResource("7_yf5mt")
 texture_progress = ExtResource("8_bd5ms")
@@ -203,19 +206,59 @@ vertical_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 16
 alignment = 1
 
-[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Pause" type="Control" parent="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(149, 54)
 layout_mode = 2
+
+[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer/Pause"]
+modulate = Color(0.113725, 0.113725, 0.113725, 1)
+custom_minimum_size = Vector2(149, 54)
+layout_mode = 2
+offset_left = 4.0
+offset_right = 153.0
+offset_bottom = 54.0
 size_flags_horizontal = 0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_bjsqh")
 theme_override_styles/hover = SubResource("StyleBoxTexture_rv6dw")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_whcom")
 theme_override_styles/normal = SubResource("StyleBoxTexture_p4xi0")
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer/Button"]
-modulate = Color(0, 0, 0, 1)
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer/Pause"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_cdnfd")
+theme_override_font_sizes/font_size = 24
+text = "Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Focus" type="Control" parent="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(149, 54)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer/Focus"]
+modulate = Color(0.113725, 0.113725, 0.113725, 1)
+custom_minimum_size = Vector2(149, 54)
+layout_mode = 2
+offset_right = 149.0
+offset_bottom = 54.0
+size_flags_horizontal = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bjsqh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rv6dw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_whcom")
+theme_override_styles/normal = SubResource("StyleBoxTexture_p4xi0")
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer/Focus"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -266,6 +309,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
+script = ExtResource("17_bvnq1")
 
 [node name="Hours" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/TextureRect/HBoxContainer"]
 layout_mode = 2
@@ -274,13 +318,13 @@ alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/TextureRect/HBoxContainer/Hours"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("14_n1t8f")
+theme_override_fonts/font = ExtResource("18_15u7c")
 theme_override_font_sizes/font_size = 56
-text = "02"
+text = "00"
 
 [node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/TextureRect/HBoxContainer/Hours"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("15_6s1vi")
+theme_override_fonts/font = ExtResource("18_15u7c")
 theme_override_font_sizes/font_size = 26
 text = "hrs"
 horizontal_alignment = 1
@@ -300,13 +344,13 @@ alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/TextureRect/HBoxContainer/Minutes"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("14_n1t8f")
+theme_override_fonts/font = ExtResource("18_15u7c")
 theme_override_font_sizes/font_size = 56
-text = "30"
+text = "00"
 
 [node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/TextureRect/HBoxContainer/Minutes"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("15_6s1vi")
+theme_override_fonts/font = ExtResource("18_15u7c")
 theme_override_font_sizes/font_size = 26
 text = "min"
 horizontal_alignment = 1
@@ -326,13 +370,13 @@ alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/TextureRect/HBoxContainer/Seconds"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("14_n1t8f")
+theme_override_fonts/font = ExtResource("18_15u7c")
 theme_override_font_sizes/font_size = 56
 text = "00"
 
 [node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/TextureRect/HBoxContainer/Seconds"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("15_6s1vi")
+theme_override_fonts/font = ExtResource("18_15u7c")
 theme_override_font_sizes/font_size = 26
 text = "sec"
 horizontal_alignment = 1
@@ -366,5 +410,6 @@ script = ExtResource("20_ej8si")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/Selector/TextureRect/HBoxContainer/Day" to="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/Selector" method="_on_day_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/Selector/TextureRect/HBoxContainer/Week" to="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/Selector" method="_on_week_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="focus_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer/Pause/Button2" to="." method="pause_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer/Focus/Button2" to="." method="focus_pressed"]
 [connection signal="child_entered_tree" from="MarginContainer/HBoxContainer/VBoxContainer/TextureRect2/MarginContainer/ScrollContainer/VBoxContainer" to="MarginContainer/HBoxContainer/VBoxContainer/TextureRect2/MarginContainer/ScrollContainer/VBoxContainer" method="on_session_added"]
