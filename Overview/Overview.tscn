@@ -20,6 +20,7 @@ friction = 4.0
 rebound_strength = 18.0
 
 [node name="Control" type="Control"]
+visible = false
 layout_mode = 3
 anchors_preset = 9
 anchor_bottom = 1.0

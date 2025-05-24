@@ -11,7 +11,7 @@ func add_session(id):
 	
 	
 func end_session():
-	workingsession.complete()
+	workingsession.complete(false)
 
 func on_session_added(session: Node) -> void:
 	workingsession = session
@@ -39,7 +39,7 @@ func update_children():
 	for i in get_child_count():
 		get_child(i).contribution.update_color()
 		
-func load_sessions(removed_id:Array):
+func load_sessions():
 	loading = true
 	for i in rtv.sessionid.size():
 		add_child(preload("res://FocusUI/Session/FocusSession.tscn").instantiate())

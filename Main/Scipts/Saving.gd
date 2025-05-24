@@ -8,6 +8,7 @@ extends TextureRect
 var console_callouts:bool = false
 var latest:bool
 signal focusloaded
+signal dumpfocus
 func _ready() -> void:
 	rtv.dolog("(System) INFO: Log date is " + Time.get_date_string_from_system())
 	if rtv.version.split("_obd").size() == 2:
@@ -24,8 +25,6 @@ func _ready() -> void:
 		loadlastlog()
 	if FileAccess.file_exists("user://orientation.json"):
 		loadorientation()
-	if FileAccess.file_exists("user://focus.json"):
-		loadfocus()
 	else:
 		rtv.lastlogwasloaded = false
 		var file = FileAccess.open("user://lastlog.json", FileAccess.WRITE)
@@ -38,7 +37,8 @@ func _ready() -> void:
 		texture = ImageTexture.create_from_image(Image.load_from_file("user://bg.jpg"))
 	savetimer.start()
 	if OS.has_feature("editor"):
-		rtv.dolog("(System) INFO: Debugger detected")
+		rtv.production = false
+		rtv.dolog("(System) INFO: Debugger detected RTV production disabled automaticly")
 		tag.texture = load("res://Main/Textures/Debug_Tag.svg")
 	await  is_latest()
 	if latest == false:
@@ -132,6 +132,8 @@ func loadlastlog(): #Loads lastlog data
 	file.close()
 	if console_callouts:
 		rtv.dolog("(Saving) INFO: Loaded lastlog")
+	if rtv.lastlogd == Time.get_date_string_from_system() and FileAccess.file_exists("user://focus.json"):
+		loadfocus()
 	
 func loadorientation(): #Loads orientation data
 	var file = FileAccess.open("user://orientation.json", FileAccess.READ)
@@ -175,7 +177,6 @@ func is_latest():
 		rtv.dolog("(System) WARN: File latest.json not found, aborting updater version check (404)")
 		rtv.dolog("(System) INFO: The error above should be fixed automaticaly when you update Tasker")
 	web.set_download_file("user://latest_version.txt")
-	print(rtv.beta)
 	if rtv.beta:
 		web.request("https://github.com/Firepixel85/Tasker-Labs/releases/download/latest_pointer/latest_beta_version.txt")
 	else:
@@ -184,9 +185,9 @@ func is_latest():
 	rtv.latest_version = FileAccess.open("user://latest_version.txt",FileAccess.READ).get_as_text().split(",")[0]
 	rtv.updater_latest_version = FileAccess.open("user://latest_version.txt",FileAccess.READ).get_as_text().split(",")[1]
 	if rtv.beta:
-		rtv.dolog("(System) INFO: Current vesrion: "+ rtv.version+ " Latest beta version: "+ rtv.latest_version)
+		rtv.dolog("(System) INFO: Current version: "+ rtv.version+ " Latest beta version: "+ rtv.latest_version)
 	else:
-		rtv.dolog("(System) INFO: Current vesrion: "+ rtv.version+ " Latest version: "+ rtv.latest_version)
+		rtv.dolog("(System) INFO: Current version: "+ rtv.version+ " Latest version: "+ rtv.latest_version)
 	if rtv.latest_version == rtv.version:
 		latest = true
 	else:

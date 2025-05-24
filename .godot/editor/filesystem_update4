@@ -1,8 +1,6 @@
 res://Main/main.tscn
 res://Theme/Deafult Round Shader.tres
 res://Theme/Main Theme.tres
-res://FocusUI/Scripts/FocusHandler.gd
-res://FocusUI/Session/Scripts/FocusSession.gd
 res://Daily UI /Daily UI.tscn
 res://Overview/Overview.tscn
 res://New Task/New Task.tscn
@@ -10,6 +8,8 @@ res://Sidebar/sidebar.tscn
 res://Daily Task/Daily Task.tscn
 res://FocusUI/FocusUI.tscn
 res://FocusUI/Session/FocusSession.tscn
-res://FocusUI/Scripts/SessionInstantiator.gd
 res://Main/Scipts/rtv.gd
 res://Main/Scipts/Saving.gd
+res://FocusUI/Scripts/FocusHandler.gd
+res://FocusUI/Scripts/SessionInstantiator.gd
+res://FocusUI/Session/Scripts/FocusSession.gd

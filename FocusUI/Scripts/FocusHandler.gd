@@ -95,11 +95,13 @@ func pause_pressed() -> void:
 		pause_button_label.text = "Pause"
 		instantiator.workingsession.paused = false
 		instantiator.resume.emit()
+		rtv.dolog("(Focus Handler) INFO: Session resumed")
 	else:
 		paused = true
 		pause_button_label.text = "Resume"
 		instantiator.workingsession.paused = true
 		instantiator.workingsession.icon.texture = load("res://FocusUI/Textures/PauseIcon.png")
+		rtv.dolog("(Focus Handler) INFO: Session paused")
 
 
 func settings_changed() -> void:
@@ -115,19 +117,6 @@ func on_focusloaded() -> void:
 
 func _ready() -> void:
 	await dataready
-	var removed = []
-	for i in rtv.sessionid.size():
-		var id = rtv.sessionid[i]
-		if rtv.sessiondate[id] != Time.get_date_string_from_system():
-			rtv.sessiondate.erase(id)
-			rtv.sessiontime.erase(id)
-			rtv.sessionlen.erase(id)
-			var array = []
-			for e in rtv.sessionid.size():
-				if rtv.sessionid[e] != str(id):
-					array.append(rtv.sessionid[e])
-			rtv.sessionid = array
-			removed.append(id)
-	instantiator.load_sessions(removed)
+	instantiator.load_sessions()
 	dataloaded = true
 	

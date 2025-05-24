@@ -52,10 +52,10 @@ var pop_up_desc:String
 var popup_clicked:bool
 
 #Focus
-var sessionid:Array
-var sessiontime:Dictionary
-var sessionlen:Dictionary
-var sessiondate:Dictionary
+var sessionid:Array = []
+var sessiontime:Dictionary = {}
+var sessionlen:Dictionary = {}
+var sessiondate:Dictionary = {}
 var last_given_session_id:int = 0
 
 #System
@@ -65,7 +65,7 @@ var beta:bool = false
 var latest_version
 var updater_version
 var updater_latest_version
-var production:bool = false #Should only be true when building new versions
+var production:bool = true #Should only be true when building new versions
 var logs = []
 
 func dolog(log):

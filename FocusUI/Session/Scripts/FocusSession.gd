@@ -58,18 +58,20 @@ func update():
 		else: 
 			icon.texture = load("res://Sidebar/Textures/Focus Icon.svg")
 
-func complete():
+func complete(silent:bool):
 	done = true
 	contribution.visible = true
 	delete.visible = true
 	contribution.update(focuslenm + focuslenh*60,"day")
 	contribution.update_color()
-	rtv.dolog("(Focus Session "+str(id)+") INFO: Complete")
+	if !silent:
+		rtv.dolog("(Focus Session "+str(id)+") INFO: Complete")
 
 func on_delete_pressed() -> void:
 	rtv.sessiondate.erase(id)
 	rtv.sessionlen.erase(id)
 	rtv.sessiontime.erase(id)
+	rtv.sessionid.remove_at(rtv.sessionid.bsearch(id))
 	get_parent().remove_session([focuslenh,focuslenm,focuslens])
 
 	rtv.dolog("(Focus Session "+str(id)+") INFO: Deleted")
@@ -79,11 +81,11 @@ func heartbeat(data:Array):
 	get_parent().heartbeat(data)
 	
 func load_data(time,len):
-	rtv.dolog("(Focus Session "+str(id)+") INFO: Created")
+	rtv.dolog("(Focus Session "+str(id)+") INFO: Loaded")
 	focuslenh = len[0]
 	focuslenm = len[1]
 	focuslens = len[2]
-	complete()
+	complete(true)
 	
 	label.set_text("Focused for "+time)
 	
