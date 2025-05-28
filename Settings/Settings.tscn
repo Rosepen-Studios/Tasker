@@ -1007,6 +1007,40 @@ layout_mode = 2
 theme = ExtResource("5_wbe3d")
 text = "debug"
 
+[node name="Appearance2" type="Label" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("8_jmt85")
+text = "Focus
+"
+
+[node name="Focus goal" type="HBoxContainer" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Focus goal"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Focus goal"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("9_bgp7a")
+text = "Daily focus goal"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Focus goal/Label2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Focus goal/Label2/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_wbe3d")
+placeholder_text = "min"
+alignment = 1
+
 [node name="Developer" type="Label" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("8_jmt85")

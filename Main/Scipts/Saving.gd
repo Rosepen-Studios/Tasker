@@ -3,20 +3,21 @@ extends TextureRect
 @onready var web: HTTPRequest = $Timer/HTTPRequest
 @onready var pop_up: Control = $"../Pop Up"
 @onready var update: Control = $"../Update"
-@onready var tag: TextureRect = $"../Greeting/MarginContainer/HBoxContainer/TextureRect"
+@onready var tag: VBoxContainer = $"../Greeting/MarginContainer/HBoxContainer/TagHolder"
+
 
 var console_callouts:bool = false
 var latest:bool
 signal focusloaded
 signal dumpfocus
 func _ready() -> void:
-	rtv.dolog("(System) INFO: Log date is " + Time.get_date_string_from_system())
+	rtv.dolog("(System) INFO: Log date/time is " + Time.get_datetime_string_from_system())
 	if rtv.version.split("_obd").size() == 2:
 		rtv.dolog("(System) INFO: Beta version detected")
 		rtv.beta = true
-		tag.texture = load("res://Main/Textures/Beta_Tag.svg")
+		tag.add_child(preload("res://Main/Tags/Beta.tscn").instantiate())
 	if rtv.production:
-		rtv.dolog("(System) INFO: RTV production is enabled and could be causing errors with task creation, if this is a production log ignore this message")
+		rtv.dolog("(System) WARN: RTV production is enabled and could be causing errors with task creation, if this is a production log ignore this message")
 	if FileAccess.file_exists("user://taskdata.json"):
 		loadtaskdata()
 		rtv.isloading = true
@@ -39,7 +40,6 @@ func _ready() -> void:
 	if OS.has_feature("editor"):
 		rtv.production = false
 		rtv.dolog("(System) INFO: Debugger detected RTV production disabled automaticly")
-		tag.texture = load("res://Main/Textures/Debug_Tag.svg")
 	await  is_latest()
 	if latest == false:
 		if rtv.settings["notify_for_updates"]:
@@ -134,6 +134,8 @@ func loadlastlog(): #Loads lastlog data
 		rtv.dolog("(Saving) INFO: Loaded lastlog")
 	if rtv.lastlogd == Time.get_date_string_from_system() and FileAccess.file_exists("user://focus.json"):
 		loadfocus()
+	else:
+		savefocus()
 	
 func loadorientation(): #Loads orientation data
 	var file = FileAccess.open("user://orientation.json", FileAccess.READ)
@@ -174,7 +176,7 @@ func is_latest():
 	if FileAccess.file_exists(OS.get_user_data_dir().split("Tasker")[0]+"Tasker Updater/latest.json"):
 		rtv.updater_version = FileAccess.open(OS.get_user_data_dir().split("Tasker")[0]+"Tasker Updater/latest.json",FileAccess.READ).get_as_text().split("\"")[1]
 	else:
-		rtv.dolog("(System) WARN: File latest.json not found, aborting updater version check (404)")
+		rtv.dolog("(System) ERROR: File latest.json not found, aborting updater version check (404)")
 		rtv.dolog("(System) INFO: The error above should be fixed automaticaly when you update Tasker")
 	web.set_download_file("user://latest_version.txt")
 	if rtv.beta:

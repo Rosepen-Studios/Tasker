@@ -1,5 +1,5 @@
 extends Button
-@export var debug_hover:bool 
+@export var debug_hover:bool = false
 @export var debug_press:bool = true
 func _pressed():
 	if debug_press:

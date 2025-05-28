@@ -77,12 +77,12 @@ func _on_create_pressed():
 		rtv.iscreating = false
 
 	elif taskname.text == "":
-		rtv.dolog("(New task) WARN: Completion aborted (400)")
+		rtv.dolog("(New task) INFO: Completion aborted (400)")
 		shake(create)
 		pop_up.make_popup("Error!","Task name can't be empty.")
 
 	elif taskname.text.split("").size() > 36:
-		rtv.dolog("(New task) WARN: Completion aborted (400)")
+		rtv.dolog("(New task) INFO: Completion aborted (400)")
 		shake(create)
 		pop_up.make_popup("Error!","Task name can't be longet than 36 characters.")
 

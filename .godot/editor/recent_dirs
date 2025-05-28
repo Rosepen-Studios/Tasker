@@ -1,3 +1,6 @@
+res://Main/Tags
+/Users/max/Documents/Godot Builds/Tasker Mac/1.1obd2
+res://Debug/Scripts
 /Users/max/Documents/Godot Builds/Tasker Mac/1.1obd1
 res://FocusUI/Session
 res://FocusUI/Scripts
@@ -6,7 +9,6 @@ res://Main/Scipts
 res://FocusUI/Selector
 res://FocusUI
 res://Sidebar/Scripts
-res://Debug/Scripts
 res://Console
 res://Console/Scripts
 res://Settings/Scripts

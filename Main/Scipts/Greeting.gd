@@ -33,7 +33,7 @@ func update_greet(username:String):
 		greets.append("Doing a bit of debugging "+username+"?")
 	
 	toastid = RandomNumberGenerator.new().randi_range(0,greets.size()-1)
-	if RandomNumberGenerator.new().randi_range(1,1000) == 420:
+	if RandomNumberGenerator.new().randi_range(1,1000) == 823:
 		toast = "All systems online Captain"
 		rtv.dolog("(???) INFO: There is an easter egg greeting you!")
 	else:

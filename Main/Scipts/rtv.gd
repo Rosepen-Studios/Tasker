@@ -42,7 +42,7 @@ var settings:Dictionary = {
 	"accent_color":"8667E9",
 	"smooth_scroll":true,
 	"notify_for_updates":true,
-	"focus_goal_day":60,
+	"focus_goal_day":1,
 	"focus_goal_week":300
 }
 
@@ -60,12 +60,12 @@ var last_given_session_id:int = 0
 
 #System
 var os = "MAC"
-var version = "1.1_obd1"
+var version = "1.1_obd2"
 var beta:bool = false
 var latest_version
 var updater_version
 var updater_latest_version
-var production:bool = true #Should only be true when building new versions
+var production:bool = true
 var logs = []
 
 func dolog(log):

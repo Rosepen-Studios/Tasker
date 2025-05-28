@@ -20,8 +20,6 @@ func _ready() -> void:
 	label.text = "Session at "+timedata
 	if id != null:
 		rtv.dolog("(Focus Session "+str(id)+") INFO: Created")
-	else:
-		rtv.dolog("(Focus Session) WARN: Unidentified session loaded!")
 func update():
 	if done != true:
 		heartbeat([-focuslenh,-focuslenm,-focuslens])
@@ -60,6 +58,7 @@ func update():
 
 func complete(silent:bool):
 	done = true
+	icon.texture = load("res://Sidebar/Textures/Focus Icon.svg")
 	contribution.visible = true
 	delete.visible = true
 	contribution.update(focuslenm + focuslenh*60,"day")
@@ -68,10 +67,10 @@ func complete(silent:bool):
 		rtv.dolog("(Focus Session "+str(id)+") INFO: Complete")
 
 func on_delete_pressed() -> void:
-	rtv.sessiondate.erase(id)
-	rtv.sessionlen.erase(id)
-	rtv.sessiontime.erase(id)
-	rtv.sessionid.remove_at(rtv.sessionid.bsearch(id))
+	rtv.sessiondate.erase(str(id))
+	rtv.sessionlen.erase(str(id))
+	rtv.sessiontime.erase(str(id))
+	rtv.sessionid.remove_at(rtv.sessionid.bsearch(str(id)))
 	get_parent().remove_session([focuslenh,focuslenm,focuslens])
 
 	rtv.dolog("(Focus Session "+str(id)+") INFO: Deleted")

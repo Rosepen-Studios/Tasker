@@ -38,6 +38,7 @@ func get_session_len():
 func update_children():
 	for i in get_child_count():
 		get_child(i).contribution.update_color()
+		get_child(i).contribution.update_time()
 		
 func load_sessions():
 	loading = true

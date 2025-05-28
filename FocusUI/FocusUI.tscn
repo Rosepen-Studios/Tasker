@@ -16,10 +16,10 @@
 [ext_resource type="FontFile" uid="uid://c3ccumvrdcimj" path="res://Theme/Fonts/SF Pro Font/SF-Pro-Display-Semibold.otf" id="11_1rkri"]
 [ext_resource type="Texture2D" uid="uid://cdnlkgld7t8ef" path="res://FocusUI/Textures/OptionsButton.svg" id="12_ltv32"]
 [ext_resource type="Texture2D" uid="uid://dwb3a4kydd3jx" path="res://FocusUI/Textures/Container2.png" id="13_c1gw7"]
-[ext_resource type="FontFile" uid="uid://3a523niai7fn" path="res://Theme/Fonts/DM Mono Font/DMMono-Medium.ttf" id="14_n1t8f"]
 [ext_resource type="Texture2D" uid="uid://batyl7l2xjitw" path="res://FocusUI/Textures/Container3.png" id="16_w6jsw"]
 [ext_resource type="Script" path="res://FocusUI/Scripts/Counter.gd" id="17_bvnq1"]
 [ext_resource type="FontFile" uid="uid://ben6ahwb5fop1" path="res://Theme/Fonts/SF Mono Font/SFMono-Regular.otf" id="18_15u7c"]
+[ext_resource type="FontFile" uid="uid://d3ga0jigdquuw" path="res://Theme/Fonts/SF Mono Font/SFMono-Medium.otf" id="19_atius"]
 [ext_resource type="Script" path="res://FocusUI/Scripts/SessionInstantiator.gd" id="20_ej8si"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i5x65"]
@@ -281,12 +281,13 @@ layout_mode = 2
 alignment = 2
 
 [node name="Control" type="Control" parent="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(33, 30)
 layout_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer2/HBoxContainer/Control"]
 layout_mode = 2
-offset_left = -33.0
-offset_top = -30.0
+offset_right = 338.0
+offset_bottom = 308.0
 scale = Vector2(0.1, 0.1)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nnxoo")
 icon = ExtResource("12_ltv32")
@@ -333,7 +334,7 @@ vertical_alignment = 1
 [node name="Seperator" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/TextureRect/HBoxContainer"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("14_n1t8f")
+theme_override_fonts/font = ExtResource("19_atius")
 theme_override_font_sizes/font_size = 56
 text = ":"
 
@@ -359,7 +360,7 @@ vertical_alignment = 1
 [node name="Seperator2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/TextureRect/HBoxContainer"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("14_n1t8f")
+theme_override_fonts/font = ExtResource("19_atius")
 theme_override_font_sizes/font_size = 56
 text = ":"
 
@@ -384,8 +385,8 @@ vertical_alignment = 1
 
 [node name="TextureRect2" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 texture = ExtResource("16_w6jsw")
-stretch_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/TextureRect2"]
 layout_mode = 1
@@ -412,4 +413,5 @@ script = ExtResource("20_ej8si")
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/Selector/TextureRect/HBoxContainer/Week" to="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/Selector" method="_on_week_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer/Pause/Button2" to="." method="pause_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer/Focus/Button2" to="." method="focus_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer2/HBoxContainer/Control/Button" to="." method="settings_pressed"]
 [connection signal="child_entered_tree" from="MarginContainer/HBoxContainer/VBoxContainer/TextureRect2/MarginContainer/ScrollContainer/VBoxContainer" to="MarginContainer/HBoxContainer/VBoxContainer/TextureRect2/MarginContainer/ScrollContainer/VBoxContainer" method="on_session_added"]
