@@ -1,11 +1,10 @@
 extends VBoxContainer
 
+@onready var task_done_inst: VBoxContainer = $"../../../../../../Complete/MarginContainer/VBoxContainer/Control/ScrollContainer2/VBoxContainer"
+
 func _ready(): 
 	if rtv.isloading == true:
 		loadfull()
-
-
-	
 
 func loadfull():
 	rtv.dolog("(Task Instantiator) INFO: Loading in full")
@@ -24,3 +23,10 @@ func new_task(id: int) -> void:
 	add_child(preload("res://Daily Task/Daily Task.tscn").instantiate())
 	rtv.justcreatedid = id
 	rtv.dolog("(Task Instantiator) INFO: Task instantiated")
+
+func complete_task(id):
+	task_done_inst.complete_task(id)
+	
+func decomplete_task(id):
+	for i in get_child_count():
+		get_children()[i].decomplete(id)

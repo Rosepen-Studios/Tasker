@@ -1,26 +1,28 @@
 res://addons/SmoothScroll/debug_font.tres::7f63f6f6a82187471c1bfd5915ce7934::1728729495::res://.godot/exported/133200997/export-088ffdf57c57146017158f09cc8d2871-debug_font.res
-res://Daily Task/Daily Task Done/Daily Task Done.tscn::8f2dde574282371ab2c91fc9ce35f083::1747823157::res://.godot/exported/133200997/export-cfbcf4d4c92a7b1cb84ae619d6801c4e-Daily Task Done.scn
-res://Daily Task/Daily Task.tscn::b21e2b40be52d6d180e46089884ceb00::1748169390::res://.godot/exported/133200997/export-833a4a1a3403fe72a9500187ff342645-Daily Task.scn
-res://Daily UI /Daily UI.tscn::f65e918bc320777adc7fd69582151a21::1748169389::res://.godot/exported/133200997/export-3ddf61b5901bc93e08899d812c469414-Daily UI.scn
+res://Daily Task/Daily Task Done/Daily Task Done.tscn::2e2c3aedf1b9422a1df3bfa91c5e4825::1748540255::res://.godot/exported/133200997/export-cfbcf4d4c92a7b1cb84ae619d6801c4e-Daily Task Done.scn
+res://Daily Task/Daily Task.tscn::438f519f25a954dab7141a4774c9fb3f::1748540255::res://.godot/exported/133200997/export-833a4a1a3403fe72a9500187ff342645-Daily Task.scn
+res://Daily UI /Daily UI.tscn::cece098849d1b539fc31a39b9fa68d2a::1748540255::res://.godot/exported/133200997/export-3ddf61b5901bc93e08899d812c469414-Daily UI.scn
 res://Debug/Theme Debug.tscn::833eb8f25d28394599dfccb56e2d80aa::1731707325::res://.godot/exported/133200997/export-0bb1dd6b60f5113ffcc7f4c1915cfc4a-Theme Debug.scn
-res://Main/main.tscn::8a2d7fb2368e06895078317fae14bc67::1748361175::res://.godot/exported/133200997/export-cdd813ab38d3bd8e260b860aae2a8731-main.scn
+res://Main/main.tscn::c038fa0708a9375d718873b2d387a8b8::1748692382::res://.godot/exported/133200997/export-cdd813ab38d3bd8e260b860aae2a8731-main.scn
 res://New Task/Edit/Edit.tscn::dd3b7e1b643ec02060a469e442f28b79::1747823157::res://.godot/exported/133200997/export-f1e7cb0d7625e879bafd5387f055a88c-Edit.scn
-res://New Task/New Task.tscn::f97fb8c859bc27279bcbaf57c1244f0a::1748361175::res://.godot/exported/133200997/export-fda55f00be859fe93d685fea26508f0e-New Task.scn
+res://New Task/New Task.tscn::65a856f8c12b4e40f420b7126e78d408::1748692382::res://.godot/exported/133200997/export-fda55f00be859fe93d685fea26508f0e-New Task.scn
 res://Orientation/Shaders/Blur.tres::ffdb5cba0628542d4b62c89e03c00d91::1729608408::res://.godot/exported/133200997/export-d110d21d7e5e96be0abb4875947c48eb-Blur.res
 res://Orientation/Orientation.tscn::c6636b66ca67cc617775d7cf7f80e082::1747823157::res://.godot/exported/133200997/export-f63c263388fb7a6e68e973039d962ef5-Orientation.scn
 res://Overview/Task/Overview Task Done.tscn::c6e96217efd86f952d9b5ac274dd993f::1747823157::res://.godot/exported/133200997/export-dcc6c77a71b53017ad644a9435d25b76-Overview Task Done.scn
 res://Overview/Task/Overview Task.tscn::5e92d6bb4c16cb597de16d30dd3c8855::1747823157::res://.godot/exported/133200997/export-94f43ccfa1c080c536082e92e83827ac-Overview Task.scn
-res://Overview/Overview.tscn::b97a857993f36a2bad58301d92dd1627::1748169389::res://.godot/exported/133200997/export-5818c38063b4a2582da8a25d7b7fb5c9-Overview.scn
+res://Overview/Overview.tscn::b97a857993f36a2bad58301d92dd1627::1748540255::res://.godot/exported/133200997/export-5818c38063b4a2582da8a25d7b7fb5c9-Overview.scn
 res://Pop Up/Pop Up.tscn::f671ec3723699a47addf9d1c714ad001::1747823157::res://.godot/exported/133200997/export-f2f1ad62f8d87aadc5ea915a79850110-Pop Up.scn
 res://Scroll Profiles/Smooth.tres::ac9d0864ffcb87d5cd470a877f629867::1732043891::res://.godot/exported/133200997/export-d09e8618f7abf34a969b42504564ddf2-Smooth.res
 res://Scroll Profiles/Standard.tres::775c009446f6e6de44e13c909fe5bfda::1732045741::res://.godot/exported/133200997/export-e4d7e52372da4da413ffacd1229763f3-Standard.res
-res://Settings/Settings.tscn::57338c8c511213660e717086596da266::1748361175::res://.godot/exported/133200997/export-ac80b14a04cbd20012b8d8192440b360-Settings.scn
-res://Sidebar/sidebar.tscn::a6c50a02c7b9de749e516e859634ceee::1748169389::res://.godot/exported/133200997/export-3e9a2099729e17271413b3486965b411-sidebar.scn
+res://Settings/Settings.tscn::763743528cb3fdd2ee28594746b216cc::1748692382::res://.godot/exported/133200997/export-ac80b14a04cbd20012b8d8192440b360-Settings.scn
+res://Sidebar/sidebar.tscn::a570ce13d2f7ffd3c51b32a77baef1e8::1748540255::res://.godot/exported/133200997/export-3e9a2099729e17271413b3486965b411-sidebar.scn
 res://Theme/Settings/Section Title.tres::fb29b1d87dfbcb677ec8bee6be9899d1::1747823157::res://.godot/exported/133200997/export-12fc929185a264e0e1a5b53449955408-Section Title.res
 res://Theme/Settings/Setting Name.tres::628165a3b64650a68d4faca5767b8f4a::1747823157::res://.godot/exported/133200997/export-30f4fba991fdcfe425b5718ab6edffed-Setting Name.res
-res://Theme/Deafult Round Shader.tres::276564d76131629c627a06f69eef735f::1748360589::res://.godot/exported/133200997/export-04274fc848907b2fcf420bc37f01dcf3-Deafult Round Shader.res
-res://Theme/Main Theme.tres::41b5ef56d2873a2430e537158505a84b::1748360589::res://.godot/exported/133200997/export-f8d490758b2f9033959f4542289496fe-Main Theme.res
+res://Theme/Deafult Round Shader.tres::351dc03e4e24c8f3d11421ee4100b9ef::1748692245::res://.godot/exported/133200997/export-04274fc848907b2fcf420bc37f01dcf3-Deafult Round Shader.res
+res://Theme/Main Theme.tres::41b5ef56d2873a2430e537158505a84b::1748692246::res://.godot/exported/133200997/export-f8d490758b2f9033959f4542289496fe-Main Theme.res
 res://Update/Update.tscn::a4688c920598d356b0224042cef5990b::1747823157::res://.godot/exported/133200997/export-595418a35bd98f66630b2fe36da23621-Update.scn
-res://Console/Console.tscn::2522b919c318e7cc54117a9122c5980d::1748361175::res://.godot/exported/133200997/export-3778b4bd26337177398d91e4ee777b9f-Console.scn
-res://FocusUI/Session/FocusSession.tscn::bd2a08170a38a2c3770ce83f9c32ffbf::1748361175::res://.godot/exported/133200997/export-366a2f6e94134eab762f6d5741661828-FocusSession.scn
-res://FocusUI/FocusUI.tscn::8919047a8f5cdffcc87721247b073f40::1748361261::res://.godot/exported/133200997/export-4ed57c21a4d498885c5b8b443b2c3d88-FocusUI.scn
+res://Console/Console.tscn::2522b919c318e7cc54117a9122c5980d::1748692382::res://.godot/exported/133200997/export-3778b4bd26337177398d91e4ee777b9f-Console.scn
+res://FocusUI/Session/FocusSession.tscn::bd2a08170a38a2c3770ce83f9c32ffbf::1748692382::res://.godot/exported/133200997/export-366a2f6e94134eab762f6d5741661828-FocusSession.scn
+res://FocusUI/FocusUI.tscn::03b3c2f4efd3a10f4f88ef7161aa494d::1748692382::res://.godot/exported/133200997/export-4ed57c21a4d498885c5b8b443b2c3d88-FocusUI.scn
+res://Main/Tags/Beta.tscn::8c4e9ae8a3d08c597e8a7c6e0a2c8485::1748692382::res://.godot/exported/133200997/export-02deaa00bb05dd8bdf33ddbdc84dcc29-Beta.scn
+res://Main/Tags/IB.tscn::2c49045fdf888ccf67846243e3765f60::1748692382::res://.godot/exported/133200997/export-388dd1700b18cebfe48008bf5038a908-IB.scn

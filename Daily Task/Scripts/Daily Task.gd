@@ -52,9 +52,9 @@ func _ready():
 			else:
 				visible = false
 			
-		rtv.dolog("(Daily Task "+str(id)+") INFO: Data loaded")
+		rtv.dolog("(Daily Task "+id+") INFO: Data loaded")
 	else:
-		rtv.dolog("(Daily Task "+str(id)+") ERROR: Task ID is invalid")
+		rtv.dolog("(Daily Task "+id+") ERROR: Task ID is invalid")
 	
 func _process(_delta: float) -> void:
 	
@@ -64,7 +64,7 @@ func _process(_delta: float) -> void:
 		animator.play("Deleted")
 		await animator.animation_finished
 		visible = false
-		rtv.dolog("(Daily Task "+str(id)+") INFO: Deleting")
+		rtv.dolog("(Daily Task "+id+") INFO: Deleting")
 
 	if deleted == false:
 		update_streak_color()
@@ -75,13 +75,6 @@ func _process(_delta: float) -> void:
 		taskicon.texture = load(iconpointer[int(rtv.icondic[id])])
 		taskstreak.text = str(rtv.streakdic[id])
 		
-		#Updates task visibility
-		if animator.is_playing() == false:
-			if rtv.donedic[id] == false:
-				visible = true
-			else:
-				visible = false
-		
 		#Corrects incorrect streak values
 		if rtv.streakdic[id] < 0: 
 			rtv.streakdic[id] = 0
@@ -91,9 +84,20 @@ func _on_done_pressed() -> void: #Completes the task
 	rtv.streakdic[id] += 1
 	rtv.donedic[id] = true
 	rtv.comlastlogdic[id] = true
-	rtv.dolog("(Daily Task "+str(id)+") INFO: Complete")
+	rtv.dolog("(Daily Task "+id+") INFO: Complete")
+	get_parent().complete_task(id)
+	if rtv.settings["task_anim"]:
+		animator.play("Complete")
+		await animator.animation_finished
+	visible = false
 
-	
+func decomplete(target_id):
+	if target_id == id:
+		visible = true
+		if rtv.settings["task_anim"]:
+			animator.play("Decomplete")
+		else:
+			task.position = Vector2(0,0)
 
 
 func _on_edit_pressed() -> void: #Requests to edit
@@ -101,7 +105,7 @@ func _on_edit_pressed() -> void: #Requests to edit
 	Input.action_release("Edit")
 	rtv.edittarget = id
 	rtv.isediting = true
-	rtv.dolog("(Daily Task "+str(id)+") INFO: Requested edit")
+	rtv.dolog("(Daily Task "+id+") INFO: Requested edit")
 
 
 

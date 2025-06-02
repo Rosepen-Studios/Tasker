@@ -1,7 +1,6 @@
-[gd_scene load_steps=28 format=3 uid="uid://cedapa6ga120n"]
+[gd_scene load_steps=29 format=3 uid="uid://cedapa6ga120n"]
 
 [ext_resource type="Script" path="res://Sidebar/Scripts/Sidebar.gd" id="1_2ga01"]
-[ext_resource type="Texture2D" uid="uid://gr3dbsbh51y0" path="res://Sidebar/Textures/Sidebar Container.png" id="2_1tnmn"]
 [ext_resource type="Shader" path="res://Theme/Shaders/Round Corners.gdshader" id="2_biijr"]
 [ext_resource type="Texture2D" uid="uid://cyhqd8huvvppb" path="res://Sidebar/Textures/Home Icon.svg" id="2_iydla"]
 [ext_resource type="Texture2D" uid="uid://buokifw8oechu" path="res://Sidebar/Textures/Selection.png" id="3_0xcps"]
@@ -25,6 +24,13 @@ shader_parameter/rounded_corner_bottom_left = true
 shader_parameter/rounded_corner_bottom_right = true
 shader_parameter/width = 64.0
 shader_parameter/height = 616.0
+
+[sub_resource type="Gradient" id="Gradient_r43pt"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_anmhh"]
+gradient = SubResource("Gradient_r43pt")
+height = 616
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4d324"]
 
@@ -192,6 +198,7 @@ grow_vertical = 2
 script = ExtResource("1_2ga01")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0.0784314, 0.0784314, 0.0784314, 1)
 material = SubResource("ShaderMaterial_0mwo0")
 layout_mode = 1
 anchors_preset = -1
@@ -200,7 +207,7 @@ offset_left = 16.0
 offset_right = 80.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_1tnmn")
+texture = SubResource("GradientTexture2D_anmhh")
 script = ExtResource("4_jydxg")
 
 [node name="Control" type="Control" parent="TextureRect"]

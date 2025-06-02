@@ -7,7 +7,7 @@ extends Control
 @onready var instantiator: VBoxContainer = $MarginContainer/HBoxContainer/VBoxContainer/TextureRect2/MarginContainer/ScrollContainer/VBoxContainer
 @onready var counter: HBoxContainer = $MarginContainer/HBoxContainer/VBoxContainer/TextureRect/HBoxContainer
 @onready var saving: TextureRect = $"../../../Background"
-@onready var pause_button: Control = $MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer/Pause
+@onready var pause_button: Button = $MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer/Pause
 @onready var pause_button_label: Label = $MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer/Pause/Label
 @onready var pop_up: Control = $"../../../Pop Up"
 @onready var settings: Control = $"../../../Settings"
@@ -40,14 +40,17 @@ func begin_session():
 	workingid = rtv.last_given_session_id
 	rtv.sessionid.append(str(workingid))
 	instantiator.add_session(workingid)
+	rtv.insession = true
 	
 func end_session():
 	get_tree().create_tween().tween_property(focus_button,"modulate",Color("1d1d1d"),0.2)
 	pause_button.visible = false
+	pause_button.self_modulate = Color("1d1d1d")
 	instantiator.end_session()
 	update_session_data(workingid,instantiator.get_session_len())
 	workingid = -1
 	heartbeatcount = 0
+	rtv.insession = false
 
 
 func tab_switched(tab: String) -> void:
@@ -99,12 +102,16 @@ func pause_pressed() -> void:
 		pause_button_label.text = "Pause"
 		instantiator.workingsession.paused = false
 		instantiator.resume.emit()
+		get_tree().create_tween().tween_property(pause_button,"self_modulate",Color("1d1d1d"),0.2)
+		get_tree().create_tween().tween_property(focus_button,"modulate",Color(rtv.settings["accent_color"]),0.2)
 		rtv.dolog("(Focus Handler) INFO: Session resumed")
 	else:
 		paused = true
 		pause_button_label.text = "Resume"
 		instantiator.workingsession.paused = true
 		instantiator.workingsession.icon.texture = load("res://FocusUI/Textures/PauseIcon.png")
+		get_tree().create_tween().tween_property(focus_button,"modulate",Color("1d1d1d"),0.2)
+		get_tree().create_tween().tween_property(pause_button,"self_modulate",Color(rtv.settings["accent_color"]),0.2)
 		rtv.dolog("(Focus Handler) INFO: Session paused")
 
 
@@ -131,4 +138,4 @@ func do_confetti():
 	pop_up.make_popup("Goal Reached!","You focused for "+str(rtv.settings["focus_goal_day"])+" minutes today.")
 
 func settings_pressed() -> void:
-	settings.open_at(260,"focus_goal")
+	settings.open_at(360,"focus_goal")

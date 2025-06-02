@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://b2eojkldvhhta" path="res://Main/Textures/Beta Mask.svg" id="1_aulsh"]
 [ext_resource type="Theme" uid="uid://c3rp1lb338sef" path="res://Theme/Main Theme.tres" id="2_xu0su"]
 
-[sub_resource type="Gradient" id="Gradient_n8amx"]
+[sub_resource type="Gradient" id="Gradient_8tjaa"]
 offsets = PackedFloat32Array(0, 0.992268)
 colors = PackedColorArray(0.913725, 0.113725, 0.529412, 1, 0.964706, 0.298039, 0.258824, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_b3av6"]
-gradient = SubResource("Gradient_n8amx")
+gradient = SubResource("Gradient_8tjaa")
 width = 68
 
 [node name="Control" type="Control"]

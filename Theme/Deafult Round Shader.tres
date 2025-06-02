@@ -9,5 +9,5 @@ shader_parameter/rounded_corner_top_left = true
 shader_parameter/rounded_corner_top_right = true
 shader_parameter/rounded_corner_bottom_left = true
 shader_parameter/rounded_corner_bottom_right = true
-shader_parameter/width = 64.0
-shader_parameter/height = 616.0
+shader_parameter/width = 503.0
+shader_parameter/height = 550.0

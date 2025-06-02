@@ -42,8 +42,9 @@ var settings:Dictionary = {
 	"accent_color":"8667E9",
 	"smooth_scroll":true,
 	"notify_for_updates":true,
-	"focus_goal_day":1,
-	"focus_goal_week":300
+	"focus_goal_day":60,
+	"focus_goal_week":300,
+	"task_anim":true
 }
 
 #Pop Up
@@ -57,10 +58,11 @@ var sessiontime:Dictionary = {}
 var sessionlen:Dictionary = {}
 var sessiondate:Dictionary = {}
 var last_given_session_id:int = 0
+var insession:bool = false
 
 #System
 var os = "MAC"
-var version = "1.1_obd2"
+var version = "1.1_ib"
 var beta:bool = false
 var latest_version
 var updater_version

@@ -1,6 +1,5 @@
-[gd_scene load_steps=12 format=3 uid="uid://hdmb3fm5ivt5"]
+[gd_scene load_steps=15 format=3 uid="uid://hdmb3fm5ivt5"]
 
-[ext_resource type="Texture2D" uid="uid://cyu6hgypsaay1" path="res://Daily UI /Textures/UI Container.png" id="1_3r60q"]
 [ext_resource type="Script" path="res://Daily UI /Scripts/Daily Handler.gd" id="1_oxqdv"]
 [ext_resource type="FontFile" uid="uid://ds4ohnaje2v44" path="res://Theme/Fonts/Inter font/static/Inter_18pt-Bold.ttf" id="2_hpifb"]
 [ext_resource type="Material" uid="uid://cwurw8t3txml2" path="res://Theme/Deafult Round Shader.tres" id="2_qtfcs"]
@@ -10,6 +9,23 @@
 [ext_resource type="Resource" uid="uid://dsg475dsth6tj" path="res://Scroll Profiles/Smooth.tres" id="5_2sb03"]
 [ext_resource type="Script" path="res://addons/SmoothScroll/scroll_damper/cubic_scroll_damper.gd" id="5_n7vli"]
 [ext_resource type="Script" path="res://Daily UI /Scripts/Task Done Instantiator.gd" id="5_obgsm"]
+
+[sub_resource type="Gradient" id="Gradient_uvrw1"]
+offsets = PackedFloat32Array(0.00515464, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bfn0r"]
+gradient = SubResource("Gradient_uvrw1")
+width = 503
+height = 550
+
+[sub_resource type="Gradient" id="Gradient_vh5br"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bigim"]
+gradient = SubResource("Gradient_vh5br")
+width = 503
+height = 550
 
 [sub_resource type="Resource" id="Resource_7tvve"]
 script = ExtResource("5_n7vli")
@@ -43,10 +59,11 @@ layout_mode = 2
 theme_override_constants/separation = 16
 
 [node name="Incomplete" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+self_modulate = Color(0.0784314, 0.0784314, 0.0784314, 1)
 material = ExtResource("2_qtfcs")
 layout_direction = 1
 layout_mode = 2
-texture = ExtResource("1_3r60q")
+texture = SubResource("GradientTexture2D_bfn0r")
 script = ExtResource("4_4xv47")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/Incomplete"]
@@ -92,10 +109,11 @@ theme_override_constants/separation = 8
 script = ExtResource("3_jy2y0")
 
 [node name="Complete" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+self_modulate = Color(0.0784314, 0.0784314, 0.0784314, 1)
 material = ExtResource("2_qtfcs")
 layout_direction = 1
 layout_mode = 2
-texture = ExtResource("1_3r60q")
+texture = SubResource("GradientTexture2D_bigim")
 script = ExtResource("4_4xv47")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/Complete"]

@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqrri74xtmqe"]
+
+[ext_resource type="Texture2D" uid="uid://1lyjdrdr8ng8" path="res://Main/Textures/IB Mask.svg" id="1_al5sj"]
+[ext_resource type="Theme" uid="uid://c3rp1lb338sef" path="res://Theme/Main Theme.tres" id="2_govmb"]
+
+[sub_resource type="Gradient" id="Gradient_n8amx"]
+offsets = PackedFloat32Array(0, 0.992268)
+colors = PackedColorArray(0.85, 0, 0.113333, 1, 0.999865, 0.294841, 0.281209, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_hft03"]
+gradient = SubResource("Gradient_n8amx")
+width = 84
+
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(84, 25)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+clip_children = 1
+layout_mode = 1
+offset_right = 840.0
+offset_bottom = 250.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_al5sj")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect2"]
+custom_minimum_size = Vector2(68, 25)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(34, 12)
+size_flags_vertical = 3
+texture = SubResource("GradientTexture1D_hft03")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(84, 25)
+layout_mode = 1
+offset_right = 37.0
+offset_bottom = 23.0
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_govmb")
+theme_override_font_sizes/font_size = 18
+text = "Internal"

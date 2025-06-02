@@ -1,17 +1,15 @@
 res://Main/main.tscn
+res://Theme/Shaders/Round Corners.gdshader
 res://Theme/Deafult Round Shader.tres
 res://Theme/Main Theme.tres
-res://Settings/Scripts/Settings.gd
+res://Sidebar/Scripts/Overview.gd
+res://Main/Scipts/rtv.gd
 res://FocusUI/FocusUI.tscn
 res://FocusUI/Session/FocusSession.tscn
 res://Console/Console.tscn
 res://Settings/Settings.tscn
 res://New Task/New Task.tscn
 res://Main/Tags/Beta.tscn
-res://Daily UI /Daily UI.tscn
+res://Main/Tags/IB.tscn
 res://Sidebar/sidebar.tscn
-res://Sidebar/Scripts/Overview.gd
-res://Sidebar/Scripts/Sidebar.gd
-res://FocusUI/Session/Scripts/FocusSession.gd
-res://Sidebar/Scripts/Settings.gd
-res://Sidebar/Scripts/Add.gd
+res://FocusUI/Scripts/FocusHandler.gd

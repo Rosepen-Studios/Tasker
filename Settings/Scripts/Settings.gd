@@ -12,9 +12,10 @@ signal reorientate
 @onready var time_setting = $"MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Show time/Label2/HBoxContainer/Time Setting"
 @onready var username = $MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Nickname/Label2/HBoxContainer/Username
 @onready var sidebar_selection: OptionButton = $"MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Sidebar selection Method/Label2/HBoxContainer/Sidebar Selection"
-@onready var accent_color: LineEdit = $"MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Accent color/Label2/HBoxContainer/Color"
+@onready var accent_color: Button = $"MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Accent color/Label2/HBoxContainer/Button"
 @onready var notify_for_updates: CheckButton = $"MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Notify For Updates/Label2/HBoxContainer/CheckButton"
 @onready var focus_goal: LineEdit = $"MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Focus goal/Label2/HBoxContainer/LineEdit"
+@onready var task_anim: CheckButton = $"MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Play task animations/Label2/HBoxContainer/CheckButton"
 
 #-----End Settings-----#
 
@@ -73,23 +74,24 @@ func begin_setting():
 	time_setting.select(settings["time_setting"])
 	username.text = settings["username"]
 	sidebar_selection.select(settings["sidebar_selection"])
-	accent_color.text = settings["accent_color"]
+	accent_color.modulate = settings["accent_color"]
+	accent_color.color = settings["accent_color"]
 	notify_for_updates.button_pressed = settings["notify_for_updates"]
 	focus_goal.text = str(settings["focus_goal_day"])
+	task_anim.button_pressed = settings["task_anim"]
 	
 	
 func apply():
-	if  username.text == "" or accent_color.text == "" or accent_color.text.split().size() != 6:
+	if  username.text == "":
 		warning.set_warn("1 or more spaces have been left empty!")
-	elif accent_color.text.split().size() != 6:
-		warning.set_warn("Sidebar Selection Color needs to be 6 characters (HEX)")
 	else: #Forwards new settings to the settings dictionary
 		settings["sidebar_selection"] = sidebar_selection.selected
 		settings["time_setting"] = time_setting.selected
 		settings["username"] = username.text
-		settings["accent_color"] = accent_color.text  
+		settings["accent_color"] = accent_color.color
 		settings["notify_for_updates"] = notify_for_updates.button_pressed
 		settings["focus_goal_day"] = int(focus_goal.text)
+		settings["task_anim"] = task_anim.button_pressed
 		applied = true
 		rtv.settings = settings
 
@@ -99,7 +101,7 @@ func on_apply_pressed() -> void:
 
 
 func on_done_pressed() -> void:
-	if (applied == true and username.text != "" and accent_color.text != "") or apply_pass == true:
+	if (applied == true and username.text != "") or apply_pass == true:
 		animator.play("Out")
 		rtv.issetting = false
 		settings_changed.emit()

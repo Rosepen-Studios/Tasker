@@ -16,6 +16,9 @@ func _ready() -> void:
 		rtv.dolog("(System) INFO: Beta version detected")
 		rtv.beta = true
 		tag.add_child(preload("res://Main/Tags/Beta.tscn").instantiate())
+	elif rtv.version.split("_")[1] == "ib":
+		rtv.dolog("(System) WARN: Internal build detected, DO NOT DISTRIBUTE")
+		tag.add_child(preload("res://Main/Tags/IB.tscn").instantiate())
 	if rtv.production:
 		rtv.dolog("(System) WARN: RTV production is enabled and could be causing errors with task creation, if this is a production log ignore this message")
 	if FileAccess.file_exists("user://taskdata.json"):

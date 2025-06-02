@@ -209,18 +209,11 @@ layout_mode = 2
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="Pause" type="Control" parent="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Pause" type="Button" parent="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer"]
 visible = false
+self_modulate = Color(0.113725, 0.113725, 0.113725, 1)
 custom_minimum_size = Vector2(149, 54)
 layout_mode = 2
-
-[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer/Pause"]
-modulate = Color(0.113725, 0.113725, 0.113725, 1)
-custom_minimum_size = Vector2(149, 54)
-layout_mode = 2
-offset_left = 4.0
-offset_right = 153.0
-offset_bottom = 54.0
 size_flags_horizontal = 0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_bjsqh")
 theme_override_styles/hover = SubResource("StyleBoxTexture_rv6dw")
@@ -232,8 +225,6 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 4.0
-offset_right = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("5_cdnfd")
@@ -411,7 +402,7 @@ script = ExtResource("20_ej8si")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/Selector/TextureRect/HBoxContainer/Day" to="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/Selector" method="_on_day_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/Selector/TextureRect/HBoxContainer/Week" to="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/Selector" method="_on_week_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer/Pause/Button2" to="." method="pause_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer/Pause" to="." method="pause_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer/Focus/Button2" to="." method="focus_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer2/HBoxContainer/Control/Button" to="." method="settings_pressed"]
 [connection signal="child_entered_tree" from="MarginContainer/HBoxContainer/VBoxContainer/TextureRect2/MarginContainer/ScrollContainer/VBoxContainer" to="MarginContainer/HBoxContainer/VBoxContainer/TextureRect2/MarginContainer/ScrollContainer/VBoxContainer" method="on_session_added"]

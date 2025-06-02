@@ -9,13 +9,6 @@ var greets
 func _ready() -> void:
 	update_greet(rtv.settings["username"])
 
-func _process(delta: float) -> void:
-	if rtv.settings["username"] == "":
-		visible = false
-	else:
-		visible = true
-		greeting.text = toast
-
 func orientation_complete() -> void:
 	update_greet(rtv.settings["username"])
 

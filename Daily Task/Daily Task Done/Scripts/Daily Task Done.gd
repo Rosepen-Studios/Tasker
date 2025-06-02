@@ -8,6 +8,8 @@ var iconpointer:Dictionary = {2:"res://Daily Task/Textures/Icons/Big/Book.svg",1
 @onready var taskstreak = $"Container/Task Right/Streak/Streak Container/MarginContainer/Hbox/Vbox/Count"
 @onready var taskflame= $"Container/Task Right/Streak/Streak Container/MarginContainer/Hbox/Vbox/Button"
 @onready var animator: AnimationPlayer = $AnimationPlayer
+@onready var task: TextureRect = $Container
+
 var id:String
 var deleted:bool
 var decomplete
@@ -36,7 +38,7 @@ func _process(_delta: float) -> void:
 		deleted = true
 		animator.play("Deleted")
 		await animator.animation_finished
-		visible= false
+		visible = false
 
 		
 	if deleted == false:
@@ -45,11 +47,6 @@ func _process(_delta: float) -> void:
 		taskcolor.texture = load(colorpointer[int(rtv.colordic[id])])
 		taskicon.texture = load(iconpointer[int(rtv.icondic[id])])
 		taskstreak.text = str(rtv.streakdic[id])
-		if animator.is_playing() == false:
-			if rtv.donedic[id] == true:
-				visible = true
-			else:
-				visible = false
 
 func _on_edit_pressed() -> void:
 	Input.action_press("Edit")
@@ -63,9 +60,19 @@ func _on_x_button_pressed() -> void:
 	rtv.donedic[id] = false
 	rtv.comlastlogdic[id] = false
 	print("(Daily Task "+str(id)+") INFO: Decomplete")
+	get_parent().decomplete_task(id)
+	if rtv.settings["task_anim"]:
+		animator.play("Decomplete")
+		await animator.animation_finished
+	visible = false
 
-
-
+func complete(target_id):
+	if target_id == id:
+		visible = true
+		if rtv.settings["task_anim"]:
+			animator.play("Complete")
+		else:
+			task.position = Vector2(0,0)
 
 func update_streak_color():
 	#Defines streak flame color constants

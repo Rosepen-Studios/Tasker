@@ -34,6 +34,8 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed(tabid):
 			pressed.emit()
 			_pressed()
+	if sidebar.tab != tabid and rtv.insession and tabid == "focus":
+		modulate = Color(rtv.settings["accent_color"])
 		
 func settings_changed():
 	_ready()

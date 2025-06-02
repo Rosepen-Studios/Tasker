@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dceb2vqd421g4"]
+[gd_scene load_steps=40 format=3 uid="uid://dceb2vqd421g4"]
 
 [ext_resource type="Script" path="res://Settings/Scripts/Settings.gd" id="1_6a7mm"]
 [ext_resource type="Texture2D" uid="uid://dg1sxtba4r5wl" path="res://Settings/Textures/Container.png" id="1_31h5v"]
@@ -17,6 +17,9 @@
 [ext_resource type="Script" path="res://Settings/Scripts/Toggle_Setting.gd" id="11_ns6ly"]
 [ext_resource type="Script" path="res://Settings/warning.gd" id="12_8v2n7"]
 [ext_resource type="Script" path="res://Settings/Scripts/Info.gd" id="16_dljw3"]
+[ext_resource type="Shader" path="res://Theme/Shaders/Round Corners.gdshader" id="16_kpsh5"]
+[ext_resource type="Script" path="res://Settings/Scripts/AccentColor.gd" id="17_0m7nd"]
+[ext_resource type="Script" path="res://Settings/Scripts/ColorPicker.gd" id="18_ep1o5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fmji8"]
 shader = ExtResource("1_qhpvl")
@@ -26,6 +29,23 @@ shader_parameter/blur_radius = 8.0
 shader_parameter/blur_direction = Vector2(1, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lytt2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bwwdt"]
+shader = ExtResource("16_kpsh5")
+shader_parameter/radius_scale = 0.4
+shader_parameter/rounded_corner_top_left = true
+shader_parameter/rounded_corner_top_right = true
+shader_parameter/rounded_corner_bottom_left = true
+shader_parameter/rounded_corner_bottom_right = true
+shader_parameter/width = 70.0
+shader_parameter/height = 30.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cqrjb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbj4n"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fvrfe"]
 
 [sub_resource type="Animation" id="Animation_vd0vd"]
 resource_name = "In"
@@ -681,6 +701,24 @@ _data = {
 "RESET": SubResource("Animation_f8kjs")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7kaed"]
+shader = ExtResource("16_kpsh5")
+shader_parameter/radius_scale = 0.15
+shader_parameter/rounded_corner_top_left = true
+shader_parameter/rounded_corner_top_right = true
+shader_parameter/rounded_corner_bottom_left = true
+shader_parameter/rounded_corner_bottom_right = true
+shader_parameter/width = 314.0
+shader_parameter/height = 376.0
+
+[sub_resource type="Gradient" id="Gradient_f3kpw"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_02h7w"]
+gradient = SubResource("Gradient_f3kpw")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_csxed"]
+
 [node name="Control" type="Control"]
 z_index = 100
 layout_mode = 3
@@ -1002,12 +1040,46 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 2
 
-[node name="Color" type="LineEdit" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Accent color/Label2/HBoxContainer"]
+[node name="Button" type="Button" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Accent color/Label2/HBoxContainer"]
+material = SubResource("ShaderMaterial_bwwdt")
+custom_minimum_size = Vector2(70, 30)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cqrjb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cbj4n")
+script = ExtResource("17_0m7nd")
+
+[node name="Animations" type="Label" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("8_jmt85")
+text = "Animations"
+
+[node name="Play task animations" type="HBoxContainer" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Play task animations"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Play task animations"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("9_bgp7a")
+text = "Play daily task animations"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Play task animations/Label2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="CheckButton" type="CheckButton" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Play task animations/Label2/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("5_wbe3d")
-text = "debug"
 
-[node name="Appearance2" type="Label" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
+[node name="Focus" type="Label" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("8_jmt85")
 text = "Focus
@@ -1162,12 +1234,14 @@ alignment = 2
 layout_mode = 2
 size_flags_vertical = 8
 theme = ExtResource("5_wbe3d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fvrfe")
 text = "Apply"
 
 [node name="Button3" type="Button" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/Control/HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 theme = ExtResource("5_wbe3d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fvrfe")
 text = "Done"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/TextureRect/MarginContainer/VBoxContainer/Control"]
@@ -1199,6 +1273,73 @@ libraries = {
 "": SubResource("AnimationLibrary_m33j3")
 }
 
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color(0.113725, 0.113725, 0.113725, 1)
+material = SubResource("ShaderMaterial_7kaed")
+layout_mode = 0
+offset_left = 406.0
+offset_top = 136.0
+offset_right = 728.0
+offset_bottom = 520.0
+texture = SubResource("GradientTexture2D_02h7w")
+script = ExtResource("18_ep1o5")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="ColorPicker" type="ColorPicker" parent="TextureRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+edit_alpha = false
+color_mode = 1
+can_add_swatches = false
+color_modes_visible = false
+sliders_visible = false
+presets_visible = false
+
+[node name="Control" type="Control" parent="TextureRect/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 33)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Control"]
+layout_mode = 2
+offset_left = 239.0
+offset_right = 298.0
+offset_bottom = 33.0
+alignment = 2
+
+[node name="Done" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/Control/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_wbe3d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_csxed")
+text = "Done"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Control"]
+layout_mode = 2
+offset_right = 75.0
+offset_bottom = 33.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Cancel" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/Control/HBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("5_wbe3d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_csxed")
+text = "Cancel"
+
 [connection signal="visibility_changed" from="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/TextureRect" to="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/TextureRect" method="_on_visibility_changed"]
 [connection signal="pressed" from="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/TextureRect/Button" to="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/TextureRect" method="_on_button_pressed"]
 [connection signal="pressed" from="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Open app_userdata/Label2/HBoxContainer/Button" to="." method="_on_open_aud_pressed"]
@@ -1206,3 +1347,6 @@ libraries = {
 [connection signal="pressed" from="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Open Console/Label2/HBoxContainer/Button" to="." method="open_console"]
 [connection signal="pressed" from="MarginContainer/TextureRect/MarginContainer/VBoxContainer/Control/HBoxContainer/Button2" to="." method="on_apply_pressed"]
 [connection signal="pressed" from="MarginContainer/TextureRect/MarginContainer/VBoxContainer/Control/HBoxContainer/Button3" to="." method="on_done_pressed"]
+[connection signal="finished" from="TextureRect" to="MarginContainer/TextureRect/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/Accent color/Label2/HBoxContainer/Button" method="picker_finished"]
+[connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/Control/HBoxContainer/Done" to="TextureRect" method="done_pressed"]
+[connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/Control/HBoxContainer2/Cancel" to="TextureRect" method="cancel_pressed"]
