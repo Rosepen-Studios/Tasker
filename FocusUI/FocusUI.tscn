@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://drw2bikltirct"]
+[gd_scene load_steps=32 format=3 uid="uid://drw2bikltirct"]
 
 [ext_resource type="Texture2D" uid="uid://dnt52yi58ujq1" path="res://FocusUI/Textures/Container1.png" id="1_nc1jc"]
 [ext_resource type="Script" path="res://FocusUI/Scripts/FocusHandler.gd" id="1_o46vs"]
@@ -21,6 +21,9 @@
 [ext_resource type="FontFile" uid="uid://ben6ahwb5fop1" path="res://Theme/Fonts/SF Mono Font/SFMono-Regular.otf" id="18_15u7c"]
 [ext_resource type="FontFile" uid="uid://d3ga0jigdquuw" path="res://Theme/Fonts/SF Mono Font/SFMono-Medium.otf" id="19_atius"]
 [ext_resource type="Script" path="res://FocusUI/Scripts/SessionInstantiator.gd" id="20_ej8si"]
+[ext_resource type="Script" path="res://addons/SmoothScroll/SmoothScrollContainer.gd" id="21_g8wo1"]
+[ext_resource type="Resource" uid="uid://dsg475dsth6tj" path="res://Scroll Profiles/Smooth.tres" id="22_uh568"]
+[ext_resource type="Script" path="res://addons/SmoothScroll/scroll_damper/expo_scroll_damper.gd" id="23_q8e4e"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i5x65"]
 
@@ -36,6 +39,12 @@ texture = ExtResource("9_p17ji")
 texture = ExtResource("10_w8lni")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nnxoo"]
+
+[sub_resource type="Resource" id="Resource_j05tc"]
+script = ExtResource("23_q8e4e")
+friction = 4.0
+minimum_velocity = 0.4
+rebound_strength = 7.0
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -394,6 +403,9 @@ theme_override_constants/margin_bottom = 16
 [node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/TextureRect2/MarginContainer"]
 layout_mode = 2
 horizontal_scroll_mode = 0
+script = ExtResource("21_g8wo1")
+wheel_scroll_damper = ExtResource("22_uh568")
+dragging_scroll_damper = SubResource("Resource_j05tc")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/TextureRect2/MarginContainer/ScrollContainer"]
 layout_mode = 2

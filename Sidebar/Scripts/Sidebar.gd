@@ -3,8 +3,6 @@ extends Control
 
 @onready var tab_handler: ScrollContainer = $"../TabHandler"
 @onready var selection: TextureRect = $TextureRect/Control/Upper/Selection/TextureRect
-@onready var overview: TextureRect = $TextureRect/Control/Upper/VBoxContainer/Overview/TextureRect
-@onready var daily: TextureRect = $TextureRect/Control/Upper/VBoxContainer/Daily/TextureRect
 @onready var settings: Control = $"../Settings"
 var tab:String = "daily"
 var selectionpositions:Dictionary = {"daily":10,"overview":62,"focus":115,"placeholder2":168}

@@ -54,10 +54,13 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/HBoxContainer/Control"]
 layout_mode = 2
-offset_right = 480.0
-offset_bottom = 480.0
+offset_left = -197.0
+offset_top = -197.0
+offset_right = 283.0
+offset_bottom = 283.0
 grow_vertical = 2
 scale = Vector2(0.18, 0.18)
+pivot_offset = Vector2(240, 240)
 texture = ExtResource("2_0vtdq")
 stretch_mode = 4
 

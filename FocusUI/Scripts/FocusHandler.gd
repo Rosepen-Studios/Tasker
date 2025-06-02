@@ -100,7 +100,7 @@ func pause_pressed() -> void:
 	if paused:
 		paused = false
 		pause_button_label.text = "Pause"
-		instantiator.workingsession.paused = false
+		instantiator.workingsession.resume()
 		instantiator.resume.emit()
 		get_tree().create_tween().tween_property(pause_button,"self_modulate",Color("1d1d1d"),0.2)
 		get_tree().create_tween().tween_property(focus_button,"modulate",Color(rtv.settings["accent_color"]),0.2)
@@ -108,7 +108,7 @@ func pause_pressed() -> void:
 	else:
 		paused = true
 		pause_button_label.text = "Resume"
-		instantiator.workingsession.paused = true
+		instantiator.workingsession.pause()
 		instantiator.workingsession.icon.texture = load("res://FocusUI/Textures/PauseIcon.png")
 		get_tree().create_tween().tween_property(focus_button,"modulate",Color("1d1d1d"),0.2)
 		get_tree().create_tween().tween_property(pause_button,"self_modulate",Color(rtv.settings["accent_color"]),0.2)

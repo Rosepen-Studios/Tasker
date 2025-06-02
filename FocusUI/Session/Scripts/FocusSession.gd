@@ -48,13 +48,8 @@ func update():
 		heartbeat([focuslenh,focuslenm,focuslens])
 		if paused:
 			await get_parent().resume
-			icon.texture = load("res://Sidebar/Textures/Focus Icon.svg")
 		await get_tree().create_timer(1).timeout
 		update()
-		if paused:
-			icon.texture = load("res://FocusUI/Textures/PauseIcon.png")
-		else: 
-			icon.texture = load("res://Sidebar/Textures/Focus Icon.svg")
 
 func complete(silent:bool):
 	done = true
@@ -100,3 +95,16 @@ func load_data(time,len):
 	label_2.text = "Focused for "+trueh+":"+truem+":"+trues
 	heartbeat([focuslenh,focuslenm,focuslens])
 	
+func pause():
+	paused = true
+	var tween = get_tree().create_tween()
+	tween.tween_property(icon,"scale",Vector2(0.8*0.18,0.8*0.18),0.15).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property(icon,"texture",load("res://FocusUI/Textures/PauseIcon.png"),0)
+	tween.tween_property(icon,"scale",Vector2(0.18,0.18),0.15).set_ease(Tween.EASE_IN_OUT)
+
+func resume():
+	paused = false
+	var tween = get_tree().create_tween()
+	tween.tween_property(icon,"scale",Vector2(0.8*0.18,0.8*0.18),0.15).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property(icon,"texture",load("res://Sidebar/Textures/Focus Icon.svg"),0)
+	tween.tween_property(icon,"scale",Vector2(0.18,0.18),0.15).set_ease(Tween.EASE_IN_OUT)

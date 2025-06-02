@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cedapa6ga120n"]
+[gd_scene load_steps=31 format=3 uid="uid://cedapa6ga120n"]
 
 [ext_resource type="Script" path="res://Sidebar/Scripts/Sidebar.gd" id="1_2ga01"]
 [ext_resource type="Shader" path="res://Theme/Shaders/Round Corners.gdshader" id="2_biijr"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://bpfhcy3xecjjt" path="res://Sidebar/Textures/Plus Icon.png" id="7_sxfcb"]
 [ext_resource type="Script" path="res://Sidebar/Scripts/Add.gd" id="8_boi5m"]
 [ext_resource type="Script" path="res://Sidebar/Scripts/Settings.gd" id="9_t5621"]
+[ext_resource type="Script" path="res://Sidebar/Scripts/Focus.gd" id="10_yj6k5"]
+[ext_resource type="Texture2D" uid="uid://b0gnmygtnowwe" path="res://Sidebar/Textures/Dot.png" id="11_kbdo4"]
 [ext_resource type="Texture2D" uid="uid://cqdylq0arfyi" path="res://Sidebar/Textures/Focus Icon.svg" id="11_t6dnj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0mwo0"]
@@ -313,16 +315,19 @@ libraries = {
 "": SubResource("AnimationLibrary_oi0tr")
 }
 
-[node name="Focus" type="Button" parent="TextureRect/Control/Upper/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/Control/Upper/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Focus" type="Button" parent="TextureRect/Control/Upper/VBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_unqxe")
 flat = true
-script = ExtResource("6_hebhy")
-tabid = "focus"
+script = ExtResource("10_yj6k5")
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect/Control/Upper/VBoxContainer/Focus"]
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Control/Upper/VBoxContainer/VBoxContainer/Focus"]
 custom_minimum_size = Vector2(2.08165e-12, 48)
 layout_mode = 2
 offset_top = 12.0
@@ -332,6 +337,18 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("11_t6dnj")
 expand_mode = 2
 stretch_mode = 2
+
+[node name="Control" type="Control" parent="TextureRect/Control/Upper/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Control/Upper/VBoxContainer/VBoxContainer/Control"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 8.0
+offset_right = 71.0
+offset_bottom = 58.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_kbdo4")
 
 [node name="Lower" type="MarginContainer" parent="TextureRect/Control"]
 layout_mode = 1
@@ -392,7 +409,7 @@ texture = ExtResource("7_sxfcb")
 
 [connection signal="pressed" from="TextureRect/Control/Upper/VBoxContainer/Daily" to="." method="_on_daily_pressed"]
 [connection signal="pressed" from="TextureRect/Control/Upper/VBoxContainer/Overview" to="." method="_on_overview_pressed"]
-[connection signal="pressed" from="TextureRect/Control/Upper/VBoxContainer/Focus" to="." method="_on_focus_pressed"]
+[connection signal="pressed" from="TextureRect/Control/Upper/VBoxContainer/VBoxContainer/Focus" to="." method="_on_focus_pressed"]
 [connection signal="mouse_entered" from="TextureRect/Control/Lower/VBoxContainer/Settings" to="TextureRect/Control/Lower/VBoxContainer/Settings" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="TextureRect/Control/Lower/VBoxContainer/Settings" to="TextureRect/Control/Lower/VBoxContainer/Settings" method="_on_mouse_exited"]
 [connection signal="pressed" from="TextureRect/Control/Lower/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
