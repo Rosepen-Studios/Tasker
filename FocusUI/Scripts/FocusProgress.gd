@@ -15,9 +15,10 @@ func update(min:int,type:String,silent:bool):
 	var val = floor(100*min/rtv.settings["focus_goal_"+type])
 	create_tween().tween_property(progress,"value",val*24,0.6).set_trans(Tween.TRANS_SINE)
 	text.text = str(val)+"%"
-	if min == rtv.settings["focus_goal_"+type] and !silent and !comp:
-		rtv.dolog("(Focus Progress) INFO: Goal reached")
-		handler.do_confetti()
+	if min == rtv.settings["focus_goal_"+type] and !comp:
+		if !silent:
+			rtv.dolog("(Focus Progress) INFO: Goal reached")
+			handler.do_confetti()
 		comp = true
 	return 200
 	

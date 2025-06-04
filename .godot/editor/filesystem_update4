@@ -1,0 +1,6 @@
+res://FocusUI/FocusUI.tscn
+res://Theme/Shaders/Round Corners.gdshader
+res://Theme/Deafult Round Shader.tres
+res://Sidebar/Scripts/Overview.gd
+res://Theme/Main Theme.tres
+res://FocusUI/Scripts/FocusProgress.gd
