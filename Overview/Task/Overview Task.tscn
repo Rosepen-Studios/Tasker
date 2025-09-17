@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bbnaarjtx64tr"]
 
-[ext_resource type="Script" path="res://Overview/Task/Scripts/Overview Task.gd" id="1_clrxp"]
+[ext_resource type="Script" uid="uid://dhacmnfjygs62" path="res://Overview/Task/Scripts/Overview Task.gd" id="1_clrxp"]
 [ext_resource type="Texture2D" uid="uid://cl1st1ntlurdy" path="res://Overview/Task/Textures/Task Container.png" id="1_npr2j"]
 [ext_resource type="FontFile" uid="uid://cql10rvrxrm18" path="res://Theme/Fonts/Inter font/static/Inter_18pt-Medium.ttf" id="2_8somj"]
 

@@ -16,9 +16,10 @@ func _ready() -> void:
 		rtv.dolog("(System) INFO: Beta version detected")
 		rtv.beta = true
 		tag.add_child(preload("res://Main/Tags/Beta.tscn").instantiate())
-	elif rtv.version.split("_")[1] == "ib":
-		rtv.dolog("(System) WARN: Internal build detected, DO NOT DISTRIBUTE")
-		tag.add_child(preload("res://Main/Tags/IB.tscn").instantiate())
+	elif rtv.version.split("_").size() == 2:
+		if rtv.version.split("_")[0] == "ib":
+			rtv.dolog("(System) WARN: Internal build detected, DO NOT DISTRIBUTE")
+			tag.add_child(preload("res://Main/Tags/IB.tscn").instantiate())
 	if rtv.production:
 		rtv.dolog("(System) WARN: RTV production is enabled and could be causing errors with task creation, if this is a production log ignore this message")
 	if FileAccess.file_exists("user://taskdata.json"):
@@ -28,6 +29,8 @@ func _ready() -> void:
 		rtv.lastlogwasloaded = true
 		loadlastlog()
 	if FileAccess.file_exists("user://orientation.json"):
+		loadorientation()
+	if FileAccess.file_exists("user://focusdata.json"):
 		loadorientation()
 	else:
 		rtv.lastlogwasloaded = false
@@ -126,6 +129,17 @@ func savefocus(): # Saves lastlog data
 	file.close()
 	if console_callouts:
 		rtv.dolog("(Saving) INFO: Saved focus")
+		
+func savefocusdata(): # Saves lastlog data
+	var file = FileAccess.open("user://focusdata.json", FileAccess.WRITE)
+	var save:Dictionary
+	save["score"] = rtv.focusdatascore 
+	save["min"] = rtv.focusdatamin
+	var json = JSON.stringify(save)
+	file.store_string(json)
+	file.close()
+	if console_callouts:
+		rtv.dolog("(Saving) INFO: Saved focus data")
 
 func loadlastlog(): #Loads lastlog data
 	var file = FileAccess.open("user://lastlog.json", FileAccess.READ)
@@ -160,7 +174,18 @@ func loadfocus(): #Loads focus data
 	rtv.last_given_session_id = save["last_given_session_id"]
 	file.close()
 	if console_callouts:
-		rtv.dolog("(Saving) INFO: Saved focus")
+		rtv.dolog("(Saving) INFO: Loaded focus")
+	focusloaded.emit()
+
+func loadfocusdata(): #Loads focus data
+	var file = FileAccess.open("user://focusdata.json", FileAccess.READ)
+	var json = file.get_as_text()
+	var save = JSON.parse_string(json)
+	rtv.focusdatamin = save["min"]
+	rtv.focusdatascore = save["score"]
+	file.close()
+	if console_callouts:
+		rtv.dolog("(Saving) INFO: Loaded focus data")
 	focusloaded.emit()
 	
 func load_timeout() -> void:

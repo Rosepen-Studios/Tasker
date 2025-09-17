@@ -22,6 +22,8 @@ var focustimesec:int = 0
 var heartbeatcount = 0
 var paused:bool = false
 var dataloaded = false
+var datamindiff:int = 0   # In this runtime how much of each has been added to focus data
+var datascorediff:int = 0 #
 signal dataready
 func focus_pressed() -> void:
 	if is_in_session:
@@ -50,6 +52,13 @@ func end_session():
 	update_session_data(workingid,instantiator.get_session_len())
 	workingid = -1
 	heartbeatcount = 0
+	rtv.focusdatamin -= datamindiff
+	rtv.focusdatascore -= datascorediff
+	rtv.focusdatamin += focustimehrs*60+focustimemin
+	rtv.focusdatascore += progress.get_progress()
+	datamindiff = focustimehrs*60+focustimemin
+	datascorediff = progress.get_progress()
+	saving.savefocusdata()
 	rtv.insession = false
 
 
@@ -129,6 +138,7 @@ func on_focusloaded() -> void:
 		on_focusloaded()
 
 func _ready() -> void:
+	process_loop()
 	await dataready
 	instantiator.load_sessions()
 	dataloaded = true
@@ -139,3 +149,12 @@ func do_confetti():
 
 func settings_pressed() -> void:
 	settings.open_at(360,"focus_goal")
+	
+
+func process_loop():
+	if Time.get_date_string_from_system() != rtv.lastlogd:
+		instantiator.erase_sessions()
+		rtv.dolog("(Focus Handler) INFO: Date diff to lastlogd, dumping sessions")
+	
+	await get_tree().create_timer(10).timeout
+	process_loop()

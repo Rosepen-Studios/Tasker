@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cwurw8t3txml2"]
 
-[ext_resource type="Shader" path="res://Theme/Shaders/Round Corners.gdshader" id="1_11kf2"]
+[ext_resource type="Shader" uid="uid://cih2qw5a7867v" path="res://Theme/Shaders/Round Corners.gdshader" id="1_11kf2"]
 
 [resource]
 shader = ExtResource("1_11kf2")

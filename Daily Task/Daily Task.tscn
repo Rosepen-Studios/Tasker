@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://cv0dmkcjhl4se"]
 
-[ext_resource type="Script" path="res://Daily Task/Scripts/Daily Task.gd" id="1_4lly5"]
+[ext_resource type="Script" uid="uid://curr8guoya3fr" path="res://Daily Task/Scripts/Daily Task.gd" id="1_4lly5"]
 [ext_resource type="Texture2D" uid="uid://cgkx0vtba7slf" path="res://Debug/Textures/Task Color Debug.png" id="2_7s1ya"]
 [ext_resource type="Texture2D" uid="uid://bh88i30soxtgf" path="res://Daily Task/Textures/Container.png" id="2_kltg8"]
 [ext_resource type="FontFile" uid="uid://cb1fkhwou4qo4" path="res://Theme/Fonts/Inter font/static/Inter_24pt-Medium.ttf" id="3_lstys"]
@@ -72,6 +72,23 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(472, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_tgyuq"]
+resource_name = "Decomplete"
+length = 0.15
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Container:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(472, 0), Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_glgbv"]
@@ -161,30 +178,13 @@ tracks/3/keys = {
 "values": [Vector2(0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_tgyuq"]
-resource_name = "Decomplete"
-length = 0.15
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Container:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.15),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(472, 0), Vector2(0, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cadd6"]
 _data = {
-"Added": SubResource("Animation_spx2f"),
-"Complete": SubResource("Animation_o5xnk"),
-"Decomplete": SubResource("Animation_tgyuq"),
-"Deleted": SubResource("Animation_glgbv"),
-"RESET": SubResource("Animation_14av2")
+&"Added": SubResource("Animation_spx2f"),
+&"Complete": SubResource("Animation_o5xnk"),
+&"Decomplete": SubResource("Animation_tgyuq"),
+&"Deleted": SubResource("Animation_glgbv"),
+&"RESET": SubResource("Animation_14av2")
 }
 
 [node name="Daily Task" type="Control"]

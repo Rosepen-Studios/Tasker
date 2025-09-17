@@ -18,11 +18,10 @@ var wasdone
 func _ready():
 	if rtv.justcreatedid != -1:
 		id = str(rtv.justcreatedid)
-
 		taskname.text = rtv.namedic[id]
 		taskcolor.texture = load(colorpointer[int(rtv.colordic[id])])
 		taskicon.texture = load(iconpointer[int(rtv.icondic[id])])
-		taskstreak.text = str(rtv.streakdic[id])
+		taskstreak.text = str(int(rtv.streakdic[id]))
 		rtv.loadcreationstatus = 0
 		rtv.iscreating = false
 		animator.play("Added")
@@ -46,7 +45,7 @@ func _process(_delta: float) -> void:
 		taskname.text = rtv.namedic[id]
 		taskcolor.texture = load(colorpointer[int(rtv.colordic[id])])
 		taskicon.texture = load(iconpointer[int(rtv.icondic[id])])
-		taskstreak.text = str(rtv.streakdic[id])
+		taskstreak.text = str(int(rtv.streakdic[id]))
 
 func _on_edit_pressed() -> void:
 	Input.action_press("Edit")

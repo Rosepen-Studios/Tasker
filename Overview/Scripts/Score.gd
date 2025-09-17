@@ -21,7 +21,7 @@ func animate_value(changed:bool):
 			tween.tween_property(self,"value",(100 * count) / rtv.iddic.size(),0.6).set_trans(Tween.TRANS_SINE)
 		else:
 			tween.tween_property(self,"value",(100 * count) / rtv.iddic.size(),0.3).set_trans(Tween.TRANS_SINE)
-		text.text = str((100 * count) / rtv.iddic.size())+"%"
+		text.text = str(int((100 * count) / rtv.iddic.size()))+"%"
 	else:
 		value = 0
 		text.text = "0%"

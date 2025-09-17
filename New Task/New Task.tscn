@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://bvnru570cxn8u"]
 
-[ext_resource type="Script" path="res://New Task/Scripts/New Task.gd" id="1_2gtfr"]
+[ext_resource type="Script" uid="uid://dygp3ut4d72pw" path="res://New Task/Scripts/New Task.gd" id="1_2gtfr"]
 [ext_resource type="Texture2D" uid="uid://bnod4wusqsep7" path="res://New Task/Textures/Container.png" id="1_v6mpj"]
 [ext_resource type="FontFile" uid="uid://b6etgqa0fr38o" path="res://Theme/Fonts/Inter font/static/Inter_28pt-Bold.ttf" id="2_tw60c"]
 [ext_resource type="Theme" uid="uid://c3rp1lb338sef" path="res://Theme/Main Theme.tres" id="3_2eupn"]
@@ -299,10 +299,10 @@ tracks/5/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jqhry"]
 _data = {
-"In": SubResource("Animation_pkue2"),
-"Out_Canceled": SubResource("Animation_cilgr"),
-"Out_Complete": SubResource("Animation_1up65"),
-"RESET": SubResource("Animation_6q12x")
+&"In": SubResource("Animation_pkue2"),
+&"Out_Canceled": SubResource("Animation_cilgr"),
+&"Out_Complete": SubResource("Animation_1up65"),
+&"RESET": SubResource("Animation_6q12x")
 }
 
 [node name="Control" type="Control"]
@@ -447,7 +447,7 @@ text = "Create"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_jqhry")
+&"": SubResource("AnimationLibrary_jqhry")
 }
 
 [connection signal="pressed" from="TextureRect/HBoxContainer/MarginContainer/HBoxContainer/Cancel" to="." method="_on_cancel_pressed"]

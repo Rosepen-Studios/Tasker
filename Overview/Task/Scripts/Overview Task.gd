@@ -9,7 +9,7 @@ func _ready() -> void:
 	id = str(rtv.justcreatedid_overview)
 	rtv.loadcreationstatus_overview = 1
 	taskname.text = rtv.namedic[id]
-	streak.text = str(rtv.streakdic[id])
+	streak.text = str(int(rtv.streakdic[id]))
 	rtv.dolog("(Overview Task "+str(id)+") INFO: Data loaded")
 	
 func _process(_delta: float) -> void:
@@ -18,7 +18,7 @@ func _process(_delta: float) -> void:
 		visible = false
 		rtv.dolog("(Overview Task "+str(id)+") INFO: Deleting")
 	if deleted == false:
-		streak.text = str(rtv.streakdic[id])
+		streak.text = str(int(rtv.streakdic[id]))
 		update_streak_color()
 		if rtv.donedic[id] == true:
 			visible = false

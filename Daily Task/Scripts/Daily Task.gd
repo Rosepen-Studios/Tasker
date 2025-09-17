@@ -39,7 +39,7 @@ func _ready():
 		taskname.text = rtv. namedic[id]
 		taskcolor.texture = load(colorpointer[int(rtv.colordic[id])])
 		taskicon.texture = load(iconpointer[int(rtv.icondic[id])])
-		taskstreak.text = str(rtv.streakdic[id])
+		taskstreak.text = str(int(rtv.streakdic[id]))
 		rtv.loadcreationstatus = 0
 		rtv.iscreating = false
 		
@@ -73,7 +73,7 @@ func _process(_delta: float) -> void:
 		taskname.text = rtv.namedic[id]
 		taskcolor.texture = load(colorpointer[int(rtv.colordic[id])])
 		taskicon.texture = load(iconpointer[int(rtv.icondic[id])])
-		taskstreak.text = str(rtv.streakdic[id])
+		taskstreak.text = str(int(rtv.streakdic[id]))
 		
 		#Corrects incorrect streak values
 		if rtv.streakdic[id] < 0: 

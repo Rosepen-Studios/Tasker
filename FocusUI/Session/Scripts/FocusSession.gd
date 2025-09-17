@@ -1,6 +1,6 @@
 extends Control
 @onready var contribution: TextureRect = $TextureRect/MarginContainer/HBoxContainer2/TextureRect
-@onready var delete: TextureProgressBar = $TextureRect/MarginContainer/HBoxContainer2/TextureProgressBar
+@onready var deletebutton: TextureProgressBar = $TextureRect/MarginContainer/HBoxContainer2/TextureProgressBar
 @onready var label: Label = $TextureRect/MarginContainer/HBoxContainer/VBoxContainer/Label
 @onready var label_2: Label = $TextureRect/MarginContainer/HBoxContainer/VBoxContainer/Label2
 @onready var icon: TextureRect = $TextureRect/MarginContainer/HBoxContainer/Control/TextureRect
@@ -15,7 +15,7 @@ var paused:bool = false
 func _ready() -> void:
 	if done == false:
 		contribution.visible = false
-		delete.visible = false
+		deletebutton.visible = false
 		update()
 	label.text = "Session at "+timedata
 	if id != null:
@@ -55,13 +55,13 @@ func complete(silent:bool):
 	done = true
 	icon.texture = load("res://Sidebar/Textures/Focus Icon.svg")
 	contribution.visible = true
-	delete.visible = true
+	deletebutton.visible = true
 	contribution.update(focuslenm + focuslenh*60,"day")
 	contribution.update_color()
 	if !silent:
 		rtv.dolog("(Focus Session "+str(id)+") INFO: Complete")
 
-func on_delete_pressed() -> void:
+func delete() -> void:
 	rtv.sessiondate.erase(str(id))
 	rtv.sessionlen.erase(str(id))
 	rtv.sessiontime.erase(str(id))
@@ -81,7 +81,7 @@ func load_data(time,len):
 	focuslens = len[2]
 	complete(true)
 	
-	label.set_text("Focused for "+time)
+	label.set_text("Session at "+time)
 	
 	var trueh = str(len[0])
 	var truem = str(len[1])

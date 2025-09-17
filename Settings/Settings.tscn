@@ -1,8 +1,8 @@
 [gd_scene load_steps=40 format=3 uid="uid://dceb2vqd421g4"]
 
-[ext_resource type="Script" path="res://Settings/Scripts/Settings.gd" id="1_6a7mm"]
+[ext_resource type="Script" uid="uid://dnvh2fbs7ri0x" path="res://Settings/Scripts/Settings.gd" id="1_6a7mm"]
 [ext_resource type="Texture2D" uid="uid://dg1sxtba4r5wl" path="res://Settings/Textures/Container.png" id="1_31h5v"]
-[ext_resource type="Shader" path="res://Orientation/Shaders/blur.gdshader" id="1_qhpvl"]
+[ext_resource type="Shader" uid="uid://d148hh8wgx8xo" path="res://Orientation/Shaders/blur.gdshader" id="1_qhpvl"]
 [ext_resource type="Texture2D" uid="uid://b8l2h0daifhql" path="res://Bootscreen High DPI.png" id="2_fh1t0"]
 [ext_resource type="FontFile" uid="uid://b6etgqa0fr38o" path="res://Theme/Fonts/Inter font/static/Inter_28pt-Bold.ttf" id="4_b8kj3"]
 [ext_resource type="Theme" uid="uid://c3rp1lb338sef" path="res://Theme/Main Theme.tres" id="5_wbe3d"]
@@ -12,14 +12,14 @@
 [ext_resource type="Theme" uid="uid://bccpxb6gby2rq" path="res://Theme/Settings/Setting Name.tres" id="9_bgp7a"]
 [ext_resource type="Texture2D" uid="uid://bvoy7b0ngxxc3" path="res://Settings/Textures/Update Container.png" id="9_ouigy"]
 [ext_resource type="FontFile" uid="uid://d4midvuswbpbb" path="res://Theme/Fonts/Inter font/static/Inter_24pt-SemiBold.ttf" id="10_4bq5v"]
-[ext_resource type="Script" path="res://Settings/Scripts/Update.gd" id="10_d0crg"]
+[ext_resource type="Script" uid="uid://c5u6tda2qvk1k" path="res://Settings/Scripts/Update.gd" id="10_d0crg"]
 [ext_resource type="FontFile" uid="uid://cb1fkhwou4qo4" path="res://Theme/Fonts/Inter font/static/Inter_24pt-Medium.ttf" id="11_itkk4"]
-[ext_resource type="Script" path="res://Settings/Scripts/Toggle_Setting.gd" id="11_ns6ly"]
-[ext_resource type="Script" path="res://Settings/warning.gd" id="12_8v2n7"]
-[ext_resource type="Script" path="res://Settings/Scripts/Info.gd" id="16_dljw3"]
-[ext_resource type="Shader" path="res://Theme/Shaders/Round Corners.gdshader" id="16_kpsh5"]
-[ext_resource type="Script" path="res://Settings/Scripts/AccentColor.gd" id="17_0m7nd"]
-[ext_resource type="Script" path="res://Settings/Scripts/ColorPicker.gd" id="18_ep1o5"]
+[ext_resource type="Script" uid="uid://d0yheebev32kf" path="res://Settings/Scripts/Toggle_Setting.gd" id="11_ns6ly"]
+[ext_resource type="Script" uid="uid://8d1gors8jh4a" path="res://Settings/warning.gd" id="12_8v2n7"]
+[ext_resource type="Script" uid="uid://sv5hsvw4i7yf" path="res://Settings/Scripts/Info.gd" id="16_dljw3"]
+[ext_resource type="Shader" uid="uid://cih2qw5a7867v" path="res://Theme/Shaders/Round Corners.gdshader" id="16_kpsh5"]
+[ext_resource type="Script" uid="uid://deu1pwk1yfspr" path="res://Settings/Scripts/AccentColor.gd" id="17_0m7nd"]
+[ext_resource type="Script" uid="uid://mv6psvksmrlx" path="res://Settings/Scripts/ColorPicker.gd" id="18_ep1o5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fmji8"]
 shader = ExtResource("1_qhpvl")
@@ -98,9 +98,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5kak6"]
 _data = {
-"In": SubResource("Animation_vd0vd"),
-"Out": SubResource("Animation_pmwny"),
-"RESET": SubResource("Animation_vp5v3")
+&"In": SubResource("Animation_vd0vd"),
+&"Out": SubResource("Animation_pmwny"),
+&"RESET": SubResource("Animation_vp5v3")
 }
 
 [sub_resource type="Animation" id="Animation_1v8ks"]
@@ -695,10 +695,10 @@ tracks/12/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m33j3"]
 _data = {
-"Closed": SubResource("Animation_1v8ks"),
-"In": SubResource("Animation_goa27"),
-"Out": SubResource("Animation_pyt5o"),
-"RESET": SubResource("Animation_f8kjs")
+&"Closed": SubResource("Animation_1v8ks"),
+&"In": SubResource("Animation_goa27"),
+&"Out": SubResource("Animation_pyt5o"),
+&"RESET": SubResource("Animation_f8kjs")
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7kaed"]

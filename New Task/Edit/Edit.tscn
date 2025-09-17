@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://b6nm4kqyij8qh"]
 
-[ext_resource type="Script" path="res://New Task/Edit/Scripts/Edit.gd" id="1_g4o2a"]
+[ext_resource type="Script" uid="uid://bimt20oyk6uqw" path="res://New Task/Edit/Scripts/Edit.gd" id="1_g4o2a"]
 [ext_resource type="Texture2D" uid="uid://cacx088843vye" path="res://New Task/Textures/Containers/Blue.png" id="2_i3xcm"]
 [ext_resource type="FontFile" uid="uid://b6etgqa0fr38o" path="res://Theme/Fonts/Inter font/static/Inter_28pt-Bold.ttf" id="2_t3rew"]
 [ext_resource type="Theme" uid="uid://c3rp1lb338sef" path="res://Theme/Main Theme.tres" id="3_08462"]
@@ -217,9 +217,9 @@ tracks/6/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kvai8"]
 _data = {
-"In": SubResource("Animation_n3e3i"),
-"Out": SubResource("Animation_u5r5h"),
-"RESET": SubResource("Animation_s8crg")
+&"In": SubResource("Animation_n3e3i"),
+&"Out": SubResource("Animation_u5r5h"),
+&"RESET": SubResource("Animation_s8crg")
 }
 
 [node name="Edit" type="Control"]

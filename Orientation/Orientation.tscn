@@ -1,18 +1,18 @@
 [gd_scene load_steps=25 format=3 uid="uid://um6cwu8sn12e"]
 
-[ext_resource type="Shader" path="res://Orientation/Shaders/blur.gdshader" id="1_gugui"]
-[ext_resource type="Script" path="res://Orientation/Scripts/Orientation.gd" id="1_ws0so"]
+[ext_resource type="Shader" uid="uid://d148hh8wgx8xo" path="res://Orientation/Shaders/blur.gdshader" id="1_gugui"]
+[ext_resource type="Script" uid="uid://oubn2owve4gy" path="res://Orientation/Scripts/Orientation.gd" id="1_ws0so"]
 [ext_resource type="Texture2D" uid="uid://b8l2h0daifhql" path="res://Bootscreen High DPI.png" id="2_vqxaf"]
 [ext_resource type="Texture2D" uid="uid://majalerbyb85" path="res://Orientation/Textures/Container.png" id="3_ya840"]
 [ext_resource type="FontFile" uid="uid://b6etgqa0fr38o" path="res://Theme/Fonts/Inter font/static/Inter_28pt-Bold.ttf" id="4_4tktt"]
 [ext_resource type="Texture2D" uid="uid://wubt4o2hrb3o" path="res://Orientation/Textures/Next Button.png" id="4_gu68s"]
 [ext_resource type="FontFile" uid="uid://cql10rvrxrm18" path="res://Theme/Fonts/Inter font/static/Inter_18pt-Medium.ttf" id="5_7xawf"]
 [ext_resource type="Texture2D" uid="uid://bwu260xgfotna" path="res://Orientation/Textures/Next Hint.png" id="5_58u3m"]
-[ext_resource type="Script" path="res://Orientation/Scripts/Next Hint.gd" id="6_ab7bw"]
+[ext_resource type="Script" uid="uid://dux8sbr2s5hct" path="res://Orientation/Scripts/Next Hint.gd" id="6_ab7bw"]
 [ext_resource type="FontFile" uid="uid://b0taxodwoxljs" path="res://Theme/Fonts/Inter font/static/Inter_24pt-Bold.ttf" id="6_m3845"]
 [ext_resource type="Texture2D" uid="uid://yu43wxwh4701" path="res://Orientation/Textures/Tasks.png" id="7_wisl4"]
 [ext_resource type="Theme" uid="uid://c3rp1lb338sef" path="res://Theme/Main Theme.tres" id="9_lmsys"]
-[ext_resource type="Script" path="res://Orientation/Scripts/Privacy Pledge.gd" id="10_rahix"]
+[ext_resource type="Script" uid="uid://dq4uuskbwtxkv" path="res://Orientation/Scripts/Privacy Pledge.gd" id="10_rahix"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7cyns"]
 shader = ExtResource("1_gugui")
@@ -76,8 +76,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jhat7"]
 _data = {
-"Pulse": SubResource("Animation_sd1fv"),
-"RESET": SubResource("Animation_krw7u")
+&"Pulse": SubResource("Animation_sd1fv"),
+&"RESET": SubResource("Animation_krw7u")
 }
 
 [sub_resource type="Animation" id="Animation_bbpa1"]
@@ -782,11 +782,11 @@ tracks/20/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t711p"]
 _data = {
-"Page2": SubResource("Animation_bbpa1"),
-"Page3": SubResource("Animation_qv12k"),
-"Page4": SubResource("Animation_ucqei"),
-"Page5": SubResource("Animation_e4jik"),
-"RESET": SubResource("Animation_ebjwm")
+&"Page2": SubResource("Animation_bbpa1"),
+&"Page3": SubResource("Animation_qv12k"),
+&"Page4": SubResource("Animation_ucqei"),
+&"Page5": SubResource("Animation_e4jik"),
+&"RESET": SubResource("Animation_ebjwm")
 }
 
 [node name="Control" type="Control"]

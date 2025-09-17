@@ -51,3 +51,7 @@ func load_sessions():
 		workingsession = null
 	loading = false
 	
+func erase_sessions():
+	for i in get_child_count():
+		get_child(i).delete()
+	

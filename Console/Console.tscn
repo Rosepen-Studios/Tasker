@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://b51ej2wrf3ue2"]
 
-[ext_resource type="Script" path="res://Console/Scripts/Console.gd" id="1_ku6qg"]
+[ext_resource type="Script" uid="uid://2838qtwbrxyn" path="res://Console/Scripts/Console.gd" id="1_ku6qg"]
 [ext_resource type="Theme" uid="uid://c3rp1lb338sef" path="res://Theme/Main Theme.tres" id="2_po6tg"]
 [ext_resource type="FontFile" uid="uid://c15pcrli5j8y3" path="res://Theme/Fonts/SF Mono Font/SFMono-Semibold.otf" id="3_c2b44"]
 

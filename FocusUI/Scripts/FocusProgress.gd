@@ -22,3 +22,6 @@ func update(min:int,type:String,silent:bool):
 		comp = true
 	return 200
 	
+func get_progress():
+	return progress.value
+	

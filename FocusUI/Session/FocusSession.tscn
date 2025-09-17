@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://d4c65c74fxgwm"]
 
-[ext_resource type="Script" path="res://FocusUI/Session/Scripts/FocusSession.gd" id="1_qvcxw"]
+[ext_resource type="Script" uid="uid://c4jf1ogk1x0ak" path="res://FocusUI/Session/Scripts/FocusSession.gd" id="1_qvcxw"]
 [ext_resource type="Texture2D" uid="uid://c6ho0a26outi6" path="res://FocusUI/Session/Textures/Container.png" id="1_wwhyt"]
 [ext_resource type="Texture2D" uid="uid://cqdylq0arfyi" path="res://Sidebar/Textures/Focus Icon.svg" id="2_0vtdq"]
 [ext_resource type="Theme" uid="uid://c3rp1lb338sef" path="res://Theme/Main Theme.tres" id="3_xcq4i"]
@@ -10,9 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://laq1hkcxbe7f" path="res://FocusUI/Session/Textures/DeleteProgress.png" id="6_rkt73"]
 [ext_resource type="Texture2D" uid="uid://xn71bfg6wngi" path="res://FocusUI/Session/Textures/Ring/Base.png" id="6_v7rh2"]
 [ext_resource type="Texture2D" uid="uid://8j3nnodl2ja3" path="res://FocusUI/Session/Textures/Ring/Progress.png" id="7_anbkk"]
-[ext_resource type="Script" path="res://FocusUI/Session/Scripts/Contribution.gd" id="7_h6khp"]
+[ext_resource type="Script" uid="uid://cy2ib3yorywnw" path="res://FocusUI/Session/Scripts/Contribution.gd" id="7_h6khp"]
 [ext_resource type="Texture2D" uid="uid://bjgybaujyjghc" path="res://FocusUI/Session/Textures/DeleteIcon.svg" id="7_x1r5o"]
-[ext_resource type="Script" path="res://FocusUI/Session/Scripts/DeleteButton.gd" id="8_sj0oj"]
+[ext_resource type="Script" uid="uid://dno7slymy2b0m" path="res://FocusUI/Session/Scripts/DeleteButton.gd" id="8_sj0oj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mxupg"]
 
@@ -158,4 +158,4 @@ script = ExtResource("8_sj0oj")
 
 [connection signal="mouse_entered" from="TextureRect/MarginContainer/HBoxContainer2/TextureProgressBar/Button" to="TextureRect/MarginContainer/HBoxContainer2/TextureProgressBar/Button" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="TextureRect/MarginContainer/HBoxContainer2/TextureProgressBar/Button" to="TextureRect/MarginContainer/HBoxContainer2/TextureProgressBar/Button" method="_on_mouse_exited"]
-[connection signal="pressed" from="TextureRect/MarginContainer/HBoxContainer2/TextureProgressBar/Button" to="." method="on_delete_pressed"]
+[connection signal="pressed" from="TextureRect/MarginContainer/HBoxContainer2/TextureProgressBar/Button" to="." method="delete"]

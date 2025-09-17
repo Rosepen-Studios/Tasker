@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bar3xjboc5x0o"]
 
 [ext_resource type="Texture2D" uid="uid://cl1st1ntlurdy" path="res://Overview/Task/Textures/Task Container.png" id="1_q80v7"]
-[ext_resource type="Script" path="res://Overview/Task/Scripts/Overview Task Done.gd" id="1_s773d"]
+[ext_resource type="Script" uid="uid://dtrpunosiq7dx" path="res://Overview/Task/Scripts/Overview Task Done.gd" id="1_s773d"]
 [ext_resource type="FontFile" uid="uid://cql10rvrxrm18" path="res://Theme/Fonts/Inter font/static/Inter_18pt-Medium.ttf" id="2_xarv8"]
 
 [node name="Control" type="Control"]

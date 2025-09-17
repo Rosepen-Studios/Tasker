@@ -60,9 +60,13 @@ var sessiondate:Dictionary = {}
 var last_given_session_id:int = 0
 var insession:bool = false
 
+#Focus Data
+var focusdatamin:int
+var focusdatascore:int
+
 #System
 var os = "MAC"
-var version = "1.1_ib"
+var version = "1.1.1"
 var beta:bool = false
 var latest_version
 var updater_version

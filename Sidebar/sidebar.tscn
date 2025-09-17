@@ -1,19 +1,19 @@
 [gd_scene load_steps=31 format=3 uid="uid://cedapa6ga120n"]
 
-[ext_resource type="Script" path="res://Sidebar/Scripts/Sidebar.gd" id="1_2ga01"]
-[ext_resource type="Shader" path="res://Theme/Shaders/Round Corners.gdshader" id="2_biijr"]
+[ext_resource type="Script" uid="uid://d34s4a0tdtp7q" path="res://Sidebar/Scripts/Sidebar.gd" id="1_2ga01"]
+[ext_resource type="Shader" uid="uid://cih2qw5a7867v" path="res://Theme/Shaders/Round Corners.gdshader" id="2_biijr"]
 [ext_resource type="Texture2D" uid="uid://cyhqd8huvvppb" path="res://Sidebar/Textures/Home Icon.svg" id="2_iydla"]
 [ext_resource type="Texture2D" uid="uid://buokifw8oechu" path="res://Sidebar/Textures/Selection.png" id="3_0xcps"]
 [ext_resource type="Texture2D" uid="uid://ctccnjwtitcfd" path="res://Sidebar/Textures/Overview Icon.png" id="3_ypvnt"]
 [ext_resource type="Texture2D" uid="uid://deexw1xdo8oup" path="res://Sidebar/Textures/Daily Icon.png" id="4_4d04x"]
-[ext_resource type="Script" path="res://Daily UI /Scripts/Update Shader.gd" id="4_jydxg"]
-[ext_resource type="Script" path="res://Sidebar/Scripts/Selection.gd" id="4_y0sa7"]
-[ext_resource type="Script" path="res://Sidebar/Scripts/Overview.gd" id="6_hebhy"]
+[ext_resource type="Script" uid="uid://dn8pbgbcrnqwy" path="res://Daily UI /Scripts/Update Shader.gd" id="4_jydxg"]
+[ext_resource type="Script" uid="uid://baxvrq5ab67xx" path="res://Sidebar/Scripts/Selection.gd" id="4_y0sa7"]
+[ext_resource type="Script" uid="uid://c2qy04ekgv76q" path="res://Sidebar/Scripts/Overview.gd" id="6_hebhy"]
 [ext_resource type="Texture2D" uid="uid://3arjmr8ikrnj" path="res://Sidebar/Textures/Settings Icon.png" id="6_wy0pj"]
 [ext_resource type="Texture2D" uid="uid://bpfhcy3xecjjt" path="res://Sidebar/Textures/Plus Icon.png" id="7_sxfcb"]
-[ext_resource type="Script" path="res://Sidebar/Scripts/Add.gd" id="8_boi5m"]
-[ext_resource type="Script" path="res://Sidebar/Scripts/Settings.gd" id="9_t5621"]
-[ext_resource type="Script" path="res://Sidebar/Scripts/Focus.gd" id="10_yj6k5"]
+[ext_resource type="Script" uid="uid://behlbl68r75ko" path="res://Sidebar/Scripts/Add.gd" id="8_boi5m"]
+[ext_resource type="Script" uid="uid://ir2sil5ns0pa" path="res://Sidebar/Scripts/Settings.gd" id="9_t5621"]
+[ext_resource type="Script" uid="uid://g2fl3y22av1u" path="res://Sidebar/Scripts/Focus.gd" id="10_yj6k5"]
 [ext_resource type="Texture2D" uid="uid://b0gnmygtnowwe" path="res://Sidebar/Textures/Dot.png" id="11_kbdo4"]
 [ext_resource type="Texture2D" uid="uid://cqdylq0arfyi" path="res://Sidebar/Textures/Focus Icon.svg" id="11_t6dnj"]
 
@@ -92,8 +92,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oi0tr"]
 _data = {
-"Pressed": SubResource("Animation_7eq5w"),
-"RESET": SubResource("Animation_xlxnb")
+&"Pressed": SubResource("Animation_7eq5w"),
+&"RESET": SubResource("Animation_xlxnb")
 }
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yofh5"]
@@ -183,9 +183,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ou1qj"]
 _data = {
-"No": SubResource("Animation_0dqyr"),
-"Pressed": SubResource("Animation_6cqmp"),
-"RESET": SubResource("Animation_nl16o")
+&"No": SubResource("Animation_0dqyr"),
+&"Pressed": SubResource("Animation_6cqmp"),
+&"RESET": SubResource("Animation_nl16o")
 }
 
 [node name="Sidebar" type="Control"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://dh2gwv61lud5m"]
 
 [ext_resource type="Texture2D" uid="uid://dfr75nnm8bwn4" path="res://Pop Up/Container.png" id="1_2toyl"]
-[ext_resource type="Script" path="res://Pop Up/Scripts/Pop Up.gd" id="1_drh30"]
+[ext_resource type="Script" uid="uid://b7lyriyr50hdn" path="res://Pop Up/Scripts/Pop Up.gd" id="1_drh30"]
 [ext_resource type="FontFile" uid="uid://ds4ohnaje2v44" path="res://Theme/Fonts/Inter font/static/Inter_18pt-Bold.ttf" id="2_v8r6d"]
 [ext_resource type="FontFile" uid="uid://cql10rvrxrm18" path="res://Theme/Fonts/Inter font/static/Inter_18pt-Medium.ttf" id="3_d1gbm"]
 [ext_resource type="Texture2D" uid="uid://dsbu3n8xh0ndl" path="res://Pop Up/Progress.png" id="4_kprfw"]
@@ -156,10 +156,10 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mt6ow"]
 _data = {
-"In": SubResource("Animation_qljf3"),
-"Out": SubResource("Animation_8nhk4"),
-"Progress": SubResource("Animation_0o30t"),
-"RESET": SubResource("Animation_d8kry")
+&"In": SubResource("Animation_qljf3"),
+&"Out": SubResource("Animation_8nhk4"),
+&"Progress": SubResource("Animation_0o30t"),
+&"RESET": SubResource("Animation_d8kry")
 }
 
 [node name="Control" type="Control"]
