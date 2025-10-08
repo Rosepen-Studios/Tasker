@@ -26,6 +26,7 @@ func _pressed() -> void:
 		
 func _process(delta: float) -> void:
 	if rtv.settings["sidebar_selection"] != 1:
+		dot.modulate = modulate
 		if sidebar.tab != "focus" and not is_hovered():
 			modulate = Color(0.576,0.576,0.576)
 		if Input.is_action_just_pressed("focus"):

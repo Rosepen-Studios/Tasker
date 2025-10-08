@@ -66,7 +66,7 @@ var focusdatascore:int
 
 #System
 var os = "MAC"
-var version = "1.1.1"
+var version = "1.1.1_ib"
 var beta:bool = false
 var latest_version
 var updater_version

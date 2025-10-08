@@ -1,13 +1,14 @@
-res://FocusUI/Session/FocusSession.tscn
+res://Pop Up/Pop Up.tscn
 res://Theme/Main Theme.tres
 res://Theme/Shaders/Round Corners.gdshader
 res://Theme/Deafult Round Shader.tres
 res://Sidebar/Scripts/Overview.gd
-res://FocusUI/Session/Scripts/FocusSession.gd
 res://New Task/New Task.tscn
 res://Daily UI /Daily UI.tscn
 res://Daily Task/Daily Task Done/Daily Task Done.tscn
 res://FocusUI/FocusUI.tscn
+res://FocusUI/Session/FocusSession.tscn
+res://Main/Scipts/rtv.gd
 res://Settings/Scripts/AccentColor.gd
 res://Sidebar/Scripts/Add.gd
 res://Debug/Scripts/button debug.gd
@@ -24,7 +25,10 @@ res://Tools/fake_confetti_particles.gd
 res://Sidebar/Scripts/Focus.gd
 res://FocusUI/Scripts/FocusHandler.gd
 res://FocusUI/Scripts/FocusProgress.gd
+res://FocusUI/Session/Scripts/FocusSession.gd
 res://Main/Scipts/Greeting.gd
 res://Settings/Scripts/Info.gd
 res://LICENSE.md
-res://Main/Scipts/rtv.gd
+res://Settings/Scripts/Settings.gd
+res://Main/Scipts/Saving.gd
+res://Sidebar/sidebar.tscn

@@ -17,7 +17,7 @@ func _ready() -> void:
 		rtv.beta = true
 		tag.add_child(preload("res://Main/Tags/Beta.tscn").instantiate())
 	elif rtv.version.split("_").size() == 2:
-		if rtv.version.split("_")[0] == "ib":
+		if rtv.version.split("_")[1] == "ib":
 			rtv.dolog("(System) WARN: Internal build detected, DO NOT DISTRIBUTE")
 			tag.add_child(preload("res://Main/Tags/IB.tscn").instantiate())
 	if rtv.production:

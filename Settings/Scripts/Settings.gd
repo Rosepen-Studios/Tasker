@@ -48,9 +48,9 @@ func open_at(pos:int,high:String):
 	begin_setting()
 	await get_tree().create_timer(0.3).timeout
 	if rtv.settings["notify_for_updates"] and rtv.latest_version != rtv.version:
-		get_tree().create_tween().tween_property(scroll,"scroll_vertical",pos,0.2).set_ease(Tween.EASE_OUT)
+		get_tree().create_tween().tween_property(scroll,"scroll_vertical",pos,0.2).set_trans(Tween.TRANS_BOUNCE)
 	else:
-		get_tree().create_tween().tween_property(scroll,"scroll_vertical",pos-122,0.2).set_ease(Tween.EASE_OUT)
+		get_tree().create_tween().tween_property(scroll,"scroll_vertical",pos-122,0.2).set_trans(Tween.TRANS_BOUNCE)
 	highlight(high)
 
 func highlight(setting:String):
@@ -77,7 +77,7 @@ func begin_setting():
 	accent_color.modulate = settings["accent_color"]
 	accent_color.color = settings["accent_color"]
 	notify_for_updates.button_pressed = settings["notify_for_updates"]
-	focus_goal.text = str(settings["focus_goal_day"])
+	focus_goal.text = str(int(settings["focus_goal_day"]))
 	task_anim.button_pressed = settings["task_anim"]
 	
 	

@@ -6,9 +6,9 @@ extends Control
 @onready var icon: TextureRect = $TextureRect/MarginContainer/HBoxContainer/Control/TextureRect
 var timedata:String = ""
 var done = null
-var focuslens = 0
-var focuslenm = 0
-var focuslenh = 0
+var focuslens := 0
+var focuslenm := 0
+var focuslenh := 0
 var id
 var contribnum:int
 var paused:bool = false
@@ -33,9 +33,9 @@ func update():
 		if focuslenh == 24:
 			focuslenh = 0
 			
-		var trues = str(focuslens)
-		var truem = str(focuslenm)
-		var trueh = str(focuslenh)
+		var trues = str(int(focuslens))
+		var truem = str(int(focuslenm))
+		var trueh = str(int(focuslenh))
 		
 		if trues.split("").size() == 1:
 			trues = "0"+trues
@@ -83,9 +83,9 @@ func load_data(time,len):
 	
 	label.set_text("Session at "+time)
 	
-	var trueh = str(len[0])
-	var truem = str(len[1])
-	var trues = str(len[2])
+	var trueh = str(int(len[0]))
+	var truem = str(int(len[1]))
+	var trues = str(int(len[2]))
 	if trueh.split("").size() == 1:
 		trueh = "0"+trueh
 	if truem.split("").size() == 1:

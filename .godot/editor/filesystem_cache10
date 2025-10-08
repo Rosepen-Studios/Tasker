@@ -1,12 +1,12 @@
 c050361209d5ba8c6808dcd5508f2ab9
-::res://::1758128414
+::res://::1759943485
 Bootscreen High DPI.png::CompressedTexture2D/CompressedTexture2D::4727013856133918767::1748534907::1753539473::1::::<><><>0<>0<>501a47daecbab3bf309017d23cd848df<>res://.godot/imported/Bootscreen High DPI.png-849f966a7b86afe36062994f5dec2a38.ctex::
 export_presets.cfg::TextFile/TextFile::-1::1750184402::0::1::::<><><>0<>0<><>::
 Icon.icns::OtherFile/OtherFile::-1::1735404137::0::1::::<><><>0<>0<><>::
 Icon.png::CompressedTexture2D/CompressedTexture2D::2608043880857299122::1731784309::1753539473::1::::<><><>0<>0<>774f87a156f0ad8ac5ba75d942251674<>res://.godot/imported/Icon.png-33e63688031d53466d4d656c73cf10ca.ctex::
 Icon_Windows.png::CompressedTexture2D/CompressedTexture2D::3865301531845764472::1731840590::1753539473::1::::<><><>0<>0<>d1e6082f61a0b47429679eb4889c52e5<>res://.godot/imported/Icon_Windows.png-85a67fb457b4db6dd8023aa9a1b4c715.ctex::
 latest_version.txt::TextFile/TextFile::-1::1732644615::0::1::::<><><>0<>0<><>::
-LICENSE.md::TextFile/TextFile::-1::1730310145::0::1::::<><><>0<>0<><>::
+LICENSE.md::TextFile::-1::1758128602::0::1::::<><><>0<>0<><>::
 README.md::TextFile/TextFile::-1::1747639604::0::1::::<><><>0<>0<><>::
 ::res://addons/::1728735039
 ::res://addons/merovi.svgtexture2d/::1753539473
@@ -36,16 +36,16 @@ quad_scroll_damper.gd::GDScript/GDScript::8202257280870210092::1728729495::0::1:
 scroll_damper.gd::GDScript/GDScript::5459659956111990385::1728729495::0::1::::ScrollDamper<>Resource<>res://addons/SmoothScroll/scroll_damper/icon.svg<>0<>0<><>::
 ::res://Console/::1753539506
 Console.tscn::PackedScene/PackedScene::4546020207452195395::1753539506::0::1::::<><><>0<>0<><>::uid://2838qtwbrxyn::::res://Console/Scripts/Console.gd<>uid://c3rp1lb338sef::::res://Theme/Main Theme.tres<>uid://c15pcrli5j8y3::::res://Theme/Fonts/SF Mono Font/SFMono-Semibold.otf
-::res://Console/Scripts/::1753539471
-Console.gd::GDScript/GDScript::1964983121833666993::1747383147::0::1::::<>Control<><>0<>0<><>::
+::res://Console/Scripts/::1758128602
+Console.gd::GDScript::1964983121833666993::1758128602::0::1::::<>Control<><>0<>0<><>::
 ::res://Daily Task/::1753539507
 Daily Task.tscn::PackedScene/PackedScene::6298620636883384644::1753539507::0::1::::<><><>0<>0<><>::uid://curr8guoya3fr::::res://Daily Task/Scripts/Daily Task.gd<>uid://cgkx0vtba7slf::::res://Debug/Textures/Task Color Debug.png<>uid://bh88i30soxtgf::::res://Daily Task/Textures/Container.png<>uid://cb1fkhwou4qo4::::res://Theme/Fonts/Inter font/static/Inter_24pt-Medium.ttf<>uid://dmic7twal8bfy::::res://Daily Task/Textures/Icons/Big/Book.svg<>uid://clrxri3hw52lv::::res://Daily Task/Textures/Streak Flame.svg<>uid://bo0nj0wolhled::::res://Daily Task/Textures/Streak Container.png<>uid://b0taxodwoxljs::::res://Theme/Fonts/Inter font/static/Inter_24pt-Bold.ttf<>uid://beajogrnqo5fo::::res://Daily Task/Textures/Edit Button.svg<>uid://dcv6aab2ye8jq::::res://Daily Task/Textures/Done Button.svg
-::res://Daily Task/Daily Task Done/::1757597970
-Daily Task Done.tscn::PackedScene::6983046593666251534::1757597970::0::1::::<><><>0<>0<><>::uid://bbswigjtsj6tj::::res://Daily Task/Daily Task Done/Scripts/Daily Task Done.gd<>uid://cgkx0vtba7slf::::res://Debug/Textures/Task Color Debug.png<>uid://bh88i30soxtgf::::res://Daily Task/Textures/Container.png<>uid://dmic7twal8bfy::::res://Daily Task/Textures/Icons/Big/Book.svg<>uid://cb1fkhwou4qo4::::res://Theme/Fonts/Inter font/static/Inter_24pt-Medium.ttf<>uid://bo0nj0wolhled::::res://Daily Task/Textures/Streak Container.png<>uid://clrxri3hw52lv::::res://Daily Task/Textures/Streak Flame.svg<>uid://b0taxodwoxljs::::res://Theme/Fonts/Inter font/static/Inter_24pt-Bold.ttf<>uid://beajogrnqo5fo::::res://Daily Task/Textures/Edit Button.svg<>uid://dfm3sk7oyuqpk::::res://Daily Task/Textures/X Button.svg
-::res://Daily Task/Daily Task Done/Scripts/::1753539728
-Daily Task Done.gd::GDScript/GDScript::2495118717027368723::1753539728::0::1::::<>Control<><>0<>0<><>::
-::res://Daily Task/Scripts/::1753539728
-Daily Task.gd::GDScript/GDScript::6212804128746147179::1753539728::0::1::::<>Control<><>0<>0<><>::
+::res://Daily Task/Daily Task Done/::1758128781
+Daily Task Done.tscn::PackedScene::6983046593666251534::1758128781::0::1::::<><><>0<>0<><>::uid://bbswigjtsj6tj::::res://Daily Task/Daily Task Done/Scripts/Daily Task Done.gd<>uid://cgkx0vtba7slf::::res://Debug/Textures/Task Color Debug.png<>uid://bh88i30soxtgf::::res://Daily Task/Textures/Container.png<>uid://dmic7twal8bfy::::res://Daily Task/Textures/Icons/Big/Book.svg<>uid://cb1fkhwou4qo4::::res://Theme/Fonts/Inter font/static/Inter_24pt-Medium.ttf<>uid://bo0nj0wolhled::::res://Daily Task/Textures/Streak Container.png<>uid://clrxri3hw52lv::::res://Daily Task/Textures/Streak Flame.svg<>uid://b0taxodwoxljs::::res://Theme/Fonts/Inter font/static/Inter_24pt-Bold.ttf<>uid://beajogrnqo5fo::::res://Daily Task/Textures/Edit Button.svg<>uid://dfm3sk7oyuqpk::::res://Daily Task/Textures/X Button.svg
+::res://Daily Task/Daily Task Done/Scripts/::1758128602
+Daily Task Done.gd::GDScript::2495118717027368723::1758128602::0::1::::<>Control<><>0<>0<><>::
+::res://Daily Task/Scripts/::1758128602
+Daily Task.gd::GDScript::6212804128746147179::1758128602::0::1::::<>Control<><>0<>0<><>::
 ::res://Daily Task/Textures/::1753539473
 Container.png::CompressedTexture2D/CompressedTexture2D::2947886512267219765::1730394915::1753539473::1::::<><><>0<>0<>e4d0d14c319aa5db0b7b510bf8ab4377<>res://.godot/imported/Container.png-18d236d2fc59cb8b1451cd4660457213.ctex::
 Done Button.svg::CompressedTexture2D/CompressedTexture2D::7344873900770212230::1730395077::1753539473::1::::<><><>0<>0<>ba4bc53fab1124e68e3bec2491ce8aa7<>res://.godot/imported/Done Button.svg-f14bea915280f6d8453645d5eaccfce1.ctex::
@@ -81,10 +81,10 @@ Dumbell.svg::CompressedTexture2D/CompressedTexture2D::8286643078100950614::17288
 Mindful.svg::CompressedTexture2D/CompressedTexture2D::3884595709929939011::1729533914::1753539473::1::::<><><>0<>0<>70307cab3b5d1ee2456d7d1b7f48623b<>res://.godot/imported/Mindful.svg-0884181d60afed87950ab7c39dbb1834.ctex::
 Paintbrush.svg::CompressedTexture2D/CompressedTexture2D::6831722655625066718::1728808732::1753539473::1::::<><><>0<>0<>f24add80301d395139863ea17cb98867<>res://.godot/imported/Paintbrush.svg-fd3d3ae754f22c19600cf290b0f412f6.ctex::
 Paw.svg::CompressedTexture2D/CompressedTexture2D::3478809780302460384::1728808695::1753539473::1::::<><><>0<>0<>3c1b324178ffeaa769f887ce10389f3d<>res://.godot/imported/Paw.svg-7aee0aceecf276c369c7f36c2e1304c5.ctex::
-::res://Daily UI /::1757597970
-Daily UI.tscn::PackedScene::498246907398989144::1757597970::0::1::::<><><>0<>0<><>::uid://bxfhqi8t0wmve::::res://Daily UI /Scripts/Daily Handler.gd<>uid://ds4ohnaje2v44::::res://Theme/Fonts/Inter font/static/Inter_18pt-Bold.ttf<>uid://cwurw8t3txml2::::res://Theme/Deafult Round Shader.tres<>uid://btqvn77pwm22y::::res://Daily UI /Scripts/Task Instantiator.gd<>uid://dn8pbgbcrnqwy::::res://Daily UI /Scripts/Update Shader.gd<>uid://pks334k1uryd::::res://addons/SmoothScroll/SmoothScrollContainer.gd<>uid://dsg475dsth6tj::::res://Scroll Profiles/Smooth.tres<>uid://ddnxxodr8xcqs::::res://addons/SmoothScroll/scroll_damper/cubic_scroll_damper.gd<>uid://d3ovtsku8f1xf::::res://Daily UI /Scripts/Task Done Instantiator.gd
-::res://Daily UI /Scripts/::1753539471
-Daily Handler.gd::GDScript/GDScript::4011540039852895966::1747381223::0::1::::<>Control<><>0<>0<><>::
+::res://Daily UI /::1758128781
+Daily UI.tscn::PackedScene::498246907398989144::1758128781::0::1::::<><><>0<>0<><>::uid://bxfhqi8t0wmve::::res://Daily UI /Scripts/Daily Handler.gd<>uid://ds4ohnaje2v44::::res://Theme/Fonts/Inter font/static/Inter_18pt-Bold.ttf<>uid://cwurw8t3txml2::::res://Theme/Deafult Round Shader.tres<>uid://btqvn77pwm22y::::res://Daily UI /Scripts/Task Instantiator.gd<>uid://dn8pbgbcrnqwy::::res://Daily UI /Scripts/Update Shader.gd<>uid://pks334k1uryd::::res://addons/SmoothScroll/SmoothScrollContainer.gd<>uid://dsg475dsth6tj::::res://Scroll Profiles/Smooth.tres<>uid://ddnxxodr8xcqs::::res://addons/SmoothScroll/scroll_damper/cubic_scroll_damper.gd<>uid://d3ovtsku8f1xf::::res://Daily UI /Scripts/Task Done Instantiator.gd
+::res://Daily UI /Scripts/::1758128602
+Daily Handler.gd::GDScript::4011540039852895966::1758128602::0::1::::<>Control<><>0<>0<><>::
 Task Done Instantiator.gd::GDScript/GDScript::9154760910254717235::1748535917::0::1::::<>VBoxContainer<><>0<>0<><>::
 Task Instantiator.gd::GDScript/GDScript::3754338759941912634::1748535917::0::1::::<>VBoxContainer<><>0<>0<><>::
 Update Shader.gd::GDScript/GDScript::8140754341742122684::1734972541::0::1::::<>TextureRect<><>0<>0<><>::
@@ -92,26 +92,26 @@ Update Shader.gd::GDScript/GDScript::8140754341742122684::1734972541::0::1::::<>
 UI Container.png::CompressedTexture2D/CompressedTexture2D::6500556250034262602::1734972137::1753539473::1::::<><><>0<>0<>29d28b5410e2f9bf67e3c2dfb97198dd<>res://.godot/imported/UI Container.png-32942df36fb96d05d57dfd4894cccd7f.ctex::
 ::res://Debug/::1753539507
 Theme Debug.tscn::PackedScene/PackedScene::7589501207727159153::1753539507::0::1::::<><><>0<>0<><>::uid://c3rp1lb338sef::::res://Theme/Main Theme.tres
-::res://Debug/Scripts/::1753539471
-button debug.gd::GDScript/GDScript::8460158512160815779::1748359321::0::1::::<>Button<><>0<>0<><>::
+::res://Debug/Scripts/::1758128602
+button debug.gd::GDScript::8460158512160815779::1758128602::0::1::::<>Button<><>0<>0<><>::
 ::res://Debug/Textures/::1753539473
 Task Color Debug.png::CompressedTexture2D/CompressedTexture2D::5216060474824596515::1728652249::1753539473::1::::<><><>0<>0<>6a8c8ea8b2bd4538cad500ba348e25a7<>res://.godot/imported/Task Color Debug.png-dc16b11d47409868b93f2d76c9c017ab.ctex::
-::res://FocusUI/::1753539507
-FocusUI.tscn::PackedScene/PackedScene::8399530284274127723::1753539507::0::1::::<><><>0<>0<><>::uid://dnt52yi58ujq1::::res://FocusUI/Textures/Container1.png<>uid://yi6kttqhm6gw::::res://FocusUI/Scripts/FocusHandler.gd<>uid://w3c6yqiswfv2::::res://FocusUI/Selector/selector.gd<>uid://c1u02j22qv1jh::::res://FocusUI/Textures/SelectorBase.png<>uid://540cgiba4bvj::::res://FocusUI/Textures/SelectorSelect.png<>uid://c3rp1lb338sef::::res://Theme/Main Theme.tres<>uid://c8wand4s2de77::::res://Theme/Fonts/SF Pro Font/SF-Pro-Display-Medium.otf<>uid://k7pq14vexn8i::::res://FocusUI/Textures/Ring/Base.png<>uid://c7t4s3nb8llm2::::res://FocusUI/Textures/Ring/Progress.png<>uid://c2hu7aqm1heq7::::res://FocusUI/Textures/Button Hover.png<>uid://dmaur8tr2t0lb::::res://FocusUI/Textures/Button Pressed.png<>uid://bmvpy5ecav4so::::res://FocusUI/Scripts/FocusProgress.gd<>uid://vubak1dutm5f::::res://FocusUI/Textures/Button.png<>uid://c3ccumvrdcimj::::res://Theme/Fonts/SF Pro Font/SF-Pro-Display-Semibold.otf<>uid://cdnlkgld7t8ef::::res://FocusUI/Textures/OptionsButton.svg<>uid://dwb3a4kydd3jx::::res://FocusUI/Textures/Container2.png<>uid://batyl7l2xjitw::::res://FocusUI/Textures/Container3.png<>uid://pwind4vgpc8k::::res://FocusUI/Scripts/Counter.gd<>uid://ben6ahwb5fop1::::res://Theme/Fonts/SF Mono Font/SFMono-Regular.otf<>uid://d3ga0jigdquuw::::res://Theme/Fonts/SF Mono Font/SFMono-Medium.otf<>uid://xrk4gashfr4t::::res://FocusUI/Scripts/SessionInstantiator.gd<>uid://pks334k1uryd::::res://addons/SmoothScroll/SmoothScrollContainer.gd<>uid://dsg475dsth6tj::::res://Scroll Profiles/Smooth.tres<>uid://bltrarlhp2qkw::::res://addons/SmoothScroll/scroll_damper/expo_scroll_damper.gd
-::res://FocusUI/Scripts/::1753539471
-Counter.gd::GDScript/GDScript::1098758119754829612::1747645232::0::1::::<>HBoxContainer<><>0<>0<><>::
-FocusHandler.gd::GDScript/GDScript::1702948382091830254::1749289593::0::1::::<>Control<><>0<>0<><>::
-FocusProgress.gd::GDScript/GDScript::3272993936101411790::1749207961::0::1::::<>Container<><>0<>0<><>::
+::res://FocusUI/::1759648390
+FocusUI.tscn::PackedScene::8399530284274127723::1758128781::0::1::::<><><>0<>0<><>::uid://dnt52yi58ujq1::::res://FocusUI/Textures/Container1.png<>uid://yi6kttqhm6gw::::res://FocusUI/Scripts/FocusHandler.gd<>uid://w3c6yqiswfv2::::res://FocusUI/Selector/selector.gd<>uid://c1u02j22qv1jh::::res://FocusUI/Textures/SelectorBase.png<>uid://540cgiba4bvj::::res://FocusUI/Textures/SelectorSelect.png<>uid://c3rp1lb338sef::::res://Theme/Main Theme.tres<>uid://c8wand4s2de77::::res://Theme/Fonts/SF Pro Font/SF-Pro-Display-Medium.otf<>uid://k7pq14vexn8i::::res://FocusUI/Textures/Ring/Base.png<>uid://c7t4s3nb8llm2::::res://FocusUI/Textures/Ring/Progress.png<>uid://c2hu7aqm1heq7::::res://FocusUI/Textures/Button Hover.png<>uid://dmaur8tr2t0lb::::res://FocusUI/Textures/Button Pressed.png<>uid://bmvpy5ecav4so::::res://FocusUI/Scripts/FocusProgress.gd<>uid://vubak1dutm5f::::res://FocusUI/Textures/Button.png<>uid://c3ccumvrdcimj::::res://Theme/Fonts/SF Pro Font/SF-Pro-Display-Semibold.otf<>uid://cdnlkgld7t8ef::::res://FocusUI/Textures/OptionsButton.svg<>uid://dwb3a4kydd3jx::::res://FocusUI/Textures/Container2.png<>uid://batyl7l2xjitw::::res://FocusUI/Textures/Container3.png<>uid://pwind4vgpc8k::::res://FocusUI/Scripts/Counter.gd<>uid://ben6ahwb5fop1::::res://Theme/Fonts/SF Mono Font/SFMono-Regular.otf<>uid://d3ga0jigdquuw::::res://Theme/Fonts/SF Mono Font/SFMono-Medium.otf<>uid://xrk4gashfr4t::::res://FocusUI/Scripts/SessionInstantiator.gd<>uid://pks334k1uryd::::res://addons/SmoothScroll/SmoothScrollContainer.gd<>uid://dsg475dsth6tj::::res://Scroll Profiles/Smooth.tres<>uid://bltrarlhp2qkw::::res://addons/SmoothScroll/scroll_damper/expo_scroll_damper.gd
+::res://FocusUI/Scripts/::1758128602
+Counter.gd::GDScript::1098758119754829612::1758128602::0::1::::<>HBoxContainer<><>0<>0<><>::
+FocusHandler.gd::GDScript::1702948382091830254::1758128602::0::1::::<>Control<><>0<>0<><>::
+FocusProgress.gd::GDScript::3272993936101411790::1758128602::0::1::::<>Container<><>0<>0<><>::
 SessionInstantiator.gd::GDScript/GDScript::1650097099412177673::1749289294::0::1::::<>VBoxContainer<><>0<>0<><>::
 ::res://FocusUI/Selector/::1753539471
 selector.gd::GDScript/GDScript::1602135216412653641::1747415123::0::1::::<>HBoxContainer<><>0<>0<><>::
-::res://FocusUI/Session/::1753539507
-FocusSession.tscn::PackedScene/PackedScene::9200803228488931384::1753539507::0::1::::<><><>0<>0<><>::uid://c4jf1ogk1x0ak::::res://FocusUI/Session/Scripts/FocusSession.gd<>uid://c6ho0a26outi6::::res://FocusUI/Session/Textures/Container.png<>uid://cqdylq0arfyi::::res://Sidebar/Textures/Focus Icon.svg<>uid://c3rp1lb338sef::::res://Theme/Main Theme.tres<>uid://c8wand4s2de77::::res://Theme/Fonts/SF Pro Font/SF-Pro-Display-Medium.otf<>uid://bchlkgr4uh2mu::::res://FocusUI/Session/Textures/ContributionContainer.png<>uid://bsvhmhodfnc2k::::res://FocusUI/Session/Textures/DeleteBack.png<>uid://laq1hkcxbe7f::::res://FocusUI/Session/Textures/DeleteProgress.png<>uid://xn71bfg6wngi::::res://FocusUI/Session/Textures/Ring/Base.png<>uid://8j3nnodl2ja3::::res://FocusUI/Session/Textures/Ring/Progress.png<>uid://cy2ib3yorywnw::::res://FocusUI/Session/Scripts/Contribution.gd<>uid://bjgybaujyjghc::::res://FocusUI/Session/Textures/DeleteIcon.svg<>uid://dno7slymy2b0m::::res://FocusUI/Session/Scripts/DeleteButton.gd
+::res://FocusUI/Session/::1758128897
+FocusSession.tscn::PackedScene::9200803228488931384::1758128897::0::1::::<><><>0<>0<><>::uid://c4jf1ogk1x0ak::::res://FocusUI/Session/Scripts/FocusSession.gd<>uid://c6ho0a26outi6::::res://FocusUI/Session/Textures/Container.png<>uid://cqdylq0arfyi::::res://Sidebar/Textures/Focus Icon.svg<>uid://c3rp1lb338sef::::res://Theme/Main Theme.tres<>uid://c8wand4s2de77::::res://Theme/Fonts/SF Pro Font/SF-Pro-Display-Medium.otf<>uid://bchlkgr4uh2mu::::res://FocusUI/Session/Textures/ContributionContainer.png<>uid://bsvhmhodfnc2k::::res://FocusUI/Session/Textures/DeleteBack.png<>uid://laq1hkcxbe7f::::res://FocusUI/Session/Textures/DeleteProgress.png<>uid://xn71bfg6wngi::::res://FocusUI/Session/Textures/Ring/Base.png<>uid://8j3nnodl2ja3::::res://FocusUI/Session/Textures/Ring/Progress.png<>uid://cy2ib3yorywnw::::res://FocusUI/Session/Scripts/Contribution.gd<>uid://bjgybaujyjghc::::res://FocusUI/Session/Textures/DeleteIcon.svg<>uid://dno7slymy2b0m::::res://FocusUI/Session/Scripts/DeleteButton.gd
 TIme.gd::GDScript/GDScript::4552220660841615758::1747848543::0::1::::<>Label<><>0<>0<><>::
-::res://FocusUI/Session/Scripts/::1753539471
-Contribution.gd::GDScript/GDScript::6513600844183522744::1748359064::0::1::::<>TextureRect<><>0<>0<><>::
-DeleteButton.gd::GDScript/GDScript::8102594010399893946::1747495889::0::1::::<>Button<><>0<>0<><>::
-FocusSession.gd::GDScript/GDScript::6827247993366799238::1749289501::0::1::::<>Control<><>0<>0<><>::
+::res://FocusUI/Session/Scripts/::1758128602
+Contribution.gd::GDScript::6513600844183522744::1758128602::0::1::::<>TextureRect<><>0<>0<><>::
+DeleteButton.gd::GDScript::8102594010399893946::1758128602::0::1::::<>Button<><>0<>0<><>::
+FocusSession.gd::GDScript::6827247993366799238::1758128602::0::1::::<>Control<><>0<>0<><>::
 ::res://FocusUI/Session/Textures/::1753539473
 Container.png::CompressedTexture2D/CompressedTexture2D::6964040890327711771::1747495156::1753539473::1::::<><><>0<>0<>9967235a71df33c5253da0e61d0384a0<>res://.godot/imported/Container.png-19cbcd25f531028477bda6e2d4d6138b.ctex::
 ContributionContainer.png::CompressedTexture2D/CompressedTexture2D::2541935102853501040::1747585689::1753539473::1::::<><><>0<>0<>ace3102cee56edc681e503c9fedccdca<>res://.godot/imported/ContributionContainer.png-bf6b2480d51d41effd9bab1853521160.ctex::
@@ -139,10 +139,10 @@ Progress.png::CompressedTexture2D/CompressedTexture2D::7059901969037131175::1747
 ::res://Main/::1753539507
 main.tscn::PackedScene/PackedScene::2425442194313377990::1753539507::0::1::::<><><>0<>0<><>::uid://hdmb3fm5ivt5::::res://Daily UI /Daily UI.tscn<>uid://72bab0j36hf8::::res://Main/Scipts/rtv.gd<>uid://cedapa6ga120n::::res://Sidebar/sidebar.tscn<>uid://dwwfilsb8uegp::::res://Main/Scipts/Saving.gd<>uid://c3rp1lb338sef::::res://Theme/Main Theme.tres<>uid://brh0ul1q1q2tl::::res://Main/Time/Time.gd<>uid://b48ari8t83lr::::res://Main/Scipts/Greeting.gd<>uid://bvnru570cxn8u::::res://New Task/New Task.tscn<>uid://slqfteyj3xc0::::res://Main/Scipts/TabHandler.gd<>uid://cyq17akq5k48v::::res://Overview/Overview.tscn<>uid://b6nm4kqyij8qh::::res://New Task/Edit/Edit.tscn<>uid://drw2bikltirct::::res://FocusUI/FocusUI.tscn<>uid://b7srdqmpudkab::::res://Theme/Fonts/Inter font/static/Inter_24pt-ExtraBold.ttf<>uid://d02xbijc5jr7i::::res://Main/Scipts/Warnings.gd<>uid://um6cwu8sn12e::::res://Orientation/Orientation.tscn<>uid://dceb2vqd421g4::::res://Settings/Settings.tscn<>uid://4l03tnwctbxw::::res://Main/Scipts/Pop Up Instantiator.gd<>uid://wlfcfsud3elg::::res://Update/Update.tscn
 Schedualed Icon.svgtex.svg::CompressedTexture2D/CompressedTexture2D::1458721803846828280::1728735654::1753539473::1::::<><><>0<>0<>2cdf495bdee7ca752da083b83ac0e679<>res://.godot/imported/Schedualed Icon.svgtex.svg-ddcaf1b7cf9c9d5c2cd5e48e0a30af58.ctex::
-::res://Main/Scipts/::1753539471
-Greeting.gd::GDScript/GDScript::132060366048536143::1748538226::0::1::::<>VBoxContainer<><>0<>0<><>::
+::res://Main/Scipts/::1758128897
+Greeting.gd::GDScript::132060366048536143::1758128602::0::1::::<>VBoxContainer<><>0<>0<><>::
 Pop Up Instantiator.gd::GDScript/GDScript::2059753566875206240::1732990525::0::1::::<>Control<><>0<>0<><>::
-rtv.gd::GDScript/GDScript::2301842004360440191::1750184358::0::1::::<>Control<><>0<>0<><>::
+rtv.gd::GDScript::2301842004360440191::1758128897::0::1::::<>Control<><>0<>0<><>::
 Saving.gd::GDScript/GDScript::8749151398674058683::1750184124::0::1::::<>TextureRect<><>0<>0<><>::
 TabHandler.gd::GDScript/GDScript::1287088746859503145::1747404366::0::1::::<>ScrollContainer<><>0<>0<><>::
 Warnings.gd::GDScript/GDScript::8971120052238636596::1731176647::0::1::::<>Label<><>0<>0<><>::
@@ -158,12 +158,12 @@ Debug_Tag.svg::CompressedTexture2D/CompressedTexture2D::4955624754387001112::174
 IB Mask.svg::CompressedTexture2D/CompressedTexture2D::1849091553847100505::1748692341::1753539473::1::::<><><>0<>0<>ab8945ce40dcf34d26ed96f800446258<>res://.godot/imported/IB Mask.svg-3db737cdb0633b1a5b58f90bb5bc41b5.ctex::
 ::res://Main/Time/::1753539471
 Time.gd::GDScript/GDScript::3595635929199468189::1732352511::0::1::::<>VBoxContainer<><>0<>0<><>::
-::res://New Task/::1757597970
-New Task.tscn::PackedScene::3888292841923410082::1757597970::0::1::::<><><>0<>0<><>::uid://dygp3ut4d72pw::::res://New Task/Scripts/New Task.gd<>uid://bnod4wusqsep7::::res://New Task/Textures/Container.png<>uid://b6etgqa0fr38o::::res://Theme/Fonts/Inter font/static/Inter_28pt-Bold.ttf<>uid://c3rp1lb338sef::::res://Theme/Main Theme.tres<>uid://dqy58arylw1rb::::res://Daily Task/Textures/Colors/Big/Teal.png<>uid://bptfqvcviqbuu::::res://Daily Task/Textures/Icons/Big/Paw.svg<>uid://d4midvuswbpbb::::res://Theme/Fonts/Inter font/static/Inter_24pt-SemiBold.ttf<>uid://demx36e56pml4::::res://Theme/Textures/Button.png<>uid://cbr4ue5kbmkc7::::res://Theme/Textures/Button Highlighted.png
+::res://New Task/::1758128781
+New Task.tscn::PackedScene::3888292841923410082::1758128781::0::1::::<><><>0<>0<><>::uid://dygp3ut4d72pw::::res://New Task/Scripts/New Task.gd<>uid://bnod4wusqsep7::::res://New Task/Textures/Container.png<>uid://b6etgqa0fr38o::::res://Theme/Fonts/Inter font/static/Inter_28pt-Bold.ttf<>uid://c3rp1lb338sef::::res://Theme/Main Theme.tres<>uid://dqy58arylw1rb::::res://Daily Task/Textures/Colors/Big/Teal.png<>uid://bptfqvcviqbuu::::res://Daily Task/Textures/Icons/Big/Paw.svg<>uid://d4midvuswbpbb::::res://Theme/Fonts/Inter font/static/Inter_24pt-SemiBold.ttf<>uid://demx36e56pml4::::res://Theme/Textures/Button.png<>uid://cbr4ue5kbmkc7::::res://Theme/Textures/Button Highlighted.png
 ::res://New Task/Edit/::1753539507
 Edit.tscn::PackedScene/PackedScene::4589892690263226995::1753539507::0::1::::<><><>0<>0<><>::uid://bimt20oyk6uqw::::res://New Task/Edit/Scripts/Edit.gd<>uid://cacx088843vye::::res://New Task/Textures/Containers/Blue.png<>uid://b6etgqa0fr38o::::res://Theme/Fonts/Inter font/static/Inter_28pt-Bold.ttf<>uid://c3rp1lb338sef::::res://Theme/Main Theme.tres<>uid://cgkx0vtba7slf::::res://Debug/Textures/Task Color Debug.png<>uid://bptfqvcviqbuu::::res://Daily Task/Textures/Icons/Big/Paw.svg<>uid://d4midvuswbpbb::::res://Theme/Fonts/Inter font/static/Inter_24pt-SemiBold.ttf<>uid://cbr4ue5kbmkc7::::res://Theme/Textures/Button Highlighted.png<>uid://demx36e56pml4::::res://Theme/Textures/Button.png<>uid://btbkmmfgp78pu::::res://Theme/Textures/Button Long Highlighted.svg<>uid://b57ai0lpwdsux::::res://Theme/Textures/Button Long.svg
-::res://New Task/Edit/Scripts/::1753539471
-Edit.gd::GDScript/GDScript::2973907140960143518::1747382385::0::1::::<>Control<><>0<>0<><>::
+::res://New Task/Edit/Scripts/::1758128602
+Edit.gd::GDScript::2973907140960143518::1758128602::0::1::::<>Control<><>0<>0<><>::
 ::res://New Task/Scripts/::1753539471
 New Task.gd::GDScript/GDScript::8857142403178485648::1748112187::0::1::::<>Control<><>0<>0<><>::
 ::res://New Task/Textures/::1753539473
@@ -223,10 +223,10 @@ Standard.tres::Resource/LinearScrollDamper::3051795983186642008::1753539508::0::
 ::res://Settings/::1753539508
 Settings.tscn::PackedScene/PackedScene::7308007310683180889::1753539508::0::1::::<><><>0<>0<><>::uid://dnvh2fbs7ri0x::::res://Settings/Scripts/Settings.gd<>uid://dg1sxtba4r5wl::::res://Settings/Textures/Container.png<>uid://d148hh8wgx8xo::::res://Orientation/Shaders/blur.gdshader<>uid://b8l2h0daifhql::::res://Bootscreen High DPI.png<>uid://b6etgqa0fr38o::::res://Theme/Fonts/Inter font/static/Inter_28pt-Bold.ttf<>uid://c3rp1lb338sef::::res://Theme/Main Theme.tres<>uid://cql10rvrxrm18::::res://Theme/Fonts/Inter font/static/Inter_18pt-Medium.ttf<>uid://cx11qitcd8fy2::::res://Settings/Textures/Search Icon.png<>uid://den5ruiqg8vi5::::res://Theme/Settings/Section Title.tres<>uid://bccpxb6gby2rq::::res://Theme/Settings/Setting Name.tres<>uid://bvoy7b0ngxxc3::::res://Settings/Textures/Update Container.png<>uid://d4midvuswbpbb::::res://Theme/Fonts/Inter font/static/Inter_24pt-SemiBold.ttf<>uid://c5u6tda2qvk1k::::res://Settings/Scripts/Update.gd<>uid://cb1fkhwou4qo4::::res://Theme/Fonts/Inter font/static/Inter_24pt-Medium.ttf<>uid://d0yheebev32kf::::res://Settings/Scripts/Toggle_Setting.gd<>uid://8d1gors8jh4a::::res://Settings/warning.gd<>uid://sv5hsvw4i7yf::::res://Settings/Scripts/Info.gd<>uid://cih2qw5a7867v::::res://Theme/Shaders/Round Corners.gdshader<>uid://deu1pwk1yfspr::::res://Settings/Scripts/AccentColor.gd<>uid://mv6psvksmrlx::::res://Settings/Scripts/ColorPicker.gd
 warning.gd::GDScript/GDScript::2324015092343482062::1731783595::0::1::::<>Label<><>0<>0<><>::
-::res://Settings/Scripts/::1753539471
-AccentColor.gd::GDScript/GDScript::7482911581608487999::1748614638::0::1::::<>Button<><>0<>0<><>::
-ColorPicker.gd::GDScript/GDScript::887528048516073041::1748540254::0::1::::<>TextureRect<><>0<>0<><>::
-Info.gd::GDScript/GDScript::1308586107560047045::1746638241::0::1::::<>Label<><>0<>0<><>::
+::res://Settings/Scripts/::1758128602
+AccentColor.gd::GDScript::7482911581608487999::1758128602::0::1::::<>Button<><>0<>0<><>::
+ColorPicker.gd::GDScript::887528048516073041::1758128602::0::1::::<>TextureRect<><>0<>0<><>::
+Info.gd::GDScript::1308586107560047045::1758128602::0::1::::<>Label<><>0<>0<><>::
 Settings.gd::GDScript/GDScript::8115542451616610705::1748614638::0::1::::<>Control<><>0<>0<><>::
 Sidebar selection color.gd::GDScript/GDScript::3736492571318644408::1731780893::0::1::::<>HBoxContainer<><>0<>0<><>::
 Toggle_Setting.gd::GDScript/GDScript::8963960582101674037::1732351758::0::1::::<>OptionButton<><>0<>0<><>::
@@ -237,12 +237,12 @@ Search Icon.png::CompressedTexture2D/CompressedTexture2D::6442466256815176087::1
 Update Container.png::CompressedTexture2D/CompressedTexture2D::3890802133623039540::1733080293::1753539473::1::::<><><>0<>0<>846dc5f43e8f67a5dfdcf545dc5e6158<>res://.godot/imported/Update Container.png-250f93930b872814ed54ef0c050be9af.ctex::
 ::res://Sidebar/::1753539508
 sidebar.tscn::PackedScene/PackedScene::5059816710271687835::1753539508::0::1::::<><><>0<>0<><>::uid://d34s4a0tdtp7q::::res://Sidebar/Scripts/Sidebar.gd<>uid://cih2qw5a7867v::::res://Theme/Shaders/Round Corners.gdshader<>uid://cyhqd8huvvppb::::res://Sidebar/Textures/Home Icon.svg<>uid://buokifw8oechu::::res://Sidebar/Textures/Selection.png<>uid://ctccnjwtitcfd::::res://Sidebar/Textures/Overview Icon.png<>uid://deexw1xdo8oup::::res://Sidebar/Textures/Daily Icon.png<>uid://dn8pbgbcrnqwy::::res://Daily UI /Scripts/Update Shader.gd<>uid://baxvrq5ab67xx::::res://Sidebar/Scripts/Selection.gd<>uid://c2qy04ekgv76q::::res://Sidebar/Scripts/Overview.gd<>uid://3arjmr8ikrnj::::res://Sidebar/Textures/Settings Icon.png<>uid://bpfhcy3xecjjt::::res://Sidebar/Textures/Plus Icon.png<>uid://behlbl68r75ko::::res://Sidebar/Scripts/Add.gd<>uid://ir2sil5ns0pa::::res://Sidebar/Scripts/Settings.gd<>uid://g2fl3y22av1u::::res://Sidebar/Scripts/Focus.gd<>uid://b0gnmygtnowwe::::res://Sidebar/Textures/Dot.png<>uid://cqdylq0arfyi::::res://Sidebar/Textures/Focus Icon.svg
-::res://Sidebar/Scripts/::1757597952
-Add.gd::GDScript/GDScript::2682297002407152970::1748441984::0::1::::<>Button<><>0<>0<><>::
+::res://Sidebar/Scripts/::1758128780
+Add.gd::GDScript::2682297002407152970::1758128602::0::1::::<>Button<><>0<>0<><>::
 Button.gd::GDScript/GDScript::3636814702837211096::1731751665::0::1::::<>Button<><>0<>0<><>::
 Daily.gd::GDScript/GDScript::8608895348457465920::1731779248::0::1::::<>Button<><>0<>0<><>::
-Focus.gd::GDScript/GDScript::477195998876567148::1748868691::0::1::::<>Button<><>0<>0<><>::
-Overview.gd::GDScript::6702473572171657974::1757597952::0::1::::<>Button<><>0<>0<><>::
+Focus.gd::GDScript::477195998876567148::1758128602::0::1::::<>Button<><>0<>0<><>::
+Overview.gd::GDScript::6702473572171657974::1758128780::0::1::::<>Button<><>0<>0<><>::
 Selection.gd::GDScript/GDScript::2435207674101282221::1733076409::0::1::::<>TextureRect<><>0<>0<><>::
 Settings.gd::GDScript/GDScript::598277112579079618::1748441984::0::1::::<>Button<><>0<>0<><>::
 shitfix2.gd::GDScript/GDScript::3361101533444591823::1748868512::0::1::::<>VBoxContainer<><>0<>0<><>::
@@ -261,9 +261,9 @@ Schedualed Icon.svg::CompressedTexture2D/CompressedTexture2D::695331307507822425
 Selection.png::CompressedTexture2D/CompressedTexture2D::3819720599410174762::1729838621::1753539473::1::::<><><>0<>0<>b386b192bd4e23441fb90a1448032e99<>res://.godot/imported/Selection.png-48f187fcbf16faaa25d6de7733529c52.ctex::
 Settings Icon.png::CompressedTexture2D/CompressedTexture2D::1966336540939430327::1728739429::1753539473::1::::<><><>0<>0<>d22d605933e2881de9e30b86ebe46d66<>res://.godot/imported/Settings Icon.png-90ff082f90517c9fbdf8a34ecd0cbc61.ctex::
 Sidebar Container.png::CompressedTexture2D/CompressedTexture2D::457932997212215601::1734972714::1753539473::1::::<><><>0<>0<>9c0d744313958d60912229a3a8e46902<>res://.godot/imported/Sidebar Container.png-0c65d1c8fc9d8a3b6cf17b7a907fd533.ctex::
-::res://Theme/::1757597952
-Deafult Round Shader.tres::ShaderMaterial::6359356722767386857::1757597952::0::1::::<><><>0<>0<><>::uid://cih2qw5a7867v::::res://Theme/Shaders/Round Corners.gdshader
-Main Theme.tres::Theme::6774181177215732573::1757597952::0::1::::<><><>0<>0<><>::uid://b4aucabwmunli::::res://Theme/Fonts/Inter font/static/Inter_18pt-SemiBold.ttf<>uid://b5dqbbvpo66y5::::res://Theme/Textures/Switch/Switch On.svg<>uid://dyvyyc81g62lh::::res://Theme/Textures/Switch/Switch Off.svg<>uid://c3ccumvrdcimj::::res://Theme/Fonts/SF Pro Font/SF-Pro-Display-Semibold.otf<>uid://conpyevb1h6rb::::res://Theme/Textures/Line Input.svg<>uid://d4midvuswbpbb::::res://Theme/Fonts/Inter font/static/Inter_24pt-SemiBold.ttf<>uid://bfy2wak52ixc5::::res://Theme/Textures/Drop Down Arrow.svg<>uid://dfp00qxyv3ph7::::res://Theme/Textures/Drop Down.svg<>uid://cql10rvrxrm18::::res://Theme/Fonts/Inter font/static/Inter_18pt-Medium.ttf<>uid://bvt1h5rvqorj7::::res://Theme/Textures/Text Input.svg<>uid://biy1spp155c2o::::res://Theme/Textures/Slider/Grabber.svg<>uid://dt3nkki1q0fxp::::res://Theme/Textures/Slider/Tick.svg<>uid://d0nrq24h37w0v::::res://Theme/Textures/Slider/Slider.svg
+::res://Theme/::1758128528
+Deafult Round Shader.tres::ShaderMaterial::6359356722767386857::1758128528::0::1::::<><><>0<>0<><>::uid://cih2qw5a7867v::::res://Theme/Shaders/Round Corners.gdshader
+Main Theme.tres::Theme::6774181177215732573::1758128528::0::1::::<><><>0<>0<><>::uid://b4aucabwmunli::::res://Theme/Fonts/Inter font/static/Inter_18pt-SemiBold.ttf<>uid://b5dqbbvpo66y5::::res://Theme/Textures/Switch/Switch On.svg<>uid://dyvyyc81g62lh::::res://Theme/Textures/Switch/Switch Off.svg<>uid://c3ccumvrdcimj::::res://Theme/Fonts/SF Pro Font/SF-Pro-Display-Semibold.otf<>uid://conpyevb1h6rb::::res://Theme/Textures/Line Input.svg<>uid://d4midvuswbpbb::::res://Theme/Fonts/Inter font/static/Inter_24pt-SemiBold.ttf<>uid://bfy2wak52ixc5::::res://Theme/Textures/Drop Down Arrow.svg<>uid://dfp00qxyv3ph7::::res://Theme/Textures/Drop Down.svg<>uid://cql10rvrxrm18::::res://Theme/Fonts/Inter font/static/Inter_18pt-Medium.ttf<>uid://bvt1h5rvqorj7::::res://Theme/Textures/Text Input.svg<>uid://biy1spp155c2o::::res://Theme/Textures/Slider/Grabber.svg<>uid://dt3nkki1q0fxp::::res://Theme/Textures/Slider/Tick.svg<>uid://d0nrq24h37w0v::::res://Theme/Textures/Slider/Slider.svg
 ::res://Theme/Fonts/::1748111931
 ::res://Theme/Fonts/Inter font/::1753539472
 Inter-Italic-VariableFont_opsz,wght.ttf::FontFile/FontFile::4977721926215648671::1725491480::1753539472::1::::<><><>0<>0<>901a7076033eed789fd9dc6f65339003<>res://.godot/imported/Inter-Italic-VariableFont_opsz,wght.ttf-a4f498486fbe7830acb35ecb8ee40bad.fontdata::
@@ -360,8 +360,8 @@ SF-Pro-Display-UltralightItalic.otf::FontFile/FontFile::5923805677105199759::174
 ::res://Theme/Settings/::1747823157
 Section Title.tres::Theme/Theme::7468707268275331562::1747823157::0::1::::<><><>0<>0<><>::uid://d4midvuswbpbb::::res://Theme/Fonts/Inter font/static/Inter_24pt-SemiBold.ttf
 Setting Name.tres::Theme/Theme::2531879055315805966::1747823157::0::1::::<><><>0<>0<><>::uid://cql10rvrxrm18::::res://Theme/Fonts/Inter font/static/Inter_18pt-Medium.ttf
-::res://Theme/Shaders/::1757597982
-Round Corners.gdshader::Shader::5350471894177984857::1757597982::0::1::::<><><>0<>0<><>::
+::res://Theme/Shaders/::1758128898
+Round Corners.gdshader::Shader::5350471894177984857::1758128898::0::1::::<><><>0<>0<><>::
 ::res://Theme/Textures/::1753539473
 Button Highlighted.png::CompressedTexture2D/CompressedTexture2D::4879921398405283004::1730404127::1753539473::1::::<><><>0<>0<>4aa9d93a5f6c23e83de958435a6af95c<>res://.godot/imported/Button Highlighted.png-68165985b8ad0de750e6f69429379f02.ctex::
 Button Long Highlighted.svg::CompressedTexture2D/CompressedTexture2D::3722702328322477318::1730404238::1753539473::1::::<><><>0<>0<>8845a69cacbc6ed7096596f485949e98<>res://.godot/imported/Button Long Highlighted.svg-0360406a188abd5c4816be3288709c32.ctex::
@@ -381,8 +381,8 @@ Tick.svg::CompressedTexture2D/CompressedTexture2D::8551460374956233529::17287337
 ::res://Theme/Textures/Switch/::1753539473
 Switch Off.svg::CompressedTexture2D/CompressedTexture2D::8888646455323283393::1730406360::1753539473::1::::<><><>0<>0<>04f9de19c62fcd35a03e6bf81331f9b8<>res://.godot/imported/Switch Off.svg-661233e2808e16da01ff9c4caa29fa5f.ctex::
 Switch On.svg::CompressedTexture2D/CompressedTexture2D::4499252469440158274::1730406355::1753539473::1::::<><><>0<>0<>ac10baab0497047d5a1c0b26db4a4d27<>res://.godot/imported/Switch On.svg-5fa4bb890e157ab12d78ea623fcac206.ctex::
-::res://Tools/::1753539472
-fake_confetti_particles.gd::GDScript/GDScript::1202719006044334220::1748169346::0::1::::FakeConfettiParticles<>Node2D<><>0<>1<><>::
+::res://Tools/::1758128602
+fake_confetti_particles.gd::GDScript::1202719006044334220::1758128602::0::1::::FakeConfettiParticles<>Node2D<><>0<>1<><>::
 ::res://Update/::1753539508
 Button Pressed.png::CompressedTexture2D/CompressedTexture2D::5151441709541630746::1732979144::1753539472::1::::<><><>0<>0<>3d252a5fd3f691c076c52d2268ab28cc<>res://.godot/imported/Button Pressed.png-ab711fc477fbf134346b92a9950ec268.ctex::
 Button.png::CompressedTexture2D/CompressedTexture2D::8014938144601109136::1732978581::1753539472::1::::<><><>0<>0<>fac067a8cabdbfa96b8828934be01e63<>res://.godot/imported/Button.png-9b1f7a01230de0ffa6b802f9dcc16d86.ctex::

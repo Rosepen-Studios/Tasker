@@ -10,7 +10,7 @@ func update(min,type):
 		
 	var val = floor(100*min/rtv.settings["focus_goal_"+type])
 	create_tween().tween_property(progress,"value",val,0.6).set_trans(Tween.TRANS_SINE)
-	text.text = str(val)+"%"
+	text.text = str(int(val))+"%"
 	return 200
 
 func update_color():

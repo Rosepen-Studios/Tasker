@@ -312,7 +312,7 @@ stretch_mode = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect/Control/Upper/VBoxContainer/Overview"]
 libraries = {
-"": SubResource("AnimationLibrary_oi0tr")
+&"": SubResource("AnimationLibrary_oi0tr")
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/Control/Upper/VBoxContainer"]
@@ -393,7 +393,7 @@ script = ExtResource("8_boi5m")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect/Control/Lower/VBoxContainer/Add"]
 root_node = NodePath("../TextureRect")
 libraries = {
-"": SubResource("AnimationLibrary_ou1qj")
+&"": SubResource("AnimationLibrary_ou1qj")
 }
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect/Control/Lower/VBoxContainer/Add"]
