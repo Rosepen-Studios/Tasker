@@ -37,7 +37,6 @@ func _ready():
 	taskicon.add_icon_item(load("res://Daily Task/Textures/Icons/Dollar.svg"),"Dollar",6)
 
 func _process(_delta):
-	container.texture = load(containerpointer[taskcolor.selected])
 	colordisplay.texture = load(colorpointer[taskcolor.selected])
 	icondisplay.texture = load(iconpointer[taskicon.selected+1])
 	if Input.is_action_just_pressed("Add") and rtv.iscreating == false:

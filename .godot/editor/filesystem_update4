@@ -1,34 +1,15 @@
-res://Pop Up/Pop Up.tscn
+res://New Task/New Task.tscn
 res://Theme/Main Theme.tres
 res://Theme/Shaders/Round Corners.gdshader
 res://Theme/Deafult Round Shader.tres
 res://Sidebar/Scripts/Overview.gd
-res://New Task/New Task.tscn
+res://New Task/Scripts/New Task.gd
 res://Daily UI /Daily UI.tscn
-res://Daily Task/Daily Task Done/Daily Task Done.tscn
 res://FocusUI/FocusUI.tscn
 res://FocusUI/Session/FocusSession.tscn
-res://Main/Scipts/rtv.gd
-res://Settings/Scripts/AccentColor.gd
-res://Sidebar/Scripts/Add.gd
-res://Debug/Scripts/button debug.gd
-res://Settings/Scripts/ColorPicker.gd
-res://Console/Scripts/Console.gd
-res://FocusUI/Session/Scripts/Contribution.gd
-res://FocusUI/Scripts/Counter.gd
-res://Daily UI /Scripts/Daily Handler.gd
-res://Daily Task/Daily Task Done/Scripts/Daily Task Done.gd
-res://Daily Task/Scripts/Daily Task.gd
-res://FocusUI/Session/Scripts/DeleteButton.gd
-res://New Task/Edit/Scripts/Edit.gd
-res://Tools/fake_confetti_particles.gd
-res://Sidebar/Scripts/Focus.gd
-res://FocusUI/Scripts/FocusHandler.gd
-res://FocusUI/Scripts/FocusProgress.gd
-res://FocusUI/Session/Scripts/FocusSession.gd
-res://Main/Scipts/Greeting.gd
-res://Settings/Scripts/Info.gd
-res://LICENSE.md
-res://Settings/Scripts/Settings.gd
-res://Main/Scipts/Saving.gd
+res://Pop Up/Pop Up.tscn
 res://Sidebar/sidebar.tscn
+res://New Task/Edit/Scripts/Edit.gd
+res://New Task/Edit/Edit.tscn
+res://FocusUI/Scripts/FocusHandler.gd
+res://Main/main.tscn

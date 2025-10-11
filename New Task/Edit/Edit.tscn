@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://b6nm4kqyij8qh"]
 
 [ext_resource type="Script" uid="uid://bimt20oyk6uqw" path="res://New Task/Edit/Scripts/Edit.gd" id="1_g4o2a"]
-[ext_resource type="Texture2D" uid="uid://cacx088843vye" path="res://New Task/Textures/Containers/Blue.png" id="2_i3xcm"]
+[ext_resource type="Texture2D" uid="uid://bnod4wusqsep7" path="res://New Task/Textures/Container.png" id="2_edu2o"]
 [ext_resource type="FontFile" uid="uid://b6etgqa0fr38o" path="res://Theme/Fonts/Inter font/static/Inter_28pt-Bold.ttf" id="2_t3rew"]
 [ext_resource type="Theme" uid="uid://c3rp1lb338sef" path="res://Theme/Main Theme.tres" id="3_08462"]
 [ext_resource type="Texture2D" uid="uid://cgkx0vtba7slf" path="res://Debug/Textures/Task Color Debug.png" id="4_inf8k"]
@@ -245,7 +245,7 @@ offset_bottom = 195.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(168, 172)
-texture = ExtResource("2_i3xcm")
+texture = ExtResource("2_edu2o")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TextureRect"]
 layout_mode = 1
@@ -333,18 +333,18 @@ theme = ExtResource("3_08462")
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
 size_flags_vertical = 8
-theme_override_constants/separation = 12
+theme_override_constants/separation = 8
 alignment = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer2"]
 custom_minimum_size = Vector2(256, 40)
 layout_mode = 2
 size_flags_vertical = 8
-theme_override_constants/separation = 16
+theme_override_constants/separation = 8
 alignment = 2
 
 [node name="Cancel" type="Button" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer2/HBoxContainer"]
-custom_minimum_size = Vector2(144, 2.08165e-12)
+custom_minimum_size = Vector2(148, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("6_vsd24")
 theme_override_font_sizes/font_size = 18
@@ -354,7 +354,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_h8m5o")
 text = "Cancel"
 
 [node name="Edit" type="Button" parent="TextureRect/HBoxContainer/MarginContainer/VBoxContainer2/HBoxContainer"]
-custom_minimum_size = Vector2(144, 2.08165e-12)
+custom_minimum_size = Vector2(148, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("6_vsd24")
 theme_override_font_sizes/font_size = 18
@@ -375,7 +375,7 @@ text = "Delete"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_kvai8")
+&"": SubResource("AnimationLibrary_kvai8")
 }
 
 [connection signal="pressed" from="TextureRect/HBoxContainer/MarginContainer/VBoxContainer2/HBoxContainer/Cancel" to="." method="_on_cancel_pressed"]

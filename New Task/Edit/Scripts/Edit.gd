@@ -43,7 +43,6 @@ func _process(_delta: float) -> void:
 		_on_cancel_pressed()
 	colordisplay.texture = load(colorpointer[taskcolor.selected])
 	icondisplay.texture = load(iconpointer[taskicon.selected+1])
-	container.texture = load(containerpointer[taskcolor.selected])
 	if Input.is_action_just_pressed("Edit"):
 		animator.play("In")
 		visible = true

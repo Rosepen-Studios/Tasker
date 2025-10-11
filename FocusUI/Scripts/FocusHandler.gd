@@ -1,6 +1,6 @@
 extends Control
 
-@onready var sidebar: Control = $Sidebar
+@onready var sidebar: Control = $"../../../Sidebar"
 @onready var focus_button: Button = $MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer/Focus/Button2
 @onready var focus_button_label: Label = $MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/HBoxContainer/Focus/Label
 @onready var progress: Container = $MarginContainer/HBoxContainer/Container1/MarginContainer/VBoxContainer/Ring/Container
@@ -154,7 +154,10 @@ func settings_pressed() -> void:
 func process_loop():
 	if Time.get_date_string_from_system() != rtv.lastlogd:
 		instantiator.erase_sessions()
-		rtv.dolog("(Focus Handler) INFO: Date diff to lastlogd, dumping sessions")
+		rtv.dolog("(Focus Handler) INFO: Date difference to lastlogd, dumping sessions")
 	
 	await get_tree().create_timer(10).timeout
 	process_loop()
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("Start") and sidebar.tab == "focus":
+		focus_pressed()
