@@ -1,7 +1,7 @@
-TextureRect
-TextEdit
 Control
+TextureRect
 VBoxContainer
+TextEdit
 SmoothScrollContainer
 MarginContainer
 Button

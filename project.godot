@@ -16,6 +16,7 @@ config/features=PackedStringArray("4.4", "Mobile")
 run/max_fps=144
 boot_splash/image="res://Bootscreen High DPI.png"
 config/icon="res://Icon.png"
+config/macos_native_icon="res://Icon.icns"
 boot_splash/minimum_display_time=500
 
 [autoload]

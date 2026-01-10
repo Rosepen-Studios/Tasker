@@ -18,6 +18,7 @@ func update(min:int,type:String,silent:bool):
 	if min == rtv.settings["focus_goal_"+type] and !comp:
 		if !silent:
 			rtv.dolog("(Focus Progress) INFO: Goal reached")
+			await handler.session_finished
 			handler.do_confetti()
 		comp = true
 	return 200

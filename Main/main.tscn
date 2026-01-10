@@ -52,36 +52,11 @@ script = ExtResource("2_8dlu8")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="Background/Timer"]
 
-[node name="Greeting" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-grow_horizontal = 2
-script = ExtResource("3_meshi")
-
-[node name="MarginContainer" type="MarginContainer" parent="Greeting"]
-layout_mode = 2
-theme_override_constants/margin_left = 96
-theme_override_constants/margin_top = 16
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Greeting/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 8
-
-[node name="Label" type="Label" parent="Greeting/MarginContainer/HBoxContainer"]
-texture_repeat = 1
-layout_mode = 2
-theme = ExtResource("2_qf686")
-text = "[Dynamic]"
-
-[node name="TagHolder" type="VBoxContainer" parent="Greeting/MarginContainer/HBoxContainer"]
-layout_mode = 2
-alignment = 1
-
 [node name="Time" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
+offset_bottom = 50.0
 grow_horizontal = 2
 script = ExtResource("3_0qn1y")
 
@@ -102,10 +77,13 @@ text = "[Dynamic]"
 
 [node name="TabHandler" type="ScrollContainer" parent="."]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
-offset_bottom = 648.0
+anchor_bottom = 1.0
+offset_right = 1120.0
 grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
 mouse_filter = 2
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 3
@@ -177,7 +155,7 @@ anchor_right = 1.0
 offset_left = 556.0
 offset_top = 10.42
 offset_right = -556.0
-offset_bottom = 33.42
+offset_bottom = 40.42
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("9_lq6es")
 theme_override_font_sizes/font_size = 24
@@ -187,6 +165,31 @@ script = ExtResource("10_ytvsy")
 
 [node name="Settings" parent="." instance=ExtResource("13_w7yt8")]
 layout_mode = 1
+
+[node name="Greeting" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 50.0
+script = ExtResource("3_meshi")
+
+[node name="MarginContainer" type="MarginContainer" parent="Greeting"]
+layout_mode = 2
+theme_override_constants/margin_left = 96
+theme_override_constants/margin_top = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Greeting/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="Greeting/MarginContainer/HBoxContainer"]
+texture_repeat = 1
+layout_mode = 2
+theme = ExtResource("2_qf686")
+text = "[Dynamic]"
+
+[node name="TagHolder" type="VBoxContainer" parent="Greeting/MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
 
 [node name="Orientation" parent="." instance=ExtResource("11_733n8")]
 z_index = 19
@@ -205,9 +208,9 @@ layout_mode = 1
 [connection signal="changed_tab" from="Sidebar" to="TabHandler/VBoxContainer/FocusUI" method="tab_switched"]
 [connection signal="reorientate" from="Settings" to="Orientation" method="_on_settings_reorientate"]
 [connection signal="settings_changed" from="Settings" to="Background" method="on_settings_changed"]
-[connection signal="settings_changed" from="Settings" to="Greeting" method="on_settings_changed"]
 [connection signal="settings_changed" from="Settings" to="Time" method="_on_settings_settings_changed"]
 [connection signal="settings_changed" from="Settings" to="TabHandler/VBoxContainer/FocusUI" method="settings_changed"]
 [connection signal="settings_changed" from="Settings" to="Sidebar" method="settings_changed"]
+[connection signal="settings_changed" from="Settings" to="Greeting" method="on_settings_changed"]
 [connection signal="orientationcomp" from="Orientation" to="Background" method="_on_orientationcomp"]
 [connection signal="orientationcomp" from="Orientation" to="Greeting" method="orientation_complete"]

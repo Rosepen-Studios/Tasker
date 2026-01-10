@@ -25,6 +25,7 @@ var dataloaded = false
 var datamindiff:int = 0   # In this runtime how much of each has been added to focus data
 var datascorediff:int = 0 #
 signal dataready
+signal session_finished
 func focus_pressed() -> void:
 	if is_in_session:
 		end_session()
@@ -45,9 +46,11 @@ func begin_session():
 	rtv.insession = true
 	
 func end_session():
+	session_finished.emit()
 	get_tree().create_tween().tween_property(focus_button,"modulate",Color("1d1d1d"),0.2)
+	if paused:
+		pause_pressed()
 	pause_button.visible = false
-	pause_button.self_modulate = Color("1d1d1d")
 	instantiator.end_session()
 	update_session_data(workingid,instantiator.get_session_len())
 	workingid = -1

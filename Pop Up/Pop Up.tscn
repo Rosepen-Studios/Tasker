@@ -10,7 +10,7 @@
 
 [sub_resource type="Animation" id="Animation_qljf3"]
 resource_name = "In"
-length = 0.4
+length = 0.5
 step = 0.001
 tracks/0/type = "bezier"
 tracks/0/imported = false
@@ -19,9 +19,9 @@ tracks/0/path = NodePath("TextureRect:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(2, 2, 2, 2),
+"handle_modes": PackedInt32Array(2, 2, 0, 0),
 "points": PackedFloat32Array(-381, 0, 0, 0.0853333, 0, 90.786, -0.0853333, 0, 0.0296667, 0, -30.8041, -0.0296667, 0, 0.0183333, 0, -0.101179, -0.0183333, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.256, 0.342, 0.4)
+"times": PackedFloat32Array(0, 0.256, 0.4, 0.501)
 }
 tracks/1/type = "bezier"
 tracks/1/imported = false
@@ -171,7 +171,7 @@ script = ExtResource("1_drh30")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
-offset_left = -381.0
+offset_right = 381.0
 offset_bottom = 102.0
 texture = ExtResource("1_2toyl")
 
