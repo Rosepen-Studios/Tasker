@@ -47,9 +47,9 @@ func begin_session():
 	
 func end_session():
 	session_finished.emit()
-	get_tree().create_tween().tween_property(focus_button,"modulate",Color("1d1d1d"),0.2)
 	if paused:
 		pause_pressed()
+	get_tree().create_tween().tween_property(focus_button,"modulate",Color("1d1d1d"),0.2)
 	pause_button.visible = false
 	instantiator.end_session()
 	update_session_data(workingid,instantiator.get_session_len())
@@ -161,6 +161,9 @@ func process_loop():
 	
 	await get_tree().create_timer(10).timeout
 	process_loop()
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("Start") and sidebar.tab == "focus":
-		focus_pressed()
+func _process(_delta: float) -> void:
+	if sidebar.tab == "focus":
+		if Input.is_action_just_pressed("Start"):
+			focus_pressed()
+		if Input.is_action_just_pressed("focus_pause"):
+			pause_pressed()

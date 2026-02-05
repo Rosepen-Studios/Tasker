@@ -1,16 +1,19 @@
-res://FocusUI/Shaders
-res://Main/Scipts
+/Users/max/Documents/Godot Builds/Tasker/1.1.1_ib3/
+/Users/max/Documents/Godot Builds/Tasker/1.1.1_ib2/
+/Users/max/Documents/Godot Builds/Tasker/
+res://FocusUI/Shaders/
+res://Main/Scipts/
 res://
-/Users/max/Documents/Godot Builds/Tasker/1.1.1ib
-/Users/max/Documents/Godot Builds/Tasker/1.1
-res://Sidebar/Scripts
-res://Main/Tags
-res://Settings/Scripts
-res://Debug/Scripts
-res://FocusUI/Session
-res://FocusUI/Scripts
-res://FocusUI/Session/Scripts
-res://FocusUI/Selector
-res://FocusUI
-res://Console
-res://Console/Scripts
+/Users/max/Documents/Godot Builds/Tasker/1.1.1ib/
+/Users/max/Documents/Godot Builds/Tasker/1.1/
+res://Sidebar/Scripts/
+res://Main/Tags/
+res://Settings/Scripts/
+res://Debug/Scripts/
+res://FocusUI/Session/
+res://FocusUI/Scripts/
+res://FocusUI/Session/Scripts/
+res://FocusUI/Selector/
+res://FocusUI/
+res://Console/
+res://Console/Scripts/

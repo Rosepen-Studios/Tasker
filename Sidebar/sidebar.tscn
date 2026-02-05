@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cedapa6ga120n"]
+[gd_scene format=3 uid="uid://cedapa6ga120n"]
 
 [ext_resource type="Script" uid="uid://d34s4a0tdtp7q" path="res://Sidebar/Scripts/Sidebar.gd" id="1_2ga01"]
 [ext_resource type="Shader" uid="uid://cih2qw5a7867v" path="res://Theme/Shaders/Round Corners.gdshader" id="2_biijr"]
@@ -19,7 +19,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0mwo0"]
 shader = ExtResource("2_biijr")
-shader_parameter/radius_scale = 0.2
+shader_parameter/radius_scale = 0.40000000596048
 shader_parameter/rounded_corner_top_left = true
 shader_parameter/rounded_corner_top_right = true
 shader_parameter/rounded_corner_bottom_left = true
@@ -188,7 +188,7 @@ _data = {
 &"RESET": SubResource("Animation_nl16o")
 }
 
-[node name="Sidebar" type="Control"]
+[node name="Sidebar" type="Control" unique_id=845038324]
 layout_mode = 3
 anchors_preset = 9
 anchor_bottom = 1.0
@@ -199,7 +199,7 @@ offset_bottom = -16.0
 grow_vertical = 2
 script = ExtResource("1_2ga01")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2027916319]
 self_modulate = Color(0.0784314, 0.0784314, 0.0784314, 1)
 material = SubResource("ShaderMaterial_0mwo0")
 layout_mode = 1
@@ -212,29 +212,29 @@ grow_vertical = 2
 texture = SubResource("GradientTexture2D_anmhh")
 script = ExtResource("4_jydxg")
 
-[node name="Control" type="Control" parent="TextureRect"]
+[node name="Control" type="Control" parent="TextureRect" unique_id=301203972]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 64.0
 grow_vertical = 2
 
-[node name="Upper" type="MarginContainer" parent="TextureRect/Control"]
-layout_mode = 2
+[node name="Upper" type="MarginContainer" parent="TextureRect/Control" unique_id=679704251]
+layout_mode = 0
 offset_top = 208.0
 offset_right = 64.0
 offset_bottom = 208.0
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = -212
 
-[node name="Selection" type="Control" parent="TextureRect/Control/Upper"]
+[node name="Selection" type="Control" parent="TextureRect/Control/Upper" unique_id=1518046257]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect/Control/Upper/Selection"]
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Control/Upper/Selection" unique_id=1265832151]
 modulate = Color(0.52549, 0.403922, 0.913725, 1)
-layout_mode = 2
+layout_mode = 0
 offset_top = 62.0
 offset_right = 48.0
 offset_bottom = 275.0
@@ -243,11 +243,11 @@ texture = ExtResource("3_0xcps")
 stretch_mode = 2
 script = ExtResource("4_y0sa7")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/Control/Upper"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/Control/Upper" unique_id=857525365]
 custom_minimum_size = Vector2(64, 213)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="TextureRect/Control/Upper/VBoxContainer"]
+[node name="Button" type="Button" parent="TextureRect/Control/Upper/VBoxContainer" unique_id=1499697368]
 visible = false
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
@@ -255,9 +255,9 @@ size_flags_horizontal = 0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4d324")
 flat = true
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect/Control/Upper/VBoxContainer/Button"]
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Control/Upper/VBoxContainer/Button" unique_id=583422442]
 custom_minimum_size = Vector2(2.08165e-12, 48)
-layout_mode = 2
+layout_mode = 0
 offset_top = 12.0
 offset_right = 48.0
 offset_bottom = 60.0
@@ -266,7 +266,7 @@ texture = ExtResource("2_iydla")
 expand_mode = 2
 stretch_mode = 2
 
-[node name="Daily" type="Button" parent="TextureRect/Control/Upper/VBoxContainer"]
+[node name="Daily" type="Button" parent="TextureRect/Control/Upper/VBoxContainer" unique_id=1215277839]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -275,9 +275,9 @@ flat = true
 script = ExtResource("6_hebhy")
 tabid = "daily"
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect/Control/Upper/VBoxContainer/Daily"]
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Control/Upper/VBoxContainer/Daily" unique_id=1856007525]
 custom_minimum_size = Vector2(2.08165e-12, 48)
-layout_mode = 2
+layout_mode = 0
 offset_left = -225.0
 offset_top = -213.0
 offset_right = 275.0
@@ -288,7 +288,7 @@ texture = ExtResource("4_4d04x")
 expand_mode = 2
 stretch_mode = 2
 
-[node name="Overview" type="Button" parent="TextureRect/Control/Upper/VBoxContainer"]
+[node name="Overview" type="Button" parent="TextureRect/Control/Upper/VBoxContainer" unique_id=1659882103]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -297,9 +297,9 @@ flat = true
 script = ExtResource("6_hebhy")
 tabid = "overview"
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect/Control/Upper/VBoxContainer/Overview"]
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Control/Upper/VBoxContainer/Overview" unique_id=8442779]
 custom_minimum_size = Vector2(2.08165e-12, 48)
-layout_mode = 2
+layout_mode = 0
 offset_left = -225.0
 offset_top = -212.0
 offset_right = 275.0
@@ -310,16 +310,14 @@ texture = ExtResource("3_ypvnt")
 expand_mode = 2
 stretch_mode = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect/Control/Upper/VBoxContainer/Overview"]
-libraries = {
-&"": SubResource("AnimationLibrary_oi0tr")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect/Control/Upper/VBoxContainer/Overview" unique_id=872567954]
+libraries/ = SubResource("AnimationLibrary_oi0tr")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/Control/Upper/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/Control/Upper/VBoxContainer" unique_id=372027632]
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="Focus" type="Button" parent="TextureRect/Control/Upper/VBoxContainer/VBoxContainer"]
+[node name="Focus" type="Button" parent="TextureRect/Control/Upper/VBoxContainer/VBoxContainer" unique_id=908726564]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -327,9 +325,9 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_unqxe")
 flat = true
 script = ExtResource("10_yj6k5")
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect/Control/Upper/VBoxContainer/VBoxContainer/Focus"]
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Control/Upper/VBoxContainer/VBoxContainer/Focus" unique_id=49735118]
 custom_minimum_size = Vector2(2.08165e-12, 48)
-layout_mode = 2
+layout_mode = 0
 offset_top = 12.0
 offset_right = 48.0
 offset_bottom = 60.0
@@ -338,10 +336,10 @@ texture = ExtResource("11_t6dnj")
 expand_mode = 2
 stretch_mode = 2
 
-[node name="Control" type="Control" parent="TextureRect/Control/Upper/VBoxContainer/VBoxContainer"]
+[node name="Control" type="Control" parent="TextureRect/Control/Upper/VBoxContainer/VBoxContainer" unique_id=463326786]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect/Control/Upper/VBoxContainer/VBoxContainer/Control"]
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Control/Upper/VBoxContainer/VBoxContainer/Control" unique_id=76785009]
 layout_mode = 0
 offset_left = 21.0
 offset_top = 8.0
@@ -350,7 +348,7 @@ offset_bottom = 58.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("11_kbdo4")
 
-[node name="Lower" type="MarginContainer" parent="TextureRect/Control"]
+[node name="Lower" type="MarginContainer" parent="TextureRect/Control" unique_id=1263084578]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -362,18 +360,18 @@ grow_vertical = 0
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/Control/Lower"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/Control/Lower" unique_id=1457964441]
 custom_minimum_size = Vector2(64, 106)
 layout_mode = 2
 
-[node name="Settings" type="Button" parent="TextureRect/Control/Lower/VBoxContainer"]
+[node name="Settings" type="Button" parent="TextureRect/Control/Lower/VBoxContainer" unique_id=1330393931]
 custom_minimum_size = Vector2(2.08165e-12, 48)
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_yofh5")
 flat = true
 script = ExtResource("9_t5621")
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect/Control/Lower/VBoxContainer/Settings"]
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Control/Lower/VBoxContainer/Settings" unique_id=150767120]
 layout_mode = 0
 offset_left = -216.0
 offset_top = -218.0
@@ -383,20 +381,18 @@ scale = Vector2(0.1, 0.1)
 pivot_offset = Vector2(240, 240)
 texture = ExtResource("6_wy0pj")
 
-[node name="Add" type="Button" parent="TextureRect/Control/Lower/VBoxContainer"]
+[node name="Add" type="Button" parent="TextureRect/Control/Lower/VBoxContainer" unique_id=1106793451]
 custom_minimum_size = Vector2(2.08165e-12, 48)
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxTexture_6vyrw")
 flat = true
 script = ExtResource("8_boi5m")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect/Control/Lower/VBoxContainer/Add"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect/Control/Lower/VBoxContainer/Add" unique_id=934807682]
 root_node = NodePath("../TextureRect")
-libraries = {
-&"": SubResource("AnimationLibrary_ou1qj")
-}
+libraries/ = SubResource("AnimationLibrary_ou1qj")
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect/Control/Lower/VBoxContainer/Add"]
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Control/Lower/VBoxContainer/Add" unique_id=250816342]
 layout_mode = 1
 anchors_preset = -1
 offset_left = -216.0
