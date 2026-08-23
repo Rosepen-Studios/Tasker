@@ -1,7 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://bas5xco4jt2as"]
+[gd_scene format=3 uid="uid://bas5xco4jt2as"]
 
 [ext_resource type="PackedScene" uid="uid://hdmb3fm5ivt5" path="res://Daily UI /Daily UI.tscn" id="1_ab27m"]
-[ext_resource type="Script" uid="uid://72bab0j36hf8" path="res://Main/Scipts/rtv.gd" id="1_evffp"]
 [ext_resource type="PackedScene" uid="uid://cedapa6ga120n" path="res://Sidebar/sidebar.tscn" id="1_ji4w0"]
 [ext_resource type="Script" uid="uid://dwwfilsb8uegp" path="res://Main/Scipts/Saving.gd" id="2_8dlu8"]
 [ext_resource type="Theme" uid="uid://c3rp1lb338sef" path="res://Theme/Main Theme.tres" id="2_qf686"]
@@ -27,16 +26,15 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 gradient = SubResource("Gradient_rknem")
 width = 1152
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=457011805]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_evffp")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=859344349]
 modulate = Color(0.0470588, 0.0470588, 0.0470588, 1)
 layout_mode = 1
 anchors_preset = 15
@@ -48,11 +46,11 @@ texture = SubResource("GradientTexture1D_ycv7o")
 expand_mode = 1
 script = ExtResource("2_8dlu8")
 
-[node name="Timer" type="Timer" parent="Background"]
+[node name="Timer" type="Timer" parent="Background" unique_id=711944222]
 
-[node name="HTTPRequest" type="HTTPRequest" parent="Background/Timer"]
+[node name="HTTPRequest" type="HTTPRequest" parent="Background/Timer" unique_id=1197189672]
 
-[node name="Time" type="VBoxContainer" parent="."]
+[node name="Time" type="VBoxContainer" parent="." unique_id=1227682388]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -60,22 +58,22 @@ offset_bottom = 50.0
 grow_horizontal = 2
 script = ExtResource("3_0qn1y")
 
-[node name="MarginContainer" type="MarginContainer" parent="Time"]
+[node name="MarginContainer" type="MarginContainer" parent="Time" unique_id=941161403]
 layout_mode = 2
 theme_override_constants/margin_left = 0
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Time/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Time/MarginContainer" unique_id=1186792529]
 layout_mode = 2
 alignment = 2
 
-[node name="Time Label" type="Label" parent="Time/MarginContainer/HBoxContainer"]
+[node name="Time Label" type="Label" parent="Time/MarginContainer/HBoxContainer" unique_id=759148163]
 layout_mode = 2
 theme = ExtResource("2_qf686")
 text = "[Dynamic]"
 
-[node name="TabHandler" type="ScrollContainer" parent="."]
+[node name="TabHandler" type="ScrollContainer" parent="." unique_id=1352957540]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -89,23 +87,23 @@ horizontal_scroll_mode = 0
 vertical_scroll_mode = 3
 script = ExtResource("6_sgb71")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabHandler"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabHandler" unique_id=690338829]
 layout_mode = 2
 
-[node name="Daily Ui" parent="TabHandler/VBoxContainer" instance=ExtResource("1_ab27m")]
+[node name="Daily Ui" parent="TabHandler/VBoxContainer" unique_id=351632971 instance=ExtResource("1_ab27m")]
 custom_minimum_size = Vector2(1152, 648)
 layout_mode = 2
 
-[node name="Overview" parent="TabHandler/VBoxContainer" instance=ExtResource("7_0mwpl")]
+[node name="Overview" parent="TabHandler/VBoxContainer" unique_id=2028509601 instance=ExtResource("7_0mwpl")]
 visible = true
 custom_minimum_size = Vector2(1152, 648)
 layout_mode = 2
 
-[node name="FocusUI" parent="TabHandler/VBoxContainer" instance=ExtResource("9_84fla")]
+[node name="FocusUI" parent="TabHandler/VBoxContainer" unique_id=678412168 instance=ExtResource("9_84fla")]
 custom_minimum_size = Vector2(1152, 648)
 layout_mode = 2
 
-[node name="Pop Up" type="Control" parent="."]
+[node name="Pop Up" type="Control" parent="." unique_id=551535116]
 z_index = 2
 layout_mode = 1
 anchors_preset = 15
@@ -116,7 +114,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("14_3jf7s")
 
-[node name="MarginContainer" type="MarginContainer" parent="Pop Up"]
+[node name="MarginContainer" type="MarginContainer" parent="Pop Up" unique_id=1816199006]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -129,26 +127,26 @@ grow_vertical = 2
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Pop Up/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Pop Up/MarginContainer" unique_id=2110392037]
 layout_mode = 2
 theme_override_constants/separation = 7
 alignment = 2
 
-[node name="Sidebar" parent="." instance=ExtResource("1_ji4w0")]
+[node name="Sidebar" parent="." unique_id=1144670646 instance=ExtResource("1_ji4w0")]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.073
 offset_left = 1.0
 offset_right = 5.904
 
-[node name="New task" parent="." instance=ExtResource("5_eynx2")]
+[node name="New task" parent="." unique_id=1799102274 instance=ExtResource("5_eynx2")]
 layout_mode = 1
 
-[node name="Edit" parent="." instance=ExtResource("8_as1ma")]
+[node name="Edit" parent="." unique_id=1943243869 instance=ExtResource("8_as1ma")]
 visible = false
 layout_mode = 1
 
-[node name="Warnings" type="Label" parent="."]
+[node name="Warnings" type="Label" parent="." unique_id=1633539749]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -161,41 +159,41 @@ theme_override_fonts/font = ExtResource("9_lq6es")
 theme_override_font_sizes/font_size = 24
 script = ExtResource("10_ytvsy")
 
-[node name="warntimer" type="Timer" parent="Warnings"]
+[node name="warntimer" type="Timer" parent="Warnings" unique_id=1425640586]
 
-[node name="Settings" parent="." instance=ExtResource("13_w7yt8")]
+[node name="Settings" parent="." unique_id=898729495 instance=ExtResource("13_w7yt8")]
 layout_mode = 1
 
-[node name="Greeting" type="VBoxContainer" parent="."]
-layout_mode = 2
+[node name="Greeting" type="VBoxContainer" parent="." unique_id=1831798943]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 50.0
 script = ExtResource("3_meshi")
 
-[node name="MarginContainer" type="MarginContainer" parent="Greeting"]
+[node name="MarginContainer" type="MarginContainer" parent="Greeting" unique_id=817039594]
 layout_mode = 2
 theme_override_constants/margin_left = 96
 theme_override_constants/margin_top = 16
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Greeting/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Greeting/MarginContainer" unique_id=1718367378]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="Label" type="Label" parent="Greeting/MarginContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Greeting/MarginContainer/HBoxContainer" unique_id=573577214]
 texture_repeat = 1
 layout_mode = 2
 theme = ExtResource("2_qf686")
 text = "[Dynamic]"
 
-[node name="TagHolder" type="VBoxContainer" parent="Greeting/MarginContainer/HBoxContainer"]
+[node name="TagHolder" type="VBoxContainer" parent="Greeting/MarginContainer/HBoxContainer" unique_id=880288875]
 layout_mode = 2
 alignment = 1
 
-[node name="Orientation" parent="." instance=ExtResource("11_733n8")]
+[node name="Orientation" parent="." unique_id=1758782374 instance=ExtResource("11_733n8")]
 z_index = 19
 layout_mode = 1
 
-[node name="Update" parent="." instance=ExtResource("16_30arf")]
+[node name="Update" parent="." unique_id=1740344792 instance=ExtResource("16_30arf")]
 visible = false
 layout_mode = 1
 

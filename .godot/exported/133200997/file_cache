@@ -19,10 +19,10 @@ res://Sidebar/sidebar.tscn::8398bb4db10b6d1d51b1386b460704b5::1770316688::res://
 res://Theme/Settings/Section Title.tres::fb29b1d87dfbcb677ec8bee6be9899d1::1747823157::res://.godot/exported/133200997/export-12fc929185a264e0e1a5b53449955408-Section Title.res
 res://Theme/Settings/Setting Name.tres::628165a3b64650a68d4faca5767b8f4a::1747823157::res://.godot/exported/133200997/export-30f4fba991fdcfe425b5718ab6edffed-Setting Name.res
 res://Theme/Deafult Round Shader.tres::a4b2ecb71d896152b9010185edc3cecd::1765474425::res://.godot/exported/133200997/export-04274fc848907b2fcf420bc37f01dcf3-Deafult Round Shader.res
-res://Theme/Main Theme.tres::a7de28c23ce91379705d92effb834251::1770316376::res://.godot/exported/133200997/export-f8d490758b2f9033959f4542289496fe-Main Theme.res
+res://Theme/Main Theme.tres::a7de28c23ce91379705d92effb834251::1770321450::res://.godot/exported/133200997/export-f8d490758b2f9033959f4542289496fe-Main Theme.res
 res://Update/Update.tscn::30fac62d40d82d418182df64c40b0938::1753539508::res://.godot/exported/133200997/export-595418a35bd98f66630b2fe36da23621-Update.scn
 res://Console/Console.tscn::f7a163f788c8df52ba8a3ea71927094e::1753539506::res://.godot/exported/133200997/export-3778b4bd26337177398d91e4ee777b9f-Console.scn
 res://FocusUI/Session/FocusSession.tscn::44b8974bd3fa84bf22dd76355c74c19c::1765475004::res://.godot/exported/133200997/export-366a2f6e94134eab762f6d5741661828-FocusSession.scn
-res://FocusUI/FocusUI.tscn::89615629dfaefc80acbb4816b7bb9afc::1770317754::res://.godot/exported/133200997/export-4ed57c21a4d498885c5b8b443b2c3d88-FocusUI.scn
+res://FocusUI/FocusUI.tscn::aa17900ca30bdb8196ca04c1ea9632b8::1770321450::res://.godot/exported/133200997/export-4ed57c21a4d498885c5b8b443b2c3d88-FocusUI.scn
 res://Main/Tags/Beta.tscn::8c4e9ae8a3d08c597e8a7c6e0a2c8485::1753539507::res://.godot/exported/133200997/export-02deaa00bb05dd8bdf33ddbdc84dcc29-Beta.scn
 res://Main/Tags/IB.tscn::2c49045fdf888ccf67846243e3765f60::1753539507::res://.godot/exported/133200997/export-388dd1700b18cebfe48008bf5038a908-IB.scn
